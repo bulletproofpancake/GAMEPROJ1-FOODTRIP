@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneSelector : Singleton<SceneSelector>
 {
+
+    public Animator transition;
+    [SerializeField] private float transitionTime;
+    
     public void LoadPreviousScene()
     {
-        if(SceneManager.GetActiveScene().buildIndex - 1 >= 0){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        if(SceneManager.GetActiveScene().buildIndex - 1 >= 0)
+        {
+            StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex - 1));
         }
         else
         {
@@ -18,11 +23,19 @@ public class SceneSelector : Singleton<SceneSelector>
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void LoadNextScene(int index)
     {
+        StartCoroutine(LoadScene(index));
+    }
+
+    private IEnumerator LoadScene(int index)
+    {
+        transition.Play("Crossfade_Start");
+        yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(index);
     }
+    
 }
