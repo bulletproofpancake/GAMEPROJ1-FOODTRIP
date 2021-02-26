@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/JacobScripts/CustomerSpawner.cs.meta
+guid: 019002cdb829eea448cbaa91f812d23a
+=======
+guid: 546ce892cd220ea40b275720752825d8
+>>>>>>> main:Assets/Scripts/Singleton.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
