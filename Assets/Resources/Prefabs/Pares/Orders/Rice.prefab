@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5462517579788063155}
   - component: {fileID: 6580914577590136435}
   m_Layer: 0
-  m_Name: Pares
+  m_Name: Rice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,4 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98db657a99e390e43b3b31e92716c132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ab6e8d767f2ed1443af8539004885b75, type: 2}
+  data: {fileID: 11400000, guid: 3df010f36eae0ee44bb2587023deb518, type: 2}
