@@ -20,10 +20,12 @@ public class GameManager : MonoBehaviour
     {
         if (isVN)
         {
+            arcadeCanvas.SetActive(false);
             Instantiate(vnCanvas, transform.position, Quaternion.identity);
         }
         else
         {
+            vnCanvas.SetActive(false);
             Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
         }
 
@@ -44,7 +46,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isVN && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneSelector.Instance.LoadNextScene();
+        }
     }
 
     private IEnumerator CountDownLevel()
