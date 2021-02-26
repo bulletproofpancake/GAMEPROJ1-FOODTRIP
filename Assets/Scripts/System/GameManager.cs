@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,9 +17,12 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private GameObject background;
     
     private void Awake()
     {
+        background.GetComponent<Canvas>().worldCamera = Camera.main;
+        SetBackground();
         if (isVN)
         {
             arcadeCanvas.SetActive(false);
@@ -61,5 +66,21 @@ public class GameManager : MonoBehaviour
             levelDuration--;
         }
         SceneSelector.Instance.LoadNextScene();
+    }
+
+    private void SetBackground()
+    {
+        switch (ShiftManager.Instance.Data.Schedule)
+        {
+            case ShiftSchedule.Morning:
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Morning;
+                break;
+            case ShiftSchedule.Afternoon:
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Afternoon;
+                break;
+            case ShiftSchedule.Night:
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Night;
+                break;
+        }
     }
 }
