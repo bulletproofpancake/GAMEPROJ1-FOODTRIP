@@ -16,7 +16,7 @@ public class SceneLoader : MonoBehaviour
         SceneSelector.Instance.LoadNextScene(0);
     }
 
-    public void LoadNextScene()
+    public virtual void LoadNextScene()
     {
         SceneSelector.Instance.LoadNextScene();
     }

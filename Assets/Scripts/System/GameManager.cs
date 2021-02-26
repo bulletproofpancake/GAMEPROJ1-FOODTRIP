@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;
     [SerializeField] private int levelDuration;
-    [SerializeField] private ShiftData shiftData;
     
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
@@ -71,16 +70,16 @@ public class GameManager : MonoBehaviour
 
     private void SetBackground()
     {
-        switch (shiftData.Schedule)
+        switch (ShiftManager.Instance.Data.Schedule)
         {
             case ShiftSchedule.Morning:
-                background.GetComponentInChildren<Image>().sprite = shiftData.LocSprites.Morning;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Morning;
                 break;
             case ShiftSchedule.Afternoon:
-                background.GetComponentInChildren<Image>().sprite = shiftData.LocSprites.Afternoon;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Afternoon;
                 break;
             case ShiftSchedule.Night:
-                background.GetComponentInChildren<Image>().sprite = shiftData.LocSprites.Night;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Night;
                 break;
         }
     }
