@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Main Menu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Area Select.unity
+    guid: 26231f6aa10835f479dbcc945eb81e00
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Shift Select.unity
+    guid: 57d502e292c84ca4fbc0ca67601984b4
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Church/Morning.unity
+    guid: 9e5a98d14ba6a9a4ab59c036fb882654
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Church/VN.unity
+    guid: 07813c459e4d6c8479949889783338ba
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Summary.unity
+    guid: 365863a6de1c0134faf6601d69378a64
   m_configObjects: {}
