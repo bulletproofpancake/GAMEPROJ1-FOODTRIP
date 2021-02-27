@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
+    [Header("Customer Spawn")]
+    public int spawnInterval;
     public CustomerData[] customers;
     public Seat[] customerSeat;
-    public int spawnInterval;
     private int _customerIndex;
+    private bool _allowedToSpawn;
     
+    [Header("Food Spawn")]
     public Seat[] foodSeat;
     private int _foodIndex;
 
@@ -26,12 +26,15 @@ public class SpawnManager : Singleton<SpawnManager>
         }
 
         StartCoroutine(SpawnCustomers());
+
     }
     
     public void Spawn(CustomerData data)
     {
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
+        
+        if (isFull()) return;
         
         if (!customerSeat[_customerIndex].isTaken)
         {
@@ -46,10 +49,36 @@ public class SpawnManager : Singleton<SpawnManager>
         }
     }
 
+    private void Update()
+    {
+        if (_allowedToSpawn)
+        {
+            Spawn(customers[Random.Range(0,customers.Length)]);
+        }
+    }
+
+    private bool isFull()
+    {
+        var counter = 0;
+        
+        foreach (var seat in customerSeat)
+        {
+            if (seat.isTaken)
+            {
+                counter++;
+            }
+        }
+
+        if (counter >= customerSeat.Length)
+            return true;
+        else
+            return false;
+    }
+
     private IEnumerator SpawnCustomers()
     {
         yield return new WaitForSeconds(spawnInterval);
-        Spawn(customers[Random.Range(0,customers.Length)]);
+        _allowedToSpawn = true;
     }
 
     public void Spawn(OrderData data)
