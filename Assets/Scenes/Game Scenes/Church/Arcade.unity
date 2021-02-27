@@ -523,6 +523,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1663581835 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6589351652661809027, guid: aae6923240baa7d408d9c884e1248b73,
+    type: 3}
+  m_PrefabInstance: {fileID: 160586297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1711110704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4962202806993891576, guid: aae6923240baa7d408d9c884e1248b73,
@@ -711,8 +717,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
+      propertyPath: bowl
+      value: 
+      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
+        type: 3}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
       propertyPath: spawnInterval
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -741,6 +758,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: cc2b3aed734bd2b4aa7c7ecd886481e5,
         type: 2}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.data[0].slot
+      value: 
+      objectReference: {fileID: 160586300}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.data[1].slot
+      value: 
+      objectReference: {fileID: 160586299}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.data[2].slot
+      value: 
+      objectReference: {fileID: 160586298}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: foodSeat.Array.data[0].slot
@@ -838,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -862,6 +894,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
+      propertyPath: itemsToPool.Array.data[4].id
+      value: Bowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
       propertyPath: itemsToPool.Array.data[0].parent
       value: 
       objectReference: {fileID: 160586301}
@@ -880,6 +917,11 @@ PrefabInstance:
       propertyPath: itemsToPool.Array.data[3].parent
       value: 
       objectReference: {fileID: 160586302}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
+      propertyPath: itemsToPool.Array.data[4].parent
+      value: 
+      objectReference: {fileID: 1663581835}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[0].amountToPool
@@ -924,6 +966,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 537334110035868631, guid: 53656ec6bf562d349a0b3be9fdbf351b,
         type: 3}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
+      propertyPath: itemsToPool.Array.data[4].amountToPool
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
+      propertyPath: itemsToPool.Array.data[4].objectToPool
+      value: 
+      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
+        type: 3}
     - target: {fileID: 6746603514144867607, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: m_Name
@@ -938,6 +991,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1890666900}
     m_Modifications:
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: isVN
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: shiftData
