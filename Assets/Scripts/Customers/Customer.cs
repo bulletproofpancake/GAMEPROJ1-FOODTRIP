@@ -29,6 +29,8 @@ public class Customer : MonoBehaviour
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
     }
     
+    
+    #region OrderMethods
     private void SetOrder()
     {
         _completedOrders = 0;
@@ -73,5 +75,6 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
+    #endregion
     
 }

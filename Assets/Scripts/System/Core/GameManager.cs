@@ -35,9 +35,8 @@ public class GameManager : MonoBehaviour
         {
             vnCanvas.SetActive(false);
             Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
+            Instantiate(cartUsed, transform.position, Quaternion.identity);
         }
-
-        Instantiate(cartUsed, transform.position, Quaternion.identity);
     }
 
     // Start is called before the first frame update
