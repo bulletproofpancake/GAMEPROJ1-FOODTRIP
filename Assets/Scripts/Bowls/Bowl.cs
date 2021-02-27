@@ -15,6 +15,7 @@ public class Bowl : MonoBehaviour
 
     private void OnDisable()
     {
+        SpawnManager.Instance.bowlSeat[SeatTaken].isTaken = false;
         if(isDirty)
             Sink.Instance.AddBowl(gameObject);
         else
