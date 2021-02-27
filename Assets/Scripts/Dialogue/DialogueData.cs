@@ -6,6 +6,7 @@ using UnityEngine;
 public class DialogueData : ScriptableObject
 {
     [SerializeField] private DialogueInfo[] dialogue;
+    public DialogueInfo[] Dialogue => dialogue;
 }
 
 [System.Serializable]
