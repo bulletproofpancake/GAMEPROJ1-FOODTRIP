@@ -13,4 +13,9 @@ public class CustomerData : ScriptableObject
     {
         return sprites[Random.Range(0, sprites.Length)];
     }
+
+    public Order SelectOrder()
+    {
+        return possibleOrders[Random.Range(0, possibleOrders.Length)];
+    }
 }

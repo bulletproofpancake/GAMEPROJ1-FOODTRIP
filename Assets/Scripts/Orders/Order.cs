@@ -22,4 +22,12 @@ public class Order : MonoBehaviour
     {
         SpawnManager.Instance.foodSeat[SeatTaken].isTaken = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<Customer>())
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
