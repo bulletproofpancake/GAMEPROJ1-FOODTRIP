@@ -14,6 +14,11 @@ public class SpawnManager : Singleton<SpawnManager>
     public Seat[] foodSeat;
     private int _foodIndex;
 
+    [Header("Bowl Spawn")]
+    public GameObject bowl;
+    public Seat[] bowlSeat;
+    private int _bowlIndex;
+    
     private void Start()
     {
         foreach (var seat in customerSeat)
@@ -28,6 +33,16 @@ public class SpawnManager : Singleton<SpawnManager>
         StartCoroutine(SpawnCustomers());
 
     }
+
+    private void Update()
+    {
+        if (_allowedToSpawn)
+        {
+            Spawn(customers[Random.Range(0,customers.Length)]);
+        }
+    }
+
+    #region CustomerSpawning
     
     public void Spawn(CustomerData data)
     {
@@ -46,14 +61,6 @@ public class SpawnManager : Singleton<SpawnManager>
         else
         {
             Debug.LogWarning("Seat taken, looking for another");
-        }
-    }
-
-    private void Update()
-    {
-        if (_allowedToSpawn)
-        {
-            Spawn(customers[Random.Range(0,customers.Length)]);
         }
     }
 
@@ -80,6 +87,10 @@ public class SpawnManager : Singleton<SpawnManager>
         yield return new WaitForSeconds(spawnInterval);
         _allowedToSpawn = true;
     }
+    
+    #endregion
+
+    #region FoodSpawning
 
     public void Spawn(OrderData data)
     {
@@ -117,6 +128,41 @@ public class SpawnManager : Singleton<SpawnManager>
 
     }
 
+    #endregion
+    
+    public void SpawnBowl(GameObject bowl)
+    {
+
+        var newBowl = bowl;
+        
+        if ( _bowlIndex < bowlSeat.Length)
+        {
+            if (!bowlSeat[_bowlIndex].isTaken)
+            {
+                newBowl.transform.position = bowlSeat[_bowlIndex].slot.position;
+                newBowl.GetComponent<Bowl>().SeatTaken = _bowlIndex;
+                newBowl.SetActive(true);
+                bowlSeat[_bowlIndex].isTaken = true;
+                _bowlIndex = 0;
+            }
+            else
+            {
+                Debug.LogWarning("Seat taken, looking for another");
+                _bowlIndex++;
+                //recursion is done so that
+                //it will continue to spawn
+                //even if seats are taken
+                SpawnBowl(bowl);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Seats full, give orders first");
+            _bowlIndex = 0;
+        }
+        
+
+    }
 }
 
 [System.Serializable]

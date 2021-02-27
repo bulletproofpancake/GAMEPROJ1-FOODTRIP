@@ -711,8 +711,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
+      propertyPath: bowl
+      value: 
+      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
+        type: 3}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
       propertyPath: spawnInterval
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -741,6 +752,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: cc2b3aed734bd2b4aa7c7ecd886481e5,
         type: 2}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.data[0].slot
+      value: 
+      objectReference: {fileID: 160586300}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.data[1].slot
+      value: 
+      objectReference: {fileID: 160586299}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowlSeat.Array.data[2].slot
+      value: 
+      objectReference: {fileID: 160586298}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: foodSeat.Array.data[0].slot
@@ -862,6 +888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
+      propertyPath: itemsToPool.Array.data[4].id
+      value: Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
       propertyPath: itemsToPool.Array.data[0].parent
       value: 
       objectReference: {fileID: 160586301}
@@ -878,6 +909,11 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].parent
+      value: 
+      objectReference: {fileID: 160586302}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
+      propertyPath: itemsToPool.Array.data[4].parent
       value: 
       objectReference: {fileID: 160586302}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
@@ -921,6 +957,17 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].objectToPool
+      value: 
+      objectReference: {fileID: 537334110035868631, guid: 53656ec6bf562d349a0b3be9fdbf351b,
+        type: 3}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
+      propertyPath: itemsToPool.Array.data[4].amountToPool
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
+        type: 3}
+      propertyPath: itemsToPool.Array.data[4].objectToPool
       value: 
       objectReference: {fileID: 537334110035868631, guid: 53656ec6bf562d349a0b3be9fdbf351b,
         type: 3}
