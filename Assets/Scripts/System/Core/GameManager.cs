@@ -21,8 +21,11 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        background.GetComponent<Canvas>().worldCamera = Camera.main;
-        SetBackground();
+        if(ShiftManager.Instance.Data != null){
+            background.GetComponent<Canvas>().worldCamera = Camera.main;
+            SetBackground();
+        }
+        
         if (isVN)
         {
             arcadeCanvas.SetActive(false);
