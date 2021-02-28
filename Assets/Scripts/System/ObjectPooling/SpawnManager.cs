@@ -18,9 +18,10 @@ public class SpawnManager : Singleton<SpawnManager>
     public GameObject bowl;
     public Seat[] bowlSeat;
     private int _bowlIndex;
-    
-    private void Start()
+
+    protected override void Awake()
     {
+        base.Awake();
         foreach (var seat in customerSeat)
         {
             seat.isTaken = false;
@@ -29,6 +30,10 @@ public class SpawnManager : Singleton<SpawnManager>
         {
             seat.isTaken = false;
         }
+    }
+
+    private void Start()
+    {
 
         StartCoroutine(SpawnCustomers());
 
@@ -43,8 +48,8 @@ public class SpawnManager : Singleton<SpawnManager>
     }
 
     #region CustomerSpawning
-    
-    public void Spawn(CustomerData data)
+
+    private void Spawn(CustomerData data)
     {
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
