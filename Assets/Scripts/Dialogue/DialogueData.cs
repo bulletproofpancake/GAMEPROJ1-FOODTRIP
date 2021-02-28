@@ -12,6 +12,7 @@ public class DialogueData : ScriptableObject
 [System.Serializable]
 public class DialogueInfo
 {
+    public NPCData npc;
     public Sprite sprite;
     [TextArea] public string text;
 }
