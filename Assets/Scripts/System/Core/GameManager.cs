@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;
     [SerializeField] private int levelDuration;
+    public bool IsVn => isVN;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
@@ -21,6 +22,7 @@ public class GameManager : Singleton<GameManager>
 
     [Header("VN Settings")]
     [SerializeField] private GameObject dialogueBox;
+    public List<Customer> vnCustomer;
 
     protected override void Awake()
     {
@@ -40,13 +42,14 @@ public class GameManager : Singleton<GameManager>
         else
         {
             vnCanvas.SetActive(false);
+            dialogueBox.SetActive(false);
             arcadeCanvas.SetActive(true);
             SpawnCart();
         }
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         SceneSelector.Instance.transition.Play("Crossfade_End");
         if (!isVN)
@@ -56,10 +59,9 @@ public class GameManager : Singleton<GameManager>
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (isVN && Input.GetKeyDown(KeyCode.Space))
+        if (isVN && vnCustomer.Count <= 0)
         {
             SceneSelector.Instance.LoadNextScene();
         }
@@ -92,7 +94,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void SpawnCart()
+    private void SpawnCart()
     {
         Instantiate(cartUsed, transform.position, Quaternion.identity);
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,5 +8,4 @@ public class NPCData : CustomerData
 {
     [SerializeField] private ShiftSchedule appearsIf;
     public ShiftSchedule AppearsIf => appearsIf;
-
 }

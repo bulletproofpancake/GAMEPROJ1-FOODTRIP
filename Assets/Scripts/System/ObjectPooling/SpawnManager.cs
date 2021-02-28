@@ -85,7 +85,12 @@ public class SpawnManager : Singleton<SpawnManager>
     private IEnumerator SpawnCustomers()
     {
         yield return new WaitForSeconds(spawnInterval);
-        _allowedToSpawn = true;
+        if (GameManager.Instance.IsVn)
+            Spawn(customers[0]);
+        else
+        {
+            _allowedToSpawn = true;
+        }
     }
     
     #endregion

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
@@ -15,7 +17,13 @@ public class Customer : MonoBehaviour
     private float _completedOrders;
     
     public int SeatTaken { get; set; }
-    
+
+    private void Awake()
+    {
+        if(GameManager.Instance.IsVn)
+            GameManager.Instance.vnCustomer.Add(this);
+    }
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -52,6 +60,10 @@ public class Customer : MonoBehaviour
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                if(GameManager.Instance.IsVn)
+                {
+                    GameManager.Instance.vnCustomer.Remove(this);
+                }
                 gameObject.SetActive(false);
             }
         }
