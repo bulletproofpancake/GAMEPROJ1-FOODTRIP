@@ -9,19 +9,24 @@ public class Customer : MonoBehaviour
     [SerializeField] private CustomerData data;
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
+    public GameObject orderBox;
     
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
     private float _numberOfOrders;
     private float _completedOrders;
+
     
     public int SeatTaken { get; set; }
 
     private void Awake()
     {
         if(GameManager.Instance.IsVn)
+        {
+            orderBox.SetActive(false);
             GameManager.Instance.vnCustomer.Add(this);
+        }
     }
 
     private void OnEnable()

@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6077367765372447431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2546742413702871809}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 696ffee4d4bbada459e8bf1fcbeeecb5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6432ca110e881844ea22ad40eb59e744, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 231b6a9cb1ac36f46baec5a868d31544, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
+  orderBox: {fileID: 2546742413702871810}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,6 +217,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ebd80676746f7a4fa19d23cccdd792b, type: 3}
+--- !u!1 &2546742413702871810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 863244940917849354, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2931003366481954312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2546742413702871809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,

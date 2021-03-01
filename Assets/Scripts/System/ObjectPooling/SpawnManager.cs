@@ -1,15 +1,20 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
+    [Header("NPC Spawn")] 
+    public NPCData vnCharacterData;
+    public GameObject vnCharacter;
+    
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
     public Seat[] customerSeat;
     private int _customerIndex;
     private bool _allowedToSpawn;
-    
+
     [Header("Food Spawn")]
     public Seat[] foodSeat;
     private int _foodIndex;
@@ -30,12 +35,23 @@ public class SpawnManager : Singleton<SpawnManager>
         {
             seat.isTaken = false;
         }
+
+        foreach (var seat in bowlSeat)
+        {
+            seat.isTaken = false;
+        }
     }
 
     private void Start()
     {
 
-        StartCoroutine(SpawnCustomers());
+        if(!GameManager.Instance.IsVn){
+            StartCoroutine(SpawnCustomers());
+        }
+        else
+        {
+            Spawn(vnCharacterData);
+        }
 
     }
 
@@ -99,7 +115,28 @@ public class SpawnManager : Singleton<SpawnManager>
     }
     
     #endregion
+    
+    private void Spawn(NPCData data)
+    {
+        vnCharacter = ObjectPoolManager.Instance.GetPooledObject(data.name);
+        _customerIndex = Random.Range(0, customerSeat.Length);
 
+        if (isFull()) return;
+        
+        if (!customerSeat[_customerIndex].isTaken)
+        {
+            vnCharacter.transform.position = customerSeat[_customerIndex].slot.position;
+            vnCharacter.GetComponent<Customer>().SeatTaken = _customerIndex;
+            vnCharacter.SetActive(true);
+            customerSeat[_customerIndex].isTaken = true;
+        }
+        else
+        {
+            Debug.LogWarning("Seat taken, looking for another");
+        }
+
+    }
+    
     #region FoodSpawning
 
     public void Spawn(OrderData data)

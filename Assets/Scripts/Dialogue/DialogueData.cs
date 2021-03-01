@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dialogue",menuName = "Data/New Dialogue")]
 public class DialogueData : ScriptableObject
 {
+    [SerializeField] private NPCData npc;
+    public NPCData NPC => npc;
     [SerializeField] private DialogueInfo[] dialogue;
     public DialogueInfo[] Dialogue => dialogue;
 }
@@ -12,7 +14,6 @@ public class DialogueData : ScriptableObject
 [System.Serializable]
 public class DialogueInfo
 {
-    public NPCData npc;
     public Sprite sprite;
     [TextArea] public string text;
 }
