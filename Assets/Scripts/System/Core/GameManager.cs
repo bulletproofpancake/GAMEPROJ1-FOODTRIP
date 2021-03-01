@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     [Header("Round Settings")]
     [SerializeField] private bool isVN;
@@ -13,14 +13,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;
     [SerializeField] private int levelDuration;
-    
+    public bool IsVn => isVN;
+
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject background;
-    
-    private void Awake()
+
+    [Header("VN Settings")]
+    [SerializeField] private GameObject dialogueBox;
+    public List<Customer> vnCustomer;
+
+    protected override void Awake()
     {
+        base.Awake();
         if(ShiftManager.Instance.Data != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
@@ -29,19 +35,21 @@ public class GameManager : MonoBehaviour
         if (isVN)
         {
             arcadeCanvas.SetActive(false);
-            Instantiate(vnCanvas, transform.position, Quaternion.identity);
+            vnCanvas.SetActive(true);
+            dialogueBox.SetActive(true);
+            SpawnCart();
         }
         else
         {
             vnCanvas.SetActive(false);
-            Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
+            dialogueBox.SetActive(false);
+            arcadeCanvas.SetActive(true);
+            SpawnCart();
         }
-
-        Instantiate(cartUsed, transform.position, Quaternion.identity);
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         SceneSelector.Instance.transition.Play("Crossfade_End");
         if (!isVN)
@@ -51,10 +59,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (isVN && Input.GetKeyDown(KeyCode.Space))
+        if (isVN && vnCustomer.Count <= 0)
         {
             SceneSelector.Instance.LoadNextScene();
         }
@@ -86,4 +93,10 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    private void SpawnCart()
+    {
+        Instantiate(cartUsed, transform.position, Quaternion.identity);
+    }
+    
 }

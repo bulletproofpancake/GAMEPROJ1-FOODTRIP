@@ -1,21 +1,34 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
     [SerializeField] private CustomerData data;
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
+    public GameObject orderBox;
     
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
     private float _numberOfOrders;
     private float _completedOrders;
+
     
     public int SeatTaken { get; set; }
-    
+
+    private void Awake()
+    {
+        if(GameManager.Instance.IsVn)
+        {
+            orderBox.SetActive(false);
+            GameManager.Instance.vnCustomer.Add(this);
+        }
+    }
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -29,6 +42,8 @@ public class Customer : MonoBehaviour
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
     }
     
+    
+    #region OrderMethods
     private void SetOrder()
     {
         _completedOrders = 0;
@@ -50,6 +65,10 @@ public class Customer : MonoBehaviour
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                if(GameManager.Instance.IsVn)
+                {
+                    GameManager.Instance.vnCustomer.Remove(this);
+                }
                 gameObject.SetActive(false);
             }
         }
@@ -73,5 +92,6 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
+    #endregion
     
 }
