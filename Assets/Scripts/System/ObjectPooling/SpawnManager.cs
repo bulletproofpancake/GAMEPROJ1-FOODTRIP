@@ -1,20 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
-    [Header("NPC Spawn")] 
-    public NPCData vnCharacterData;
-    public GameObject vnCharacter;
-    
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
     public Seat[] customerSeat;
     private int _customerIndex;
     private bool _allowedToSpawn;
-
+    
     [Header("Food Spawn")]
     public Seat[] foodSeat;
     private int _foodIndex;
@@ -23,10 +18,9 @@ public class SpawnManager : Singleton<SpawnManager>
     public GameObject bowl;
     public Seat[] bowlSeat;
     private int _bowlIndex;
-
-    protected override void Awake()
+    
+    private void Start()
     {
-        base.Awake();
         foreach (var seat in customerSeat)
         {
             seat.isTaken = false;
@@ -36,22 +30,7 @@ public class SpawnManager : Singleton<SpawnManager>
             seat.isTaken = false;
         }
 
-        foreach (var seat in bowlSeat)
-        {
-            seat.isTaken = false;
-        }
-    }
-
-    private void Start()
-    {
-
-        if(!GameManager.Instance.IsVn){
-            StartCoroutine(SpawnCustomers());
-        }
-        else
-        {
-            Spawn(vnCharacterData);
-        }
+        StartCoroutine(SpawnCustomers());
 
     }
 
@@ -64,8 +43,8 @@ public class SpawnManager : Singleton<SpawnManager>
     }
 
     #region CustomerSpawning
-
-    private void Spawn(CustomerData data)
+    
+    public void Spawn(CustomerData data)
     {
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
@@ -106,37 +85,11 @@ public class SpawnManager : Singleton<SpawnManager>
     private IEnumerator SpawnCustomers()
     {
         yield return new WaitForSeconds(spawnInterval);
-        if (GameManager.Instance.IsVn)
-            Spawn(customers[0]);
-        else
-        {
-            _allowedToSpawn = true;
-        }
+        _allowedToSpawn = true;
     }
     
     #endregion
-    
-    private void Spawn(NPCData data)
-    {
-        vnCharacter = ObjectPoolManager.Instance.GetPooledObject(data.name);
-        _customerIndex = Random.Range(0, customerSeat.Length);
 
-        if (isFull()) return;
-        
-        if (!customerSeat[_customerIndex].isTaken)
-        {
-            vnCharacter.transform.position = customerSeat[_customerIndex].slot.position;
-            vnCharacter.GetComponent<Customer>().SeatTaken = _customerIndex;
-            vnCharacter.SetActive(true);
-            customerSeat[_customerIndex].isTaken = true;
-        }
-        else
-        {
-            Debug.LogWarning("Seat taken, looking for another");
-        }
-
-    }
-    
     #region FoodSpawning
 
     public void Spawn(OrderData data)
