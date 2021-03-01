@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : MonoBehaviour
 {
     [Header("Round Settings")]
     [SerializeField] private bool isVN;
@@ -13,20 +13,14 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;
     [SerializeField] private int levelDuration;
-    public bool IsVn => isVN;
-
+    
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject background;
-
-    [Header("VN Settings")]
-    [SerializeField] private GameObject dialogueBox;
-    public List<Customer> vnCustomer;
-
-    protected override void Awake()
+    
+    private void Awake()
     {
-        base.Awake();
         if(ShiftManager.Instance.Data != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
@@ -35,21 +29,19 @@ public class GameManager : Singleton<GameManager>
         if (isVN)
         {
             arcadeCanvas.SetActive(false);
-            vnCanvas.SetActive(true);
-            dialogueBox.SetActive(true);
-            SpawnCart();
+            Instantiate(vnCanvas, transform.position, Quaternion.identity);
         }
         else
         {
             vnCanvas.SetActive(false);
-            dialogueBox.SetActive(false);
-            arcadeCanvas.SetActive(true);
-            SpawnCart();
+            Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
         }
+
+        Instantiate(cartUsed, transform.position, Quaternion.identity);
     }
 
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
         SceneSelector.Instance.transition.Play("Crossfade_End");
         if (!isVN)
@@ -59,9 +51,10 @@ public class GameManager : Singleton<GameManager>
         
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (isVN && vnCustomer.Count <= 0)
+        if (isVN && Input.GetKeyDown(KeyCode.Space))
         {
             SceneSelector.Instance.LoadNextScene();
         }
@@ -93,10 +86,4 @@ public class GameManager : Singleton<GameManager>
                 break;
         }
     }
-
-    private void SpawnCart()
-    {
-        Instantiate(cartUsed, transform.position, Quaternion.identity);
-    }
-    
 }
