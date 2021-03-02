@@ -13,7 +13,7 @@ public class SummaryManager : MonoBehaviour
 
     private void Start()
     {
-        actualProfit.text = $"Actual Profit: {DataManager.Instance.roundMoney}";
-        totalMoney.text = $"Total Money: {DataManager.Instance.totalMoney}";
+        actualProfit.text = $"Actual Profit: {MoneyManager.Instance.roundMoney}";
+        totalMoney.text = $"Total Money: {MoneyManager.Instance.totalMoney}";
     }
 }

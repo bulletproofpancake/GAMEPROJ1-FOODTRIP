@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataManager : Singleton<DataManager>
+public class MoneyManager : Singleton<MoneyManager>
 {
     public float totalMoney;
     public float roundMoney;
@@ -24,6 +24,11 @@ public class DataManager : Singleton<DataManager>
     {
         currentMoney = 0;
         roundMoney = 0;
+    }
+
+    public void Spend(float cost)
+    {
+        totalMoney -= cost;
     }
     
 }

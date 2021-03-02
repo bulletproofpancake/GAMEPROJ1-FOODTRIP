@@ -48,7 +48,7 @@ public class Customer : MonoBehaviour
         {
             _completedOrders++;
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
-            DataManager.Instance.Collect(_currentOrder.Data.Cost);
+            MoneyManager.Instance.Collect(_currentOrder.Data.Cost);
             if (_completedOrders >= _numberOfOrders + 1)
             {
                 gameObject.SetActive(false);

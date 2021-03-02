@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            moneyText.text = $"{DataManager.Instance.currentMoney}";
+            moneyText.text = $"{MoneyManager.Instance.currentMoney}";
         }
     }
 
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             levelDuration--;
         }
-        DataManager.Instance.Earn();
+        MoneyManager.Instance.Earn();
         SceneSelector.Instance.LoadNextScene();
     }
 
