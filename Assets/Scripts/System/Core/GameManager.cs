@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -58,6 +56,10 @@ public class GameManager : MonoBehaviour
         {
             SceneSelector.Instance.LoadNextScene();
         }
+        else
+        {
+            moneyText.text = $"{DataManager.Instance.currentMoney}";
+        }
     }
 
     private IEnumerator CountDownLevel()
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             levelDuration--;
         }
+        DataManager.Instance.Earn();
         SceneSelector.Instance.LoadNextScene();
     }
 

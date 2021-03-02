@@ -13,6 +13,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        DataManager.Instance.EndRound();
         SceneSelector.Instance.LoadNextScene(0);
     }
 
