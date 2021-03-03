@@ -5,17 +5,28 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     [SerializeField] private CustomerData data;
+    [SerializeField] private DialogueData dialogueData;
+
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
-    
+
+    [SerializeField] private SpriteRenderer dialogueBox;
+
+    [SerializeField] private ScriptableFloat actualMoney;
+    [SerializeField] private ScriptableFloat expectedMoney;
+    [SerializeField] private ScriptableFloat customersServed;
+
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
     private float _numberOfOrders;
     private float _completedOrders;
+
+    private float _paymentContainer;
+    private bool readyToCollect;
     
     public int SeatTaken { get; set; }
-    
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,6 +38,9 @@ public class Customer : MonoBehaviour
     private void OnDisable()
     {
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+        _paymentContainer = 0;
+        dialogueBox.color = Color.white;
+        orderIcon.GetComponent<SpriteRenderer>().enabled = true;
     }
     
     private void SetOrder()
@@ -44,13 +58,26 @@ public class Customer : MonoBehaviour
 
     private void TakeOrder(Order givenOrder)
     {
+        int _index;
+
         if (_currentOrder.Data == givenOrder.Data)
         {
             _completedOrders++;
+
+            _paymentContainer += givenOrder.Data.Cost;
+
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
+
             if (_completedOrders >= _numberOfOrders + 1)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                dialogueBox.color = Color.green;
+                readyToCollect = true;
+
+                _index = Random.Range(0, dialogueData.customerDialogue.Length);
+
+                orderIcon.GetComponent<SpriteRenderer>().enabled = false;
+                orderText.text = dialogueData.customerDialogue[_index].Dialogue;
             }
         }
         else
@@ -73,5 +100,18 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
-    
+
+    private void OnMouseDown()
+    {
+        if(readyToCollect==true)
+        {
+            DataManager.Instance.PlayerTotalMoney += _paymentContainer;
+            readyToCollect = false;
+            gameObject.SetActive(false);
+        }
+    }
+
+    // Current bugs
+    // 1. Nakakaka receive pa din ng order ang customers kahit nabigay mo na lahat ng order nila
+    // 2. Pag spawn ng new customer naka green (completed order >= number of orders) na agad ang dialogue box
 }

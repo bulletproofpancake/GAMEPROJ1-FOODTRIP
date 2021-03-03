@@ -8,9 +8,9 @@ public class DataManager : Singleton<DataManager>
 
     // Variables for summary screen
     // These reset every round;
-    [SerializeField] ScriptableFloat actualMoney;
-    [SerializeField] ScriptableFloat expectedMoney;
-    [SerializeField] ScriptableFloat customersServed;
+    [SerializeField] private ScriptableFloat actualMoney;
+    [SerializeField] private ScriptableFloat expectedMoney;
+    [SerializeField] private ScriptableFloat customersServed;
 
 
     [SerializeField] private float totalMoney;
