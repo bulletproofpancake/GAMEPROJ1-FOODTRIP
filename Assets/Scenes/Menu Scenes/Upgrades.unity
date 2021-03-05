@@ -425,7 +425,6 @@ GameObject:
   - component: {fileID: 283142835}
   - component: {fileID: 283142834}
   - component: {fileID: 283142833}
-  - component: {fileID: 283142832}
   m_Layer: 5
   m_Name: Upgrade1
   m_TagString: Untagged
@@ -453,18 +452,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1262, y: 438}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &283142832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283142830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40cc045ed8864a645844c0863de2a5f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &283142833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,8 +495,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 283142832}
-        m_MethodName: LoadSummary
+      - m_Target: {fileID: 1808345552}
+        m_MethodName: Upgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1220,6 +1207,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 51808944}
+  upgradeData: {fileID: 11400000, guid: 3652375cc073d2a4091351b912f41d5c, type: 2}
+  orderData:
+  - {fileID: 11400000, guid: ab6e8d767f2ed1443af8539004885b75, type: 2}
+  - {fileID: 11400000, guid: 3df010f36eae0ee44bb2587023deb518, type: 2}
 --- !u!1 &1979654876
 GameObject:
   m_ObjectHideFlags: 0

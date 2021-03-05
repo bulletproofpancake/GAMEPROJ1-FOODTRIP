@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,21 @@ public class OrderData : ScriptableObject
 {
     [SerializeField] private Sprite orderImage;
     [SerializeField] private int orderCost;
-    [SerializeField] private int orderCookTime;
+    [SerializeField] private float baseCookTime;
+    [SerializeField] private float currentCookTime;
 
     public Sprite Image => orderImage;
     public int Cost => orderCost;
-    public int CookTime => orderCookTime;
+    public float CookTime => currentCookTime;
+
+    private void OnEnable()
+    {
+        currentCookTime = baseCookTime;
+    }
+
+    public void ReduceCookTime(float multiplier)
+    {
+        currentCookTime = baseCookTime - (baseCookTime * multiplier);
+    }
+    
 }

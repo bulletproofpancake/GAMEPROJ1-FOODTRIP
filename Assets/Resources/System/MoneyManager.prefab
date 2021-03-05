@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6595811618947696112}
   - component: {fileID: 6595811618947696113}
   m_Layer: 0
-  m_Name: DataManager
+  m_Name: MoneyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersist: 1
-  totalMoney: 0
+  totalMoney: 2000
+  roundMoney: 0
   currentMoney: 0

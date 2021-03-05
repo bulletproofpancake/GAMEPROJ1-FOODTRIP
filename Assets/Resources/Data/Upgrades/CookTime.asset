@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f557fcff3c48fe14ba0df5b709a726f5, type: 3}
   m_Name: CookTime
   m_EditorClassIdentifier: 
-  level: []
+  upgrade:
+  - multiplier: 10
+    cost: 100
+  - multiplier: 15
+    cost: 150
+  - multiplier: 20
+    cost: 200
+  - multiplier: 25
+    cost: 250
+  - multiplier: 50
+    cost: 500
