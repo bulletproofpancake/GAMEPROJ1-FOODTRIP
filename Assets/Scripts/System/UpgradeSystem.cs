@@ -7,7 +7,7 @@ using UnityEngine;
 public class UpgradeSystem:MonoBehaviour
 {
     [SerializeField] protected UpgradeData upgradeData;
-    [SerializeField] protected TextMeshProUGUI upgradeText;
+    [SerializeField] protected TextMeshProUGUI upgradeText, currentText;
     protected int Level;
     
     private void Update()
@@ -16,5 +16,7 @@ public class UpgradeSystem:MonoBehaviour
             upgradeText.text = $"Cost: {upgradeData.Upgrade[Level].cost}";
         else
             upgradeText.text = "Upgrade Complete";
+        
+        currentText.text = $"Level: {Level}";
     }
 }

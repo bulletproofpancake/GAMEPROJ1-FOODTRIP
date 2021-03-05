@@ -7,16 +7,19 @@ using UnityEngine;
 public class OrderData : ScriptableObject
 {
     [SerializeField] private Sprite orderImage;
-    [SerializeField] private int orderCost;
+    [SerializeField] private float baseOrderCost;
+    [SerializeField] private float currentOrderCost;
     [SerializeField] private float baseCookTime;
     [SerializeField] private float currentCookTime;
 
     public Sprite Image => orderImage;
-    public int Cost => orderCost;
+
+    public float Cost => currentOrderCost;
     public float CookTime => currentCookTime;
 
     private void OnEnable()
     {
+        currentOrderCost = baseOrderCost;
         currentCookTime = baseCookTime;
     }
 
@@ -24,5 +27,9 @@ public class OrderData : ScriptableObject
     {
         currentCookTime = baseCookTime - (baseCookTime * multiplier);
     }
-    
+
+    public void IncreaseOrderCost(float multiplier)
+    {
+        currentOrderCost = baseOrderCost + (baseOrderCost * multiplier);
+    }
 }
