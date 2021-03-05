@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 876499571202053958}
-  - component: {fileID: 1341604726995576732}
+  - component: {fileID: 4452024837193188929}
   - component: {fileID: 6807643634568628927}
   - component: {fileID: 5991150695849982127}
   - component: {fileID: 3444510248852689126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fishball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,8 +34,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1341604726995576732
-BoxCollider2D:
+--- !u!60 &4452024837193188929
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -57,9 +57,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5}
+      - {x: -0.5, y: -0.000000021855694}
+      - {x: 0.00000004371139, y: -0.5}
+      - {x: 0.5, y: 0.0000000059624403}
 --- !u!50 &6807643634568628927
 Rigidbody2D:
   serializedVersion: 4
