@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578317293}
   m_Layer: 0
-  m_Name: Pooled Obejcts
+  m_Name: Pooled Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
