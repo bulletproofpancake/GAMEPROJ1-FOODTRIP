@@ -41,6 +41,7 @@ public class Customer : MonoBehaviour
         _paymentContainer = 0;
         dialogueBox.color = Color.white;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
+        readyToCollect = false;
     }
     
     private void SetOrder()
@@ -70,7 +71,6 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
-                //gameObject.SetActive(false);
                 dialogueBox.color = Color.green;
                 readyToCollect = true;
 
@@ -78,6 +78,8 @@ public class Customer : MonoBehaviour
 
                 orderIcon.GetComponent<SpriteRenderer>().enabled = false;
                 orderText.text = dialogueData.customerDialogue[_index].Dialogue;
+
+                StartCoroutine(CustomerDespawn());
             }
         }
         else
@@ -99,6 +101,13 @@ public class Customer : MonoBehaviour
         orderIcon.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    private IEnumerator CustomerDespawn()
+    {
+        yield return new WaitForSeconds(data.DespawnTime);
+
+        gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
