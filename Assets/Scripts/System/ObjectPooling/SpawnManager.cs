@@ -40,7 +40,7 @@ public class SpawnManager : Singleton<SpawnManager>
     {
         if (_allowedToSpawn)
         {
-            Spawn(customers[Random.Range(0,customers.Length)]);
+            Spawn(customers[Random.Range(0,customers.Length-1)]);
         }
     }
 

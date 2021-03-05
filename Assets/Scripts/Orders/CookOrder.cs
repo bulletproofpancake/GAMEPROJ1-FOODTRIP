@@ -29,7 +29,7 @@ public class CookOrder : MonoBehaviour
     }
     private IEnumerator AddFood() {
         yield return new WaitForSeconds(orderToCook.Data.CookTime);
-
+        TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
     }
 
 
