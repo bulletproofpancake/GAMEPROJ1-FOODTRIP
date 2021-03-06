@@ -8,17 +8,17 @@ public class OrderCostUpgrade : UpgradeSystem
 
     public void UpgradeOrderCost()
     {
-        if(Level < upgradeData.Upgrade.Length){
-            if (MoneyManager.Instance.totalMoney >= upgradeData.Upgrade[Level].cost)
+        if(upgradeData.Level < upgradeData.Upgrade.Length){
+            if (MoneyManager.Instance.totalMoney >= upgradeData.Upgrade[upgradeData.Level].cost)
             {
-                MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[Level].cost;
+                MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[upgradeData.Level].cost;
 
                 foreach (var data in orderData)
                 {
-                    data.IncreaseOrderCost(upgradeData.Upgrade[Level].Multiplier);
+                    data.IncreaseOrderCost(upgradeData.Upgrade[upgradeData.Level].Multiplier);
                 }
-                if (Level < upgradeData.Upgrade.Length)
-                    Level++;
+                if (upgradeData.Level < upgradeData.Upgrade.Length)
+                    upgradeData.Level++;
             }
             else
             {

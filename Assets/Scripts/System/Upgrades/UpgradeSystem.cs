@@ -8,15 +8,14 @@ public class UpgradeSystem:MonoBehaviour
 {
     [SerializeField] protected UpgradeData upgradeData;
     [SerializeField] protected TextMeshProUGUI upgradeText, currentText;
-    protected int Level;
     
     private void Update()
     {
-        if(Level < upgradeData.Upgrade.Length)
-            upgradeText.text = $"Cost: {upgradeData.Upgrade[Level].cost}";
+        if(upgradeData.Level < upgradeData.Upgrade.Length)
+            upgradeText.text = $"Cost: {upgradeData.Upgrade[upgradeData.Level].cost}";
         else
             upgradeText.text = "Upgrade Complete";
         
-        currentText.text = $"Level: {Level}";
+        currentText.text = $"Level: {upgradeData.Level}";
     }
 }

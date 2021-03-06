@@ -7,17 +7,17 @@ public class CookTimeUpgrade : UpgradeSystem
 
     public void UpgradeCookTime()
     {
-        if(Level < upgradeData.Upgrade.Length){
-            if (MoneyManager.Instance.totalMoney >= upgradeData.Upgrade[Level].cost)
+        if(upgradeData.Level < upgradeData.Upgrade.Length){
+            if (MoneyManager.Instance.totalMoney >= upgradeData.Upgrade[upgradeData.Level].cost)
             {
-                MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[Level].cost;
+                MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[upgradeData.Level].cost;
 
                 foreach (var data in orderData)
                 {
-                    data.ReduceCookTime(upgradeData.Upgrade[Level].Multiplier);
+                    data.ReduceCookTime(upgradeData.Upgrade[upgradeData.Level].Multiplier);
                 }
-                if (Level < upgradeData.Upgrade.Length)
-                    Level++;
+                if (upgradeData.Level < upgradeData.Upgrade.Length)
+                    upgradeData.Level++;
             }
             else
             {

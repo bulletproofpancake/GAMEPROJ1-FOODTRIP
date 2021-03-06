@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeData: {fileID: 11400000, guid: 53c03a52cfe4e6a47945fb9bdeb7e3cc, type: 2}
   upgradeText: {fileID: 2103130699}
-  currentText: {fileID: 0}
+  currentText: {fileID: 1049993316}
   orderData:
   - {fileID: 11400000, guid: ab6e8d767f2ed1443af8539004885b75, type: 2}
   - {fileID: 11400000, guid: 3df010f36eae0ee44bb2587023deb518, type: 2}
@@ -1342,7 +1342,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 978232594}
-        m_MethodName: 
+        m_MethodName: UpgradeOrderCost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeData: {fileID: 11400000, guid: 528c733707c20ae4b854a0c5837492e8, type: 2}
   upgradeText: {fileID: 1662770449}
-  currentText: {fileID: 0}
+  currentText: {fileID: 757683090}
   bowl: {fileID: 5406834193081483512, guid: 39f32ec2c89358145817c28b22dfed5c, type: 3}
 --- !u!114 &983794607
 MonoBehaviour:
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 1049993317}
   - component: {fileID: 1049993316}
   m_Layer: 5
-  m_Name: Current (1)
+  m_Name: Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

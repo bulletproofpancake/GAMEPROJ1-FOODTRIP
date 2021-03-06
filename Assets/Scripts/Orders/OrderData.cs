@@ -13,7 +13,6 @@ public class OrderData : ScriptableObject
     [SerializeField] private float currentCookTime;
 
     public Sprite Image => orderImage;
-
     public float Cost => currentOrderCost;
     public float CookTime => currentCookTime;
 
