@@ -1446,7 +1446,8 @@ MonoBehaviour:
   upgradeData: {fileID: 11400000, guid: 528c733707c20ae4b854a0c5837492e8, type: 2}
   upgradeText: {fileID: 1662770449}
   currentText: {fileID: 757683090}
-  bowl: {fileID: 5406834193081483512, guid: 39f32ec2c89358145817c28b22dfed5c, type: 3}
+  bowlObject: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
+    type: 3}
 --- !u!114 &983794607
 MonoBehaviour:
   m_ObjectHideFlags: 0
