@@ -94,5 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b2293c925df5b4a8daab46875e95ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseWashTime: 1
+  currentWashTime: 1
   isDirty: 0
-  washTime: 1

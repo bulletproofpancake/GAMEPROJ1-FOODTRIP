@@ -33,7 +33,7 @@ public class Sink : Singleton<Sink>
     {
         bowl.GetComponent<Bowl>().isDirty = false;
         _bowls.Remove(bowl);
-        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().washTime);       
+        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);       
         BowlSpawner.Instance.AddBowl(bowl);
     }
     

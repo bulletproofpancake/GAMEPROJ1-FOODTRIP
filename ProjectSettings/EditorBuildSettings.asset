@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Church/Arcade.unity
     guid: 9e5a98d14ba6a9a4ab59c036fb882654
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/Church/VN.unity
-    guid: 07813c459e4d6c8479949889783338ba
-  - enabled: 1
     path: Assets/Scenes/Menu Scenes/Summary.unity
     guid: 365863a6de1c0134faf6601d69378a64
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Upgrades.unity
+    guid: 31ae36dc07034b14c8f327ab6605580d
   m_configObjects: {}
