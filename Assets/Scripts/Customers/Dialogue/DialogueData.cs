@@ -10,7 +10,7 @@ public class DialogueData : ScriptableObject
 [System.Serializable]
 public class DialogueInfo
 {
-    public OrderData order;
+    public Order order;
     public Sprite sprite;
     
     [TextArea]

@@ -8,7 +8,7 @@ public class DialogueManager : Singleton<DialogueManager>
 {
     public NPCData data;
     [SerializeField] private TextMeshProUGUI nameBox, dialogueBox;
-    [SerializeField] private int dataIndex, textIndex;
+    public int dataIndex, textIndex;
     [SerializeField] private GameObject customerObject;
     private Customer _customer;
     private SpriteRenderer _spriteRenderer;

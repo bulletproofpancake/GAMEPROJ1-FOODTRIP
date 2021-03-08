@@ -44,7 +44,6 @@ public class SpawnManager : Singleton<SpawnManager>
         {
             Spawn(DialogueManager.Instance.data);
         }
-
     }
 
     #region CustomerSpawning

@@ -13,6 +13,7 @@ public class NPCData : CustomerData
         hideFlags = HideFlags.DontUnloadUnusedAsset;
     }
 
+    //TODO: WHAT HAPPENS WHEN COUNT EXCEEDS AVAILABLE ENCOUNTERS
     public void IncrementEncounter()
     {
         count++;
@@ -22,6 +23,6 @@ public class NPCData : CustomerData
 [System.Serializable]
 public class NpcEncounter
 {
-    public int encounter;
     public DialogueData[] dialogueDatas;
+    public int DialogueCount => dialogueDatas.Length;
 }

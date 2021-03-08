@@ -56,6 +56,13 @@ public class Customer : MonoBehaviour
         orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
     }
 
+    public void GiveOrder(Order order)
+    {
+        _currentOrder = order;
+        orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;
+        orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
+    }
+
     private void TakeOrder(Order givenOrder)
     {
         if (_currentOrder.Data == givenOrder.Data)
@@ -68,11 +75,26 @@ public class Customer : MonoBehaviour
                 if (GameManager.Instance.isVN)
                 {
                     var npcData = (NPCData) data;
-                    npcData.IncrementEncounter();
-                    GameManager.Instance.customers.Remove(this);
-                    GameManager.Instance.completedCustomers++;
+                    if (npcData.Encounter[npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
+                    {
+                        orderBox.SetActive(false);
+                        SetOrder();
+                        GiveOrder();
+                        DialogueManager.Instance.Advance();
+                    }
+                    else
+                    {
+                        npcData.IncrementEncounter();
+                        GameManager.Instance.customers.Remove(this);
+                        GameManager.Instance.completedCustomers++;
+                        gameObject.SetActive(false);
+                    }
+                    
                 }
-                gameObject.SetActive(false);
+                else
+                {
+                    gameObject.SetActive(false);
+                }
             }
         }
         else

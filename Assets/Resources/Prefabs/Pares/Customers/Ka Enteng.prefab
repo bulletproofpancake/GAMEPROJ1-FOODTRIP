@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2942762d9e67d604db5e4a190c252ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f, type: 2}
+  data: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
   orderBox: {fileID: 2546742413702871810}
