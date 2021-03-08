@@ -29,7 +29,9 @@ public class SpawnManager : Singleton<SpawnManager>
             seat.isTaken = false;
         }
 
-        StartCoroutine(SpawnCustomers());
+        if(!GameManager.Instance.isVN){
+            StartCoroutine(SpawnCustomers());
+        }
 
     }
 
