@@ -981,12 +981,12 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[0].parent
       value: 
-      objectReference: {fileID: 528899800}
+      objectReference: {fileID: 8597260959869166265}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[1].parent
       value: 
-      objectReference: {fileID: 528899800}
+      objectReference: {fileID: 8597260959869166265}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[2].parent
@@ -996,7 +996,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[3].parent
       value: 
-      objectReference: {fileID: 8597260959869166267}
+      objectReference: {fileID: 528899800}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[4].parent
@@ -1463,7 +1463,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1815896131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1025104546}
+        m_MethodName: Advance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1815896131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,6 +1818,12 @@ Transform:
 --- !u!4 &8597260959869166264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 980794793141296145, guid: aae6923240baa7d408d9c884e1248b73,
+    type: 3}
+  m_PrefabInstance: {fileID: 8597260959869166262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8597260959869166265 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3632026253546606551, guid: aae6923240baa7d408d9c884e1248b73,
     type: 3}
   m_PrefabInstance: {fileID: 8597260959869166262}
   m_PrefabAsset: {fileID: 0}

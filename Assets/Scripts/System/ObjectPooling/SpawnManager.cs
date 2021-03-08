@@ -18,8 +18,9 @@ public class SpawnManager : Singleton<SpawnManager>
     public Seat[] bowlSeat;
     private int _bowlIndex;
     
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         foreach (var seat in customerSeat)
         {
             seat.isTaken = false;
@@ -28,7 +29,14 @@ public class SpawnManager : Singleton<SpawnManager>
         {
             seat.isTaken = false;
         }
+        foreach (var seat in bowlSeat)
+        {
+            seat.isTaken = false;
+        }
+    }
 
+    private void Start()
+    {
         if(!GameManager.Instance.isVN){
             StartCoroutine(SpawnCustomers());
         }

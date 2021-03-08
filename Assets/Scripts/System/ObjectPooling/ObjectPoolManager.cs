@@ -5,11 +5,16 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
 {
     public List<ObjectPoolItems> itemsToPool;
     private List<GameObject> pooledObjects;
+    protected override void Awake()
+    {
+        base.Awake();
+        InstantiateObjects();
+    }
 
-    private void Start()
+    public void InstantiateObjects()
     {
         pooledObjects = new List<GameObject>();
-        
+
         foreach (var item in itemsToPool)
         {
             for (var i = 0; i < item.amountToPool; i++)

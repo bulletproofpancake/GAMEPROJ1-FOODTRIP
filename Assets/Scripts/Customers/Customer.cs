@@ -24,6 +24,7 @@ public class Customer : MonoBehaviour
         if (GameManager.Instance.isVN)
         {
             orderBox.SetActive(false);
+            GameManager.Instance.customers.Add(this);
             DialogueManager.Instance.GetCustomerObject(gameObject);
             DialogueManager.Instance.Advance();
         }
@@ -64,6 +65,11 @@ public class Customer : MonoBehaviour
             MoneyManager.Instance.Collect(_currentOrder.Data.Cost);
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                if (GameManager.Instance.isVN)
+                {
+                    GameManager.Instance.customers.Remove(this);
+                    GameManager.Instance.completedCustomers++;
+                }
                 gameObject.SetActive(false);
             }
         }

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;
     [SerializeField] private int levelDuration;
-    
+    public List<Customer> customers;
+    public int completedCustomers;
+
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI moneyText;
@@ -20,7 +23,7 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
-        
+
         if(ShiftManager.Instance.Data != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
@@ -54,14 +57,17 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        if (isVN && Input.GetKeyDown(KeyCode.Space))
+        if (isVN && completedCustomers > customers.Count)
         {
+            //TODO: EARN MONEY AFTER FINISHING VN
             SceneSelector.Instance.LoadNextScene();
         }
         else
         {
             moneyText.text = $"{MoneyManager.Instance.currentMoney}";
         }
+        
+        
     }
 
     private IEnumerator CountDownLevel()
