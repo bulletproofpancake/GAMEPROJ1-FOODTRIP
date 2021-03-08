@@ -115,8 +115,4 @@ public class Customer : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
-    // Current bugs
-    // 1. Nakakaka receive pa din ng order ang customers kahit nabigay mo na lahat ng order nila
-    // 2. Pag spawn ng new customer naka green (completed order >= number of orders) na agad ang dialogue box
 }
