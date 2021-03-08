@@ -29,6 +29,5 @@ public class MoneyManager : Singleton<MoneyManager>
     public void Spend(float cost)
     {
         totalMoney -= cost;
-    }
-    
+    } 
 }

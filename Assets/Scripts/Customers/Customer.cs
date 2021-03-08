@@ -5,17 +5,24 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     [SerializeField] private CustomerData data;
+    [SerializeField] private DialogueData dialogueData;
+
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
-    
+
+    [SerializeField] private SpriteRenderer dialogueBox;
+
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
     private float _numberOfOrders;
     private float _completedOrders;
+
+    private float _paymentContainer;
+    private bool readyToCollect;
     
     public int SeatTaken { get; set; }
-    
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,6 +34,10 @@ public class Customer : MonoBehaviour
     private void OnDisable()
     {
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+        _paymentContainer = 0;
+        dialogueBox.color = Color.white;
+        orderIcon.GetComponent<SpriteRenderer>().enabled = true;
+        readyToCollect = false;
     }
     
     private void SetOrder()
@@ -44,14 +55,27 @@ public class Customer : MonoBehaviour
 
     private void TakeOrder(Order givenOrder)
     {
+        int _index;
+
         if (_currentOrder.Data == givenOrder.Data)
         {
             _completedOrders++;
+
+            _paymentContainer += givenOrder.Data.Cost;
+
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
-            MoneyManager.Instance.Collect(_currentOrder.Data.Cost);
+
             if (_completedOrders >= _numberOfOrders + 1)
             {
-                gameObject.SetActive(false);
+                dialogueBox.color = Color.green;
+                readyToCollect = true;
+
+                _index = Random.Range(0, dialogueData.customerDialogue.Length);
+
+                orderIcon.GetComponent<SpriteRenderer>().enabled = false;
+                orderText.text = dialogueData.customerDialogue[_index].Dialogue;
+
+                StartCoroutine(CustomerDespawn());
             }
         }
         else
@@ -74,5 +98,21 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
-    
+
+    private IEnumerator CustomerDespawn()
+    {
+        yield return new WaitForSeconds(data.DespawnTime);
+
+        gameObject.SetActive(false);
+    }
+
+    private void OnMouseDown()
+    {
+        if(readyToCollect==true)
+        {
+            MoneyManager.Instance.Collect(_paymentContainer);
+            readyToCollect = false;
+            gameObject.SetActive(false);
+        }
+    }
 }
