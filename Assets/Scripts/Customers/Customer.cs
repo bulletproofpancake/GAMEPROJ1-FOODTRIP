@@ -67,6 +67,8 @@ public class Customer : MonoBehaviour
             {
                 if (GameManager.Instance.isVN)
                 {
+                    var npcData = (NPCData) data;
+                    npcData.IncrementEncounter();
                     GameManager.Instance.customers.Remove(this);
                     GameManager.Instance.completedCustomers++;
                 }

@@ -13,12 +13,12 @@ public class DialogueManager : Singleton<DialogueManager>
     private Customer _customer;
     private SpriteRenderer _spriteRenderer;
     private Sprite _base;
-    
+
     private void OnEnable()
     {
-        nameBox.name = data.name;
+        nameBox.text = data.name;
     }
-    
+
     private void OnDisable()
     {
         dataIndex++;
