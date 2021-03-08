@@ -110,7 +110,7 @@ public class Customer : MonoBehaviour
     {
         if(readyToCollect==true)
         {
-            DataManager.Instance.PlayerTotalMoney += _paymentContainer;
+            MoneyManager.Instance.Collect(_paymentContainer);
             readyToCollect = false;
             gameObject.SetActive(false);
         }
