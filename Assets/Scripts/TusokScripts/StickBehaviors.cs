@@ -34,28 +34,33 @@ public class StickBehaviors : MonoBehaviour
 
   #endregion
 
+
+  // ? STACK DATA STRUCT FOR GROUPING FOODS IN THE STICK
+  // ! MIGHT NOT USE THIS ON THE LONG RUN. WILL STILL KEEP AN EYE OUT IN CASE I FIND A WAY FOR THIS TO BE USEFUL
   //stack for the food
   private Stack<GameObject> foodStack = new Stack<GameObject>();
 
   [SerializeField]
   private AreaToStick[] foodStickPos = new AreaToStick[3];
 
+  // * USE LIST INSTEAD FOR GROUPING FOODS IN THE STICK
+  private List<GameObject> foodsInTheStick = new List<GameObject>();
+
   [SerializeField]
   private Transform pooledObjectReference;
 
 
-
-
-
   private void Start()
   {
+
+
   }
   private void Update()
   {
     if (Input.GetKeyDown(KeyCode.E))
     {
+      RemoveFood();
       Debug.Log("Did Press E");
-      PopOutFood();
     }
 
     LaserPointer();
@@ -64,9 +69,7 @@ public class StickBehaviors : MonoBehaviour
 
   }
 
-  //! REDO LASERPOINTER FUNCTION
-  // TODO make sure to add controls to raycasting
-
+  // ! MIGHT REDO THE CODE AGAIN
   private void LaserPointer()
   {
     //Setting up 2d ray 
@@ -77,20 +80,35 @@ public class StickBehaviors : MonoBehaviour
 
     var hitFood = hit.collider.gameObject;
 
+
+
     if (hit.collider != null)
     {
 
       // ! there are times where it does not pick up the food
       if (hitFood != null && hitFood.GetComponent<Order>() && Input.GetMouseButtonDown(1))
       {
-        Debug.Log("Did Press");
+        int counter = 0;
+        // for loop checks if there is still space within the stick
+        for (int i = 0; i < foodStickPos.Length; i++)
+        {
+          if (!foodStickPos[i].doesContain)
+            break; // detects that there is still space in the stick
+          else
+            counter++;
+
+        }
+        if (counter > foodStickPos.Length - 1)
+        {// checks if the coutner has gone atleast 3 
+          Debug.LogWarning("stick is full!");
+          return;
+
+        }
+
         hitFood.transform.rotation = Quaternion.Euler(Vector3.zero);
         StackInFood(hitFood);
-        //return;
       }
     }
-
-
 
   }
 
@@ -111,10 +129,8 @@ public class StickBehaviors : MonoBehaviour
   private void OnMouseDrag()
   {
     // this is the line of code that rotates the stick around. 
-    // TODO make sure to optimize this line of code
-    // ! still buggy. It bugs aorund at certain positions randomly. 
-    // ! lowering the sensitivity could be the solution but UX feels like a heavy stick
-    transform.RotateAround(referencePosition.position, zAxis, Input.GetAxis("Mouse X") * 480f * Time.deltaTime);
+    // TODO redo the rotation. Somehow, the reference comes from above
+    transform.RotateAround(referencePosition.position, zAxis, Input.GetAxisRaw("Mouse X") * 500f * Time.deltaTime);
 
     // for mouse dragging
     mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -125,52 +141,42 @@ public class StickBehaviors : MonoBehaviour
 
 
   //function that puts the food in the stick.
-  // TODO make this so that it uses Stack 
-  // ! not yet done. 
   private void StackInFood(GameObject food)
   {
     food.GetComponent<Rigidbody2D>().isKinematic = true;
     food.GetComponent<Rigidbody2D>().Sleep();
-    food.GetComponent<Rigidbody2D>().freezeRotation = true;
+    foodsInTheStick.Insert(0, food);
 
-    foodStack.Push(food);
-    int index = 0;
-    foreach (GameObject foods in foodStack)
-    {
+    SetFoodInStickPosition();
 
-      food.transform.position = foodStickPos[index].stickInPos.position;
-      food.transform.parent = foodStickPos[index].stickInPos.transform;
-
-      index++;
-    }
   }
 
-  //function that removes the food from the object
-  // TODO implement this so that 
-  private void PopOutFood()
+  //function that removes the food from the stick
+  private void RemoveFood()
   {
-    GameObject getTopObject;
+    GameObject foodOnTop = foodsInTheStick[0];
+    int LastIndex = foodsInTheStick.Count - 1;
 
+    foodOnTop.GetComponent<Rigidbody2D>().isKinematic = false;
+    foodOnTop.GetComponent<Rigidbody2D>().WakeUp();
 
-    getTopObject = foodStack.Pop(); // this just references the top of the food object
-    foodStack.Pop();
-    // this checks if the Stack contains a gameobject
-    if (getTopObject == null)
+    foodOnTop.transform.parent = pooledObjectReference.transform;
+
+    foodStickPos[LastIndex].doesContain = false;
+    foodsInTheStick.Remove(foodOnTop);
+    SetFoodInStickPosition();
+
+  }
+
+  private void SetFoodInStickPosition()
+  {
+    for (int index = 0; index <= foodsInTheStick.Count; index++)
     {
-      Debug.LogWarning("There is no food in this stick.");
+      foodsInTheStick[index].transform.position = foodStickPos[index].stickInPos.position;
+      foodStickPos[index].doesContain = true;
+      foodsInTheStick[index].transform.parent = foodStickPos[index].stickInPos.transform;
     }
 
-
-    //getTopObject.transform.localScale *= 2.0f;
-    getTopObject.GetComponent<Rigidbody2D>().isKinematic = false;
-    getTopObject.GetComponent<Rigidbody2D>().WakeUp();
-    getTopObject.GetComponent<Rigidbody2D>().freezeRotation = false;
-
-
-    getTopObject.transform.parent = pooledObjectReference.transform; // food goes back to the pooledObjects
-
-
-    //test 
   }
 
 }
