@@ -211,12 +211,12 @@ PrefabInstance:
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: customers.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: customerSeat.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -264,7 +264,7 @@ PrefabInstance:
         type: 3}
       propertyPath: customerSeat.Array.data[0].slot
       value: 
-      objectReference: {fileID: 8597260959869166265}
+      objectReference: {fileID: 8597260959869166264}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: customerSeat.Array.data[1].slot
@@ -730,9 +730,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersist: 0
-  data: {fileID: 0}
-  nameBox: {fileID: 0}
-  dialogueBox: {fileID: 0}
+  data: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f, type: 2}
+  nameBox: {fileID: 1024511961}
+  dialogueBox: {fileID: 1897062337}
+  dataIndex: 0
+  textIndex: 0
+  customerObject: {fileID: 0}
 --- !u!4 &1025104547
 Transform:
   m_ObjectHideFlags: 0
@@ -947,7 +950,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -962,12 +965,12 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[2].id
-      value: Student
+      value: Bowl
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].id
-      value: Worker
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -988,12 +991,12 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[2].parent
       value: 
-      objectReference: {fileID: 528899800}
+      objectReference: {fileID: 8597260959869166267}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].parent
       value: 
-      objectReference: {fileID: 528899800}
+      objectReference: {fileID: 8597260959869166267}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[4].parent
@@ -1030,18 +1033,18 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[2].objectToPool
       value: 
-      objectReference: {fileID: 6077367765372447431, guid: 3ca788167ccfa3546945574a1af5614a,
+      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].amountToPool
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].objectToPool
       value: 
-      objectReference: {fileID: 537334110035868631, guid: 53656ec6bf562d349a0b3be9fdbf351b,
+      objectReference: {fileID: 6077367765372447431, guid: 7a420e784a6a9044b9625f591da5e9b6,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -1804,12 +1807,6 @@ Transform:
 --- !u!4 &8597260959869166264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 980794793141296145, guid: aae6923240baa7d408d9c884e1248b73,
-    type: 3}
-  m_PrefabInstance: {fileID: 8597260959869166262}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8597260959869166265 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4962202806993891576, guid: aae6923240baa7d408d9c884e1248b73,
     type: 3}
   m_PrefabInstance: {fileID: 8597260959869166262}
   m_PrefabAsset: {fileID: 0}

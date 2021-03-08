@@ -32,6 +32,10 @@ public class SpawnManager : Singleton<SpawnManager>
         if(!GameManager.Instance.isVN){
             StartCoroutine(SpawnCustomers());
         }
+        else
+        {
+            Spawn(DialogueManager.Instance.data);
+        }
 
     }
 

@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
     [SerializeField] private CustomerData data;
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
+    public GameObject orderBox;
     
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
@@ -15,7 +18,17 @@ public class Customer : MonoBehaviour
     private float _completedOrders;
     
     public int SeatTaken { get; set; }
-    
+
+    private void Start()
+    {
+        if (GameManager.Instance.isVN)
+        {
+            orderBox.SetActive(false);
+            DialogueManager.Instance.GetCustomerObject(gameObject);
+            DialogueManager.Instance.Advance();
+        }
+    }
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();

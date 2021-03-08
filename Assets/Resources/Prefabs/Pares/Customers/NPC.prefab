@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2928564202525044758}
   - component: {fileID: 5359904429127108726}
   m_Layer: 0
-  m_Name: Student
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6432ca110e881844ea22ad40eb59e744, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 696ffee4d4bbada459e8bf1fcbeeecb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2942762d9e67d604db5e4a190c252ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 0cc879b1788214c46a190230750cd6ad, type: 2}
+  data: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
   orderBox: {fileID: 2546742413702871810}
