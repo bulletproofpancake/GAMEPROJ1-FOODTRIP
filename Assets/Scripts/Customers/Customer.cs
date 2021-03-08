@@ -12,10 +12,6 @@ public class Customer : MonoBehaviour
 
     [SerializeField] private SpriteRenderer dialogueBox;
 
-    [SerializeField] private ScriptableFloat actualMoney;
-    [SerializeField] private ScriptableFloat expectedMoney;
-    [SerializeField] private ScriptableFloat customersServed;
-
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
