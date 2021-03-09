@@ -15,6 +15,8 @@ public class Customer : MonoBehaviour
     private float _completedOrders;
     
     public int SeatTaken { get; set; }
+
+    public GameObject particleEffect;
     
     private void OnEnable()
     {
@@ -26,6 +28,7 @@ public class Customer : MonoBehaviour
 
     private void OnDisable()
     {
+        particleEffect.SetActive(false);
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
     }
     
@@ -46,6 +49,7 @@ public class Customer : MonoBehaviour
     {
         if (_currentOrder.Data == givenOrder.Data)
         {
+            StartCoroutine(ShowParticleEffect());
             _completedOrders++;
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
             if (_completedOrders >= _numberOfOrders + 1)
@@ -73,5 +77,11 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
-    
+
+    private IEnumerator ShowParticleEffect()
+    {
+        particleEffect.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        particleEffect.SetActive(true);
+    }
 }

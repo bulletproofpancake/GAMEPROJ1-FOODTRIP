@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Order : MonoBehaviour
@@ -12,14 +13,22 @@ public class Order : MonoBehaviour
 
     public int SeatTaken { get; set; }
 
+    [SerializeField] private GameObject smoke;
+
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.Image;
     }
 
+    private void OnEnable()
+    {
+        smoke.SetActive(true);
+    }
+
     private void OnDisable()
     {
+        smoke.SetActive(false);
         SpawnManager.Instance.foodSeat[SeatTaken].isTaken = false;
     }
 
