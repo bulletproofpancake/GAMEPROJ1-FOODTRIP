@@ -34,8 +34,12 @@ public class Customer : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
-        //SetOrder();
-        //GiveOrder();
+        
+        if (!GameManager.Instance.isVN)
+        {
+            SetOrder();
+            GiveOrder();
+        }
     }
 
     private void OnDisable()
