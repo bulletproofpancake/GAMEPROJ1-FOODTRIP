@@ -16,7 +16,7 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void OnEnable()
     {
-        nameBox.text = data.name;
+        
     }
 
     private void OnDisable()
@@ -40,6 +40,7 @@ public class DialogueManager : Singleton<DialogueManager>
         
         if (textIndex < data.Encounter[data.Count].dialogueDatas[dataIndex].Info.Length)
         {
+            nameBox.text = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].speakerName;
             _spriteRenderer.sprite = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].sprite;
             dialogueBox.text = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].text;
             textIndex++;

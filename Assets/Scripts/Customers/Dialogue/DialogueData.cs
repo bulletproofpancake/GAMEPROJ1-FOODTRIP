@@ -12,7 +12,7 @@ public class DialogueInfo
 {
     public Order order;
     public Sprite sprite;
-    
+    public string speakerName;
     [TextArea]
     public string text;
 }
