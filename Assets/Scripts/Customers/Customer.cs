@@ -34,8 +34,8 @@ public class Customer : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
-        SetOrder();
-        GiveOrder();
+        //SetOrder();
+        //GiveOrder();
     }
 
     private void OnDisable()
@@ -43,13 +43,13 @@ public class Customer : MonoBehaviour
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
     }
     
-    private void SetOrder()
+    public void SetOrder()
     {
         _completedOrders = 0;
         _numberOfOrders = Random.Range(0, data.PossibleOrders.Length);
     }
     
-    private void GiveOrder()
+    public void GiveOrder()
     {
         _currentOrder = data.SelectOrder();
         orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;

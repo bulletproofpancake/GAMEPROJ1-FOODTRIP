@@ -13,11 +13,7 @@ public class DialogueManager : Singleton<DialogueManager>
     private Customer _customer;
     private SpriteRenderer _spriteRenderer;
     private Sprite _base;
-
-    private void OnEnable()
-    {
-        
-    }
+    [SerializeField] private Order _order;
 
     private void OnDisable()
     {
@@ -37,20 +33,32 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         if (!gameObject.activeSelf)
             gameObject.SetActive(true);
-        
         if (textIndex < data.Encounter[data.Count].dialogueDatas[dataIndex].Info.Length)
         {
             nameBox.text = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].speakerName;
             _spriteRenderer.sprite = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].sprite;
             dialogueBox.text = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].text;
+            _order = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].order;
             textIndex++;
         }
         else
         {
+            if(_order!=null)
+            {
+                _customer.SetOrder();
+                _customer.GiveOrder(_order);
+            }
+            else
+            {
+                _customer.SetOrder();
+                _customer.GiveOrder();
+            }
             gameObject.SetActive(false);
             _spriteRenderer.sprite = _base;
             _customer.orderBox.SetActive(true);
         }
+
+        print(_order);
     }
     
 }
