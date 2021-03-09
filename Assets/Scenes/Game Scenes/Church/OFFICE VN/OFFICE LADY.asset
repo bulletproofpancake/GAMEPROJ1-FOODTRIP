@@ -17,7 +17,10 @@ MonoBehaviour:
   encounter:
   - dialogueDatas:
     - {fileID: 11400000, guid: 747bd2efa1ca1f54a92053c143f435a9, type: 2}
-  - dialogueDatas: []
-  - dialogueDatas: []
-  - dialogueDatas: []
+  - dialogueDatas:
+    - {fileID: 11400000, guid: a257cc2ebd6d1604badf664ee824ccb5, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: edae6046ad5f45b478d57d305fd0eea1, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: aef2d684c7647a6438815d052981ab87, type: 2}
   count: 0

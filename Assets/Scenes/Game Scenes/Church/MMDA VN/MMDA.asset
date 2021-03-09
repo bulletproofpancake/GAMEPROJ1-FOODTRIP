@@ -23,4 +23,4 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6f08956b672659a4eb11727417f65dea, type: 2}
   - dialogueDatas:
     - {fileID: 11400000, guid: 963c3b4ba1c16e44c81a15d979ee5e4e, type: 2}
-  count: 0
+  count: 2

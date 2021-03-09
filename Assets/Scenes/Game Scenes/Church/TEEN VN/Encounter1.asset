@@ -12,4 +12,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
   m_Name: Encounter1
   m_EditorClassIdentifier: 
-  info: []
+  info:
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Hey, what can I get for you?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: Can I see your menu?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Come again?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: The menu. Do you have one?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: I uh, don't have a menu, I suppose.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Pares and rice are all you're gonna get, as you can see with my pot full
+      of savory pares.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: Right! right, I knew that.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: I'll have that then.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 
