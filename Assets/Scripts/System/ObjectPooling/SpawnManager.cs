@@ -20,7 +20,6 @@ public class SpawnManager : Singleton<SpawnManager>
     
     protected override void Awake()
     {
-        base.Awake();
         foreach (var seat in customerSeat)
         {
             seat.isTaken = false;
@@ -41,7 +40,7 @@ public class SpawnManager : Singleton<SpawnManager>
             StartCoroutine(SpawnCustomers());
         }
         else
-        {
+        {   
             Spawn(DialogueManager.Instance.data);
         }
     }
@@ -94,7 +93,7 @@ public class SpawnManager : Singleton<SpawnManager>
             Spawn(customers[Random.Range(0,customers.Length)]);
         }
     }
-    
+
     #endregion
 
     #region FoodSpawning
