@@ -13,7 +13,13 @@ public class CookOrder : MonoBehaviour
 
     private IEnumerator Cook()
     {
+        FindObjectOfType<AudioManager>().Play("CookingSFX");
+
         yield return new WaitForSeconds(orderToCook.Data.CookTime);
         SpawnManager.Instance.Spawn(orderToCook.Data);
+
+        FindObjectOfType<AudioManager>().Stop("CookingSFX");
+
+        FindObjectOfType<AudioManager>().Play("OrderReady");
     }
 }
