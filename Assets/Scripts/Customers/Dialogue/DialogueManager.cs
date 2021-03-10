@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
-    public NPCData data;
+    private NPCData _data;
     [SerializeField] private TextMeshProUGUI nameBox, dialogueBox;
     public int dataIndex, textIndex;
     [SerializeField] private GameObject customerObject;
@@ -25,6 +25,7 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         customerObject = customer;
         _customer = customerObject.GetComponent<Customer>();
+        _data = (NPCData)_customer.Data;
         _spriteRenderer = customerObject.GetComponent<SpriteRenderer>();
         _base = _spriteRenderer.sprite;
     }
@@ -33,12 +34,12 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         if (!gameObject.activeSelf)
             gameObject.SetActive(true);
-        if (textIndex < data.Encounter[data.Count].dialogueDatas[dataIndex].Info.Length)
+        if (textIndex < _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info.Length)
         {
-            nameBox.text = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].speakerName;
-            _spriteRenderer.sprite = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].sprite;
-            dialogueBox.text = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].text;
-            _order = data.Encounter[data.Count].dialogueDatas[dataIndex].Info[textIndex].order;
+            nameBox.text = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].speakerName;
+            _spriteRenderer.sprite = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].sprite;
+            dialogueBox.text = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].text;
+            _order = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].order;
             textIndex++;
         }
         else

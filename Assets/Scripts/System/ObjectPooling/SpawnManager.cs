@@ -1,8 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
+    [Header("NPC Spawn")]
+    public NPCData[] NpcDatas;
+    
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
@@ -40,14 +45,50 @@ public class SpawnManager : Singleton<SpawnManager>
             StartCoroutine(SpawnCustomers());
         }
         else
-        {   
-            Spawn(DialogueManager.Instance.data);
+        {
+            SpawnVN();
         }
     }
 
     #region CustomerSpawning
+    private void SpawnVN()
+    {
+        var npc = ScriptableObject.CreateInstance<NPCData>();
+        
+        foreach (var data in NpcDatas)
+        {
+            if (data.AppearsIf == ShiftManager.Instance.Data.Schedule)
+            {
+                npc = data;
+            }
+        }
+        
+        var customer = ObjectPoolManager.Instance.GetPooledObject(npc.name);
+
+        if (customer == null)
+        {
+            Debug.LogWarning("No NPC object found");
+            return;
+        }
+
+        _customerIndex = Random.Range(0, customerSeat.Length);
+        
+        if (isFull()) return;
+        
+        if (!customerSeat[_customerIndex].isTaken)
+        {
+            customer.transform.position = customerSeat[_customerIndex].slot.position;
+            customer.GetComponent<Customer>().SeatTaken = _customerIndex;
+            customer.SetActive(true);
+            customerSeat[_customerIndex].isTaken = true;
+        }
+        else
+        {
+            Debug.LogWarning("Seat taken, looking for another");
+        }
+    }
     
-    public void Spawn(CustomerData data)
+    private void Spawn(CustomerData data)
     {
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);

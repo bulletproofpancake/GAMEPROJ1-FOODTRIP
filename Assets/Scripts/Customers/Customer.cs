@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class Customer : MonoBehaviour
 {
     [SerializeField] private CustomerData data;
+    public CustomerData Data => data;
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
     public GameObject orderBox;
