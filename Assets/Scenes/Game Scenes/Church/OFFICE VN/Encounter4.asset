@@ -107,7 +107,11 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
-    text: "i don\u2019t know really, it just feels like you have that same air around
+    text: I wonder whatever happened to him?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "Ii don\u2019t know really, it just feels like you have that same air around
       you."
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -119,7 +123,7 @@ MonoBehaviour:
     text: You know, company you can enjoy some good food over.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Clara
     text: "And there\u2019s never been a better pair like food and company"
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -127,7 +131,7 @@ MonoBehaviour:
     text: I agree. You, my friend, have earned yourself a regular.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Clara
     text: "Anyways, I\u2019ll be heading home then if you\u2019ll excuse me."
   - order: {fileID: 0}
     sprite: {fileID: 0}
