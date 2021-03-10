@@ -13,22 +13,30 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         MoneyManager.Instance.EndRound();
         SceneSelector.Instance.LoadNextScene(0);
     }
 
     public void LoadSummary()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         SceneSelector.Instance.LoadNextScene("Summary");
     }
 
     public void LoadUpgrades()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         SceneSelector.Instance.LoadNextScene("Upgrades");
     }
 
     public virtual void LoadNextScene()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         SceneSelector.Instance.LoadNextScene();
     }
 
@@ -39,6 +47,8 @@ public class SceneLoader : MonoBehaviour
 
     public void Exit()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
         Application.Quit();
     }
     

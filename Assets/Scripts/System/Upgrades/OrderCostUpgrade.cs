@@ -8,7 +8,9 @@ public class OrderCostUpgrade : UpgradeSystem
 
     public void UpgradeOrderCost()
     {
-        if(upgradeData.Level < upgradeData.Upgrade.Length){
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
+        if (upgradeData.Level < upgradeData.Upgrade.Length){
             if (MoneyManager.Instance.totalMoney >= upgradeData.Upgrade[upgradeData.Level].cost)
             {
                 MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[upgradeData.Level].cost;
