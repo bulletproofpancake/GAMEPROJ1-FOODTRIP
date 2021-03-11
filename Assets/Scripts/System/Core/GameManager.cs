@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
+
+    [Header("VN Settings")]
+    [SerializeField] private NPCData[] NpcDatas;
+    
     [Header("Round Settings")]
     public bool isVN;
     [SerializeField] private GameObject arcadeCanvas;
@@ -79,9 +83,41 @@ public class GameManager : Singleton<GameManager>
             levelDuration--;
         }
         MoneyManager.Instance.Earn();
-        SceneSelector.Instance.LoadNextScene();
+        if(!IsEncounterComplete())
+        {
+            SceneSelector.Instance.LoadNextScene();
+        }
+        else
+        {
+            SceneSelector.Instance.LoadNextScene("Summary");
+        }
     }
 
+    public bool IsEncounterComplete()
+    {
+        var isComplete = false;
+        
+        foreach (var data in NpcDatas)
+        {
+            if (data.AppearsIf == ShiftManager.Instance.Data.Schedule)
+            {
+                if (data.Count >= data.Encounter.Length)
+                {
+                    isComplete= true;
+                }
+                else
+                {
+                    isComplete= false;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("No suitable NPC found");
+            }
+        }
+
+        return isComplete;
+    }
     private void SetBackground()
     {
         switch (ShiftManager.Instance.Data.Schedule)

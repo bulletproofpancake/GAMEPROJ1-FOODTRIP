@@ -7,7 +7,6 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
     private List<GameObject> pooledObjects;
     protected override void Awake()
     {
-        base.Awake();
         InstantiateObjects();
     }
 
