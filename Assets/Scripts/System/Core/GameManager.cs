@@ -83,10 +83,15 @@ public class GameManager : Singleton<GameManager>
             levelDuration--;
         }
         MoneyManager.Instance.Earn();
-        if(!IsEncounterComplete())
+        
+        if(ShiftManager.Instance.Data == null)
+            SceneSelector.Instance.LoadNextScene("Summary");
+        
+        else if(!IsEncounterComplete())
         {
             SceneSelector.Instance.LoadNextScene();
         }
+        
         else
         {
             SceneSelector.Instance.LoadNextScene("Summary");
