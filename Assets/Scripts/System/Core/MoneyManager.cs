@@ -30,5 +30,4 @@ public class MoneyManager : Singleton<MoneyManager>
     {
         totalMoney -= cost;
     }
-    
 }
