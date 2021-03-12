@@ -170,6 +170,7 @@ public class SpawnManager : Singleton<SpawnManager>
             //there is nothing being spawned
             //because there are no places to spawn
             Debug.LogWarning("Seats full, give orders first");
+            print(foodSeat.Length);
             _foodIndex = 0;
         }
 
