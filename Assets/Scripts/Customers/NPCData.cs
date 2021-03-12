@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Customers.Dialogue;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "NPC", menuName = "Data/New NPC")]
 public class NPCData : CustomerData
