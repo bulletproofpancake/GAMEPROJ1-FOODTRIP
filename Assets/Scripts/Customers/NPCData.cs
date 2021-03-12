@@ -16,7 +16,6 @@ public class NPCData : CustomerData
         hideFlags = HideFlags.DontUnloadUnusedAsset;
     }
 
-    //TODO: WHAT HAPPENS WHEN COUNT EXCEEDS AVAILABLE ENCOUNTERS
     public void IncrementEncounter()
     {
         count++;

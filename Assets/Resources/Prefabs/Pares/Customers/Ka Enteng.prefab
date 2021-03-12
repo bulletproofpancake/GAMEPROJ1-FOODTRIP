@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2928564202525044758}
   - component: {fileID: 5359904429127108726}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Ka Enteng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +101,8 @@ MonoBehaviour:
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
   orderBox: {fileID: 2546742413702871810}
+  dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
+  dialogueBox: {fileID: 2546742412094899566}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -226,6 +228,12 @@ GameObject:
 --- !u!4 &2546742413702871809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2931003366481954312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2546742412094899566 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 863244941461488486, guid: 9ebd80676746f7a4fa19d23cccdd792b,
     type: 3}
   m_PrefabInstance: {fileID: 2931003366481954312}
   m_PrefabAsset: {fileID: 0}

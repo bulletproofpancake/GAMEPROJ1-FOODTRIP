@@ -14,7 +14,7 @@ public class Customer : MonoBehaviour
     [SerializeField] private TextMeshPro orderText;
     public GameObject orderBox;
     
-    [SerializeField] private DialogueData dialogueData;
+    [SerializeField] private Customers.DialogueData dialogueData;
     [SerializeField] private SpriteRenderer dialogueBox;
 
     private Order _currentOrder;
@@ -114,7 +114,7 @@ public class Customer : MonoBehaviour
                         orderIcon.GetComponent<SpriteRenderer>().enabled = false;
                         orderText.text = dialogueData.customerDialogue[_index].Dialogue;
 
-                        StartCoroutine(NPCDespawn());
+                        StartCoroutine(NPCDespawn(npcData));
                     }
                     
                 }
@@ -160,7 +160,7 @@ public class Customer : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private IEnumerator NPCDespawn(){
+    private IEnumerator NPCDespawn(NPCData npcData){
         yield return new WaitForSeconds(data.DespawnTime);
         npcData.IncrementEncounter();
         GameManager.Instance.customers.Remove(this);
