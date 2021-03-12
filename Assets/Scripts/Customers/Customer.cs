@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
+    private NPCData _npcData;
     [SerializeField] private CustomerData data;
     public CustomerData Data => data;
     [SerializeField] private GameObject orderIcon;
@@ -96,8 +97,8 @@ public class Customer : MonoBehaviour
             {
                 if (GameManager.Instance.isVN)
                 {
-                    var npcData = (NPCData) data;
-                    if (npcData.Encounter[npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
+                    _npcData = (NPCData) data;
+                    if (_npcData.Encounter[_npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
                     {
                         orderBox.SetActive(false);
                         SetOrder();
@@ -113,8 +114,6 @@ public class Customer : MonoBehaviour
 
                         orderIcon.GetComponent<SpriteRenderer>().enabled = false;
                         orderText.text = dialogueData.customerDialogue[_index].Dialogue;
-
-                        StartCoroutine(NPCDespawn(npcData));
                     }
                     
                 }
@@ -160,20 +159,20 @@ public class Customer : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private IEnumerator NPCDespawn(NPCData npcData){
-        yield return new WaitForSeconds(data.DespawnTime);
-        npcData.IncrementEncounter();
-        GameManager.Instance.customers.Remove(this);
-        GameManager.Instance.completedCustomers++;
-        gameObject.SetActive(false);
-    }
-
     private void OnMouseDown()
     {
         if(readyToCollect==true)
         {
             MoneyManager.Instance.Collect(_paymentContainer);
             readyToCollect = false;
+
+            if (GameManager.Instance.isVN)
+            {
+                _npcData.IncrementEncounter();
+                GameManager.Instance.customers.Remove(this);
+                GameManager.Instance.completedCustomers++;
+            }
+            
             gameObject.SetActive(false);
         }
     }
