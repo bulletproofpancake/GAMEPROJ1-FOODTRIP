@@ -18,6 +18,14 @@ public class SceneLoader : MonoBehaviour
         SceneSelector.Instance.LoadNextScene(0);
     }
 
+    public void LoadChurchArcade()
+    {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Play("ArcadeBGM");
+
+        SceneSelector.Instance.LoadNextScene("Arcade");
+    }
+
     public void LoadSummary()
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
@@ -39,6 +47,8 @@ public class SceneLoader : MonoBehaviour
     public void LoadPreviousScene()
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
+
         SceneSelector.Instance.LoadPreviousScene();
     }
 

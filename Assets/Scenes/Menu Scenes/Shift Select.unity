@@ -443,7 +443,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 302164559}
-        m_MethodName: LoadNextScene
+        m_MethodName: LoadChurchArcade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -787,7 +787,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1075807961}
-        m_MethodName: LoadNextScene
+        m_MethodName: LoadChurchArcade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1774848660}
-        m_MethodName: LoadNextScene
+        m_MethodName: LoadChurchArcade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

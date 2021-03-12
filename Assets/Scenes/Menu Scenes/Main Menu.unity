@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: BGM
+  - name: ArcadeBGM
     clip: {fileID: 8300000, guid: c9903694b02bbdb4aa8de79aa2df1208, type: 3}
     volume: 0.1
     pitch: 1
@@ -954,14 +954,20 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: CookingSFX
-    clip: {fileID: 8300000, guid: bdce1d03b24c1d940b5a55198a385621, type: 3}
-    volume: 0.5
+  - name: OrderReady
+    clip: {fileID: 8300000, guid: 1f5c0c40f9c345e4091a138ded998056, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: OrderReady
-    clip: {fileID: 8300000, guid: 1f5c0c40f9c345e4091a138ded998056, type: 3}
+  - name: ParesSFX
+    clip: {fileID: 8300000, guid: bdce1d03b24c1d940b5a55198a385621, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KaninSFX
+    clip: {fileID: 8300000, guid: bdce1d03b24c1d940b5a55198a385621, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0

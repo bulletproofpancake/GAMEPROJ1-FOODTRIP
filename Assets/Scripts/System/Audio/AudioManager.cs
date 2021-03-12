@@ -31,12 +31,16 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        /*for(int i = 0; i < sounds.Length; i++)
+        {
+            GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].name);
+            _go.transform.SetParent(this.transform);
+
+            sounds[i].SetSource(_go.AddComponent<AudioSource>());
+        }*/
     }
 
-    private void Start()
-    {
-        Play("BGM");
-    }
 
     public void Play(string name)
     {
@@ -78,6 +82,15 @@ public class Sound
     [Range(.1f, 3f)] public float pitch;
 
     public bool loop;
+
+    /*public void SetSource(AudioSource _source)
+    {
+        source = _source;
+        source.clip = clip;
+        source.volume = volume;
+        source.pitch = pitch;
+        source.loop = loop;
+    }*/
 
     [HideInInspector]
     public AudioSource source;
