@@ -7,6 +7,8 @@ public class CustomerData : ScriptableObject
 {
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private Order[] possibleOrders;
+    [SerializeField] private int despawnTime;
+
     public Order[] PossibleOrders => possibleOrders;
 
     public Sprite ChangeSprite()
@@ -18,4 +20,6 @@ public class CustomerData : ScriptableObject
     {
         return possibleOrders[Random.Range(0, possibleOrders.Length)];
     }
+
+    public int DespawnTime => despawnTime;
 }

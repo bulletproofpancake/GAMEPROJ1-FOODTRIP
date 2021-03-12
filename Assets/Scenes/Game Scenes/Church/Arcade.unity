@@ -492,6 +492,53 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &1458154633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458154635}
+  - component: {fileID: 1458154634}
+  m_Layer: 0
+  m_Name: MoneyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1458154634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458154633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87571a4b3f1e05a44a313ca6f24f99bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersist: 0
+  totalMoney: 0
+  roundMoney: 0
+  currentMoney: 0
+--- !u!4 &1458154635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458154633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45130852, y: 1.1629463, z: -0.48688513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462141145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,54 +1073,8 @@ PrefabInstance:
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: levelDuration
-      value: 5
+      value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: NpcDatas.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: npcDatas.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: NpcDatas.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
-        type: 2}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: NpcDatas.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 10b83d83181589d4b9afde6e73ffb62f,
-        type: 2}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: NpcDatas.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f,
-        type: 2}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: npcDatas.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
-        type: 2}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: npcDatas.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f,
-        type: 2}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: npcDatas.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 10b83d83181589d4b9afde6e73ffb62f,
-        type: 2}
     - target: {fileID: 8474473383680894217, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_RootOrder

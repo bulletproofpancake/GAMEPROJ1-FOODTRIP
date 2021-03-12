@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections;
 using Customers.Dialogue;
+using Customers;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,11 +14,17 @@ public class Customer : MonoBehaviour
     [SerializeField] private TextMeshPro orderText;
     public GameObject orderBox;
     
+    [SerializeField] private DialogueData dialogueData;
+    [SerializeField] private SpriteRenderer dialogueBox;
+
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
     private float _numberOfOrders;
     private float _completedOrders;
+
+    private float _paymentContainer;
+    private bool readyToCollect;
     
     public int SeatTaken { get; set; }
 
@@ -47,6 +54,10 @@ public class Customer : MonoBehaviour
     private void OnDisable()
     {
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+        _paymentContainer = 0;
+        dialogueBox.color = Color.white;
+        orderIcon.GetComponent<SpriteRenderer>().enabled = true;
+        readyToCollect = false;
     }
     
     public void SetOrder()
@@ -71,11 +82,16 @@ public class Customer : MonoBehaviour
 
     private void TakeOrder(Order givenOrder)
     {
+        int _index;
+
         if (_currentOrder.Data == givenOrder.Data)
         {
             _completedOrders++;
+
+            _paymentContainer += givenOrder.Data.Cost;
+
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
-            MoneyManager.Instance.Collect(_currentOrder.Data.Cost);
+
             if (_completedOrders >= _numberOfOrders + 1)
             {
                 if (GameManager.Instance.isVN)
@@ -90,16 +106,29 @@ public class Customer : MonoBehaviour
                     }
                     else
                     {
-                        npcData.IncrementEncounter();
-                        GameManager.Instance.customers.Remove(this);
-                        GameManager.Instance.completedCustomers++;
-                        gameObject.SetActive(false);
+                        dialogueBox.color = Color.green;
+                        readyToCollect = true;
+
+                        _index = Random.Range(0, dialogueData.customerDialogue.Length);
+
+                        orderIcon.GetComponent<SpriteRenderer>().enabled = false;
+                        orderText.text = dialogueData.customerDialogue[_index].Dialogue;
+
+                        StartCoroutine(NPCDespawn());
                     }
                     
                 }
                 else
                 {
-                    gameObject.SetActive(false);
+                    dialogueBox.color = Color.green;
+                    readyToCollect = true;
+
+                    _index = Random.Range(0, dialogueData.customerDialogue.Length);
+
+                    orderIcon.GetComponent<SpriteRenderer>().enabled = false;
+                    orderText.text = dialogueData.customerDialogue[_index].Dialogue;
+
+                    StartCoroutine(CustomerDespawn());
                 }
             }
         }
@@ -123,5 +152,29 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
-    
+
+    private IEnumerator CustomerDespawn()
+    {
+        yield return new WaitForSeconds(data.DespawnTime);
+
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator NPCDespawn(){
+        yield return new WaitForSeconds(data.DespawnTime);
+        npcData.IncrementEncounter();
+        GameManager.Instance.customers.Remove(this);
+        GameManager.Instance.completedCustomers++;
+        gameObject.SetActive(false);
+    }
+
+    private void OnMouseDown()
+    {
+        if(readyToCollect==true)
+        {
+            MoneyManager.Instance.Collect(_paymentContainer);
+            readyToCollect = false;
+            gameObject.SetActive(false);
+        }
+    }
 }
