@@ -83,7 +83,6 @@ public class Customer : MonoBehaviour
 
     private void TakeOrder(Order givenOrder)
     {
-        int _index;
 
         if (_currentOrder.Data == givenOrder.Data)
         {
@@ -95,6 +94,8 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                readyToCollect = true;
+                
                 if (GameManager.Instance.isVN)
                 {
                     _npcData = (NPCData) data;
@@ -107,26 +108,13 @@ public class Customer : MonoBehaviour
                     }
                     else
                     {
-                        dialogueBox.color = Color.green;
-                        readyToCollect = true;
-
-                        _index = Random.Range(0, dialogueData.customerDialogue.Length);
-
-                        orderIcon.GetComponent<SpriteRenderer>().enabled = false;
-                        orderText.text = dialogueData.customerDialogue[_index].Dialogue;
+                        OrderPrompt();
                     }
                     
                 }
                 else
                 {
-                    dialogueBox.color = Color.green;
-                    readyToCollect = true;
-
-                    _index = Random.Range(0, dialogueData.customerDialogue.Length);
-
-                    orderIcon.GetComponent<SpriteRenderer>().enabled = false;
-                    orderText.text = dialogueData.customerDialogue[_index].Dialogue;
-
+                    OrderPrompt();
                     StartCoroutine(CustomerDespawn());
                 }
             }
@@ -135,6 +123,15 @@ public class Customer : MonoBehaviour
         {
             StartCoroutine(WrongOrder());
         }
+    }
+
+    private void OrderPrompt()
+    {
+        dialogueBox.color = Color.green;
+        int _index = Random.Range(0, dialogueData.customerDialogue.Length);
+
+        orderIcon.GetComponent<SpriteRenderer>().enabled = false;
+        orderText.text = dialogueData.customerDialogue[_index].Dialogue;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
