@@ -47,6 +47,8 @@ public class StickBehaviors : MonoBehaviour
   [SerializeField]
   private Transform pooledObjectReference;
 
+  private GameObject referencePoolObject;
+
   int counter;
 
   #endregion
@@ -56,6 +58,7 @@ public class StickBehaviors : MonoBehaviour
     didLeftClick = false;
     disableMouseControl = false;
     counter = 0;
+    //  referencePoolObject = GameObject.Find();
 
   }
   private void Update()
