@@ -212,10 +212,3 @@ public class SpawnManager : Singleton<SpawnManager>
 
     }
 }
-
-[System.Serializable]
-public class Seat
-{
-    public Transform slot;
-    public bool isTaken;
-}
