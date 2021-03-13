@@ -55,6 +55,7 @@ public class StickBehaviors : MonoBehaviour
   {
     didLeftClick = false;
     disableMouseControl = false;
+    counter = 0;
 
   }
   private void Update()
@@ -63,6 +64,7 @@ public class StickBehaviors : MonoBehaviour
     Controls();
     LaserPointer();
     OnDrawGizmos();
+
   }
 
   private void Controls()
@@ -86,7 +88,6 @@ public class StickBehaviors : MonoBehaviour
 
   }
 
-  // ! MIGHT REDO THE CODE AGAIN
   private void LaserPointer()
   {
     //Setting up 2d ray 
@@ -112,9 +113,11 @@ public class StickBehaviors : MonoBehaviour
             counter++;
 
         }
+        Debug.Log("The amount of food in stick is: " + counter);
         // ? This statement detects if the amount of food in stick is full or not
         if (counter < foodStickPos.Length)
         {
+
           hitFood.transform.rotation = Quaternion.Euler(Vector3.zero);
           StackInFood(hitFood);
         }
@@ -123,7 +126,6 @@ public class StickBehaviors : MonoBehaviour
     }
     else
     {
-      Debug.Log("Hit Collider is detecting:" + hit.collider.name);
       lineRenderer.enabled = false;
     }
 
@@ -209,14 +211,17 @@ public class StickBehaviors : MonoBehaviour
     if (other.CompareTag("DirtyCup"))
     {
 
-      if (Input.GetKeyDown("mouse 2"))
+      if (Input.GetKeyDown("mouse 2") && counter >= 2)
       {
         Debug.Log("middle click detected!");
         disableMouseControl = true;
         didLeftClick = false;
-        transform.parent = other.gameObject.transform;
-        transform.position = other.gameObject.transform.position;
-        transform.rotation = Quaternion.Euler(0, 0, 45f);
+
+        this.gameObject.SetActive(false);
+        // these are the lines of code if we don't want to make it disappear
+        // transform.parent = other.gameObject.transform;
+        // transform.position = other.gameObject.transform.position;
+        // transform.rotation = Quaternion.Euler(0, 0, 45f);
 
       }
       lineRenderer.enabled = false;
