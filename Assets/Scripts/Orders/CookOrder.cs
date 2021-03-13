@@ -7,17 +7,30 @@ public class CookOrder : MonoBehaviour
 {
     [SerializeField] private Order orderToCook;
     [SerializeField] private Image fillImage;
+    private Button button;
     private float timer;
     private bool isCooking;
 
+    private void Start()
+    {
+        button = GetComponent<Button>();
+    }
+
     private void Update()
     {
+        if (Pause.isPaused == true)
+            button.interactable = false;
+        else if (Pause.isPaused == false)
+            button.interactable = true;
         CookingIndicator();
     }
 
     public void StartCooking()
     {
-        StartCoroutine(Cook());
+        if (Pause.isPaused == true)
+            StopAllCoroutines();
+        else
+            StartCoroutine(Cook());
     }
 
     private IEnumerator Cook()
@@ -46,6 +59,15 @@ public class CookOrder : MonoBehaviour
 
     private void CookingIndicator()
     {
+        if(Pause.isPaused==true)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+
         if (isCooking == true)
         {
             timer = orderToCook.Data.CookTime;

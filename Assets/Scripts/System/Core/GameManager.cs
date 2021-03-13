@@ -91,18 +91,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PauseGame()
+    public void PauseGame(bool paused)
     {
         if (!isPaused)
         {
-            isPaused = true;
-            print(isPaused);
+            isPaused = paused;
+            print("Paused = " + isPaused);
             StopAllCoroutines();
         }
         else
         {
-            isPaused = false;
-            print(isPaused);
+            isPaused = paused;
+            print("Paused = " + isPaused);
             StartCoroutine(CountDownLevel());
         }
     }

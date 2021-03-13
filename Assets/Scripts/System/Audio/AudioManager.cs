@@ -31,14 +31,6 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-
-        /*for(int i = 0; i < sounds.Length; i++)
-        {
-            GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].name);
-            _go.transform.SetParent(this.transform);
-
-            sounds[i].SetSource(_go.AddComponent<AudioSource>());
-        }*/
     }
 
 
@@ -68,6 +60,31 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+    public void Pause(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.Pause();
+    }
+
+    public void UnPause(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.UnPause();
+    }
 }
 
 
@@ -82,15 +99,6 @@ public class Sound
     [Range(.1f, 3f)] public float pitch;
 
     public bool loop;
-
-    /*public void SetSource(AudioSource _source)
-    {
-        source = _source;
-        source.clip = clip;
-        source.volume = volume;
-        source.pitch = pitch;
-        source.loop = loop;
-    }*/
 
     [HideInInspector]
     public AudioSource source;

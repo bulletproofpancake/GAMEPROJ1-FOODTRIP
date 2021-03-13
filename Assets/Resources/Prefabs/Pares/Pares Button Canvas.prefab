@@ -1076,6 +1076,7 @@ MonoBehaviour:
   orderToCook: {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747,
     type: 3}
   fillImage: {fileID: 8268625655960156322}
+  _gameManager: {fileID: 0}
 --- !u!1 &5462583767371125532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1224,7 @@ MonoBehaviour:
   orderToCook: {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d,
     type: 3}
   fillImage: {fileID: 5376485241528961116}
+  _gameManager: {fileID: 0}
 --- !u!1 &5462583768455702629
 GameObject:
   m_ObjectHideFlags: 0
