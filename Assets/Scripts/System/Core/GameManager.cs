@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        if(ShiftManager.Instance.Data != null){
+        if(ShiftManager.Instance.shift != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
         }
@@ -73,16 +73,16 @@ public class GameManager : MonoBehaviour
 
     private void SetBackground()
     {
-        switch (ShiftManager.Instance.Data.Schedule)
+        switch (ShiftManager.Instance.shift.Schedule)
         {
             case ShiftSchedule.Morning:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Morning;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Morning;
                 break;
             case ShiftSchedule.Afternoon:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Afternoon;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Afternoon;
                 break;
             case ShiftSchedule.Night:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Night;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Night;
                 break;
         }
     }

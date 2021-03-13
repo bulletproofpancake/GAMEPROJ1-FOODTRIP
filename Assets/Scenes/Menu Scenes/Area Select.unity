@@ -1089,9 +1089,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075807956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40cc045ed8864a645844c0863de2a5f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cfa01af5d94abd4eb6ad3c24af111aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 88e32c58c95c26c45aa93c191ae56903, type: 2}
 --- !u!1 &1148552702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,7 +2132,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1788900329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1788900331}
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1788900329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2178,9 +2190,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788900326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40cc045ed8864a645844c0863de2a5f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cfa01af5d94abd4eb6ad3c24af111aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: a31e424ac07c34143929a02f58646d98, type: 2}
 --- !u!1 &1829696024
 GameObject:
   m_ObjectHideFlags: 0

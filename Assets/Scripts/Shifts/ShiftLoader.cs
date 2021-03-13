@@ -9,7 +9,7 @@ public class ShiftLoader : SceneLoader
 
     public override void LoadNextScene()
     {
-        ShiftManager.Instance.Data = data;
+        ShiftManager.Instance.shift = data;
         base.LoadNextScene();
     }
 }
