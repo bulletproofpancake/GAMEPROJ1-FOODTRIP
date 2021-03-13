@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject background;
+    public bool isPaused;
     
     private void Awake()
     {
@@ -87,6 +88,22 @@ public class GameManager : MonoBehaviour
             case ShiftSchedule.Night:
                 background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Night;
                 break;
+        }
+    }
+
+    public void PauseGame(bool paused)
+    {
+        if (!isPaused)
+        {
+            isPaused = paused;
+            print("Paused = " + isPaused);
+            StopAllCoroutines();
+        }
+        else
+        {
+            isPaused = paused;
+            print("Paused = " + isPaused);
+            StartCoroutine(CountDownLevel());
         }
     }
 }
