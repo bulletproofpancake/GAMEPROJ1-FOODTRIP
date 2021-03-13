@@ -12,34 +12,32 @@ public class StickBehaviors : MonoBehaviour
 {
 
   //Variables used for rotating stick
-  #region Revolving_stick
+  #region r_Stick_Drag_Variables
 
-  [Tooltip("reference position for the stick to revolve around to")]
-  [SerializeField]
-  private Transform referencePosition;
-
-  Vector3 zAxis = new Vector3(0, 0, 1);
   Vector2 mousePos;
-  #endregion
 
+
+  [Space]
 
   //variables used for Line Renderer.
-  #region Raycast_pointer
-
   public LineRenderer lineRenderer;
+
+  //variable for 
   public Transform startPoint;
-  public LayerMask layer;
 
   private const int MAX_RAYCASTDISTANCE = 100;
+  private bool didLeftClick;
+
+  private bool disableMouseControl;
 
   #endregion
 
+  #region r_Foods_In_Stick_Variables
 
-  // ? STACK DATA STRUCT FOR GROUPING FOODS IN THE STICK
-  // ! MIGHT NOT USE THIS ON THE LONG RUN. WILL STILL KEEP AN EYE OUT IN CASE I FIND A WAY FOR THIS TO BE USEFUL
-  //stack for the food
-  private Stack<GameObject> foodStack = new Stack<GameObject>();
 
+
+  [Space]
+  [Header("Food transfer variables")]
   [SerializeField]
   private AreaToStick[] foodStickPos = new AreaToStick[3];
 
@@ -49,23 +47,42 @@ public class StickBehaviors : MonoBehaviour
   [SerializeField]
   private Transform pooledObjectReference;
 
+  int counter;
+
+  #endregion
 
   private void Start()
   {
-
+    didLeftClick = false;
+    disableMouseControl = false;
 
   }
   private void Update()
   {
-    if (Input.GetKeyDown(KeyCode.E))
-    {
-      RemoveFood();
-      Debug.Log("Did Press E");
-    }
 
+    Controls();
     LaserPointer();
     OnDrawGizmos();
+  }
 
+  private void Controls()
+  {
+    // * left click
+    if (Input.GetMouseButtonDown(0) && !disableMouseControl)
+    {
+      didLeftClick = true;
+    }
+
+    // * right click
+    if (Input.GetMouseButtonDown(1))
+    {
+      RemoveFood();
+      Debug.Log("Dropped Item");
+    }
+    if (didLeftClick && !disableMouseControl)
+      MoveStick();
+
+    RotateStick();
 
   }
 
@@ -76,19 +93,16 @@ public class StickBehaviors : MonoBehaviour
     Ray2D ray = new Ray2D(startPoint.position, -transform.up);
     //separated raycast2d outside the if statement just in case this is still needed for other raycast
     RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-    DrawRay2D(ray.origin, hit.point);
-
     var hitFood = hit.collider.gameObject;
 
 
-
-    if (hit.collider != null)
+    if (hitFood.GetComponent<Order>() || hit.collider.CompareTag("Kawali"))
     {
-
-      // ! there are times where it does not pick up the food
-      if (hitFood != null && hitFood.GetComponent<Order>() && Input.GetMouseButtonDown(1))
+      lineRenderer.enabled = true;
+      DrawRay2D(ray.origin, hit.point);
+      if (hitFood != null && hitFood.GetComponent<Order>() && Input.GetMouseButtonDown(0))
       {
-        int counter = 0;
+        counter = 0;
         // for loop checks if there is still space within the stick
         for (int i = 0; i < foodStickPos.Length; i++)
         {
@@ -98,16 +112,19 @@ public class StickBehaviors : MonoBehaviour
             counter++;
 
         }
-        if (counter > foodStickPos.Length - 1)
-        {// checks if the coutner has gone atleast 3 
-          Debug.LogWarning("stick is full!");
-          return;
-
+        // ? This statement detects if the amount of food in stick is full or not
+        if (counter < foodStickPos.Length)
+        {
+          hitFood.transform.rotation = Quaternion.Euler(Vector3.zero);
+          StackInFood(hitFood);
         }
 
-        hitFood.transform.rotation = Quaternion.Euler(Vector3.zero);
-        StackInFood(hitFood);
       }
+    }
+    else
+    {
+      Debug.Log("Hit Collider is detecting:" + hit.collider.name);
+      lineRenderer.enabled = false;
     }
 
   }
@@ -120,23 +137,29 @@ public class StickBehaviors : MonoBehaviour
 
   public void DrawRay2D(Vector2 startPos, Vector2 endPos)
   {
+
     lineRenderer.SetPosition(0, startPos);
     lineRenderer.SetPosition(1, endPos);
 
   }
 
-  //function that enables to drag the stick around.
-  private void OnMouseDrag()
+  private void MoveStick()
   {
-    // this is the line of code that rotates the stick around. 
-    // TODO redo the rotation. Somehow, the reference comes from above
-    transform.RotateAround(referencePosition.position, zAxis, Input.GetAxisRaw("Mouse X") * 500f * Time.deltaTime);
+    mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    transform.position = new Vector2(mousePos.x, mousePos.y);
+  }
 
-    // for mouse dragging
-    mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-    transform.Translate(mousePos);
+  private void RotateStick()
+  {
 
-
+    if (Input.GetAxis("Mouse ScrollWheel") > 0 && !disableMouseControl)
+    {
+      transform.Rotate(Vector3.forward * 5f, Space.Self);
+    }
+    if (Input.GetAxis("Mouse ScrollWheel") < 0 && !disableMouseControl)
+    {
+      transform.Rotate(Vector3.back * 5f, Space.Self);
+    }
   }
 
 
@@ -169,6 +192,7 @@ public class StickBehaviors : MonoBehaviour
   }
 
   private void SetFoodInStickPosition()
+
   {
     for (int index = 0; index <= foodsInTheStick.Count; index++)
     {
@@ -177,6 +201,26 @@ public class StickBehaviors : MonoBehaviour
       foodsInTheStick[index].transform.parent = foodStickPos[index].stickInPos.transform;
     }
 
+  }
+
+
+  private void OnTriggerStay2D(Collider2D other)
+  {
+    if (other.CompareTag("DirtyCup"))
+    {
+
+      if (Input.GetKeyDown("mouse 2"))
+      {
+        Debug.Log("middle click detected!");
+        disableMouseControl = true;
+        didLeftClick = false;
+        transform.parent = other.gameObject.transform;
+        transform.position = other.gameObject.transform.position;
+        transform.rotation = Quaternion.Euler(0, 0, 45f);
+
+      }
+      lineRenderer.enabled = false;
+    }
   }
 
 }

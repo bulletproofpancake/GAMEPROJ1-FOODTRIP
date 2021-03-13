@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 4036029441748707178}
   - component: {fileID: 4036029441748707179}
   - component: {fileID: 4036029441748707159}
+  - component: {fileID: 4697104572443377199}
   m_Layer: 0
-  m_Name: TestCup
+  m_Name: Cup
   m_TagString: DirtyCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,3 +144,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4697104572443377199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4036029441748707180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25819203e1f5eb4f9520ed4971829d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
