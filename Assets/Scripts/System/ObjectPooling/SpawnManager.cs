@@ -34,6 +34,7 @@ public class SpawnManager : Singleton<SpawnManager>
         seats = new List<Seat>(FindObjectsOfType<Seat>());
         foreach (var seat in seats)
         {
+            seat.isTaken = false;
             switch (seat.type)
             {
                 case SeatType.Customer:
@@ -155,33 +156,36 @@ public class SpawnManager : Singleton<SpawnManager>
 
         if (_foodIndex < foodSeat.Count)
         {
-            if (!foodSeat[_foodIndex].isTaken)
+            if (foodSeat[_foodIndex] != null)
             {
-                food.transform.position = foodSeat[_foodIndex].slot.position;
-                food.GetComponent<Order>().SeatTaken = _foodIndex;
-                food.SetActive(true);
-                foodSeat[_foodIndex].isTaken = true;
-                //index always starts at zero so that
-                //all slots can be checked
-                _foodIndex = 0;
+                if (!foodSeat[_foodIndex].isTaken)
+                {
+                    food.transform.position = foodSeat[_foodIndex].slot.position;
+                    food.GetComponent<Order>().SeatTaken = _foodIndex;
+                    food.SetActive(true);
+                    foodSeat[_foodIndex].isTaken = true;
+                    //index always starts at zero so that
+                    //all slots can be checked
+                    _foodIndex = 0;
+                }
+                else
+                {
+                    Debug.LogWarning("Seat taken, looking for another");
+                    _foodIndex++;
+                    //recursion is done so that
+                    //it will continue to spawn
+                    //even if seats are taken
+                    Spawn(data);
+                }
             }
             else
             {
-                Debug.LogWarning("Seat taken, looking for another");
-                _foodIndex++;
-                //recursion is done so that
-                //it will continue to spawn
-                //even if seats are taken
-                Spawn(data);
+                //there is nothing being spawned
+                //because there are no places to spawn
+                Debug.LogWarning("Seats full, give orders first");
+                print(foodSeat.Count);
+                _foodIndex = 0;
             }
-        }
-        else
-        {
-            //there is nothing being spawned
-            //because there are no places to spawn
-            Debug.LogWarning("Seats full, give orders first");
-            print(foodSeat.Count);
-            _foodIndex = 0;
         }
 
     }
