@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour
             Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
         }
 
-        Instantiate(cartUsed, transform.position, Quaternion.identity);
+        if(cartUsed!=null){
+            Instantiate(cartUsed, transform.position, Quaternion.identity);
+        }
     }
 
     // Start is called before the first frame update

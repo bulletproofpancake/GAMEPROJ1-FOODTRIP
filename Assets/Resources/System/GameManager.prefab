@@ -401,8 +401,7 @@ MonoBehaviour:
   isVN: 1
   arcadeCanvas: {fileID: 8308649091480219468}
   vnCanvas: {fileID: 428401191653753652}
-  cartUsed: {fileID: 5462583768610612738, guid: e7886e8aff0951449a30bcd5f142b753,
-    type: 3}
+  cartUsed: {fileID: 0}
   levelDuration: 60
   timerText: {fileID: 8308649091834417791}
   moneyTextArcade: {fileID: 8308649092043967940}
