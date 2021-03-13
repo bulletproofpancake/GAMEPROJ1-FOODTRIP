@@ -1,17 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPoolManager : Singleton<ObjectPoolManager>
 {
     public List<ObjectPoolItems> itemsToPool;
     private List<GameObject> pooledObjects;
+
     protected override void Awake()
     {
-        base.Awake();
         InstantiateObjects();
     }
 
-    public void InstantiateObjects()
+    private void InstantiateObjects()
     {
         pooledObjects = new List<GameObject>();
 
@@ -63,7 +64,7 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
     
 }
 
-[System.Serializable]
+[Serializable]
 public class ObjectPoolItems
 {
     public string id;

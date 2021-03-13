@@ -17,6 +17,8 @@ MonoBehaviour:
   possibleOrders:
   - {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
   - {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747, type: 3}
+  despawnTime: 0
+  appearsIf: 0
   encounter:
   - dialogueDatas:
     - {fileID: 11400000, guid: e1707e400d45a6c40b7111c13a12afdf, type: 2}
@@ -25,4 +27,4 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b6e6d1bda2a04da4d8e3d2ce969dfeea, type: 2}
   - dialogueDatas:
     - {fileID: 11400000, guid: eb85c7ee5f46702468a31e6edffc8bc1, type: 2}
-  count: 2
+  count: 0

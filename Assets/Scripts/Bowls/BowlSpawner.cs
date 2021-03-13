@@ -10,7 +10,6 @@ public class BowlSpawner : Singleton<BowlSpawner>
     
     protected override void Awake()
     {
-        base.Awake();
         _bowls = new List<GameObject>();
         _btnText = GetComponentInChildren<TextMeshProUGUI>();
     }
