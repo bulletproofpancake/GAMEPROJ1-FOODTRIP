@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI moneyTextArcade;
+    [SerializeField] private TextMeshProUGUI moneyTextVN;
     [SerializeField] private GameObject background;
     
     private void Awake()
@@ -58,7 +59,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            moneyText.text = $"{MoneyManager.Instance.currentMoney}";
+            if(!isVN)
+                moneyTextArcade.text = $"{MoneyManager.Instance.currentMoney}";
+            else
+                moneyTextVN.text = $"{MoneyManager.Instance.currentMoney}";
         }
     }
 
