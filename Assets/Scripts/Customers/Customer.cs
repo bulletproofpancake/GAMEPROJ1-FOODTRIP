@@ -165,6 +165,7 @@ public class Customer : MonoBehaviour
 
             if (GameManager.Instance.isVN)
             {
+                MoneyManager.Instance.Earn();
                 _npcData.IncrementEncounter();
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
