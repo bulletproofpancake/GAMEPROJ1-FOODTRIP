@@ -10,7 +10,6 @@ public class SpawnManager : Singleton<SpawnManager>
     public CustomerData[] customers;
     public Seat[] customerSeat;
     private int _customerIndex;
-    private bool _allowedToSpawn;
     
     [Header("Food Spawn")]
     public Seat[] foodSeat;
@@ -34,14 +33,6 @@ public class SpawnManager : Singleton<SpawnManager>
 
         StartCoroutine(SpawnCustomers());
 
-    }
-
-    private void Update()
-    {
-        if (_allowedToSpawn)
-        {
-            Spawn(customers[Random.Range(0,customers.Length-1)]);
-        }
     }
 
     #region CustomerSpawning
@@ -86,8 +77,11 @@ public class SpawnManager : Singleton<SpawnManager>
 
     private IEnumerator SpawnCustomers()
     {
-        yield return new WaitForSeconds(spawnInterval);
-        _allowedToSpawn = true;
+        while(true)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+            Spawn(customers[Random.Range(0,customers.Length)]);
+        }
     }
     
     #endregion

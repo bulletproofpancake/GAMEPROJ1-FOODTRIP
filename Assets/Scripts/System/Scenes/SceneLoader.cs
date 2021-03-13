@@ -13,7 +13,18 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        MoneyManager.Instance.EndRound();
         SceneSelector.Instance.LoadNextScene(0);
+    }
+
+    public void LoadSummary()
+    {
+        SceneSelector.Instance.LoadNextScene("Summary");
+    }
+
+    public void LoadUpgrades()
+    {
+        SceneSelector.Instance.LoadNextScene("Upgrades");
     }
 
     public virtual void LoadNextScene()
