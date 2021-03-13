@@ -972,6 +972,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: CustomerPay
+    clip: {fileID: 8300000, guid: 6e0ebe9e7cbd64646abbabd762aab1b3, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &903166581
 Transform:
   m_ObjectHideFlags: 0
