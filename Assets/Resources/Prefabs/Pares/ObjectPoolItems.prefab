@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec0fcff0ea7984478405711cd011cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   slot: {fileID: 217976843479239467}
   isTaken: 0
 --- !u!1 &217976844121669560
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec0fcff0ea7984478405711cd011cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   slot: {fileID: 217976844121669561}
   isTaken: 0
 --- !u!1 &217976844348865754
@@ -198,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec0fcff0ea7984478405711cd011cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   slot: {fileID: 217976844428490466}
   isTaken: 0
 --- !u!1 &3045815307415847406
@@ -369,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec0fcff0ea7984478405711cd011cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   slot: {fileID: 4962202806993891576}
   isTaken: 0
 --- !u!1 &6008506480603898271
@@ -414,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec0fcff0ea7984478405711cd011cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   slot: {fileID: 3001723912962039566}
   isTaken: 0
 --- !u!1 &6043642941730646758
@@ -459,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec0fcff0ea7984478405711cd011cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   slot: {fileID: 980794793141296145}
   isTaken: 0
 --- !u!1 &6728444962164351456

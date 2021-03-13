@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,35 +8,44 @@ public class SpawnManager : Singleton<SpawnManager>
 {
     [Header("NPC Spawn")]
     public NPCData[] NpcDatas;
-    
+
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
-    public Seat[] customerSeat;
+    public List<Seat> customerSeat;
     private int _customerIndex;
     
     [Header("Food Spawn")]
-    public Seat[] foodSeat;
+    public List<Seat> foodSeat;
     private int _foodIndex;
 
     [Header("Bowl Spawn")]
     public GameObject bowl;
-    public Seat[] bowlSeat;
+    public List<Seat> bowlSeat;
     private int _bowlIndex;
+
+    
+    public List<Seat> seats;
     
     protected override void Awake()
     {
-        foreach (var seat in customerSeat)
+        _customerIndex = 0;
+        _foodIndex = 0;
+        seats = new List<Seat>(FindObjectsOfType<Seat>());
+        foreach (var seat in seats)
         {
-            seat.isTaken = false;
-        }
-        foreach (var seat in foodSeat)
-        {
-            seat.isTaken = false;
-        }
-        foreach (var seat in bowlSeat)
-        {
-            seat.isTaken = false;
+            switch (seat.type)
+            {
+                case SeatType.Customer:
+                    customerSeat.Add(seat);
+                    break;
+                case SeatType.Food:
+                    foodSeat.Add(seat);
+                    bowlSeat.Add(seat);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 
@@ -71,7 +81,7 @@ public class SpawnManager : Singleton<SpawnManager>
             return;
         }
 
-        _customerIndex = Random.Range(0, customerSeat.Length);
+        _customerIndex = Random.Range(0, customerSeat.Count);
         
         if (isFull()) return;
         
@@ -91,7 +101,7 @@ public class SpawnManager : Singleton<SpawnManager>
     private void Spawn(CustomerData data)
     {
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
-        _customerIndex = Random.Range(0, customerSeat.Length);
+        _customerIndex = Random.Range(0, customerSeat.Count);
         
         if (isFull()) return;
         
@@ -120,7 +130,7 @@ public class SpawnManager : Singleton<SpawnManager>
             }
         }
 
-        if (counter >= customerSeat.Length)
+        if (counter >= customerSeat.Count)
             return true;
         else
             return false;
@@ -143,7 +153,7 @@ public class SpawnManager : Singleton<SpawnManager>
     {
         var food = ObjectPoolManager.Instance.GetPooledObject(data.name);
 
-        if (_foodIndex < foodSeat.Length)
+        if (_foodIndex < foodSeat.Count)
         {
             if (!foodSeat[_foodIndex].isTaken)
             {
@@ -170,7 +180,7 @@ public class SpawnManager : Singleton<SpawnManager>
             //there is nothing being spawned
             //because there are no places to spawn
             Debug.LogWarning("Seats full, give orders first");
-            print(foodSeat.Length);
+            print(foodSeat.Count);
             _foodIndex = 0;
         }
 
@@ -183,7 +193,7 @@ public class SpawnManager : Singleton<SpawnManager>
 
         var newBowl = bowl;
         
-        if ( _bowlIndex < bowlSeat.Length)
+        if ( _bowlIndex < bowlSeat.Count)
         {
             if (!bowlSeat[_bowlIndex].isTaken)
             {
@@ -208,7 +218,13 @@ public class SpawnManager : Singleton<SpawnManager>
             Debug.LogWarning("Seats full, give orders first");
             _bowlIndex = 0;
         }
-        
-
     }
+
+    public void ClearLists()
+    {
+        customerSeat.Clear();
+        foodSeat.Clear();
+        bowlSeat.Clear();
+    }
+    
 }

@@ -64,6 +64,7 @@ public class GameManager : Singleton<GameManager>
         if (isVN && completedCustomers > customers.Count)
         {
             //TODO: EARN MONEY AFTER FINISHING VN
+            SpawnManager.Instance.ClearLists();
             SceneSelector.Instance.LoadNextScene();
         }
         else
@@ -82,6 +83,9 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(1f);
             levelDuration--;
         }
+        
+        SpawnManager.Instance.ClearLists();
+        
         MoneyManager.Instance.Earn();
         
         if(ShiftManager.Instance.Data == null)
