@@ -10,6 +10,14 @@ public class ShiftLoader : SceneLoader
     public override void LoadNextScene()
     {
         ShiftManager.Instance.shift = data;
-        base.LoadNextScene();
+        //TODO: CREATE A MORE GENERIC LOADER
+        if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
+        {
+            base.LoadNextScene("tusoktusokTestScene");
+        }
+        else
+        {
+            base.LoadNextScene();
+        }
     }
 }
