@@ -341,19 +341,19 @@ PrefabInstance:
         type: 3}
       propertyPath: NpcDatas.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
+      objectReference: {fileID: 11400000, guid: f3a4b7d1665a64b4a9e9b8cfd457d9fb,
         type: 2}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: NpcDatas.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 10b83d83181589d4b9afde6e73ffb62f,
+      objectReference: {fileID: 11400000, guid: 315469fd2018416439bf4300f468ab60,
         type: 2}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: NpcDatas.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f,
+      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
         type: 2}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -559,12 +559,12 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[4].id
-      value: NPC
+      value: MMDA
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[5].id
-      value: Night
+      value: OFFICE LADY
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -649,7 +649,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[4].objectToPool
       value: 
-      objectReference: {fileID: 6077367765372447431, guid: 78b62272f6e5c1f4bacae9ca4ba343d3,
+      objectReference: {fileID: 6077367765372447431, guid: c9d57a6a4ffd5894581647e5f9357815,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -660,7 +660,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[5].objectToPool
       value: 
-      objectReference: {fileID: 6077367765372447431, guid: 6f774842de14a414ebb23d5c94d5c71b,
+      objectReference: {fileID: 6077367765372447431, guid: 1298048b9a6e47e47a5746ad96a4c123,
         type: 3}
     - target: {fileID: 6746603514144867607, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}

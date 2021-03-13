@@ -129,7 +129,7 @@ MonoBehaviour:
     sprite: {fileID: 0}
     speakerName: ???
     text: I'm keepin' my eye on you, just in case.
-  - order: {fileID: 0}
+  - order: {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
     sprite: {fileID: 0}
     speakerName: 
     text: Uh huh, right.

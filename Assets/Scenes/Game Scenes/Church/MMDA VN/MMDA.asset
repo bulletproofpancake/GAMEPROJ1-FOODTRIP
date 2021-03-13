@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: MMDA
   m_EditorClassIdentifier: 
   sprites: []
-  possibleOrders: []
+  possibleOrders:
+  - {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
+  - {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747, type: 3}
+  despawnTime: 0
+  appearsIf: 2
   encounter:
   - dialogueDatas:
     - {fileID: 11400000, guid: 0aa795dac59b9e249b99cdb85cc6bcde, type: 2}
