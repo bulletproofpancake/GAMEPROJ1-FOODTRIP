@@ -28,12 +28,12 @@ public class GameManager : MonoBehaviour
         if (isVN)
         {
             arcadeCanvas.SetActive(false);
-            Instantiate(vnCanvas, transform.position, Quaternion.identity);
+            //Instantiate(vnCanvas, transform.position, Quaternion.identity);
         }
         else
         {
             vnCanvas.SetActive(false);
-            Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
+            //Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
         }
 
         Instantiate(cartUsed, transform.position, Quaternion.identity);

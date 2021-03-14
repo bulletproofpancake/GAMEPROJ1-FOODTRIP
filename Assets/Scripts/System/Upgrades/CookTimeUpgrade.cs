@@ -7,7 +7,9 @@ public class CookTimeUpgrade : UpgradeSystem
 
     public void UpgradeCookTime()
     {
-        if(upgradeData.Level < upgradeData.Upgrade.Length){
+        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+
+        if (upgradeData.Level < upgradeData.Upgrade.Length){
             if (MoneyManager.Instance.totalMoney >= upgradeData.Upgrade[upgradeData.Level].cost)
             {
                 MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[upgradeData.Level].cost;

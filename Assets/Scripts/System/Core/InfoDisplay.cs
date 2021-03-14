@@ -6,25 +6,23 @@ using UnityEngine;
 public class InfoDisplay : MonoBehaviour
 {
     [SerializeField] private GameObject infoBox;
-    [SerializeField] private GameManager _gameManager;
 
-    void Start()
+    private void Start()
     {
         infoBox.SetActive(false);
     }
 
     public void ShowInfo()
     {
-        if(Pause.isPaused==true)
+        if (Pause.isPaused == true)// Closes Info Box
         {
             Pause.isPaused = false;
-            _gameManager.PauseGame(false);
+            LeanTween.scale(infoBox, new Vector3(0, 0, 0), 0.5f);
             infoBox.SetActive(false);
         }
-        else
+        else// Opens Info Box
         {
             Pause.isPaused = true;
-            _gameManager.PauseGame(true);
             infoBox.SetActive(true);
         }
     }
