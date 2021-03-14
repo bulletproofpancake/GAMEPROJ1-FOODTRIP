@@ -102,9 +102,8 @@ MonoBehaviour:
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
   dialogueBox: {fileID: 2546742412094899566}
-  actualMoney: {fileID: 11400000, guid: e2f485a632a1ca547a9167f8ad5afd40, type: 2}
-  expectedMoney: {fileID: 11400000, guid: c7cff84318f9973418dc4da94cc8208f, type: 2}
-  customersServed: {fileID: 11400000, guid: 574858f953d6afc4481f4b45a6427f60, type: 2}
+  DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
+  dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
   m_ObjectHideFlags: 0

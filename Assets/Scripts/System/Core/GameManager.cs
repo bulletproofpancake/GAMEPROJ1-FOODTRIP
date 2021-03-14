@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moneyTextArcade;
     [SerializeField] private TextMeshProUGUI moneyTextVN;
     [SerializeField] private GameObject background;
+    public bool isPaused;
     
     private void Awake()
     {
@@ -93,6 +94,22 @@ public class GameManager : MonoBehaviour
             case ShiftSchedule.Night:
                 background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Night;
                 break;
+        }
+    }
+
+    public void PauseGame(bool paused)
+    {
+        if (!isPaused)
+        {
+            isPaused = paused;
+            print("Paused = " + isPaused);
+            StopAllCoroutines();
+        }
+        else
+        {
+            isPaused = paused;
+            print("Paused = " + isPaused);
+            StartCoroutine(CountDownLevel());
         }
     }
 }
