@@ -45,7 +45,7 @@ public class StickBehaviors : MonoBehaviour
   private List<GameObject> foodsInTheStick = new List<GameObject>();
 
   [SerializeField]
-  private Transform pooledObjectReference;
+  private GameObject pooledObjectReference;
 
   private GameObject referencePoolObject;
 
@@ -60,6 +60,10 @@ public class StickBehaviors : MonoBehaviour
     counter = 0;
     //  referencePoolObject = GameObject.Find();
 
+  }
+  private void OnEnable()
+  {
+    pooledObjectReference = GameObject.Find("Pooled Objects");
   }
   private void Update()
   {
