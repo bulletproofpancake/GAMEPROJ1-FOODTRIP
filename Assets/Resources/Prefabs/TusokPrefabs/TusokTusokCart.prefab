@@ -1239,6 +1239,7 @@ GameObject:
   - component: {fileID: 9081295665050219603}
   - component: {fileID: 5946614100611303979}
   - component: {fileID: 6662656079182748630}
+  - component: {fileID: 2336397735556875387}
   m_Layer: 5
   m_Name: Sticks
   m_TagString: Untagged
@@ -1345,7 +1346,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5946614100611303979}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2564330019190876046}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2336397735556875387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564330019190876046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d9350583ea33746b1bbffb21833a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2811238549914968527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1382,7 @@ GameObject:
   - component: {fileID: 7428610758751330708}
   - component: {fileID: 4383433712668221538}
   - component: {fileID: 7391475136845897278}
+  - component: {fileID: 9213781017317213417}
   m_Layer: 5
   m_Name: Cups
   m_TagString: Untagged
@@ -1464,7 +1489,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4383433712668221538}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9213781017317213417}
+        m_MethodName: SpawnCup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9213781017317213417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811238549914968527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848323ff08e88494e8778efe112d1e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  maxCupAllowed: 1
+  timeToSpawn: 1
 --- !u!1 &4204137626157340887
 GameObject:
   m_ObjectHideFlags: 0

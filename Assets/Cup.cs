@@ -17,13 +17,14 @@ public class Cup : MonoBehaviour
     cupSprite = GetComponent<SpriteRenderer>();
     cupSprite.sprite = sprites[0];
   }
-  private void OnTriggerEnter2D(Collider2D other)
+  private void OnTriggerStay2D(Collider2D other)
   {
-    if (Input.GetButtonDown("mouse 2"))
+    if (Input.GetKeyDown("mouse 2"))
     {
-      if (other.gameObject.tag == "Stick")
+      if (other.gameObject.CompareTag("Stick"))
       {
         Debug.Log("Stick is detected!");
+        cupSprite.sprite = sprites[1];
       }
     }
   }
