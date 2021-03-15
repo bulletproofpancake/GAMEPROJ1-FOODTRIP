@@ -15,7 +15,7 @@ public class SummaryManager : MonoBehaviour
 
     private void Start()
     {
-        if(ShiftManager.Instance.Data != null)
+        if(ShiftManager.Instance.shift != null)
             SetBackgroundImage();
         
         actualProfit.text = $"Actual Profit: {MoneyManager.Instance.roundMoney}";
@@ -24,16 +24,16 @@ public class SummaryManager : MonoBehaviour
 
     private void SetBackgroundImage()
     {
-        switch (ShiftManager.Instance.Data.Schedule)
+        switch (ShiftManager.Instance.shift.Schedule)
         {
             case ShiftSchedule.Morning:
-                image.sprite = ShiftManager.Instance.Data.LocSprites.Morning;
+                image.sprite = ShiftManager.Instance.shift.LocSprites.Morning;
                 break;
             case ShiftSchedule.Afternoon:
-                image.sprite = ShiftManager.Instance.Data.LocSprites.Afternoon;
+                image.sprite = ShiftManager.Instance.shift.LocSprites.Afternoon;
                 break;
             case ShiftSchedule.Night:
-                image.sprite = ShiftManager.Instance.Data.LocSprites.Night;
+                image.sprite = ShiftManager.Instance.shift.LocSprites.Night;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
