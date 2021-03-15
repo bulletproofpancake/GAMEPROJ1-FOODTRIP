@@ -15,7 +15,7 @@ public class SceneLoader : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
 
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        Tween();
 
         MoneyManager.Instance.EndRound();
         SceneSelector.Instance.LoadNextScene(0);
@@ -26,7 +26,7 @@ public class SceneLoader : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("ButtonClick");
         FindObjectOfType<AudioManager>().Play("ArcadeBGM");
 
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        Tween();
 
         SceneSelector.Instance.LoadNextScene("Arcade");
     }
@@ -35,7 +35,7 @@ public class SceneLoader : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
 
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        Tween();
 
         SceneSelector.Instance.LoadNextScene("Summary");
     }
@@ -44,7 +44,7 @@ public class SceneLoader : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
 
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        Tween();
 
         SceneSelector.Instance.LoadNextScene("Upgrades");
     }
@@ -53,7 +53,7 @@ public class SceneLoader : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
 
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        Tween();
 
         SceneSelector.Instance.LoadNextScene();
     }
@@ -69,8 +69,13 @@ public class SceneLoader : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");
 
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        Tween();
 
         Application.Quit();
+    }
+
+    void Tween()
+    {
+        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
     }
 }
