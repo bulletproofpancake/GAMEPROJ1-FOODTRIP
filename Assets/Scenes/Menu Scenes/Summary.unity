@@ -1762,6 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175ff6a46fa09ab489f12a2118a5ca0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 1181055878}
   customersServed: {fileID: 1679448889}
   expectedProfit: {fileID: 12995362}
   actualProfit: {fileID: 866084074}
