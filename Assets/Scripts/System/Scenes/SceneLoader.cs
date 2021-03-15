@@ -31,7 +31,12 @@ public class SceneLoader : MonoBehaviour
     {
         SceneSelector.Instance.LoadNextScene();
     }
-
+    
+    public void LoadNextScene(string path)
+    {
+        SceneSelector.Instance.LoadNextScene(path);
+    }
+    
     public void LoadPreviousScene()
     {
         SceneSelector.Instance.LoadPreviousScene();

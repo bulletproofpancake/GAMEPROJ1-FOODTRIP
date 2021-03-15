@@ -25,6 +25,7 @@ public class CookOrder : MonoBehaviour
         CookingIndicator();
     }
 
+    #region Pares
     public void StartCooking()
     {
         if (Pause.isPaused == true)
@@ -32,6 +33,7 @@ public class CookOrder : MonoBehaviour
         else
             StartCoroutine(Cook());
     }
+
 
     private IEnumerator Cook()
     {
@@ -41,17 +43,23 @@ public class CookOrder : MonoBehaviour
         isCooking = false;
     }
 
+    #endregion
+
+    #region TusokTusok
+
+    public void SpawnFood() {
+
+        StartCoroutine(AddFood());
+    }
+    private IEnumerator AddFood() {
+        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
+    }
+
+
+    #endregion
     private void CookingIndicator()
     {
-        if(Pause.isPaused==true)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
-
         if (isCooking == true)
         {
             timer = orderToCook.Data.CookTime;

@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class ShiftManager : Singleton<ShiftManager>
 {
-    public ShiftData Data { get; set; }
+    public CartData cart;
+    public ShiftData shift;
 }
