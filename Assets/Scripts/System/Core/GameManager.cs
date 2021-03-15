@@ -96,12 +96,14 @@ public class GameManager : MonoBehaviour
         if (!isPaused)
         {
             isPaused = paused;
+            Time.timeScale = 0f;
             print("Paused = " + isPaused);
             StopAllCoroutines();
         }
         else
         {
             isPaused = paused;
+            Time.timeScale = 1f;
             print("Paused = " + isPaused);
             StartCoroutine(CountDownLevel());
         }

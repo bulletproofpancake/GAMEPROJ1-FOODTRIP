@@ -43,15 +43,6 @@ public class CookOrder : MonoBehaviour
 
     private void CookingIndicator()
     {
-        if(Pause.isPaused==true)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
-
         if (isCooking == true)
         {
             timer = orderToCook.Data.CookTime;
