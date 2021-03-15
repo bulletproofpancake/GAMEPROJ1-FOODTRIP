@@ -283,16 +283,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Afternoon
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c772aaf45233bc04ea854315d8d523a2, type: 2}
-  m_sharedMaterial: {fileID: 5561954584724423772, guid: c772aaf45233bc04ea854315d8d523a2,
+  m_fontAsset: {fileID: 11400000, guid: 1cca9b4aa471dbf43a64adae4ad35f41, type: 2}
+  m_sharedMaterial: {fileID: 2255838918751245115, guid: 1cca9b4aa471dbf43a64adae4ad35f41,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4291687422
+  m_fontColor: {r: 0.99607843, g: 0.9529412, b: 0.8039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -309,10 +309,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76.8
+  m_fontSize: 99.05
   m_fontSizeBase: 76.8
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 500
   m_fontStyle: 0
@@ -563,16 +563,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Morning
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c772aaf45233bc04ea854315d8d523a2, type: 2}
-  m_sharedMaterial: {fileID: 5561954584724423772, guid: c772aaf45233bc04ea854315d8d523a2,
+  m_fontAsset: {fileID: 11400000, guid: 1cca9b4aa471dbf43a64adae4ad35f41, type: 2}
+  m_sharedMaterial: {fileID: 2255838918751245115, guid: 1cca9b4aa471dbf43a64adae4ad35f41,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4291687422
+  m_fontColor: {r: 0.99607843, g: 0.9529412, b: 0.8039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 88.65
+  m_fontSize: 108.65
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -917,8 +917,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4291687422
+  m_fontColor: {r: 0.99607843, g: 0.9529412, b: 0.8039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1268,16 +1268,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Night
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c772aaf45233bc04ea854315d8d523a2, type: 2}
-  m_sharedMaterial: {fileID: 5561954584724423772, guid: c772aaf45233bc04ea854315d8d523a2,
+  m_fontAsset: {fileID: 11400000, guid: 1cca9b4aa471dbf43a64adae4ad35f41, type: 2}
+  m_sharedMaterial: {fileID: 2255838918751245115, guid: 1cca9b4aa471dbf43a64adae4ad35f41,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4291687422
+  m_fontColor: {r: 0.99607843, g: 0.9529412, b: 0.8039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1294,10 +1294,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76.8
+  m_fontSize: 107.95
   m_fontSizeBase: 76.8
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 500
   m_fontStyle: 0

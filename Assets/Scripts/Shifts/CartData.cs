@@ -16,6 +16,5 @@ public class CartData : ScriptableObject
 public enum CartType
 {
     Paresan,
-    Ihawan,
     Tusoktusok
 }

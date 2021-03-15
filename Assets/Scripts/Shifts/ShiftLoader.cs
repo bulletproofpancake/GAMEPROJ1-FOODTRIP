@@ -29,9 +29,6 @@ public class ShiftLoader : SceneLoader
             case CartType.Paresan:
                 SetSprites();
                 break;
-            case CartType.Ihawan:
-                SetSprites();
-                break;
             case CartType.Tusoktusok:
                 SetSprites();
                 break;
@@ -64,8 +61,6 @@ public class ShiftLoader : SceneLoader
         {
             case CartType.Paresan:
                 ShiftManager.Instance.shift = shiftPares;
-                break;
-            case CartType.Ihawan:
                 break;
             case CartType.Tusoktusok:
                 ShiftManager.Instance.shift = shiftTusok;
