@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ShiftLoader : SceneLoader
 {
-    [SerializeField] private ShiftData data;
     [SerializeField] private ShiftSchedule schedule;
+    [SerializeField] private ShiftData shiftPares,shiftTusok;
     private Image _image;
 
     private void Start()
@@ -18,7 +18,7 @@ public class ShiftLoader : SceneLoader
 
     public override void LoadNextScene()
     {
-        ShiftManager.Instance.shift = data;
+        SetShift();
         base.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/Arcade");
     }
 
@@ -52,6 +52,23 @@ public class ShiftLoader : SceneLoader
                 break;
             case ShiftSchedule.Night:
                 _image.sprite = ShiftManager.Instance.cart.LocSprites.Night;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    private void SetShift()
+    {
+        switch (ShiftManager.Instance.cart.Type)
+        {
+            case CartType.Paresan:
+                ShiftManager.Instance.shift = shiftPares;
+                break;
+            case CartType.Ihawan:
+                break;
+            case CartType.Tusoktusok:
+                ShiftManager.Instance.shift = shiftTusok;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

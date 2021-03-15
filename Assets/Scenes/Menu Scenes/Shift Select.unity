@@ -502,8 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b8ea6927ca9c4eb677f8d3eac1fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 5b5e9ceeb2f13fc48993afba84cb8d83, type: 2}
   schedule: 2
+  shiftPares: {fileID: 11400000, guid: 5b5e9ceeb2f13fc48993afba84cb8d83, type: 2}
+  shiftTusok: {fileID: 11400000, guid: 016c306cc85dd464c9d5f8d106c5b10c, type: 2}
 --- !u!1 &441137652
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,8 +848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b8ea6927ca9c4eb677f8d3eac1fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 78311b1a8a7ecbe47b806180e5eb75ce, type: 2}
   schedule: 0
+  shiftPares: {fileID: 11400000, guid: 78311b1a8a7ecbe47b806180e5eb75ce, type: 2}
+  shiftTusok: {fileID: 11400000, guid: 4828dde103b90914f8d2eba7d3c6a3c2, type: 2}
 --- !u!1 &1148552702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,5 +1561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b8ea6927ca9c4eb677f8d3eac1fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 83142cfd305ea8244a48b7c2019bec76, type: 2}
   schedule: 1
+  shiftPares: {fileID: 11400000, guid: 83142cfd305ea8244a48b7c2019bec76, type: 2}
+  shiftTusok: {fileID: 11400000, guid: a76a75207b92c814f9a34b0b8035fc10, type: 2}
