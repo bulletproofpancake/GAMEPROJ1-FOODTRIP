@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4452024837193188929}
   - component: {fileID: 6807643634568628927}
   - component: {fileID: 3444510248852689126}
-  - component: {fileID: 5991150695849982127}
+  - component: {fileID: -8138934420859995115}
   m_Layer: 8
   m_Name: Fishball
   m_TagString: Untagged
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5991150695849982127
+--- !u!114 &-8138934420859995115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6287829208680567943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98db657a99e390e43b3b31e92716c132, type: 3}
+  m_Script: {fileID: 11500000, guid: 42858dc170385284881a0955e9e26179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: d5122c0577fa62548a47cb4da1b08c28, type: 2}

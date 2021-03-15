@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 949986910898805943}
   - component: {fileID: 6318369393814182882}
   - component: {fileID: 1074293150562917465}
-  - component: {fileID: 4982726109120523340}
+  - component: {fileID: -5392372973590953509}
   m_Layer: 8
   m_Name: Squid ball
   m_TagString: Untagged
@@ -136,7 +136,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4982726109120523340
+--- !u!114 &-5392372973590953509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4777404099944850042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98db657a99e390e43b3b31e92716c132, type: 3}
+  m_Script: {fileID: 11500000, guid: 42858dc170385284881a0955e9e26179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: d8f20d6e7a3e26f4b991e6de1e370a68, type: 2}

@@ -58,7 +58,7 @@ public class StickBehaviors : MonoBehaviour
     didLeftClick = false;
     disableMouseControl = false;
     counter = 0;
-    //  referencePoolObject = GameObject.Find();
+
 
   }
   private void OnEnable()

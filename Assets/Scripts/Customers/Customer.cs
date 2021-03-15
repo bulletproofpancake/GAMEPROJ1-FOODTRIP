@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using Customers;
 using TMPro;
 using UnityEngine;
@@ -21,6 +21,7 @@ public class Customer : MonoBehaviour
 
     private float _paymentContainer;
     private bool readyToCollect;
+
     
     public int SeatTaken { get; set; }
 
@@ -28,7 +29,9 @@ public class Customer : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
+        // Set Order get's the amount of orders that the customers will be using.
         SetOrder();
+        // Give Order get's the orders of custome
         GiveOrder();
     }
 
@@ -54,6 +57,8 @@ public class Customer : MonoBehaviour
         orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
     }
 
+// This function checks if the said orders are correct
+        
     private void TakeOrder(Order givenOrder)
     {
         int _index;

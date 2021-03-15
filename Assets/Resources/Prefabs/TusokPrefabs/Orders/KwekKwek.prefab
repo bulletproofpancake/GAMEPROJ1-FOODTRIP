@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6908132387267464733}
   - component: {fileID: 2955307075203429895}
   - component: {fileID: 451615424934754775}
-  - component: {fileID: 8758606404657732872}
+  - component: {fileID: 8629433395338078643}
   m_Layer: 8
   m_Name: KwekKwek
   m_TagString: Untagged
@@ -133,7 +133,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8758606404657732872
+--- !u!114 &8629433395338078643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6898327170047566929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98db657a99e390e43b3b31e92716c132, type: 3}
+  m_Script: {fileID: 11500000, guid: 42858dc170385284881a0955e9e26179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: ac91610ab54ec93469c2d82eb62b95e9, type: 2}
