@@ -304,12 +304,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5095226403551351857}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &940013748 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8198392540849498377, guid: c8e26806f4c618e43a208f6992e17b81,
-    type: 3}
-  m_PrefabInstance: {fileID: 8474473384624548479}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1070472875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3001723912962039566, guid: aae6923240baa7d408d9c884e1248b73,
@@ -541,6 +535,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 160586297}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1842971941 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8474473383680894217, guid: c8e26806f4c618e43a208f6992e17b81,
+    type: 3}
+  m_PrefabInstance: {fileID: 8474473384624548479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1890666899
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 940013748}
+  - {fileID: 1842971941}
   - {fileID: 57620124}
   - {fileID: 519310673}
   m_Father: {fileID: 0}
@@ -1047,6 +1047,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 895
       objectReference: {fileID: 0}
+    - target: {fileID: 120496224702054123, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2480595306952540860, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1166,6 +1171,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899314818840127905, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6467308510634541362, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
