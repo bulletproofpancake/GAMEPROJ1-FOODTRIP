@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+/// <summary>
+/// Spawn manager for Pares only
+/// </summary>
 public class SpawnManager : Singleton<SpawnManager>
 {
     [Header("Customer Spawn")]
