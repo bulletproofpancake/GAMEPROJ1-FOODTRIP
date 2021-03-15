@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/Shift Select.unity
     guid: 57d502e292c84ca4fbc0ca67601984b4
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/Church/Arcade.unity
+    path: Assets/Scenes/Game Scenes/Paresan/Arcade.unity
     guid: 9e5a98d14ba6a9a4ab59c036fb882654
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/Summary.unity
