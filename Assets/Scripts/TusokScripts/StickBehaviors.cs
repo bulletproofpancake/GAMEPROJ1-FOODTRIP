@@ -42,7 +42,11 @@ public class StickBehaviors : MonoBehaviour
   private AreaToStick[] foodStickPos = new AreaToStick[3];
 
   // * USE LIST INSTEAD FOR GROUPING FOODS IN THE STICK
-  private List<GameObject> foodsInTheStick = new List<GameObject>();
+  public List<GameObject> foodsInTheStick = new List<GameObject>();
+
+
+  // * List for getting the orderdata of the food
+  public List<OrderTT> _getFood = new List<OrderTT>();
 
   [SerializeField]
   private GameObject pooledObjectReference;
@@ -101,14 +105,14 @@ public class StickBehaviors : MonoBehaviour
     Ray2D ray = new Ray2D(startPoint.position, -transform.up);
     //separated raycast2d outside the if statement just in case this is still needed for other raycast
     RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-    var hitFood = hit.collider.gameObject;
+    GameObject hitFood = hit.collider.gameObject;
 
 
-    if (hitFood.GetComponent<Order>() || hit.collider.CompareTag("Kawali"))
+    if (hitFood.GetComponent<OrderTT>() || hit.collider.CompareTag("Kawali"))
     {
       lineRenderer.enabled = true;
       DrawRay2D(ray.origin, hit.point);
-      if (hitFood != null && hitFood.GetComponent<Order>() && Input.GetMouseButtonDown(0))
+      if (hitFood != null && hitFood.GetComponent<OrderTT>() && Input.GetMouseButtonDown(0))
       {
         counter = 0;
         // for loop checks if there is still space within the stick
@@ -127,6 +131,7 @@ public class StickBehaviors : MonoBehaviour
 
           hitFood.transform.rotation = Quaternion.Euler(Vector3.zero);
           StackInFood(hitFood);
+
         }
 
       }
@@ -175,9 +180,11 @@ public class StickBehaviors : MonoBehaviour
   //function that puts the food in the stick.
   private void StackInFood(GameObject food)
   {
+    OrderTT _order = food.GetComponent<OrderTT>();
     food.GetComponent<Rigidbody2D>().isKinematic = true;
     food.GetComponent<Rigidbody2D>().Sleep();
     foodsInTheStick.Insert(0, food);
+    _getFood.Insert(0, _order);
 
     SetFoodInStickPosition();
 
@@ -186,7 +193,9 @@ public class StickBehaviors : MonoBehaviour
   //function that removes the food from the stick
   private void RemoveFood()
   {
+
     GameObject foodOnTop = foodsInTheStick[0];
+    OrderTT _order = foodOnTop.GetComponent<OrderTT>();
     int LastIndex = foodsInTheStick.Count - 1;
 
     foodOnTop.GetComponent<Rigidbody2D>().isKinematic = false;
@@ -196,6 +205,7 @@ public class StickBehaviors : MonoBehaviour
 
     foodStickPos[LastIndex].doesContain = false;
     foodsInTheStick.Remove(foodOnTop);
+    _getFood.Remove(_order);
     SetFoodInStickPosition();
 
   }
@@ -209,13 +219,12 @@ public class StickBehaviors : MonoBehaviour
       foodStickPos[index].doesContain = true;
       foodsInTheStick[index].transform.parent = foodStickPos[index].stickInPos.transform;
     }
-
   }
 
 
   private void OnTriggerStay2D(Collider2D other)
   {
-    if (other.CompareTag("DirtyCup"))
+    if (other.CompareTag("CleanCup"))
     {
 
       if (Input.GetKeyDown("mouse 2") && counter >= 2)

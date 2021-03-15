@@ -10,7 +10,7 @@ public class Cup : MonoBehaviour
   private Sprite[] sprites = new Sprite[2];
 
 
-
+  public List<OrderTT> foodContents;
 
   private void Start()
   {
@@ -23,8 +23,26 @@ public class Cup : MonoBehaviour
     {
       if (other.gameObject.CompareTag("Stick"))
       {
+        foodContents = other.gameObject.GetComponent<StickBehaviors>()._getFood;
         Debug.Log("Stick is detected!");
         cupSprite.sprite = sprites[1];
+      }
+    }
+  }
+
+  // This function hopefully only occurs when the current sprite is set to the 2nd sprite
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    if (cupSprite.sprite == sprites[1])
+    {
+      if (other.GetComponent<CustomerTT>() && SpawnDirtyCup.amountInScene < SpawnDirtyCup.maxDirtyCupSpawn)
+      {
+        gameObject.SetActive(false);
+      }
+
+      if (SpawnDirtyCup.amountInScene >= SpawnDirtyCup.maxDirtyCupSpawn)
+      {
+        Debug.LogWarning("There are too many dirty cups in scne!");
       }
     }
   }

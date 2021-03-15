@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3539798815121080270}
   - component: {fileID: 2811268103644105606}
-  - component: {fileID: 4639890436639549833}
   - component: {fileID: -7529832867200504693}
   - component: {fileID: 58299122021398426}
+  - component: {fileID: -4396085576448876722}
   m_Layer: 0
   m_Name: Worker
   m_TagString: Untagged
@@ -85,23 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4639890436639549833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537334110035868631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2942762d9e67d604db5e4a190c252ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 0abf52bb2d6c86543a802489412f82eb, type: 2}
-  dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
-  orderIcon: {fileID: 5257329337426000543}
-  orderText: {fileID: 1677336308125156304}
-  dialogueBox: {fileID: 5257329337898569564}
 --- !u!61 &-7529832867200504693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,6 +132,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4396085576448876722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537334110035868631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72374090a865a241a631214a131fd24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 0abf52bb2d6c86543a802489412f82eb, type: 2}
+  dialogeData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
+  iconOrder: []
+  orderText: {fileID: 0}
+  dialogueBox: {fileID: 5257329337898569564}
+  dirtyCupSpawnPosition: {fileID: 0}
 --- !u!1001 &4832104697791253562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,21 +231,3 @@ SpriteRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 4832104697791253562}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5257329337426000543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 863244941929494181, guid: 9ebd80676746f7a4fa19d23cccdd792b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4832104697791253562}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1677336308125156304 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6073119365110321130, guid: 9ebd80676746f7a4fa19d23cccdd792b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4832104697791253562}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

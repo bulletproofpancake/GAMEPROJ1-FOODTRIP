@@ -7,11 +7,17 @@ public class CustomerData : ScriptableObject
 {
   [SerializeField] private Sprite[] sprites;
   [SerializeField] private Order[] possibleOrders;
+
+  [SerializeField] private OrderTT[] possibleOrder;
   [SerializeField] private int despawnTime;
 
   public Order[] PossibleOrders => possibleOrders;
 
-  private Order[] OrderLineUp;
+
+  //vairables with 'TT' at the end are for tusok tusok
+  public OrderTT[] PossibleOrder => possibleOrder;
+
+  private OrderTT[] OrderLineUp = new OrderTT[3];
 
   public Sprite ChangeSprite()
   {
@@ -24,11 +30,11 @@ public class CustomerData : ScriptableObject
   }
 
   // * Use this function to get all orders of customer
-  public Order GetAllOrder(int index)
+  public OrderTT GetAllOrder(int index)
   {
     for (int i = 0; i < possibleOrders.Length; i++)
     {
-      OrderLineUp[i] = possibleOrders[Random.Range(0, possibleOrders.Length)];
+      OrderLineUp[i] = possibleOrder[Random.Range(0, possibleOrder.Length)];
     }
     return OrderLineUp[index];
   }
