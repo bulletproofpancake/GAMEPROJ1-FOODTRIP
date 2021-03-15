@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             levelDuration--;
         }
         MoneyManager.Instance.Earn();
-        SceneSelector.Instance.LoadNextScene();
+        SceneSelector.Instance.LoadNextScene("Summary");
     }
 
     private void SetBackground()
