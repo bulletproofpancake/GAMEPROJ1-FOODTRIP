@@ -113,9 +113,16 @@ public class Customer : MonoBehaviour
     {
         if(readyToCollect==true)
         {
+            FindObjectOfType<AudioManager>().Play("CustomerPay");
+
             MoneyManager.Instance.Collect(_paymentContainer);
             readyToCollect = false;
             gameObject.SetActive(false);
         }
     }
+
+    //bugs: Customer can still receive orders even when the current orders is complete
+    // customer also pays for extra orders that are received
+    // For example: Customer orders 2 pares and you give another pares before customer disappears making it 3 pares
+    // If you collect the payment in time the customer will pay for 3 pares instead of original 2 pares
 }

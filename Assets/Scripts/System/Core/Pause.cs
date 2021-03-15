@@ -12,11 +12,20 @@ public class Pause : MonoBehaviour
     {
         if (isPaused == false)
         {
+            FindObjectOfType<AudioManager>().Play("ButtonClick");
+            FindObjectOfType<AudioManager>().Pause("ParesSFX");
+            FindObjectOfType<AudioManager>().Pause("KaninSFX");
+
             isPaused = true;
             _gameManager.PauseGame(isPaused);
         }
         else if (isPaused == true)
         {
+            FindObjectOfType<AudioManager>().Play("ButtonClick");
+            FindObjectOfType<AudioManager>().UnPause("ParesSFX");
+            FindObjectOfType<AudioManager>().UnPause("KaninSFX");
+
+
             isPaused = false;
             _gameManager.PauseGame(isPaused);
         }

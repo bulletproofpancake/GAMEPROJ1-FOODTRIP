@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
         }
         MoneyManager.Instance.Earn();
         SceneSelector.Instance.LoadNextScene();
+
+        FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
     }
 
     private void SetBackground()

@@ -14,6 +14,7 @@ public class WashTimeUpgrade : UpgradeSystem
 
     public void UpgradeBowlWashTime()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
 
         if (upgradeData.Level < upgradeData.Upgrade.Length){

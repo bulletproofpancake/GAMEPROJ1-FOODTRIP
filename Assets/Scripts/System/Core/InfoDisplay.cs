@@ -21,15 +21,24 @@ public class InfoDisplay : MonoBehaviour
     {
         if (Pause.isPaused == true)// Closes Info Box
         {
+            FindObjectOfType<AudioManager>().Play("ButtonClick");
+            FindObjectOfType<AudioManager>().UnPause("ParesSFX");
+            FindObjectOfType<AudioManager>().UnPause("KaninSFX");
+
             Pause.isPaused = false;
             infoBox.SetActive(false);
             print("Info open (PAUSED) = " + Pause.isPaused);
         }
         else// Opens Info Box
         {
+            FindObjectOfType<AudioManager>().Play("ButtonClick");
+            FindObjectOfType<AudioManager>().Pause("ParesSFX");
+            FindObjectOfType<AudioManager>().Pause("KaninSFX");
+
             Pause.isPaused = true;
             infoBox.SetActive(true);
             print("Info open (PAUSED) = " + Pause.isPaused);
+
         }
     }
 }
