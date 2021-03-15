@@ -9,6 +9,8 @@ public class CartData : ScriptableObject
     public CartType Type => type;
     [SerializeField] private GameObject cart;
     public GameObject Cart => cart;
+    [SerializeField] private LocationSprites locSprites;
+    public LocationSprites LocSprites => locSprites;
 }
 
 public enum CartType

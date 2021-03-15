@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   cart: {fileID: 5462583768610612738, guid: e7886e8aff0951449a30bcd5f142b753, type: 3}
+  locSprites:
+    morning: {fileID: 21300000, guid: 2069509e951d59b40b2b30d17eb458e8, type: 3}
+    afternoon: {fileID: 21300000, guid: be24b76286fc6bf478fc2e9687553bf4, type: 3}
+    night: {fileID: 21300000, guid: a15016aacb2ca2b4e8f6c205ee40738f, type: 3}

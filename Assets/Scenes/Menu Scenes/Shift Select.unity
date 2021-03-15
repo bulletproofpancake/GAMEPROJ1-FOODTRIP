@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5b5e9ceeb2f13fc48993afba84cb8d83, type: 2}
+  schedule: 2
 --- !u!1 &441137652
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 78311b1a8a7ecbe47b806180e5eb75ce, type: 2}
+  schedule: 0
 --- !u!1 &1148552702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,3 +1560,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 83142cfd305ea8244a48b7c2019bec76, type: 2}
+  schedule: 1
