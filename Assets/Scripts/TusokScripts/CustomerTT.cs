@@ -44,7 +44,8 @@ public class CustomerTT : MonoBehaviour
     //Upon spawning of character in the scene, select the sprite to use
     _sprite = GetComponent<SpriteRenderer>();
     _sprite.sprite = data.ChangeSprite();
-    dirtyCupSpawnPosition = GameObject.Find("DirtyCupSpawner").transform;
+    Transform transform1 = GameObject.Find("DirtyCupSpawner").transform;
+    dirtyCupSpawnPosition = transform1;
 
     SetOrderTT();
     GiveOrderTT();

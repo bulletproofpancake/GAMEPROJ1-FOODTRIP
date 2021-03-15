@@ -17,7 +17,7 @@ public class CustomerData : ScriptableObject
   //vairables with 'TT' at the end are for tusok tusok
   public OrderTT[] PossibleOrder => possibleOrder;
 
-  private OrderTT[] OrderLineUp = new OrderTT[3];
+  private OrderTT[] OrderLineUp;
 
   public Sprite ChangeSprite()
   {

@@ -5,58 +5,60 @@ using UnityEngine.UI;
 
 public class CookOrder : MonoBehaviour
 {
-    [SerializeField] private Order orderToCook;
-    [SerializeField] private Image fillImage;
-    private float timer;
-    private bool isCooking;
+  [SerializeField] private OrderTT orderToCook;
+  [SerializeField] private Image fillImage;
+  private float timer;
+  private bool isCooking;
 
-    private void Update()
+  private void Update()
+  {
+    CookingIndicator();
+  }
+
+  #region Pares
+  public void StartCooking()
+  {
+    StartCoroutine(Cook());
+  }
+
+
+  private IEnumerator Cook()
+  {
+    isCooking = true;
+    yield return new WaitForSeconds(orderToCook.Data.CookTime);
+    SpawnManager.Instance.Spawn(orderToCook.Data);
+    isCooking = false;
+  }
+
+  #endregion
+
+  #region TusokTusok
+
+  public void SpawnFood()
+  {
+
+    StartCoroutine(AddFood());
+  }
+  private IEnumerator AddFood()
+  {
+    yield return new WaitForSeconds(orderToCook.Data.CookTime);
+    TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
+  }
+
+
+  #endregion
+  private void CookingIndicator()
+  {
+    if (isCooking == true)
     {
-        CookingIndicator();
+      timer = orderToCook.Data.CookTime;
+      fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
     }
-
-    #region Pares
-    public void StartCooking()
+    else if (isCooking == false)
     {
-        StartCoroutine(Cook());
+      timer = 0;
+      fillImage.fillAmount = timer;
     }
-
-
-    private IEnumerator Cook()
-    {
-        isCooking = true;
-        yield return new WaitForSeconds(orderToCook.Data.CookTime);
-        SpawnManager.Instance.Spawn(orderToCook.Data);
-        isCooking = false;
-    }
-
-    #endregion
-
-    #region TusokTusok
-
-    public void SpawnFood() {
-
-        StartCoroutine(AddFood());
-    }
-    private IEnumerator AddFood() {
-        yield return new WaitForSeconds(orderToCook.Data.CookTime);
-        TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
-    }
-
-
-    #endregion
-    private void CookingIndicator()
-    {
-        if (isCooking == true)
-        {
-            timer = orderToCook.Data.CookTime;
-            fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
-        }
-        else if (isCooking == false)
-        {
-            timer = 0;
-            fillImage.fillAmount = timer;
-        }
-    }
+  }
 
 }

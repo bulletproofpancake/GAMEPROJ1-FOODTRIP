@@ -19,4 +19,8 @@ MonoBehaviour:
   - {fileID: 5991150695849982127, guid: e409bff26358fa64d86c933cbf778ca6, type: 3}
   - {fileID: 8758606404657732872, guid: 3c3a24bd77da06a4abe6ffb56605c325, type: 3}
   - {fileID: 4982726109120523340, guid: 19bf7778c89e3384c97075ee214e7a1b, type: 3}
+  possibleOrder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   despawnTime: 2

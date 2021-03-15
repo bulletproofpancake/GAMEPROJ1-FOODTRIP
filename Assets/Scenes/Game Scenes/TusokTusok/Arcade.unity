@@ -746,7 +746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderToCook: {fileID: 0}
+  orderToCook: {fileID: 8629433395338078643, guid: 3c3a24bd77da06a4abe6ffb56605c325,
+    type: 3}
   fillImage: {fileID: 0}
 --- !u!1 &1323666790
 GameObject:
@@ -1231,7 +1232,8 @@ PrefabInstance:
         type: 3}
       propertyPath: orderToCook
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -8138934420859995115, guid: e409bff26358fa64d86c933cbf778ca6,
+        type: 3}
     - target: {fileID: 31499509234177162, guid: c101d73538b9d384bb529c00d10ac61a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1519,7 +1521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderToCook: {fileID: 0}
+  orderToCook: {fileID: -5392372973590953509, guid: 19bf7778c89e3384c97075ee214e7a1b,
+    type: 3}
   fillImage: {fileID: 0}
 --- !u!1001 &1071866724640851276
 PrefabInstance:
