@@ -54,9 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Spicy Pumpkin
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -77307260
   material: {fileID: -37133106256686647}
-  materialHashCode: 0
+  materialHashCode: 1340223140
   m_Version: 1.1.0
   m_SourceFontFileGUID: 3a6d1c3fc692b2d4c85b129c85a3da7d
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 3a6d1c3fc692b2d4c85b129c85a3da7d,
