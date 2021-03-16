@@ -149,6 +149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 3620773897691688689, guid: 2e7542351fbe8d04dbd33c0f56701b65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3620773897691688690, guid: 2e7542351fbe8d04dbd33c0f56701b65,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
