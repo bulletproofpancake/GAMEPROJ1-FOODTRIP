@@ -912,7 +912,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363486371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: d53c11041e92adf48a2a661407067b06, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &363486371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,7 +973,7 @@ GameObject:
   - component: {fileID: 375657747}
   - component: {fileID: 375657746}
   m_Layer: 5
-  m_Name: CookTime Bar
+  m_Name: CookTimeUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1739,7 +1750,7 @@ GameObject:
   - component: {fileID: 1064984191}
   - component: {fileID: 1064984190}
   m_Layer: 5
-  m_Name: FoodQuality Bar
+  m_Name: OrderCostUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2221,7 +2232,7 @@ GameObject:
   - component: {fileID: 1505469314}
   - component: {fileID: 1505469313}
   m_Layer: 5
-  m_Name: WashTime Bar
+  m_Name: WashTimeUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,7 +2372,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1516762683}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 30545e9d69e660b4ba0bd4ad7c3d37a0, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1516762683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2871,7 +2893,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1875844508}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 6095f4e6b2842344db8fab8fc67c1e8f, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1875844508
 MonoBehaviour:
   m_ObjectHideFlags: 0
