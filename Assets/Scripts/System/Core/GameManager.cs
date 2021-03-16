@@ -21,14 +21,14 @@ public class GameManager : Singleton<GameManager>
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI moneyTextArcade;
+    [SerializeField] private TextMeshProUGUI moneyTextVN;
     [SerializeField] private GameObject background;
-
-    protected override void Awake()
+    public bool isPaused;
+    
+    private void Awake()
     {
-        base.Awake();
-
-        if(ShiftManager.Instance.Data != null){
+        if(ShiftManager.Instance.shift != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
         }
@@ -44,7 +44,9 @@ public class GameManager : Singleton<GameManager>
             arcadeCanvas.SetActive(true);
         }
 
-        Instantiate(cartUsed, transform.position, Quaternion.identity);
+        if(cartUsed!=null){
+            Instantiate(cartUsed, transform.position, Quaternion.identity);
+        }
     }
 
     // Start is called before the first frame update
@@ -69,7 +71,10 @@ public class GameManager : Singleton<GameManager>
         }
         else
         {
-            moneyText.text = $"{MoneyManager.Instance.currentMoney}";
+            if(!isVN)
+                moneyTextArcade.text = $"{MoneyManager.Instance.currentMoney}";
+            else
+                moneyTextVN.text = $"{MoneyManager.Instance.currentMoney}";
         }
         
         
@@ -88,7 +93,7 @@ public class GameManager : Singleton<GameManager>
         
         MoneyManager.Instance.Earn();
         
-        if(ShiftManager.Instance.Data == null)
+        if(ShiftManager.Instance.shift == null)
             SceneSelector.Instance.LoadNextScene("Summary");
         
         else if(!IsEncounterComplete())
@@ -129,17 +134,35 @@ public class GameManager : Singleton<GameManager>
     }
     private void SetBackground()
     {
-        switch (ShiftManager.Instance.Data.Schedule)
+        switch (ShiftManager.Instance.shift.Schedule)
         {
             case ShiftSchedule.Morning:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Morning;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Morning;
                 break;
             case ShiftSchedule.Afternoon:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Afternoon;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Afternoon;
                 break;
             case ShiftSchedule.Night:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Night;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Night;
                 break;
+        }
+    }
+
+    public void PauseGame(bool paused)
+    {
+        if (!isPaused)
+        {
+            isPaused = paused;
+            Time.timeScale = 0f;
+            print("Paused = " + isPaused);
+            StopAllCoroutines();
+        }
+        else
+        {
+            isPaused = paused;
+            Time.timeScale = 1f;
+            print("Paused = " + isPaused);
+            StartCoroutine(CountDownLevel());
         }
     }
 }

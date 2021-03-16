@@ -17,6 +17,8 @@ public class Customer : MonoBehaviour
     
     [SerializeField] private Customers.DialogueData dialogueData;
     [SerializeField] private SpriteRenderer dialogueBox;
+    [SerializeField] private Sprite DialogueBoxNormal;
+    [SerializeField] private Sprite dialogueBoxPaid;
 
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
@@ -56,7 +58,7 @@ public class Customer : MonoBehaviour
     {
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
         _paymentContainer = 0;
-        dialogueBox.color = Color.white;
+        dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;
     }
@@ -94,6 +96,7 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
                 
                 if (GameManager.Instance.isVN)

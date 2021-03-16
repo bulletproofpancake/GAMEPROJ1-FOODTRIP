@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Spawn manager for Pares only
+/// </summary>
 public class SpawnManager : Singleton<SpawnManager>
 {
     [Header("NPC Spawn")]

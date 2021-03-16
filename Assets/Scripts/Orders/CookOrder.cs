@@ -7,18 +7,33 @@ public class CookOrder : MonoBehaviour
 {
     [SerializeField] private Order orderToCook;
     [SerializeField] private Image fillImage;
+    private Button button;
     private float timer;
     private bool isCooking;
 
+    private void Start()
+    {
+        button = GetComponent<Button>();
+    }
+
     private void Update()
     {
+        if (Pause.isPaused == true)
+            button.interactable = false;
+        else if (Pause.isPaused == false)
+            button.interactable = true;
         CookingIndicator();
     }
 
+    #region Pares
     public void StartCooking()
     {
-        StartCoroutine(Cook());
+        if (Pause.isPaused == true)
+            StopAllCoroutines();
+        else
+            StartCoroutine(Cook());
     }
+
 
     private IEnumerator Cook()
     {
@@ -28,6 +43,21 @@ public class CookOrder : MonoBehaviour
         isCooking = false;
     }
 
+    #endregion
+
+    #region TusokTusok
+
+    public void SpawnFood() {
+
+        StartCoroutine(AddFood());
+    }
+    private IEnumerator AddFood() {
+        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
+    }
+
+
+    #endregion
     private void CookingIndicator()
     {
         if (isCooking == true)
