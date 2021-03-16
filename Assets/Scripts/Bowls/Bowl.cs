@@ -12,6 +12,7 @@ public class Bowl : MonoBehaviour
 
     private void OnEnable()
     {
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
         BowlSpawner.Instance.RemoveBowl(gameObject);
     }
 
@@ -28,5 +29,17 @@ public class Bowl : MonoBehaviour
     {
         currentWashTime = baseWashTime - baseWashTime * multiplier;
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<Order>())
+        {
+            var order = other.GetComponent<Order>();
+            if (order._bowl == null)
+            {
+                isDirty = true;
+                order.GetBowl(this);
+            }
+        }
+    }
 }
