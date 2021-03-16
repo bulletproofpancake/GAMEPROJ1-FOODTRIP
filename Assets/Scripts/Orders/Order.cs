@@ -25,6 +25,7 @@ public class Order : MonoBehaviour
         SpawnManager.Instance.foodSeat[SeatTaken].isTaken = false;
         SpawnManager.Instance.bowlSeat[_bowl.SeatTaken].isTaken = false;
         _bowl.gameObject.SetActive(false);
+        _bowl = null;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
