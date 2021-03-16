@@ -28,6 +28,7 @@ public class GameManager : Singleton<GameManager>
     
     private void Awake()
     {
+        base.Awake();
         if(ShiftManager.Instance.shift != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();

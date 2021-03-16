@@ -71,9 +71,16 @@ public class SpawnManager : Singleton<SpawnManager>
         
         foreach (var data in NpcDatas)
         {
-            if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+            if(ShiftManager.Instance.shift != null){
+                if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+                {
+                    npc = data;
+                }
+            }
+            else
             {
-                npc = data;
+                Debug.LogWarning("Loading default npc");
+                npc = NpcDatas[0];
             }
         }
         

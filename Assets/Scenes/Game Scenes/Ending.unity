@@ -140,9 +140,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
+      propertyPath: cartUsed
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
       propertyPath: shiftData
       value: 
       objectReference: {fileID: 11400000, guid: 8397e55bad836c945b896322f6ed96b5,
+        type: 2}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: NpcDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: NpcDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a0a4efefdc8a7264ea3692606d706284,
         type: 2}
     - target: {fileID: 8474473383680894217, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
@@ -326,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: NpcDatas.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -342,7 +358,7 @@ PrefabInstance:
         type: 3}
       propertyPath: NpcDatas.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f3a4b7d1665a64b4a9e9b8cfd457d9fb,
+      objectReference: {fileID: 11400000, guid: a0a4efefdc8a7264ea3692606d706284,
         type: 2}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -610,12 +626,12 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[0].id
-      value: Pares
+      value: Ending
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -646,7 +662,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[0].parent
       value: 
-      objectReference: {fileID: 3632026253757582826}
+      objectReference: {fileID: 6896594325083940592}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[1].parent
@@ -676,13 +692,13 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[0].amountToPool
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[0].objectToPool
       value: 
-      objectReference: {fileID: 5476258529874628051, guid: bc43124a97d488f489846143cb2a5d0d,
+      objectReference: {fileID: 6077367765372447431, guid: f7c194f48355bbf4b858631888a7181b,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}

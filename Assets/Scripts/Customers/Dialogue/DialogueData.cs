@@ -2,7 +2,7 @@
 
 namespace Customers.Dialogue
 {
-    [CreateAssetMenu(fileName = "Dialogue", menuName = "Data/New Dialogue")]
+    [CreateAssetMenu(fileName = "Dialogue", menuName = "Data/New NPC Dialogue")]
     public class DialogueData : ScriptableObject
     {
         [SerializeField] private DialogueInfo[] info;
