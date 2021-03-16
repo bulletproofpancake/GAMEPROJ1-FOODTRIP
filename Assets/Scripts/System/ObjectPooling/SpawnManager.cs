@@ -166,7 +166,7 @@ public class SpawnManager : Singleton<SpawnManager>
 
         if (_foodIndex < foodSeat.Count)
         {
-            if(_foodIndex < bowlSeat.Length){
+            if(_foodIndex < bowlSeat.Count){
                 if (bowlSeat[_foodIndex].isTaken)
                 {
                     if (!foodSeat[_foodIndex].isTaken)
