@@ -94,7 +94,8 @@ public class SpawnManager : Singleton<SpawnManager>
 
         if (_foodIndex < foodSeat.Length)
         {
-            if(bowlSeat[_foodIndex].isTaken){
+            if (bowlSeat[_foodIndex].isTaken)
+            {
                 if (!foodSeat[_foodIndex].isTaken)
                 {
                     food.transform.position = foodSeat[_foodIndex].slot.position;

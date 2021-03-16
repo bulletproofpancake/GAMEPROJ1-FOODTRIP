@@ -10,7 +10,7 @@ public class Order : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
-    private Bowl _bowl;
+    public Bowl _bowl;
 
     public int SeatTaken { get; set; }
 

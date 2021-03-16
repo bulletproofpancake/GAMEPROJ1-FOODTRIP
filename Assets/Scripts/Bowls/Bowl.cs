@@ -34,8 +34,12 @@ public class Bowl : MonoBehaviour
     {
         if (other.GetComponent<Order>())
         {
-            isDirty = true;
-            other.GetComponent<Order>().GetBowl(this);
+            var order = other.GetComponent<Order>();
+            if (order._bowl == null)
+            {
+                isDirty = true;
+                order.GetBowl(this);
+            }
         }
     }
 }
