@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   schedule: 2
   locSprites:
-    morning: {fileID: 21300000, guid: 133b703d1695e2341973b94e696f1378, type: 3}
-    afternoon: {fileID: 21300000, guid: 0ce53645e1bcfa24c9c2a291bdba0d9c, type: 3}
-    night: {fileID: 21300000, guid: 86bf170d6ec0e6247be833c45f4878e7, type: 3}
+    morning: {fileID: 21300000, guid: b7f114295dbd6d34bbf4ed49d756b85c, type: 3}
+    afternoon: {fileID: 21300000, guid: 862b8bce6ead9ee499571e93e321576d, type: 3}
+    night: {fileID: 21300000, guid: f073af4ef8e351740958f1165e65178a, type: 3}
