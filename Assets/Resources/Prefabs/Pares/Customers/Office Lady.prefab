@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2928564202525044758}
   - component: {fileID: 5359904429127108726}
   m_Layer: 0
-  m_Name: Night
+  m_Name: Office Lady
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 696ffee4d4bbada459e8bf1fcbeeecb5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e92c32b44ea937498946f56dfeb8782, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,12 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2942762d9e67d604db5e4a190c252ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 10b83d83181589d4b9afde6e73ffb62f, type: 2}
+  data: {fileID: 11400000, guid: 315469fd2018416439bf4300f468ab60, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
   orderBox: {fileID: 2546742413702871810}
   dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   dialogueBox: {fileID: 2546742412094899566}
+  DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
+  dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,9 +120,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.22498071, y: 3.674944}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.992138, y: 5.242}
+    border: {x: 0, y: 0.22133331, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.036}
+    oldSize: {x: 3.235293, y: 6.04}
     newSize: {x: 2.992138, y: 5.242}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -165,12 +167,12 @@ PrefabInstance:
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}

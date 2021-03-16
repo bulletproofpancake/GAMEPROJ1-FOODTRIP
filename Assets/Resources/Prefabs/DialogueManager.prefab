@@ -179,12 +179,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersist: 0
-  data: {fileID: 0}
   nameBox: {fileID: 3822760963189267190}
   dialogueBox: {fileID: 3822760964196027118}
   dataIndex: 0
   textIndex: 0
   customerObject: {fileID: 0}
+  _order: {fileID: 0}
 --- !u!1 &3822760963395774081
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e079bc7fc5a64084cb8a8c583c7f2dc0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8e5b4137f9cc7b429e8af2ec81e1849, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -562,8 +562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -25, y: 50}
+  m_SizeDelta: {x: -50, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3822760964499223592
 CanvasRenderer:
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
+  m_fontSize: 281.65
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

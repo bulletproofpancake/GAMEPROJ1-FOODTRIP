@@ -130,7 +130,6 @@ public class Customer : MonoBehaviour
 
     private void OrderPrompt()
     {
-        dialogueBox.color = Color.green;
         int _index = Random.Range(0, dialogueData.customerDialogue.Length);
 
         orderIcon.GetComponent<SpriteRenderer>().enabled = false;

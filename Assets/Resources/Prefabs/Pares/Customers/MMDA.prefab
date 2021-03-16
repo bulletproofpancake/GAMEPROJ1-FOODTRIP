@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2928564202525044758}
   - component: {fileID: 5359904429127108726}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: MMDA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,12 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2942762d9e67d604db5e4a190c252ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 53ab289adbc881b479d1a8eb430b9e2f, type: 2}
+  data: {fileID: 11400000, guid: f3a4b7d1665a64b4a9e9b8cfd457d9fb, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
   orderBox: {fileID: 2546742413702871810}
   dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   dialogueBox: {fileID: 2546742412094899566}
+  DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
+  dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,12 +167,12 @@ PrefabInstance:
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}

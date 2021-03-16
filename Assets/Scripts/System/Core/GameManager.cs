@@ -113,7 +113,7 @@ public class GameManager : Singleton<GameManager>
         
         foreach (var data in NpcDatas)
         {
-            if (data.AppearsIf == ShiftManager.Instance.Data.Schedule)
+            if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
             {
                 if (data.Count >= data.Encounter.Length)
                 {

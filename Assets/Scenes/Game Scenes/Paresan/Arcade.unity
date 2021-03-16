@@ -729,12 +729,12 @@ PrefabInstance:
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: bowlSeat.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: foodSeat.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -744,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: customerSeat.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -1533,6 +1533,29 @@ PrefabInstance:
       propertyPath: levelDuration
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: NpcDatas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: NpcDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f3a4b7d1665a64b4a9e9b8cfd457d9fb,
+        type: 2}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: NpcDatas.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
+        type: 2}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: NpcDatas.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 315469fd2018416439bf4300f468ab60,
+        type: 2}
     - target: {fileID: 8474473383680894217, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_RootOrder
