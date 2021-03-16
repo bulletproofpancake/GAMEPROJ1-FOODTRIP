@@ -22,7 +22,7 @@ public class CustomerTT : MonoBehaviour
   [SerializeField]
   private SpriteRenderer dialogueBox;
 
-  private List<OrderTT> currentOrders;
+  private List<OrderTT> currentOrders = new List<OrderTT>;
 
   // sets the current sprite for the order of the customer
   private SpriteRenderer _sprite;
@@ -38,6 +38,11 @@ public class CustomerTT : MonoBehaviour
   Transform dirtyCupSpawnPosition;
 
   GameObject dirtyCup;
+  public int SeatTaken { get; set; }
+  void Start()
+  {
+    //Debug.Log(currentOrders.Count);
+  }
 
   private void OnEnable()
   {
@@ -49,6 +54,7 @@ public class CustomerTT : MonoBehaviour
 
     SetOrderTT();
     GiveOrderTT();
+
   }
 
   //constant number of orders will be 3
@@ -63,7 +69,7 @@ public class CustomerTT : MonoBehaviour
   {
     for (int i = 0; i < numOfOrders; i++)
     {
-      currentOrders[i] = data.GetAllOrder(i);
+      currentOrders.Add(data.GetAllOrder());
       iconOrder[i].GetComponent<SpriteRenderer>().sprite = currentOrders[i].Data.Image;
     }
   }

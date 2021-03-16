@@ -146,7 +146,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 0abf52bb2d6c86543a802489412f82eb, type: 2}
   dialogeData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
-  iconOrder: []
+  iconOrder:
+  - {fileID: 6287829208680567943, guid: e409bff26358fa64d86c933cbf778ca6, type: 3}
+  - {fileID: 6898327170047566929, guid: 3c3a24bd77da06a4abe6ffb56605c325, type: 3}
+  - {fileID: 4777404099944850042, guid: 19bf7778c89e3384c97075ee214e7a1b, type: 3}
   orderText: {fileID: 0}
   dialogueBox: {fileID: 5257329337898569564}
   dirtyCupSpawnPosition: {fileID: 0}

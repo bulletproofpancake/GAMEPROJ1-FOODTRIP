@@ -17,7 +17,9 @@ public class CustomerData : ScriptableObject
   //vairables with 'TT' at the end are for tusok tusok
   public OrderTT[] PossibleOrder => possibleOrder;
 
-  private OrderTT[] OrderLineUp;
+  private OrderTT[] orderLineUp;
+
+
 
   public Sprite ChangeSprite()
   {
@@ -29,14 +31,12 @@ public class CustomerData : ScriptableObject
     return possibleOrders[Random.Range(0, possibleOrders.Length)];
   }
 
-  // * Use this function to get all orders of customer
-  public OrderTT GetAllOrder(int index)
+  // * Use this function to get all orders of customer specifically in Tusok Tusok
+
+
+  public OrderTT GetAllOrder()
   {
-    for (int i = 0; i < possibleOrders.Length; i++)
-    {
-      OrderLineUp[i] = possibleOrder[Random.Range(0, possibleOrder.Length)];
-    }
-    return OrderLineUp[index];
+    return possibleOrder[Random.Range(0, possibleOrder.Length)];
   }
 
   public int DespawnTime => despawnTime;
