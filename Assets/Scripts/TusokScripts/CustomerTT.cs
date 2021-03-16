@@ -22,6 +22,7 @@ public class CustomerTT : MonoBehaviour
   [SerializeField]
   private SpriteRenderer dialogueBox;
 
+  [SerializeField]
   private List<OrderTT> currentOrders;
 
   // sets the current sprite for the order of the customer

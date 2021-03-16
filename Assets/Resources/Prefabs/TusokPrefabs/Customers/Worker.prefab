@@ -160,6 +160,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3539798815121080270}
     m_Modifications:
+    - target: {fileID: 191039160670967505, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_RootOrder
@@ -220,6 +226,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrderBox
       objectReference: {fileID: 0}
+    - target: {fileID: 863244941929494181, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3848422875132193969, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ebd80676746f7a4fa19d23cccdd792b, type: 3}
 --- !u!4 &5257329338438103347 stripped

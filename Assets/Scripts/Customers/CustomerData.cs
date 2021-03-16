@@ -36,7 +36,7 @@ public class CustomerData : ScriptableObject
 
   public OrderTT GetAllOrder()
   {
-    return possibleOrder[Random.Range(0, possibleOrder.Count + 1)];
+    return possibleOrder[Random.Range(0, possibleOrder.Count)];
   }
 
   public int DespawnTime => despawnTime;
