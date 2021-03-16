@@ -15,16 +15,16 @@ public class SpawnManager : Singleton<SpawnManager>
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
-    public Seat[] customerSeat;
+    public Seats[] customerSeat;
     private int _customerIndex;
     
     [Header("Food Spawn")]
-    public Seat[] foodSeat;
+    public Seats[] foodSeat;
     private int _foodIndex;
 
     [Header("Bowl Spawn")]
     public GameObject bowl;
-    public Seat[] bowlSeat;
+    public Seats[] bowlSeat;
     private int _bowlIndex;
 
     
