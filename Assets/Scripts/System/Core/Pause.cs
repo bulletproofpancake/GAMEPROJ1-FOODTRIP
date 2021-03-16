@@ -28,6 +28,7 @@ public class Pause : MonoBehaviour
 
     public void ResumeTheGame()
     {
+        UnPauseAudio();
         pauseMenuPanel.SetActive(false);
         isPaused = false;
         _gameManager.PauseGame(isPaused);
@@ -35,6 +36,7 @@ public class Pause : MonoBehaviour
 
     public void PauseTheGame()
     {
+        PauseAudio();
         pauseMenuPanel.SetActive(true);
         isPaused = true;
         _gameManager.PauseGame(isPaused);
@@ -48,5 +50,17 @@ public class Pause : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    void PauseAudio()
+    {
+        FindObjectOfType<AudioManager>().Pause("ParesSFX");
+        FindObjectOfType<AudioManager>().Pause("KaninSFX");
+    }
+
+    void UnPauseAudio()
+    {
+        FindObjectOfType<AudioManager>().UnPause("ParesSFX");
+        FindObjectOfType<AudioManager>().UnPause("KaninSFX");
     }
 }

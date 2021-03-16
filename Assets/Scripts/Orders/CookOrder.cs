@@ -18,10 +18,6 @@ public class CookOrder : MonoBehaviour
 
     private void Update()
     {
-        if (Pause.isPaused == true)
-            button.interactable = false;
-        else if (Pause.isPaused == false)
-            button.interactable = true;
         CookingIndicator();
     }
 
@@ -38,9 +34,25 @@ public class CookOrder : MonoBehaviour
     private IEnumerator Cook()
     {
         isCooking = true;
-        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        switch (orderToCook.Data.Type)
+        {
+            case OrderType.Pares:
+                FindObjectOfType<AudioManager>().Play("ParesSFX");
+                yield return new WaitForSeconds(orderToCook.Data.CookTime);
+                FindObjectOfType<AudioManager>().Stop("ParesSFX");
+                break;
+
+            case OrderType.Kanin:
+                FindObjectOfType<AudioManager>().Play("KaninSFX");
+                yield return new WaitForSeconds(orderToCook.Data.CookTime);
+                FindObjectOfType<AudioManager>().Stop("KaninSFX");
+                break;
+        }
+
         SpawnManager.Instance.Spawn(orderToCook.Data);
         isCooking = false;
+
+        FindObjectOfType<AudioManager>().Play("OrderReady");
     }
 
     #endregion
@@ -58,6 +70,7 @@ public class CookOrder : MonoBehaviour
 
 
     #endregion
+
     private void CookingIndicator()
     {
         if (isCooking == true)
@@ -71,5 +84,4 @@ public class CookOrder : MonoBehaviour
             fillImage.fillAmount = timer;
         }
     }
-
 }

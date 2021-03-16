@@ -113,8 +113,9 @@ public class Customer : MonoBehaviour
     {
         if(readyToCollect==true)
         {
+            FindObjectOfType<AudioManager>().Play("CustomerPay");
+
             MoneyManager.Instance.Collect(_paymentContainer);
-            readyToCollect = false;
             gameObject.SetActive(false);
         }
     }
