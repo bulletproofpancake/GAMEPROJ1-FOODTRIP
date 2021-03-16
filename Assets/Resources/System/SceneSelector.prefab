@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPersist: 0
   transition: {fileID: 6053724579464154619}
+  _sceneTransition: {fileID: 1229712536145285864}
   transitionTime: 1
 --- !u!1 &4450301844678407628
 GameObject:

@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private void Awake()
-    {
-        SceneSelector.Instance.transition.Play("Crossfade_End");
-    }
-
     public void LoadMainMenu()
     {
         PlayButtonSFX();
