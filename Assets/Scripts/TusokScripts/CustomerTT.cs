@@ -35,6 +35,8 @@ public class CustomerTT : MonoBehaviour
 
   private bool toCollect;
 
+  CustomerSpawnerTT customertt;
+
   [SerializeField]
   Transform dirtyCupSpawnPosition;
 
@@ -43,6 +45,7 @@ public class CustomerTT : MonoBehaviour
   void Start()
   {
     //Debug.Log(currentOrders.Count);
+    customertt = GetComponent<CustomerSpawnerTT>();
   }
 
   private void OnEnable()
@@ -60,8 +63,9 @@ public class CustomerTT : MonoBehaviour
 
   private void OnDisable()
   {
+
     //! ERROR: Array out of bounds
-    SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+    customertt.customerSeat[SeatTaken].isTaken = false;//.customerSeat[SeatTaken].isTaken = false;
     _payment = 0;
     dialogueBox.color = Color.white;
     for (int i = 0; i < numOfOrders; i++)
@@ -91,7 +95,7 @@ public class CustomerTT : MonoBehaviour
   {
 
     // ? make it so that it utilizes List.Contains
-    for (int i = 0; i <= numOfOrders; i++)
+    for (int i = 0; i < numOfOrders; i++)
     {
       // if function that check if _getOrder contains the same contents as the currentOrders
       if (_getOrder.Contains(currentOrders[i]))
@@ -101,7 +105,7 @@ public class CustomerTT : MonoBehaviour
       }
     }
 
-    if (_completeOrders >= 3)
+    if (_completeOrders >= 2)
     {
       //put lines of script that would approve the order
       int _index = Random.Range(0, dialogeData.customerDialogue.Length);

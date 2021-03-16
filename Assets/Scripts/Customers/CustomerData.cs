@@ -17,10 +17,6 @@ public class CustomerData : ScriptableObject
   //vairables with 'TT' at the end are for tusok tusok
   public List<OrderTT> PossibleOrder => possibleOrder;
 
-  private OrderTT[] orderLineUp;
-
-
-
   public Sprite ChangeSprite()
   {
     return sprites[Random.Range(0, sprites.Length)];
@@ -32,8 +28,6 @@ public class CustomerData : ScriptableObject
   }
 
   // * Use this function to get all orders of customer specifically in Tusok Tusok
-
-
   public OrderTT GetAllOrder()
   {
     return possibleOrder[Random.Range(0, possibleOrder.Count)];

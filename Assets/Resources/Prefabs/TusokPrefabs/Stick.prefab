@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6623343302309548480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pos 3
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6623343302352366302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pos 1
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6623343302651031435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Raycast_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 6623343302960742358}
   - component: {fileID: 6623343302960742361}
   - component: {fileID: 6623343302960742360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stick
   m_TagString: Stick
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 0ab2704fd09b9bf4bafde5162986f55a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -362,6 +362,8 @@ MonoBehaviour:
     doesContain: 0
   - stickInPos: {fileID: 6623343302309548480}
     doesContain: 0
+  foodsInTheStick: []
+  _getFood: []
   pooledObjectReference: {fileID: 0}
 --- !u!1 &6623343303203531154
 GameObject:
@@ -372,7 +374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6623343303203531155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pos 2
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
