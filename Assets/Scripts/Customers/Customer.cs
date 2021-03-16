@@ -26,6 +26,10 @@ public class Customer : MonoBehaviour
     
     public int SeatTaken { get; set; }
 
+
+    public GameObject particleEffect;
+    
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -36,6 +40,7 @@ public class Customer : MonoBehaviour
 
     private void OnDisable()
     {
+        particleEffect.SetActive(false);
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
         _paymentContainer = 0;
         dialogueBox.sprite = DialogueBoxNormal;
@@ -62,6 +67,7 @@ public class Customer : MonoBehaviour
 
         if (_currentOrder.Data == givenOrder.Data)
         {
+            StartCoroutine(ShowParticleEffect());
             _completedOrders++;
 
             _paymentContainer += givenOrder.Data.Cost;
@@ -111,12 +117,19 @@ public class Customer : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(readyToCollect==true)
+        if (readyToCollect == true)
         {
             FindObjectOfType<AudioManager>().Play("CustomerPay");
 
             MoneyManager.Instance.Collect(_paymentContainer);
             gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator ShowParticleEffect()
+    {
+        particleEffect.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        particleEffect.SetActive(true);
     }
 }
