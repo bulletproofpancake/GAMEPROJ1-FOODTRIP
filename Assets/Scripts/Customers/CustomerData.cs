@@ -8,14 +8,14 @@ public class CustomerData : ScriptableObject
   [SerializeField] private Sprite[] sprites;
   [SerializeField] private Order[] possibleOrders;
 
-  [SerializeField] private OrderTT[] possibleOrder;
+  [SerializeField] private List<OrderTT> possibleOrder;
   [SerializeField] private int despawnTime;
 
   public Order[] PossibleOrders => possibleOrders;
 
 
   //vairables with 'TT' at the end are for tusok tusok
-  public OrderTT[] PossibleOrder => possibleOrder;
+  public List<OrderTT> PossibleOrder => possibleOrder;
 
   private OrderTT[] orderLineUp;
 
@@ -36,7 +36,7 @@ public class CustomerData : ScriptableObject
 
   public OrderTT GetAllOrder()
   {
-    return possibleOrder[Random.Range(0, possibleOrder.Length)];
+    return possibleOrder[Random.Range(0, possibleOrder.Count + 1)];
   }
 
   public int DespawnTime => despawnTime;

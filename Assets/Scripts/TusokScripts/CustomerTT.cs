@@ -57,6 +57,17 @@ public class CustomerTT : MonoBehaviour
 
   }
 
+  private void OnDisable()
+  {
+    //! ERROR: Array out of bounds
+    SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+    _payment = 0;
+    dialogueBox.color = Color.white;
+    for (int i = 0; i < numOfOrders; i++)
+      iconOrder[i].GetComponent<SpriteRenderer>().enabled = true;
+    toCollect = false;
+  }
+
   //constant number of orders will be 3
   private void SetOrderTT()
   {
@@ -64,17 +75,17 @@ public class CustomerTT : MonoBehaviour
     numOfOrders = 3;
 
   }
-  //TODO change all to arrays
+
+  //! ERROR: LINE 84 currentOrders is apparently not referenced to an object
   private void GiveOrderTT()
   {
     for (int i = 0; i < numOfOrders; i++)
     {
-      currentOrders.Add(data.GetAllOrder());
+      currentOrders.Add(data.GetAllOrder()); //? bakit walang reference?
       iconOrder[i].GetComponent<SpriteRenderer>().sprite = currentOrders[i].Data.Image;
     }
   }
 
-  // TODO CHANGE FUNCTION so that it takes the full order set
   private void TakeOrderTT(List<OrderTT> _getOrder)
   {
 
@@ -85,6 +96,7 @@ public class CustomerTT : MonoBehaviour
       if (_getOrder.Contains(currentOrders[i]))
       {
         _completeOrders++;
+        orderText.text = $"{_completeOrders}/{numOfOrders + 1}";
       }
     }
 
@@ -118,14 +130,13 @@ public class CustomerTT : MonoBehaviour
     }
   }
 
-  //TODO Make a function that when the customer despawns, it would leave a dirty cup. Prefereably IEnumerator. REFERENCE: Customer.cs LINE: 108
+
   private IEnumerator CustomerDespawn()
   {
 
     yield return new WaitForSeconds(data.DespawnTime);
     gameObject.SetActive(false);
 
-    // TODO add lines of code where in it spawns the dirty cup
     //? spawn the dirty cup as soon as the customer leaves the cart
     //? where to reference dirty cup???????
     dirtyCup = ObjectPoolManager.Instance.GetPooledObject("DirtyCup");
