@@ -16,7 +16,11 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Hey-woah, you don't look too good.
+    text: Hey-
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Woah, you don't look too good.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara

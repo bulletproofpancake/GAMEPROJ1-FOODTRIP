@@ -79,7 +79,3 @@ MonoBehaviour:
     sprite: {fileID: 0}
     speakerName: Clara
     text: Actually, I'll take you up on that, but I'll pay this time.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Sure thing.

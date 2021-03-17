@@ -50,7 +50,7 @@ MonoBehaviour:
     sprite: {fileID: 0}
     speakerName: Clara
     text: "Ugh, everyone at the office thinks it\u2019s fine to push work onto me
-      just cause i\u2019m little old Clara who\u2019s too shy to say no."
+      just cause I\u2019m little old Clara who\u2019s too shy to say no."
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
@@ -114,12 +114,12 @@ MonoBehaviour:
     text: ...
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Clara
     text: "Fine. I\u2019ll give it a shot. And hey, sorry you have to hear some stranger
       rant about work."
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Clara
+    speakerName: 
     text: "I believe we\u2019re already acquainted so you\u2019re no stranger to
       me, Clara.\r\n"
   - order: {fileID: 0}
@@ -128,5 +128,5 @@ MonoBehaviour:
     text: "...\t"
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
-    text: Thanks for that. I'll take another order, to go this time. My treat.
+    speakerName: Clara
+    text: Thanks for that. I'll take another order, to go this time.

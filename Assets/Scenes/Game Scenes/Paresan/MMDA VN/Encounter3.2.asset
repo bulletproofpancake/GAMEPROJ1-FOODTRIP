@@ -19,7 +19,7 @@ MonoBehaviour:
     text: Next time you visit Enteng, tell him Francisco sends his regards, yeah?
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: ???
+    speakerName: Francisco
     text: "I've known that guy for a while and I tell ya, not even a broken bone
       would shut him up!\t"
   - order: {fileID: 0}
