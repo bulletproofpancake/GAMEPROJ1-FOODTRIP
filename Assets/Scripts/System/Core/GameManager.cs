@@ -95,19 +95,13 @@ public class GameManager : Singleton<GameManager>
         
         MoneyManager.Instance.Earn();
         
-        // if(ShiftManager.Instance.shift == null)
-        //     SceneSelector.Instance.LoadNextScene("Summary");
-        // if(NpcDatas.Length == 0)
-        //     SceneSelector.Instance.LoadNextScene("Summary");
-        // if(!IsEncounterComplete())
-        // {
-        //     SceneSelector.Instance.LoadNextScene();
-        // }
-        // else
-        // {
-        //     SceneSelector.Instance.LoadNextScene("Summary");
-        // }
-        SceneSelector.Instance.LoadNextScene("Summary");
+
+        if(!IsEncounterComplete())
+        {
+            SceneSelector.Instance.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/VN");
+        }
+        else
+            SceneSelector.Instance.LoadNextScene("Summary");
     }
 
     public bool IsEncounterComplete()

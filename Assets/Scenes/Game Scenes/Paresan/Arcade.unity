@@ -1682,19 +1682,19 @@ PrefabInstance:
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: NpcDatas.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: NpcDatas.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f3a4b7d1665a64b4a9e9b8cfd457d9fb,
+      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
         type: 2}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: NpcDatas.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
+      objectReference: {fileID: 11400000, guid: f3a4b7d1665a64b4a9e9b8cfd457d9fb,
         type: 2}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}

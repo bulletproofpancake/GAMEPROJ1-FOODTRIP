@@ -62,6 +62,41 @@ public class ObjectPoolManager : Singleton<ObjectPoolManager>
         return null;
     }
     
+    public GameObject GetPooledObject(NPCData id)
+    {
+        for (int i = 0; i < pooledObjects.Count; i++)
+        {
+            //we need to make sure that the object is not active
+            //and that the object has the same id
+            if (!pooledObjects[i].activeInHierarchy &&
+                pooledObjects[i].GetComponent<PooledObjectItem>().ID == id.name)
+            {
+                return pooledObjects[i];
+            }
+        }
+
+        //if all objects are currently in use
+        //check if the object can expand and then instantiate a new object and add it to the pool
+        foreach (var item in itemsToPool)
+        {
+            if(item.id == id.name)
+            {
+                if (item.shouldExpand)
+                {
+                    GameObject obj = Instantiate(item.objectToPool, item.parent);
+                    obj.AddComponent<PooledObjectItem>();
+                    obj.GetComponent<PooledObjectItem>().ID = item.id;
+                    obj.SetActive(false);
+                    pooledObjects.Add(obj);
+                    return obj;
+                }
+            }
+        }
+
+        return null;
+    }
+    
+    
 }
 
 [Serializable]
