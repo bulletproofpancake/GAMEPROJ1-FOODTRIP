@@ -15,6 +15,9 @@ public class Customer : MonoBehaviour
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
 
+    [SerializeField] private Transform originalPos;
+    [SerializeField] private Transform endPos;
+
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
@@ -46,6 +49,8 @@ public class Customer : MonoBehaviour
         dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;
+
+        gameObject.transform.position = originalPos.position;
     }
     
     private void SetOrder()
@@ -111,7 +116,8 @@ public class Customer : MonoBehaviour
     private IEnumerator CustomerDespawn()
     {
         yield return new WaitForSeconds(data.DespawnTime);
-
+        LeanTween.moveX(gameObject, endPos.position.x, 2f);
+        yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
     }
 
@@ -120,10 +126,18 @@ public class Customer : MonoBehaviour
         if (readyToCollect == true)
         {
             FindObjectOfType<AudioManager>().Play("CustomerPay");
-
             MoneyManager.Instance.Collect(_paymentContainer);
-            gameObject.SetActive(false);
+
+            StartCoroutine(CustomerLeave());
         }
+    }
+
+    private IEnumerator CustomerLeave()
+    {
+        LeanTween.moveX(gameObject, endPos.position.x, 2f);
+        yield return new WaitForSeconds(3f);
+
+        gameObject.SetActive(false);
     }
 
     private IEnumerator ShowParticleEffect()
