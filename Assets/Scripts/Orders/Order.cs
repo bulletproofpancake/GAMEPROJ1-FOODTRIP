@@ -11,6 +11,8 @@ public class Order : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
+    public Bowl _bowl;
+
     public int SeatTaken { get; set; }
 
     [SerializeField] private GameObject smoke;
@@ -30,6 +32,9 @@ public class Order : MonoBehaviour
     {
         smoke.SetActive(false);
         SpawnManager.Instance.foodSeat[SeatTaken].isTaken = false;
+        SpawnManager.Instance.bowlSeat[_bowl.SeatTaken].isTaken = false;
+        _bowl.gameObject.SetActive(false);
+        _bowl = null;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -39,4 +44,11 @@ public class Order : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void GetBowl(Bowl bowl)
+    {
+        _bowl = bowl;
+        _bowl.GetComponent<SpriteRenderer>().enabled = false;
+    }
+    
 }

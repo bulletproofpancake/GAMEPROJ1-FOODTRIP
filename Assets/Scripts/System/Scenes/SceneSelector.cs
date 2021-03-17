@@ -40,10 +40,11 @@ public class SceneSelector : Singleton<SceneSelector>
     private IEnumerator LoadScene(int index)
     {
         //Show designated transitions for the scene that will be loaded
-        if (index == 1)
-            AreaSelectFromRight();
-        if (index == 2)
-            ParesShiftFromRight();
+        //if (index == 1)
+        //    AreaSelectFromRight();
+        //if (index == 2)
+        //    ParesShiftFromRight();
+        transition.Play("Crossfade_Start");
 
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(index);
@@ -52,10 +53,11 @@ public class SceneSelector : Singleton<SceneSelector>
     private IEnumerator LoadScene(string path)
     {
         //Show designated transitions for the scene that will be loaded
-        if (path == "Area Select")
-            AreaSelectFromRight();
-        if (path == "Shift Select")
-            ParesShiftFromRight();
+        //if (path == "Area Select")
+        //    AreaSelectFromRight();
+        //if (path == "Shift Select")
+        //    ParesShiftFromRight();
+        transition.Play("Crossfade_Start");
 
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(path);
