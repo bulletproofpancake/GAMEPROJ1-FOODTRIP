@@ -39,6 +39,7 @@ public class GameManager : Singleton<GameManager>
         {
             arcadeCanvas.SetActive(false);
             vnCanvas.SetActive(true);
+            print("VN Start");
         }
         else
         {
@@ -69,7 +70,7 @@ public class GameManager : Singleton<GameManager>
         {
             //TODO: EARN MONEY AFTER FINISHING VN
             //SpawnManager.Instance.ClearLists();
-            SceneSelector.Instance.LoadNextScene();
+            SceneSelector.Instance.LoadNextScene("Summary");
         }
         else
         {
