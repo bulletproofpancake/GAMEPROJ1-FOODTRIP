@@ -801,7 +801,7 @@ PrefabInstance:
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: NpcDatas.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -1664,6 +1664,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
+      propertyPath: cartUsed
+      value: 
+      objectReference: {fileID: 5462583768610612738, guid: e7886e8aff0951449a30bcd5f142b753,
+        type: 3}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
       propertyPath: shiftData
       value: 
       objectReference: {fileID: 11400000, guid: 1df55894e66731845870a675b9918a47,
@@ -1676,7 +1682,7 @@ PrefabInstance:
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: NpcDatas.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}

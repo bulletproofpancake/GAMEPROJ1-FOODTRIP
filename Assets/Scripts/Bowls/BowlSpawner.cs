@@ -8,7 +8,7 @@ public class BowlSpawner : Singleton<BowlSpawner>
     private TextMeshProUGUI _btnText;
     public List<GameObject> _bowls;
     
-    protected override void Awake()
+    private void Awake()
     {
         _bowls = new List<GameObject>();
         _btnText = GetComponentInChildren<TextMeshProUGUI>();

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject background;
     public bool isPaused;
     
-    private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         if(ShiftManager.Instance.shift != null){
@@ -94,18 +95,19 @@ public class GameManager : Singleton<GameManager>
         
         MoneyManager.Instance.Earn();
         
-        if(ShiftManager.Instance.shift == null)
-            SceneSelector.Instance.LoadNextScene("Summary");
-        
-        else if(!IsEncounterComplete())
-        {
-            SceneSelector.Instance.LoadNextScene();
-        }
-        
-        else
-        {
-            SceneSelector.Instance.LoadNextScene("Summary");
-        }
+        // if(ShiftManager.Instance.shift == null)
+        //     SceneSelector.Instance.LoadNextScene("Summary");
+        // if(NpcDatas.Length == 0)
+        //     SceneSelector.Instance.LoadNextScene("Summary");
+        // if(!IsEncounterComplete())
+        // {
+        //     SceneSelector.Instance.LoadNextScene();
+        // }
+        // else
+        // {
+        //     SceneSelector.Instance.LoadNextScene("Summary");
+        // }
+        SceneSelector.Instance.LoadNextScene("Summary");
     }
 
     public bool IsEncounterComplete()

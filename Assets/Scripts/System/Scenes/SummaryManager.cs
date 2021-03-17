@@ -13,6 +13,14 @@ public class SummaryManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI actualProfit;
     [SerializeField] private TextMeshProUGUI totalMoney;
 
+    private void Awake()
+    {
+        if(GameManager.Instance != null)
+        {
+            Destroy(GameManager.Instance.gameObject);
+        }
+    }
+
     private void Start()
     {
         if(ShiftManager.Instance.shift != null)
