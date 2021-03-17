@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter3
+  m_Name: Encounter3.1
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
@@ -60,16 +60,3 @@ MonoBehaviour:
     sprite: {fileID: 0}
     speakerName: ???
     text: Speakin' of pares...
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: Next time you visit Enteng, tell him Francisco sends his regards, yeah?
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Francisco
-    text: "I've known that guy for a while and I tell ya, not even a broken bone
-      would shut him up!\t"
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: I'll be sure to relay the message. See ya around.

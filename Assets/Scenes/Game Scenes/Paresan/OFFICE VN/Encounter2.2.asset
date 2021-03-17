@@ -10,86 +10,76 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter1
+  m_Name: Encounter2.2
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
     sprite: {fileID: 0}
+    speakerName: 
+    text: It's on the house.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
     speakerName: ???
-    text: Koya! Puwede pabile?
+    text: What?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Sure, what can I get you?
+    text: Food's free, lady uh...
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: Oh, you speak English! And very fluent too, thank goodness!
+    text: Clara, and why?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: I do, and your Filipino wasn't that bad either.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: Thank you! So, what are you sellin'?
+    text: Well, Clara, from the looks of it, you mght as well need that extra energy
+      before headin' home.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: "Well I got kwek kwek, kikiam, and fishball so you're free to choose whatever
-      you want.\t"
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: I see!
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: Hmm...
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: What was that orange thing again? That neon ball?
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: Quack quack??
+    text: Cause you seem to be a bit out of it to be honest.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: It's called kwek kwek, and it's an egg covered in batter and deep fried,
-      if ever you're curious.
+    text: "Think of it as an act of kindness.\n\t"
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: ???
-    text: Quack quack?
+    speakerName: Clara
+    text: I...
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
-    text: No, kwek kwek.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: What a weird name. And you say it's just egg covered in batter and fried,
-      correct?
+    speakerName: Clara
+    text: Alright. Thank you.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: That's right.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: I see! It's just like tempura, but egg!
+    text: No worries.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Probably. I'm not really sure what "tempura" is, but if you say so.
+    text: So... rough day at work I'm guessin'?
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: ???
-    text: "How interesting. Oh, I will be back soon my friend, for I shall explore
-      the sights of this city. Adj\xF6!"
+    speakerName: Clara
+    text: Excuse me?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Alright then, take care!
+    text: I could've sworn the dead was walkin' over when I saw you shuffling all
+      the way over here.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Heh, you could say that.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Well I could prepare another one for you if you want.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Actually, I'll take you up on that, but I'll pay this time.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Sure thing.

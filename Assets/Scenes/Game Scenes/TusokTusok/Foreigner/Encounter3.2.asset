@@ -10,25 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter3
+  m_Name: Encounter3.2
   m_EditorClassIdentifier: 
   info:
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Hey there, Hugo.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
-    text: My friend! It is good to see you again.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: So, how's your visit around town been doing?
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
-    text: I would love to talk about that, but let us discuss over some food!
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
@@ -39,7 +23,7 @@ MonoBehaviour:
     text: Well, this place is actually quite a sight.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: The contrast between the mega city of Buendia and the smaller areas of
       Chino Roces was it? It's like night and day!
   - order: {fileID: 0}
@@ -59,7 +43,7 @@ MonoBehaviour:
       frolic around the city.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Hugo
     text: Why's that? Heading home so soon?
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -76,16 +60,16 @@ MonoBehaviour:
     text: 'Me too, friend. '
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: I didn't expect making friends with a local vendor to be in my itinerary,
       but I thank you for making my stay that much more meaningful.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Hugo
     text: I might as well pair my food with good company for my customers.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: HA HA HA You've gotten that right, that's for sure. Maybe if I come back,
       I'll make sure to bring my buddies around and introduce you.
   - order: {fileID: 0}
@@ -95,8 +79,24 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Hugo
-    text: "I'll take my leave now, farv\xE4l!"
+    text: Huh, sounds very familiar.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: See you soon.
+    text: 'Now, let us indulge in each other''s presence! '
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: 
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 

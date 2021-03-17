@@ -10,63 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter1
+  m_Name: Encounter1.1
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
     sprite: {fileID: 0}
+    speakerName: ???
+    text: Koya! Puwede pabile?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
     speakerName: 
-    text: Hey, what can I get for you?
+    text: Sure, what can I get you?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: Can I see your menu?
+    text: Oh, you speak English! And very fluent too, thank goodness!
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Come again?
+    text: I do, and your Filipino wasn't that bad either.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: The menu. Do you have one?
+    text: Thank you! So, what are you sellin'?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: I uh, don't have a menu, I suppose.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Pares and rice are all you're gonna get, as you can see with my pot full
-      of savory pares.
+    text: "Well I got kwek kwek, kikiam, and fishball so you're free to choose whatever
+      you want.\t"
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: Right! right, I knew that.
+    text: I see!
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: I'll have that then.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
+    text: Hmm...

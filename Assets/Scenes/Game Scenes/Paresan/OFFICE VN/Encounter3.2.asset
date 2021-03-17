@@ -10,17 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter3
+  m_Name: Encounter3.2
   m_EditorClassIdentifier: 
   info:
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Hey-woah, you don't look too good.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Clara
-    text: "I\u2019ll just order real quick and I\u2019ll be on my way."
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
@@ -57,8 +49,8 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
-    text: "Everyone at the office thinks it\u2019s fine to push work onto me just
-      cause i\u2019m little old Clara who\u2019s too shy to say no."
+    text: "Ugh, everyone at the office thinks it\u2019s fine to push work onto me
+      just cause i\u2019m little old Clara who\u2019s too shy to say no."
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
@@ -71,7 +63,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: "I  can tell it\u2019s taking its toll on you, given how dead you\u2019ve
+    text: "I can tell it\u2019s taking its toll on you, given how dead you\u2019ve
       been looking compared to last time."
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -111,7 +103,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
-    text: "You don\u2019t think i\u2019ve tried that before?"
+    text: "You don\u2019t think i haven't tried that before?"
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
@@ -122,12 +114,12 @@ MonoBehaviour:
     text: ...
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Clara
+    speakerName: 
     text: "Fine. I\u2019ll give it a shot. And hey, sorry you have to hear some stranger
       rant about work."
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Clara
     text: "I believe we\u2019re already acquainted so you\u2019re no stranger to
       me, Clara.\r\n"
   - order: {fileID: 0}
@@ -136,9 +128,5 @@ MonoBehaviour:
     text: "...\t"
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Clara
-    text: Thanks, I'll be on my way then.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
     speakerName: 
-    text: Safe travels to you then.
+    text: Thanks for that. I'll take another order, to go this time. My treat.

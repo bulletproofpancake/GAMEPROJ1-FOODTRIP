@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter1
+  m_Name: Encounter1.1
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
@@ -70,28 +70,3 @@ MonoBehaviour:
     speakerName: ???
     text: Tell you what, I'll toss you a bone. If you can impress me with your food,
       I'll leave you alone.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: "Are you satisfied yet?\t"
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: Oh very!
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: You know what, I was about to charge you for the public disturbance, but
-      I'm feeling veeeery generous today!
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: '??? '
-    text: 'I''ll take your food as payment instead. '
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: "HA HA HA\t"
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: ...

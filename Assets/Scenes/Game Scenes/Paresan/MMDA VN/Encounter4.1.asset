@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter4
+  m_Name: Encounter4.1
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
@@ -103,13 +103,17 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Alright, alright. Here, to commemorate this moment.
+    text: Alright, alright.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Francisco
-    text: Ha! Nothing goes well with food better than good company. and you're some
-      damn good company.
+    text: So, how about an order of pares?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: I could say you are now, too.
+    text: Sure, something to commemorate this change of heart of yours.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Francisco
+    text: "Ha! Nothing goes well with food better than good company, and you\u2019re
+      good company, kid."

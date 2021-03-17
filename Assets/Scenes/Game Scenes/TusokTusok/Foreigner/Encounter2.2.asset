@@ -10,50 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter2
+  m_Name: Encounter2.2
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: 'My good friend!
-
-'
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Hey! It's er.. you! From yesterday.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: HA HA HA Forgive my rudeness, I forgot to introduce myself yesterday.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: ???
-    text: You can call me Hugo!
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Well, Hugo, it's a pleasure to meet you.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: So, what can I get you?
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
     text: AHHHH this is truly bliss~
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: No fancy restaurant can ever compare to this.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: ???
     text: Say Hugo, you aren't from around here, aren't you?
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: ???
     text: My, how did you know?
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -74,7 +48,7 @@ MonoBehaviour:
     text: You see, I'm in search of this place called Entoy's Bakasihan!
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: 'My friends back in Sweden told me all about it! Especially how it''s also
       a well known aphrodisiac. '
   - order: {fileID: 0}
@@ -87,15 +61,15 @@ MonoBehaviour:
     text: But Hugo...
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: Hm? What's wrong my friend?
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Hugo
     text: That diner you're looking for, well...
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Hugo
     text: It's in Cebu. We're in Makati right now, and Cebu is at the other side
       of the country.
   - order: {fileID: 0}
@@ -108,15 +82,15 @@ MonoBehaviour:
     text: Haaaa... And I was completely looking forward to it too.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: "Ah well, no use worrying about it now. Ingen ko p\xE5 isen HA HA HA"
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Hugo
     text: What does that mean exactly?
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Hugo
+    speakerName: 
     text: "No cow on the ice! \t"
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -128,14 +102,17 @@ MonoBehaviour:
     text: Er, well, it just really means no worries.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
+    speakerName: Hugo
     text: I see, I'll keep that in mind then.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Hugo
-    text: Alas, I must depart for I have more sights to see. Thank you again for
-      keeping me company, friend!
+    text: 'Alas, I must depart for I have more sights to see. '
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: Stay safe now!
+    text: BUT!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Not before having a snack on the go!

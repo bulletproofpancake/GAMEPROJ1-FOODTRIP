@@ -10,30 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter1
+  m_Name: Encounter2.2
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: Kuya isang pares nga po.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: "Rough day?\n\t"
+    text: You know kid, you ain't half bad.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: ...
+    text: BUT!!
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: ???
-    text: Thank you for the meal.
+    text: I'm keepin' my eye on you, just in case.
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: 
-    text: You know, you haven't even finished your food.
+    text: Uh huh, right.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: 
-    text: Huh...
+    speakerName: ???
+    text: 'Anyways, I''ll have another one to go, my buddies by the church are wondering
+      what got me coming back here a lot. '

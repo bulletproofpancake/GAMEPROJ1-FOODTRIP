@@ -10,23 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
-  m_Name: Encounter4
+  m_Name: Encounter4.2
   m_EditorClassIdentifier: 
   info:
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 'Well, looks like someones lookin'' livelier than usual.
-
-'
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Clara
-    text: No thanks to you.
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: So, what can I get this fine lady today?
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
@@ -111,7 +97,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
-    text: "Ii don\u2019t know really, it just feels like you have that same air around
+    text: "I don\u2019t know really, it just feels like you have that same air around
       you."
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -123,7 +109,7 @@ MonoBehaviour:
     text: You know, company you can enjoy some good food over.
   - order: {fileID: 0}
     sprite: {fileID: 0}
-    speakerName: Clara
+    speakerName: 
     text: "And there\u2019s never been a better pair like food and company"
   - order: {fileID: 0}
     sprite: {fileID: 0}
@@ -132,8 +118,5 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 0}
     speakerName: Clara
-    text: "Anyways, I\u2019ll be heading home then if you\u2019ll excuse me."
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: Alright, take care then!
+    text: Plus, your sevings taste so similar to his. Maybe it's just a coincidence
+      but i'll have another order to go just to be sure!

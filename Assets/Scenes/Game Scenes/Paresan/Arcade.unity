@@ -789,17 +789,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
-      propertyPath: bowl
-      value: 
-      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
-        type: 3}
-    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
-        type: 3}
-      propertyPath: spawnInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
-        type: 3}
       propertyPath: NpcDatas.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -817,6 +806,22 @@ PrefabInstance:
         type: 3}
       propertyPath: customers.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: customerSeat.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: bowl
+      value: 
+      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
+        type: 3}
+    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
+        type: 3}
+      propertyPath: spawnInterval
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
@@ -866,11 +871,6 @@ PrefabInstance:
       propertyPath: foodSeat.Array.data[2]
       value: 
       objectReference: {fileID: 2056623837}
-    - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
-        type: 3}
-      propertyPath: customerSeat.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: customers.Array.data[0]
@@ -2036,6 +2036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
+      propertyPath: NpcDatas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
       propertyPath: isVN
       value: 0
       objectReference: {fileID: 0}
@@ -2058,14 +2063,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
-      propertyPath: NpcDatas.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
       propertyPath: NpcDatas.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 8f4896c14a2246149bb2acce528fabcc,
+      objectReference: {fileID: 11400000, guid: 13920bde4cdd4f44abeb8193005543d6,
         type: 2}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}

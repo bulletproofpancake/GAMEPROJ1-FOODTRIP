@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: Foreigner
   m_EditorClassIdentifier: 
   sprites: []
-  possibleOrders: []
-  despawnTime: 0
+  possibleOrders:
+  - {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747, type: 3}
+  - {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
+  despawnTime: 3
   appearsIf: 0
   encounter:
   - dialogueDatas:
     - {fileID: 11400000, guid: fe6c26afb347383469d06e7502a09695, type: 2}
+    - {fileID: 11400000, guid: c67ede7b364fcc74ab13c35fd1348671, type: 2}
   - dialogueDatas:
     - {fileID: 11400000, guid: 317a8c4e676615048b2c8e9ab75895f3, type: 2}
   - dialogueDatas:
     - {fileID: 11400000, guid: 306a3b701cab6fb409d74f5255183841, type: 2}
-  count: 0
+  count: 3
