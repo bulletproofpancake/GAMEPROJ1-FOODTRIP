@@ -82,6 +82,9 @@ public class CustomerTT : MonoBehaviour
     for (int i = 0; i < numOfOrders; i++)
       iconOrder[i].GetComponent<SpriteRenderer>().enabled = true;
     toCollect = false;
+    fishb = 0;
+    kwek = 0;
+    squidb = 0;
   }
 
   //constant number of orders will be 3
@@ -147,6 +150,9 @@ public class CustomerTT : MonoBehaviour
       Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
       Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
       Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
+      fishb = 0;
+      kwek = 0;
+      squidb = 0;
     }
 
     //* DONUT ERASE
@@ -163,6 +169,7 @@ public class CustomerTT : MonoBehaviour
       }
       orderText.text = dialogeData.customerDialogue[_index].Dialogue;
       StartCoroutine(CustomerDespawn());
+
     }
     else
     {

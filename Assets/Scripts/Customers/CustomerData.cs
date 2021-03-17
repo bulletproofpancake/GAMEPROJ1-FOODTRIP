@@ -30,7 +30,7 @@ public class CustomerData : ScriptableObject
   // * Use this function to get all orders of customer specifically in Tusok Tusok
   public OrderTT GetAllOrder()
   {
-    return possibleOrder[Random.Range(0, possibleOrder.Count)];
+    return possibleOrder[Random.Range(0, possibleOrder.Count - 1)];
   }
 
   public int DespawnTime => despawnTime;
