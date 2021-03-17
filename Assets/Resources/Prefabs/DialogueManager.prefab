@@ -66,8 +66,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c9d3ab6d8f171348833bfb9cf6c06c8, type: 2}
-  m_sharedMaterial: {fileID: -37133106256686647, guid: 4c9d3ab6d8f171348833bfb9cf6c06c8,
+  m_fontAsset: {fileID: 11400000, guid: 1cca9b4aa471dbf43a64adae4ad35f41, type: 2}
+  m_sharedMaterial: {fileID: 2255838918751245115, guid: 1cca9b4aa471dbf43a64adae4ad35f41,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -252,9 +252,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 86c2fd3adb1b23143a3ac8bd713a4341, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f20154f5162a86041811812894a6d574, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -460,8 +460,8 @@ MonoBehaviour:
     elementum velit, sit amet mattis lacus pharetra vel. Aliquam vestibulum sollicitudin
     lorem, nec imperdiet lorem pretium at.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c772aaf45233bc04ea854315d8d523a2, type: 2}
-  m_sharedMaterial: {fileID: 5561954584724423772, guid: c772aaf45233bc04ea854315d8d523a2,
+  m_fontAsset: {fileID: 11400000, guid: 2ab8b4e494a7fd34abb0836f4bfcaf0f, type: 2}
+  m_sharedMaterial: {fileID: -7768168473486692243, guid: 2ab8b4e494a7fd34abb0836f4bfcaf0f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.55
+  m_fontSize: 52.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
