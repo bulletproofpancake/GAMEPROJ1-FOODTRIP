@@ -40,7 +40,7 @@ public class CustomerTT : MonoBehaviour
   CustomerSpawnerTT customertt;
 
   [SerializeField]
-  Transform dirtyCupSpawnPosition;
+  GameObject dirtyCupSpawnPosition;
 
   GameObject dirtyCup;
 
@@ -50,20 +50,20 @@ public class CustomerTT : MonoBehaviour
   public int SeatTaken { get; set; }
   void Start()
   {
-    fishb = 0;
-    kwek = 0;
-    squidb = 0;
+
     //Debug.Log(currentOrders.Count);
     customertt = GetComponent<CustomerSpawnerTT>();
+
+    dirtyCupSpawnPosition = GameObject.Find("DirtyCupSpawner");
   }
 
   private void OnEnable()
   {
+
     //Upon spawning of character in the scene, select the sprite to use
     _sprite = GetComponent<SpriteRenderer>();
     _sprite.sprite = data.ChangeSprite();
-    Transform transform1 = GameObject.Find("DirtyCupSpawner").transform;
-    dirtyCupSpawnPosition = transform1;
+    dirtyCupSpawnPosition = GameObject.Find("DirtyCupSpawner");
 
     SetOrderTT();
     GiveOrderTT();
@@ -95,6 +95,9 @@ public class CustomerTT : MonoBehaviour
 
   private void GiveOrderTT()
   {
+    fishb = 0;
+    kwek = 0;
+    squidb = 0;
     for (int i = 0; i < numOfOrders; i++)
     {
       currentOrders.Add(data.GetAllOrder());
@@ -145,10 +148,6 @@ public class CustomerTT : MonoBehaviour
       Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
     }
 
-    Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
-    Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
-    Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
-
     //* DONUT ERASE
 
     // orderText.text = $"{_completeOrders}/{numOfOrders + 1}";
@@ -188,6 +187,7 @@ public class CustomerTT : MonoBehaviour
     //*Spawns DirtyCup
     dirtyCup = ObjectPoolManager.Instance.GetPooledObject("DirtyCup");
     dirtyCup.SetActive(true);
+    dirtyCup.transform.position = dirtyCupSpawnPosition.transform.position;
     SpawnDirtyCup.amountInScene += 1;
 
 
