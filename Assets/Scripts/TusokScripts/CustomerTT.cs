@@ -51,7 +51,6 @@ public class CustomerTT : MonoBehaviour
   void Start()
   {
 
-    //Debug.Log(currentOrders.Count);
     customertt = GetComponent<CustomerSpawnerTT>();
 
     dirtyCupSpawnPosition = GameObject.Find("DirtyCupSpawner");
@@ -67,10 +66,10 @@ public class CustomerTT : MonoBehaviour
 
     SetOrderTT();
     GiveOrderTT();
-    Debug.Log("Current orders count is: " + currentOrders.Count);
-    Debug.Log("fishb is: " + fishb);
-    Debug.Log("kwek is: " + kwek);
-    Debug.Log("squidb is: " + squidb);
+    // Debug.Log("Current orders count is: " + currentOrders.Count);
+    // Debug.Log("fishb is: " + fishb);
+    // Debug.Log("kwek is: " + kwek);
+    // Debug.Log("squidb is: " + squidb);
   }
 
   private void OnDisable()
@@ -90,18 +89,20 @@ public class CustomerTT : MonoBehaviour
   {
     _completeOrders = 0;
     numOfOrders = 3;
+    fishb = 0;
+    kwek = 0;
+    squidb = 0;
 
   }
 
   private void GiveOrderTT()
   {
-    fishb = 0;
-    kwek = 0;
-    squidb = 0;
+
     for (int i = 0; i < numOfOrders; i++)
     {
       currentOrders.Add(data.GetAllOrder());
       iconOrder[i].GetComponent<SpriteRenderer>().sprite = currentOrders[i].Data.Image;
+      Debug.Log("How many are you? " + currentOrders.Count);
     }
 
     foreach (var order in currentOrders)
