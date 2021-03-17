@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 32
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300d5e45baa727a4e8382cfee5673110, type: 3}
+  m_Name: Foreigner
+  m_EditorClassIdentifier: 
+  sprites: []
+  possibleOrders: []
+  despawnTime: 0
+  appearsIf: 0
+  encounter:
+  - dialogueDatas:
+    - {fileID: 11400000, guid: fe6c26afb347383469d06e7502a09695, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: 317a8c4e676615048b2c8e9ab75895f3, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: 306a3b701cab6fb409d74f5255183841, type: 2}
+  count: 0

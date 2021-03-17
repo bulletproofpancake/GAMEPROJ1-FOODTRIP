@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
+  m_Name: Encounter3
+  m_EditorClassIdentifier: 
+  info:
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Hey there, Hugo.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: My friend! It is good to see you again.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: So, how's your visit around town been doing?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: I would love to talk about that, but let us discuss over some food!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: So? How was it?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Well, this place is actually quite a sight.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: The contrast between the mega city of Buendia and the smaller areas of
+      Chino Roces was it? It's like night and day!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: There's so much to explore that It feels like i haven't seen everything
+      yet!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: I agree. You know, there's this one place I know of in Taft that sounds
+      like heaven if you're into street food a lot.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: I would love to go honestly, but sadly I do not have the time anymore to
+      frolic around the city.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Why's that? Heading home so soon?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Yes, I've been called in for a meeting next week, and I have to be back
+      before then.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: I see. Well, I'm glad i got the chance to meet you.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: 'Me too, friend. '
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: I didn't expect making friends with a local vendor to be in my itinerary,
+      but I thank you for making my stay that much more meaningful.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: I might as well pair my food with good company for my customers.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: HA HA HA You've gotten that right, that's for sure. Maybe if I come back,
+      I'll make sure to bring my buddies around and introduce you.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: After all, good food goes well with good company!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: "I'll take my leave now, farv\xE4l!"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: See you soon.

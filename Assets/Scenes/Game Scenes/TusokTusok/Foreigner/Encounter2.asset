@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
+  m_Name: Encounter2
+  m_EditorClassIdentifier: 
+  info:
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: 'My good friend!
+
+'
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Hey! It's er.. you! From yesterday.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: HA HA HA Forgive my rudeness, I forgot to introduce myself yesterday.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: ???
+    text: You can call me Hugo!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Well, Hugo, it's a pleasure to meet you.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: So, what can I get you?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: AHHHH this is truly bliss~
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: No fancy restaurant can ever compare to this.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Say Hugo, you aren't from around here, aren't you?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: My, how did you know?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Just think of it as a hunch.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: So, where are you from? And what are you doing here, spending time at a
+      lowly street cart like mine?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: I'm glad you asked friend!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: You see, I'm in search of this place called Entoy's Bakasihan!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: 'My friends back in Sweden told me all about it! Especially how it''s also
+      a well known aphrodisiac. '
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: It could help me boost my game, if you know what I mean. HA HA HA
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: But Hugo...
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Hm? What's wrong my friend?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: That diner you're looking for, well...
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: It's in Cebu. We're in Makati right now, and Cebu is at the other side
+      of the country.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Ah..
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Haaaa... And I was completely looking forward to it too.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: "Ah well, no use worrying about it now. Ingen ko p\xE5 isen HA HA HA"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: What does that mean exactly?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: "No cow on the ice! \t"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "...\t"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Er, well, it just really means no worries.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: I see, I'll keep that in mind then.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Hugo
+    text: Alas, I must depart for I have more sights to see. Thank you again for
+      keeping me company, friend!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Stay safe now!
