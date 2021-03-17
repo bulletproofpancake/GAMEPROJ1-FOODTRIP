@@ -1674,12 +1674,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfa70badc5f9e84cb43c5bfee3b533d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPersist: 0
+  NpcDatas: []
   isVN: 0
   arcadeCanvas: {fileID: 8580389058982339404}
   vnCanvas: {fileID: 120496224660279092}
-  cartUsed: {fileID: 5462583768610612738, guid: e7886e8aff0951449a30bcd5f142b753,
-    type: 3}
+  cartUsed: {fileID: 0}
   levelDuration: 30
+  customers: []
+  completedCustomers: 0
   timerText: {fileID: 8580389058464652927}
   moneyTextArcade: {fileID: 8580389058405040580}
   moneyTextVN: {fileID: 1699285192457072006}

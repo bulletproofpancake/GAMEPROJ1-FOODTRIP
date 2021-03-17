@@ -1,16 +1,21 @@
-﻿using System.Collections;
+using System;
+using System.Collections;
+using Customers.Dialogue;
 using Customers;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
 {
+    private NPCData _npcData;
     [SerializeField] private CustomerData data;
-    [SerializeField] private DialogueData dialogueData;
-
+    public CustomerData Data => data;
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
-
+    public GameObject orderBox;
+    
+    [SerializeField] private Customers.DialogueData dialogueData;
     [SerializeField] private SpriteRenderer dialogueBox;
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
@@ -26,12 +31,27 @@ public class Customer : MonoBehaviour
     
     public int SeatTaken { get; set; }
 
+    private void Start()
+    {
+        if (GameManager.Instance.isVN)
+        {
+            orderBox.SetActive(false);
+            GameManager.Instance.customers.Add(this);
+            DialogueManager.Instance.GetCustomerObject(gameObject);
+            DialogueManager.Instance.Advance();
+        }
+    }
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
-        SetOrder();
-        GiveOrder();
+        
+        if (!GameManager.Instance.isVN)
+        {
+            SetOrder();
+            GiveOrder();
+        }
     }
 
     private void OnDisable()
@@ -43,22 +63,28 @@ public class Customer : MonoBehaviour
         readyToCollect = false;
     }
     
-    private void SetOrder()
+    public void SetOrder()
     {
         _completedOrders = 0;
         _numberOfOrders = Random.Range(0, data.PossibleOrders.Length);
     }
     
-    private void GiveOrder()
+    public void GiveOrder()
     {
         _currentOrder = data.SelectOrder();
         orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;
         orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
     }
 
+    public void GiveOrder(Order order)
+    {
+        _currentOrder = order;
+        orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;
+        orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
+    }
+
     private void TakeOrder(Order givenOrder)
     {
-        int _index;
 
         if (_currentOrder.Data == givenOrder.Data)
         {
@@ -72,19 +98,42 @@ public class Customer : MonoBehaviour
             {
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
-
-                _index = Random.Range(0, dialogueData.customerDialogue.Length);
-
-                orderIcon.GetComponent<SpriteRenderer>().enabled = false;
-                orderText.text = dialogueData.customerDialogue[_index].Dialogue;
-
-                StartCoroutine(CustomerDespawn());
+                
+                if (GameManager.Instance.isVN)
+                {
+                    _npcData = (NPCData) data;
+                    if (_npcData.Encounter[_npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
+                    {
+                        orderBox.SetActive(false);
+                        SetOrder();
+                        GiveOrder();
+                        DialogueManager.Instance.Advance();
+                    }
+                    else
+                    {
+                        OrderPrompt();
+                    }
+                    
+                }
+                else
+                {
+                    OrderPrompt();
+                    StartCoroutine(CustomerDespawn());
+                }
             }
         }
         else
         {
             StartCoroutine(WrongOrder());
         }
+    }
+
+    private void OrderPrompt()
+    {
+        int _index = Random.Range(0, dialogueData.customerDialogue.Length);
+
+        orderIcon.GetComponent<SpriteRenderer>().enabled = false;
+        orderText.text = dialogueData.customerDialogue[_index].Dialogue;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -115,6 +164,15 @@ public class Customer : MonoBehaviour
         {
             MoneyManager.Instance.Collect(_paymentContainer);
             readyToCollect = false;
+
+            if (GameManager.Instance.isVN)
+            {
+                MoneyManager.Instance.Earn();
+                _npcData.IncrementEncounter();
+                GameManager.Instance.customers.Remove(this);
+                GameManager.Instance.completedCustomers++;
+            }
+            
             gameObject.SetActive(false);
         }
     }

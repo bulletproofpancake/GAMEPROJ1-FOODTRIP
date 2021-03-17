@@ -17,4 +17,4 @@ MonoBehaviour:
   locSprites:
     morning: {fileID: 21300000, guid: d4abc7c724d5c9a42a452a0de15882ce, type: 3}
     afternoon: {fileID: 21300000, guid: 3184ab36b6e469a49baf44721e7f798f, type: 3}
-    night: {fileID: 21300000, guid: 3184ab36b6e469a49baf44721e7f798f, type: 3}
+    night: {fileID: 21300000, guid: a5e62d313f6022840935e1447a227470, type: 3}

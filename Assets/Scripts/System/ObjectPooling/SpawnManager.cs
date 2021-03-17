@@ -1,43 +1,115 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 /// <summary>
 /// Spawn manager for Pares only
 /// </summary>
 public class SpawnManager : Singleton<SpawnManager>
 {
+    [Header("NPC Spawn")]
+    public NPCData[] NpcDatas;
+
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
-    public Seat[] customerSeat;
+    public Seats[] customerSeat;
     private int _customerIndex;
     
     [Header("Food Spawn")]
-    public Seat[] foodSeat;
+    public Seats[] foodSeat;
     private int _foodIndex;
 
     [Header("Bowl Spawn")]
     public GameObject bowl;
-    public Seat[] bowlSeat;
+    public Seats[] bowlSeat;
     private int _bowlIndex;
+
     
+    public List<Seat> seats;
+    
+    protected override void Awake()
+    {
+        _customerIndex = 0;
+        _foodIndex = 0;
+        // seats = new List<Seat>(FindObjectsOfType<Seat>());
+        // foreach (var seat in seats)
+        // {
+        //     seat.isTaken = false;
+        //     switch (seat.type)
+        //     {
+        //         case SeatType.Customer:
+        //             customerSeat.Add(seat);
+        //             break;
+        //         case SeatType.Food:
+        //             foodSeat.Add(seat);
+        //             bowlSeat.Add(seat);
+        //             break;
+        //         default:
+        //             throw new ArgumentOutOfRangeException();
+        //     }
+        // }
+    }
+
     private void Start()
     {
-        foreach (var seat in customerSeat)
-        {
-            seat.isTaken = false;
+        if(!GameManager.Instance.isVN){
+            StartCoroutine(SpawnCustomers());
         }
-        foreach (var seat in foodSeat)
+        else
         {
-            seat.isTaken = false;
+            SpawnVN();
         }
-
-        StartCoroutine(SpawnCustomers());
-
     }
 
     #region CustomerSpawning
+    private void SpawnVN()
+    {
+        var npc = ScriptableObject.CreateInstance<NPCData>();
+        
+        foreach (var data in NpcDatas)
+        {
+            if(ShiftManager.Instance.shift != null){
+                if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+                {
+                    npc = data;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Loading default npc");
+                npc = NpcDatas[0];
+            }
+        }
+        
+        var customer = ObjectPoolManager.Instance.GetPooledObject(npc.name);
+
+        if (customer == null)
+        {
+            Debug.LogWarning("No NPC object found");
+            return;
+        }
+
+        _customerIndex = Random.Range(0, customerSeat.Length);
+        
+        if (isFull()) return;
+        
+        if (!customerSeat[_customerIndex].isTaken)
+        {
+            customer.transform.position = customerSeat[_customerIndex].slot.position;
+            customer.GetComponent<Customer>().SeatTaken = _customerIndex;
+            customer.SetActive(true);
+            customerSeat[_customerIndex].isTaken = true;
+        }
+        else
+        {
+            Debug.LogWarning("Seat taken, looking for another");
+        }
+    }
     
-    public void Spawn(CustomerData data)
+    private void Spawn(CustomerData data)
     {
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
@@ -83,7 +155,7 @@ public class SpawnManager : Singleton<SpawnManager>
             Spawn(customers[Random.Range(0,customers.Length)]);
         }
     }
-    
+
     #endregion
 
     #region FoodSpawning
@@ -95,31 +167,50 @@ public class SpawnManager : Singleton<SpawnManager>
         if (_foodIndex < foodSeat.Length)
         {
             if(_foodIndex < bowlSeat.Length){
-                if (bowlSeat[_foodIndex].isTaken)
+                // if (bowlSeat[_foodIndex].isTaken)
+                // {
+                //     // if (!foodSeat[_foodIndex].isTaken)
+                //     // {
+                //     //     food.transform.position = foodSeat[_foodIndex].slot.position;
+                //     //     food.GetComponent<Order>().SeatTaken = _foodIndex;
+                //     //     food.SetActive(true);
+                //     //     foodSeat[_foodIndex].isTaken = true;
+                //     //     //index always starts at zero so that
+                //     //     //all slots can be checked
+                //     //     _foodIndex = 0;
+                //     // }
+                //     // else
+                //     // {
+                //     //     Debug.LogWarning("Seat taken, looking for another");
+                //     //     _foodIndex++;
+                //     //     //recursion is done so that
+                //     //     //it will continue to spawn
+                //     //     //even if seats are taken
+                //     //     Spawn(data);
+                //     // }
+                // }
+                // else
+                // {
+                //     Debug.LogWarning("bowl seat taken, looking for another");
+                //     _foodIndex++;
+                //     //recursion is done so that
+                //     //it will continue to spawn
+                //     //even if seats are taken
+                //     Spawn(data);
+                // }
+                if (!foodSeat[_foodIndex].isTaken)
                 {
-                    if (!foodSeat[_foodIndex].isTaken)
-                    {
-                        food.transform.position = foodSeat[_foodIndex].slot.position;
-                        food.GetComponent<Order>().SeatTaken = _foodIndex;
-                        food.SetActive(true);
-                        foodSeat[_foodIndex].isTaken = true;
-                        //index always starts at zero so that
-                        //all slots can be checked
-                        _foodIndex = 0;
-                    }
-                    else
-                    {
-                        Debug.LogWarning("Seat taken, looking for another");
-                        _foodIndex++;
-                        //recursion is done so that
-                        //it will continue to spawn
-                        //even if seats are taken
-                        Spawn(data);
-                    }
+                    food.transform.position = foodSeat[_foodIndex].slot.position;
+                    food.GetComponent<Order>().SeatTaken = _foodIndex;
+                    food.SetActive(true);
+                    foodSeat[_foodIndex].isTaken = true;
+                    //index always starts at zero so that
+                    //all slots can be checked
+                    _foodIndex = 0;
                 }
                 else
                 {
-                    Debug.LogWarning("bowl seat taken, looking for another");
+                    Debug.LogWarning("Seat taken, looking for another");
                     _foodIndex++;
                     //recursion is done so that
                     //it will continue to spawn
@@ -131,13 +222,6 @@ public class SpawnManager : Singleton<SpawnManager>
             {
                 Debug.LogWarning("No bowls available");
             }
-        }
-        else
-        {
-            //there is nothing being spawned
-            //because there are no places to spawn
-            Debug.LogWarning("Seats full, give orders first");
-            _foodIndex = 0;
         }
 
     }
@@ -174,13 +258,19 @@ public class SpawnManager : Singleton<SpawnManager>
             Debug.LogWarning("Seats full, give orders first");
             _bowlIndex = 0;
         }
-        
-
     }
+
+    // public void ClearLists()
+    // {
+    //     customerSeat.Clear();
+    //     foodSeat.Clear();
+    //     bowlSeat.Clear();
+    // }
+    
 }
 
-[System.Serializable]
-public class Seat
+[Serializable]
+public class Seats
 {
     public Transform slot;
     public bool isTaken;

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
+  m_Name: Encounter3
+  m_EditorClassIdentifier: 
+  info:
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Hey-woah, you don't look too good.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "I\u2019ll just order real quick and I\u2019ll be on my way."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Hey, you alright?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: I suppose, why do you ask?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: In all honesty, you look like a walking corpse. Tough day at work?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Is it really that obvious?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: VERY, very obvious.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Ugh, maybe I should put on some make-up before leaving next time.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "You know, you look like someone who can keep a secret. You don\u2019t
+      mind if I rant for a bit? "
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Be my guest.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "Everyone at the office thinks it\u2019s fine to push work onto me just
+      cause i\u2019m little old Clara who\u2019s too shy to say no."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "You know, sometimes I feel like they know what they\u2019re doing and
+      it pisses me off so much."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "It\u2019s really frustrating how much I want to decline but can\u2019t."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "I  can tell it\u2019s taking its toll on you, given how dead you\u2019ve
+      been looking compared to last time."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "I know! If this keeps up, I\u2019d be dead before i reach my 30\u2019s! "
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "Well, I wouldn\u2019t say that."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Probably.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Maybe.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: God, I could use another bowl.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "You know, there\u2019s nothing wrong with being a little selfish with
+      your time every now and then."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: I know that! but how do I do it??
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 'Breathe deep, look at them dead in the eye, and give ''em a solid no.
+
+'
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "You don\u2019t think i\u2019ve tried that before?"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: From how you're lookin', I'd say no.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: ...
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "Fine. I\u2019ll give it a shot. And hey, sorry you have to hear some stranger
+      rant about work."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "I believe we\u2019re already acquainted so you\u2019re no stranger to
+      me, Clara.\r\n"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "...\t"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Thanks, I'll be on my way then.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Safe travels to you then.
