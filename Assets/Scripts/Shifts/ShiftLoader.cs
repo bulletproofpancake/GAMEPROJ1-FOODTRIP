@@ -22,7 +22,7 @@ public class ShiftLoader : SceneLoader
         base.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/Arcade");
 
         FindObjectOfType<AudioManager>().Play("ArcadeBGM");
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        LeanTween.scale(gameObject, new Vector3(.7f, .7f, .7f), 1f).setEase(LeanTweenType.punch);
     }
 
     private void SetBackgroundImage()

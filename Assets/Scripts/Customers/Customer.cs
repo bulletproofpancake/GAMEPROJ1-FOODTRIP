@@ -135,7 +135,7 @@ public class Customer : MonoBehaviour
     private IEnumerator CustomerLeave()
     {
         LeanTween.moveX(gameObject, endPos.position.x, 2f);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3f + data.DespawnTime);
 
         gameObject.SetActive(false);
     }
@@ -143,7 +143,7 @@ public class Customer : MonoBehaviour
     private IEnumerator ShowParticleEffect()
     {
         particleEffect.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        particleEffect.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        particleEffect.SetActive(false);
     }
 }

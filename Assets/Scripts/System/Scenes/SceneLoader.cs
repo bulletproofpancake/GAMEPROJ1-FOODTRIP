@@ -74,6 +74,6 @@ public class SceneLoader : MonoBehaviour
 
     void Tween()
     {
-        LeanTween.scale(gameObject, new Vector3(.3f, .3f, .3f), 1f).setEase(LeanTweenType.punch);
+        LeanTween.scale(gameObject, new Vector3(.7f, .7f, .7f), 1f).setEase(LeanTweenType.punch);
     }
 }
