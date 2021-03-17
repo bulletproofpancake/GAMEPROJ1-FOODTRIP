@@ -4,6 +4,8 @@ using Customers;
 using TMPro;
 using UnityEngine;
 
+
+
 public class CustomerTT : MonoBehaviour
 {
 
@@ -41,9 +43,16 @@ public class CustomerTT : MonoBehaviour
   Transform dirtyCupSpawnPosition;
 
   GameObject dirtyCup;
+
+
+
+  int fishb, kwek, squidb;
   public int SeatTaken { get; set; }
   void Start()
   {
+    fishb = 0;
+    kwek = 0;
+    squidb = 0;
     //Debug.Log(currentOrders.Count);
     customertt = GetComponent<CustomerSpawnerTT>();
   }
@@ -58,14 +67,17 @@ public class CustomerTT : MonoBehaviour
 
     SetOrderTT();
     GiveOrderTT();
-
+    Debug.Log("Current orders count is: " + currentOrders.Count);
+    Debug.Log("fishb is: " + fishb);
+    Debug.Log("kwek is: " + kwek);
+    Debug.Log("squidb is: " + squidb);
   }
 
   private void OnDisable()
   {
 
-    //! ERROR: Array out of bounds
-    customertt.customerSeat[SeatTaken].isTaken = false;//.customerSeat[SeatTaken].isTaken = false;
+    //! ERROR: Object reference not set to an instance of an object
+    customertt.customerSeat[SeatTaken].isTaken = false;
     _payment = 0;
     dialogueBox.color = Color.white;
     for (int i = 0; i < numOfOrders; i++)
@@ -81,40 +93,73 @@ public class CustomerTT : MonoBehaviour
 
   }
 
-  //! ERROR: LINE 84 currentOrders is apparently not referenced to an object
   private void GiveOrderTT()
   {
     for (int i = 0; i < numOfOrders; i++)
     {
-      currentOrders.Add(data.GetAllOrder()); //? bakit walang reference?
+      currentOrders.Add(data.GetAllOrder());
       iconOrder[i].GetComponent<SpriteRenderer>().sprite = currentOrders[i].Data.Image;
+    }
+
+    foreach (var order in currentOrders)
+    {
+      switch (order.tusokFoods)
+      {
+        case TusokType.Fishball:
+          fishb++;
+          break;
+        case TusokType.Kwekkwek:
+          kwek++;
+          break;
+        case TusokType.Squidball:
+          squidb++;
+          break;
+      }
     }
   }
 
-  private void TakeOrderTT(List<OrderTT> _getOrder)
+  private void TakeOrderTT(Cup cups)
   {
+    // if function that check if _getOrder contains the same contents as the currentOrders
+    //TODO CHANGE lIST.Containts  
 
-    // ? make it so that it utilizes List.Contains
-    for (int i = 0; i < numOfOrders; i++)
+    if (cups.fishBalls == fishb)
     {
-      // if function that check if _getOrder contains the same contents as the currentOrders
-      if (_getOrder.Contains(currentOrders[i]))
-      {
-        _completeOrders++;
-        orderText.text = $"{_completeOrders}/{numOfOrders + 1}";
-      }
+      Debug.Log("Correct amount of fishballs");
+      _completeOrders++;
+    }
+    if (cups.squidBalls == squidb)
+    {
+      Debug.Log("Correct amount of squidballs");
+      _completeOrders++;
+    }
+    if (cups.kwekKwek == kwek)
+    {
+      Debug.Log("Correct amount of  kwekkwek");
+      _completeOrders++;
+    }
+    if (cups.fishBalls != fishb || cups.squidBalls != squidb || cups.kwekKwek != kwek)
+    {
+      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
+      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
+      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
     }
 
-    if (_completeOrders >= 2)
+    Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
+    Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
+    Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
+
+    //* DONUT ERASE
+
+    // orderText.text = $"{_completeOrders}/{numOfOrders + 1}";
+    if (_completeOrders == numOfOrders)
     {
       //put lines of script that would approve the order
       int _index = Random.Range(0, dialogeData.customerDialogue.Length);
-      //? tried separatingthis from the other for loop to make sure that 
-      //? payment only counts when the orders are complete.
       for (int i = 0; i < numOfOrders; i++)
       {
-        _payment += _getOrder[i].Data.Cost;
-        iconOrder[i].GetComponent<SpriteRenderer>().enabled = false;
+        _payment += cups.foodContents[i].Data.Cost;
+        // iconOrder[i].GetComponent<SpriteRenderer>().enabled = false;
       }
       orderText.text = dialogeData.customerDialogue[_index].Dialogue;
       StartCoroutine(CustomerDespawn());
@@ -124,14 +169,13 @@ public class CustomerTT : MonoBehaviour
       // start coroutine the procedure of not accepting the order
       StartCoroutine(WrongOrder());
     }
-
   }
 
   private void OnTriggerEnter2D(Collider2D other)
   {
     if (other.GetComponent<Cup>())
     {
-      TakeOrderTT(other.GetComponent<Cup>().foodContents);
+      TakeOrderTT(other.GetComponent<Cup>());
     }
   }
 
@@ -141,9 +185,7 @@ public class CustomerTT : MonoBehaviour
 
     yield return new WaitForSeconds(data.DespawnTime);
     gameObject.SetActive(false);
-
-    //? spawn the dirty cup as soon as the customer leaves the cart
-    //? where to reference dirty cup???????
+    //*Spawns DirtyCup
     dirtyCup = ObjectPoolManager.Instance.GetPooledObject("DirtyCup");
     dirtyCup.SetActive(true);
     SpawnDirtyCup.amountInScene += 1;
@@ -160,11 +202,9 @@ public class CustomerTT : MonoBehaviour
   }
   private IEnumerator WrongOrder()
   {
-    //iconOrder.GetComponent<SpriteRenderer>().color = Color.red;
-    IconOrderColorChange(Color.red);
+    IconOrderColorChange(Color.red); //sets the color of the icon to red
     yield return new WaitForSeconds(1f);
-    // iconOrder.GetComponent<SpriteRenderer>().color = Color.white;
-    IconOrderColorChange(Color.white);
+    IconOrderColorChange(Color.white); //sets it back to the original.
   }
 
   private void OnMouseDown()

@@ -41,8 +41,10 @@ public class CookOrder : MonoBehaviour
   }
   private IEnumerator AddFood()
   {
+    isCooking = true;
     yield return new WaitForSeconds(orderToCook.Data.CookTime);
     TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
+    isCooking = false;
   }
 
 

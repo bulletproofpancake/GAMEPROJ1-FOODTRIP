@@ -15,7 +15,7 @@ public class CupSpawner : MonoBehaviour
   private int maxCupAllowed;
 
 
-  private int currentSpawned;
+  public static int currentSpawned;
 
   [Space]
   [Tooltip("This is the time for the cup to spawn")]

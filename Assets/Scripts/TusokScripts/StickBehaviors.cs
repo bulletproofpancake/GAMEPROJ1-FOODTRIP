@@ -68,14 +68,14 @@ public class StickBehaviors : MonoBehaviour
   private void OnEnable()
   {
     pooledObjectReference = GameObject.Find("Pooled Objects");
+    didLeftClick = true;
+    disableMouseControl = false;
   }
   private void Update()
   {
 
     Controls();
     LaserPointer();
-    OnDrawGizmos();
-
   }
 
   private void Controls()
@@ -143,11 +143,7 @@ public class StickBehaviors : MonoBehaviour
 
   }
 
-  private void OnDrawGizmos()
-  {
-    Gizmos.color = Color.red;
-    Gizmos.DrawRay(startPoint.position, -transform.up * MAX_RAYCASTDISTANCE);
-  }
+
 
   public void DrawRay2D(Vector2 startPos, Vector2 endPos)
   {
@@ -210,6 +206,28 @@ public class StickBehaviors : MonoBehaviour
 
   }
 
+  //this function attempts to remove the foods inside the stick
+  private void OnDisable()
+  {
+
+    foreach (GameObject food in foodsInTheStick)
+    {
+      //OrderTT _order = food.GetComponent<OrderTT>();
+      food.GetComponent<Rigidbody2D>().isKinematic = false;
+      food.GetComponent<Rigidbody2D>().WakeUp();
+      food.transform.parent = pooledObjectReference.transform;
+      food.gameObject.SetActive(false);
+    }
+    foodsInTheStick.Clear();
+
+    //resets the counter
+    counter = 0;
+    for (int i = 0; i < foodStickPos.Length; i++)
+    {
+      foodStickPos[i].doesContain = false;
+    }
+  }
+
   private void SetFoodInStickPosition()
 
   {
@@ -232,7 +250,6 @@ public class StickBehaviors : MonoBehaviour
         Debug.Log("middle click detected!");
         disableMouseControl = true;
         didLeftClick = false;
-
         this.gameObject.SetActive(false);
         // these are the lines of code if we don't want to make it disappear
         // transform.parent = other.gameObject.transform;

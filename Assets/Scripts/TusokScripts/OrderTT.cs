@@ -3,10 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum TusokType
+{
+  Kwekkwek, Fishball, Squidball
+}
+
 public class OrderTT : MonoBehaviour
 {
   [SerializeField]
   private OrderData data;
+
+  public TusokType tusokFoods;
 
   public OrderData Data => data;
 
