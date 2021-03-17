@@ -14,44 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: So? How was it?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
     text: Well, this place is actually quite a sight.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: Hugo
     text: The contrast between the mega city of Buendia and the smaller areas of
       Chino Roces was it? It's like night and day!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
     text: There's so much to explore that It feels like i haven't seen everything
       yet!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: I agree. You know, there's this one place I know of in Taft that sounds
       like heaven if you're into street food a lot.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
     text: I would love to go honestly, but sadly I do not have the time anymore to
       frolic around the city.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: 
     text: Why's that? Heading home so soon?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
     text: Yes, I've been called in for a meeting next week, and I have to be back
       before then.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: I see. Well, I'm glad i got the chance to meet you.
   - order: {fileID: 0}
@@ -59,44 +59,28 @@ MonoBehaviour:
     speakerName: Hugo
     text: 'Me too, friend. '
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: Hugo
     text: I didn't expect making friends with a local vendor to be in my itinerary,
       but I thank you for making my stay that much more meaningful.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: 
     text: I might as well pair my food with good company for my customers.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: Hugo
     text: HA HA HA You've gotten that right, that's for sure. Maybe if I come back,
       I'll make sure to bring my buddies around and introduce you.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
     text: After all, good food goes well with good company!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: 
     text: Huh, sounds very familiar.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 'Now, let us indulge in each other''s presence! '
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Hugo
-    text: 
-  - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: 
+    text: Now, might as well grab a snack for the road!

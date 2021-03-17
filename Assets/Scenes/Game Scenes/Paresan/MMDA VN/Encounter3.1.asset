@@ -14,42 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Fancy seeing you again.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Mmhm, just doing my job.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Right.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Say, how did you meet Enteng anyways?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: I would've recognised you if you were a regular, but somehow I haven't
       seen you around before.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: I only come by in the afternoon. I used to come her after school, staying
       till the evening just listening to the old chatterbox.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: HA! He was always the talkative type.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: He was good company, and nothing goes well with food better than good company
       that's for sure.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: 'I suppose. He''d always have stories to tell. '
   - order: {fileID: 0}
@@ -57,6 +57,6 @@ MonoBehaviour:
     speakerName: 
     text: Real or fake, it was fun listening to him over a hot bowl of pares.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Speakin' of pares...

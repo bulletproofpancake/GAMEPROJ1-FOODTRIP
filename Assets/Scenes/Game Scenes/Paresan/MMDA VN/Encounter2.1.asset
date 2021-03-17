@@ -14,39 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Huh, you again today?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: I was here the last time we spoke, how is now any different?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: No, no,it's just that...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: 'Someone else used to run this cart. Man named Enteng. '
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Fun guy, he is. One of the only vendors I tolerate.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Huh, weird how we have something we can agree on.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Hmmm...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Hmm...!!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Hmm?
   - order: {fileID: 0}
@@ -54,35 +54,35 @@ MonoBehaviour:
     speakerName: ???
     text: Wait a damn minute, I bet you stole his cart huh?!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: No-what?? No, of course not.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: He just ain't here right now. I'm just here to keep the business alive.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Then tell me, why are you running this thing instead of him???
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: He's well...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: He's in the hospital right now.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: What?! What did you do?!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: It wasn't me, it was a bunch of rowdy kids.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Took him by surprise on his way home. I was lucky to find him barely breathing
       at all.
@@ -92,28 +92,28 @@ MonoBehaviour:
     text: Why should I believe you? Give me one good reason why I shouldn't turn
       you in right now.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: '''Cause I''m working to pay his medical bills. That, and I''ve known him
       my whole life. I would never hurt him.'
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Fine, you have a point. I may not like your lot, but even I have limitations.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Beating an old man in the middle of the night just for the hell of it?
       That's an all new level of low.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: You can say that again.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: All this talk is makin' me hungry. How 'bout an order of pares?

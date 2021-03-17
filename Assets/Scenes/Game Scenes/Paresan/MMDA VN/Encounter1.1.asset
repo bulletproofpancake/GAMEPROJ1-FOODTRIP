@@ -14,41 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 696ffee4d4bbada459e8bf1fcbeeecb5, type: 3}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Morning.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Well now, a new rat!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: 'Hey, I''m not here to cause any trouble. '
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Just doin' business.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Uh huh, and are you not aware of the litter and obstruction your little
       "BUSINESS" is causing?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Look, I clean it up as much as I can during AND after shifts.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Besides, I'm right next to the station. There is no "obstruction" going
       on.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: You expect me to believe that??
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Well, yes, obviously. As you can see, I keep my equipment and area VERY
       well maintained.
@@ -58,15 +58,15 @@ MonoBehaviour:
     text: HMPH! You street food vendors, always doing whatever you want, wherever
       you want.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: "We're just trying to make a living, no need to get hostile now.\t\t\t"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
     text: Tell you what, I'll toss you a bone. If you can impress me with your food,
       I'll leave you alone.

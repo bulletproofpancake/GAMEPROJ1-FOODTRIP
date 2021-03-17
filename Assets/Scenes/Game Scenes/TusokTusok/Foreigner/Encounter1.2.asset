@@ -14,41 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: ???
     text: What was that orange thing again? That neon ball?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: ???
     text: Quack quack??
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: It's called kwek kwek, and it's an egg covered in batter and deep fried,
       if ever you're curious.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: ???
     text: Quack quack?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: No, kwek kwek.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: ???
     text: What a weird name. And you say it's just egg covered in batter and fried,
       correct?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: That's right.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: ???
     text: I see! It's just like tempura, but egg!
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: 
     text: Probably. I'm not really sure what "tempura" is, but if you say so.
   - order: {fileID: 0}
