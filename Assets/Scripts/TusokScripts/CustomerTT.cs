@@ -183,7 +183,6 @@ public class CustomerTT : MonoBehaviour
       // start coroutine the procedure of not accepting the order
       ResetCounter();
       StartCoroutine(WrongOrder());
-      //GiveOrderTT();
     }
 
   }
