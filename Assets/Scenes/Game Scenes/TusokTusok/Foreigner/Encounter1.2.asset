@@ -52,6 +52,6 @@ MonoBehaviour:
     speakerName: 
     text: Probably. I'm not really sure what "tempura" is, but if you say so.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: ???
     text: How interesting. I'll give it another go and I'll be on my way!
