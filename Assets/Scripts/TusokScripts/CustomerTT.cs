@@ -80,7 +80,9 @@ public class CustomerTT : MonoBehaviour
     _payment = 0;
     dialogueBox.color = Color.white;
     for (int i = 0; i < numOfOrders; i++)
+    {
       iconOrder[i].GetComponent<SpriteRenderer>().enabled = true;
+    }
     toCollect = false;
     fishb = 0;
     kwek = 0;
