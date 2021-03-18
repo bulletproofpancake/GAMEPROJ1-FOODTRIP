@@ -56,6 +56,7 @@ public class Singleton<T> : MonoBehaviour
             {
                 //Destroy self because there can only be one instance
                 Destroy(this.gameObject);
+                Debug.LogWarning("Another singleton found");
             }
         }
 

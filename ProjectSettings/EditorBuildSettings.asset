@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Paresan/Arcade.unity
     guid: 9e5a98d14ba6a9a4ab59c036fb882654
   - enabled: 1
+    path: Assets/Scenes/Game Scenes/Paresan/VN.unity
+    guid: 07813c459e4d6c8479949889783338ba
+  - enabled: 1
     path: Assets/Scenes/Game Scenes/TusokTusok/Arcade.unity
     guid: 3395a3543f6c7604ab31cede6a040b09
   - enabled: 1
@@ -26,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/Upgrades.unity
     guid: 31ae36dc07034b14c8f327ab6605580d
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Ending.unity
+    guid: 7b426651a44be8f4785b8ba4b5b413f5
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Tutorial.unity
+    guid: ef6a9ad830e126645b6a1025f7d39f1c
   m_configObjects: {}

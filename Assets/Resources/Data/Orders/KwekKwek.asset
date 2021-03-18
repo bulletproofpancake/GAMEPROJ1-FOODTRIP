@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8025813b5c7c94e4f97450b92e0ffc00, type: 3}
   m_Name: KwekKwek
   m_EditorClassIdentifier: 
-  orderImage: {fileID: 21300000, guid: 05976cb691424d34f9240616d2e8ce28, type: 3}
-  baseOrderCost: 10
-  currentOrderCost: 10
-  baseCookTime: 1
-  currentCookTime: 1
+  orderImage: {fileID: 21300000, guid: 728900814cac1cc438ec41252bfba7ca, type: 3}
+  baseOrderCost: 0
+  currentOrderCost: 0
+  baseCookTime: 0
+  currentCookTime: 0
+  type: 3

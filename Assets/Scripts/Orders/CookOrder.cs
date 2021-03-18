@@ -5,62 +5,89 @@ using UnityEngine.UI;
 
 public class CookOrder : MonoBehaviour
 {
-  [SerializeField] private OrderTT orderToCook;
-  [SerializeField] private Image fillImage;
-  private float timer;
-  private bool isCooking;
+    [SerializeField] private Order orderToCook;
+    [SerializeField] private Image fillImage;
+    private Button button;
+    private float timer;
+    private bool isCooking;
 
-  private void Update()
-  {
-    CookingIndicator();
-  }
-
-  #region Pares
-  public void StartCooking()
-  {
-    StartCoroutine(Cook());
-  }
-
-
-  private IEnumerator Cook()
-  {
-    isCooking = true;
-    yield return new WaitForSeconds(orderToCook.Data.CookTime);
-    SpawnManager.Instance.Spawn(orderToCook.Data);
-    isCooking = false;
-  }
-
-  #endregion
-
-  #region TusokTusok
-
-  public void SpawnFood()
-  {
-
-    StartCoroutine(AddFood());
-  }
-  private IEnumerator AddFood()
-  {
-    isCooking = true;
-    yield return new WaitForSeconds(orderToCook.Data.CookTime);
-    TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
-    isCooking = false;
-  }
-
-
-  #endregion
-  private void CookingIndicator()
-  {
-    if (isCooking == true)
+    private void Start()
     {
-      timer = orderToCook.Data.CookTime;
-      fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+        button = GetComponent<Button>();
     }
-    else if (isCooking == false)
-    {
-      timer = 0;
-      fillImage.fillAmount = timer;
-    }
-  }
 
+    private void Update()
+    {
+        CookingIndicator();
+        if (Pause.isPaused == true)
+            button.interactable = false;
+        else if (Pause.isPaused == false)
+            button.interactable = true;
+        //CookingIndicator();
+    }
+
+    #region Pares
+    public void StartCooking()
+    {
+        if (Pause.isPaused == true)
+            StopAllCoroutines();
+        else
+            StartCoroutine(Cook());
+    }
+
+
+    private IEnumerator Cook()
+    {
+        isCooking = true;
+        //switch (orderToCook.Data.Type)
+        //{
+        //    case OrderType.Pares:
+        //        FindObjectOfType<AudioManager>().Play("ParesSFX");
+        //        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        //        FindObjectOfType<AudioManager>().Stop("ParesSFX");
+        //        break;
+
+        //    case OrderType.Kanin:
+        //        FindObjectOfType<AudioManager>().Play("KaninSFX");
+        //        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        //        FindObjectOfType<AudioManager>().Stop("KaninSFX");
+        //        break;
+        //}
+
+        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        SpawnManager.Instance.Spawn(orderToCook.Data);
+        isCooking = false;
+
+        FindObjectOfType<AudioManager>().Play("OrderReady");
+    }
+
+    #endregion
+
+    #region TusokTusok
+
+    public void SpawnFood() {
+
+        StartCoroutine(AddFood());
+    }
+    private IEnumerator AddFood() {
+        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
+    }
+
+
+    #endregion
+
+    private void CookingIndicator()
+    {
+        if (isCooking == true)
+        {
+            timer = orderToCook.Data.CookTime;
+            fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+        }
+        else if (isCooking == false)
+        {
+            timer = 0;
+            fillImage.fillAmount = timer;
+        }
+    }
 }
