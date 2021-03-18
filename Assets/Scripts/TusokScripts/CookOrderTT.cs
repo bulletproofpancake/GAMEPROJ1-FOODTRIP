@@ -1,18 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CookOrder : MonoBehaviour
+public class CookOrderTT : MonoBehaviour
 {
-  [SerializeField] private Order orderToCook;
+  [SerializeField] private OrderTT orderToCook;
   [SerializeField] private Image fillImage;
+
   private Button button;
   private float timer;
   private bool isCooking;
 
   private void Start()
   {
+    timer = 1.0f;
     button = GetComponent<Button>();
   }
 
@@ -22,7 +24,7 @@ public class CookOrder : MonoBehaviour
       button.interactable = false;
     else if (Pause.isPaused == false)
       button.interactable = true;
-    //CookingIndicator();
+    CookingIndicator();
   }
 
   #region Pares
@@ -54,24 +56,26 @@ public class CookOrder : MonoBehaviour
   }
   private IEnumerator AddFood()
   {
+    isCooking = true;
     yield return new WaitForSeconds(orderToCook.Data.CookTime);
     TusokTusokFoodSpawner.Instance.Spawn(orderToCook.Data);
+    isCooking = false;
   }
 
 
   #endregion
-  // private void CookingIndicator()
-  // {
-  //     if (isCooking == true)
-  //     {
-  //         timer = orderToCook.Data.CookTime;
-  //         fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
-  //     }
-  //     else if (isCooking == false)
-  //     {
-  //         timer = 0;
-  //         fillImage.fillAmount = timer;
-  //     }
-  // }
+  private void CookingIndicator()
+  {
+    if (isCooking == true)
+    {
+      timer = orderToCook.Data.CookTime;
+      fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+    }
+    else if (isCooking == false)
+    {
+      timer = 0;
+      fillImage.fillAmount = timer;
+    }
+  }
 
 }

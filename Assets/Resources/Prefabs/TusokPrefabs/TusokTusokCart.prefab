@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 31499509234177160}
   - component: {fileID: 31499509234177163}
   - component: {fileID: 31499509234177162}
-  - component: {fileID: 31499509234177161}
+  - component: {fileID: 791880064503530220}
   m_Layer: 5
   m_Name: Fishball
   m_TagString: Untagged
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 31499509234177161}
+      - m_Target: {fileID: 791880064503530220}
         m_MethodName: SpawnFood
         m_Mode: 1
         m_Arguments:
@@ -132,7 +132,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &31499509234177161
+--- !u!114 &791880064503530220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31499509234177164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
+  m_Script: {fileID: 11500000, guid: c4e9afdb2a9087849a38619623aa8756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   orderToCook: {fileID: -8138934420859995115, guid: e409bff26358fa64d86c933cbf778ca6,
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 31499509658348457}
   - component: {fileID: 31499509658348456}
   - component: {fileID: 31499509658348459}
-  - component: {fileID: 8019967616848776540}
+  - component: {fileID: 2931660800773676185}
   m_Layer: 5
   m_Name: Kwek Kwek
   m_TagString: Untagged
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8019967616848776540}
+      - m_Target: {fileID: 2931660800773676185}
         m_MethodName: SpawnFood
         m_Mode: 1
         m_Arguments:
@@ -547,7 +547,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8019967616848776540
+--- !u!114 &2931660800773676185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31499509658348461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
+  m_Script: {fileID: 11500000, guid: c4e9afdb2a9087849a38619623aa8756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   orderToCook: {fileID: 8629433395338078643, guid: 3c3a24bd77da06a4abe6ffb56605c325,
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 31499511272330950}
   - component: {fileID: 31499511272330969}
   - component: {fileID: 31499511272330968}
-  - component: {fileID: 9123892986137778067}
+  - component: {fileID: 796428798174161065}
   m_Layer: 5
   m_Name: Squidball
   m_TagString: Untagged
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9123892986137778067}
+      - m_Target: {fileID: 796428798174161065}
         m_MethodName: SpawnFood
         m_Mode: 1
         m_Arguments:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9123892986137778067
+--- !u!114 &796428798174161065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31499511272330970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
+  m_Script: {fileID: 11500000, guid: c4e9afdb2a9087849a38619623aa8756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   orderToCook: {fileID: -5392372973590953509, guid: 19bf7778c89e3384c97075ee214e7a1b,
@@ -1520,7 +1520,6 @@ GameObject:
   - component: {fileID: 9081295665050219603}
   - component: {fileID: 5946614100611303979}
   - component: {fileID: 6662656079182748630}
-  - component: {fileID: 2336397735556875387}
   m_Layer: 5
   m_Name: Sticks
   m_TagString: Untagged
@@ -1628,32 +1627,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2564330019190876046}
+      - m_Target: {fileID: 0}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2336397735556875387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2564330019190876046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9d9350583ea33746b1bbffb21833a85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  maxCupAllowed: 0
-  timeToSpawn: 0
 --- !u!1 &2811238549914968527
 GameObject:
   m_ObjectHideFlags: 0
