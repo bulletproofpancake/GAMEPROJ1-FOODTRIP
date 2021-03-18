@@ -7,7 +7,7 @@ public class CustomerSpawnerTT : MonoBehaviour
   [Header("Customer Spawn")]
   public int spawnInterval;
   public CustomerData[] customers;
-  public Seat[] customerSeat;
+  public Seats[] customerSeat;
   private int _customerIndex;
 
 

@@ -272,7 +272,7 @@ public class SpawnManager : Singleton<SpawnManager>
 
 }
 
-[Serializable]
+[System.Serializable]
 public class Seats
 {
   public Transform slot;
