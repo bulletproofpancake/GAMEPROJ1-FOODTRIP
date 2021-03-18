@@ -110,10 +110,11 @@ public class CustomerTT : MonoBehaviour
     {
       currentOrders.Insert(i, data.GetAllOrder());
       iconOrder[i].GetComponent<SpriteRenderer>().sprite = currentOrders[i].Data.Image;
-      Debug.Log("How many are you? " + currentOrders.Count);
+
     }
+    Debug.Log("How many are you? " + currentOrders.Count);
     if (currentOrders.Count > 3)
-      currentOrders.RemoveRange(0, 3);
+      currentOrders.RemoveRange(3, 3);
 
     foreach (var order in currentOrders)
     {
@@ -138,31 +139,26 @@ public class CustomerTT : MonoBehaviour
 
     if (cups.fishBalls == fishb)
     {
-      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
-      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
-      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
+
       _completeOrders++;
     }
     if (cups.squidBalls == squidb)
     {
-      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
-      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
-      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
+
       _completeOrders++;
     }
     if (cups.kwekKwek == kwek)
     {
-      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
-      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
-      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
+
       _completeOrders++;
     }
     if (cups.fishBalls != fishb || cups.squidBalls != squidb || cups.kwekKwek != kwek)
     {
-      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
-      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
-      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
+      //insert lines of code here.
     }
+    Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
+    Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
+    Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
 
     //* DONUT ERASE
     // orderText.text = $"{_completeOrders}/{numOfOrders + 1}";
