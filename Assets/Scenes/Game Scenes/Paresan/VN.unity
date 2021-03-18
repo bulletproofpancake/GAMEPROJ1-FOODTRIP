@@ -1649,12 +1649,12 @@ PrefabInstance:
     - target: {fileID: 8580389058765965296, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1813
+      value: 202
       objectReference: {fileID: 0}
     - target: {fileID: 8580389058765965296, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 616.99994
+      value: 959.9
       objectReference: {fileID: 0}
     - target: {fileID: 8580389058765965310, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
@@ -2084,6 +2084,43 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 24.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cca9b4aa471dbf43a64adae4ad35f41,
+        type: 2}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.99607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2255838918751245115, guid: 1cca9b4aa471dbf43a64adae4ad35f41,
+        type: 2}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292148991
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822760964499223593, guid: 6bb935743c07a4a4094008cb6b10afe1,
+        type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bb935743c07a4a4094008cb6b10afe1, type: 3}
