@@ -55,7 +55,7 @@ MonoBehaviour:
     speakerName: 
     text: I see. Well, I'm glad i got the chance to meet you.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
     speakerName: Hugo
     text: 'Me too, friend. '
   - order: {fileID: 0}
