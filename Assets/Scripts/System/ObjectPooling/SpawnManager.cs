@@ -68,20 +68,22 @@ public class SpawnManager : Singleton<SpawnManager>
     private void SpawnVN()
     {
         var npc = ScriptableObject.CreateInstance<NPCData>();
-        
-        foreach (var data in NpcDatas)
+
+
+        if (ShiftManager.Instance.shift != null)
         {
-            if(ShiftManager.Instance.shift != null){
+            foreach (var data in NpcDatas)
+            {
                 if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
                 {
                     npc = data;
                 }
             }
-            else
-            {
-                Debug.LogWarning("Loading default npc");
-                npc = NpcDatas[0];
-            }
+        }
+        else
+        {
+            Debug.LogWarning("Loading default npc");
+            npc = NpcDatas[0];
         }
         
         var customer = ObjectPoolManager.Instance.GetPooledObject(npc.name);
