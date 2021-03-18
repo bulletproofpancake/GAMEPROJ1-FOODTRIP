@@ -11,9 +11,9 @@ public class CustomerSpawnerTT : MonoBehaviour
   private int _customerIndex;
 
 
-
   private void Start()
   {
+
     foreach (var seat in customerSeat)
     {
       seat.isTaken = false;

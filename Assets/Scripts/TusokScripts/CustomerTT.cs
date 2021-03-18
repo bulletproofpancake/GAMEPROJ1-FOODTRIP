@@ -66,11 +66,13 @@ public class CustomerTT : MonoBehaviour
 
     SetOrderTT();
     GiveOrderTT();
-    // Debug.Log("Current orders count is: " + currentOrders.Count);
-    // Debug.Log("fishb is: " + fishb);
-    // Debug.Log("kwek is: " + kwek);
-    // Debug.Log("squidb is: " + squidb);
   }
+
+  // Debug.Log("Current orders count is: " + currentOrders.Count);
+  // Debug.Log("fishb is: " + fishb);
+  // Debug.Log("kwek is: " + kwek);
+  // Debug.Log("squidb is: " + squidb);
+
 
   private void OnDisable()
   {
@@ -84,20 +86,21 @@ public class CustomerTT : MonoBehaviour
       iconOrder[i].GetComponent<SpriteRenderer>().enabled = true;
     }
     toCollect = false;
+
+  }
+
+  void ResetCounter()
+  {
     fishb = 0;
     kwek = 0;
     squidb = 0;
   }
-
   //constant number of orders will be 3
   private void SetOrderTT()
   {
     _completeOrders = 0;
     numOfOrders = 3;
-    fishb = 0;
-    kwek = 0;
-    squidb = 0;
-
+    ResetCounter();
   }
 
   private void GiveOrderTT()
@@ -105,10 +108,12 @@ public class CustomerTT : MonoBehaviour
 
     for (int i = 0; i < numOfOrders; i++)
     {
-      currentOrders.Add(data.GetAllOrder());
+      currentOrders.Insert(i, data.GetAllOrder());
       iconOrder[i].GetComponent<SpriteRenderer>().sprite = currentOrders[i].Data.Image;
       Debug.Log("How many are you? " + currentOrders.Count);
     }
+    if (currentOrders.Count > 3)
+      currentOrders.RemoveRange(0, 3);
 
     foreach (var order in currentOrders)
     {
@@ -129,22 +134,27 @@ public class CustomerTT : MonoBehaviour
 
   private void TakeOrderTT(Cup cups)
   {
-    // if function that check if _getOrder contains the same contents as the currentOrders
-    //TODO CHANGE lIST.Containts  
+    //* NOTE: CUPS IS WHERE THE FOOD FROM THE STICK COMES FROM.
 
     if (cups.fishBalls == fishb)
     {
-      Debug.Log("Correct amount of fishballs");
+      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
+      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
+      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
       _completeOrders++;
     }
     if (cups.squidBalls == squidb)
     {
-      Debug.Log("Correct amount of squidballs");
+      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
+      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
+      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
       _completeOrders++;
     }
     if (cups.kwekKwek == kwek)
     {
-      Debug.Log("Correct amount of  kwekkwek");
+      Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
+      Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
+      Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
       _completeOrders++;
     }
     if (cups.fishBalls != fishb || cups.squidBalls != squidb || cups.kwekKwek != kwek)
@@ -152,13 +162,9 @@ public class CustomerTT : MonoBehaviour
       Debug.Log("cups.fishballs amount is: " + cups.fishBalls + " | fishb amount is: " + fishb);
       Debug.Log("cups.squidBalls amount is: " + cups.squidBalls + " | squidb amount is: " + squidb);
       Debug.Log("cups.kwekkwek amount is: " + cups.kwekKwek + " | kwek amount is: " + kwek);
-      fishb = 0;
-      kwek = 0;
-      squidb = 0;
     }
 
     //* DONUT ERASE
-
     // orderText.text = $"{_completeOrders}/{numOfOrders + 1}";
     if (_completeOrders == numOfOrders)
     {
@@ -170,14 +176,20 @@ public class CustomerTT : MonoBehaviour
         // iconOrder[i].GetComponent<SpriteRenderer>().enabled = false;
       }
       orderText.text = dialogeData.customerDialogue[_index].Dialogue;
+      ResetCounter();
+      currentOrders.Clear();
       StartCoroutine(CustomerDespawn());
+
 
     }
     else
     {
       // start coroutine the procedure of not accepting the order
+      ResetCounter();
       StartCoroutine(WrongOrder());
+      //GiveOrderTT();
     }
+
   }
 
   private void OnTriggerEnter2D(Collider2D other)

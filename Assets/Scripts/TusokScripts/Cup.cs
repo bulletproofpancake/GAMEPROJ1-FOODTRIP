@@ -25,6 +25,8 @@ public class Cup : MonoBehaviour
   {
     cupSprite = GetComponent<SpriteRenderer>();
     cupSprite.sprite = sprites[0];
+    foodContents.Clear();
+    Debug.Log("current amount of objects in stick: " + foodContents.Count);
 
   }
   private void OnTriggerStay2D(Collider2D other)
@@ -37,7 +39,7 @@ public class Cup : MonoBehaviour
         //other.gameObject.GetComponent<StickBehaviors>()._getFood.Clear();
         TusokTusokFoodSpawner.Instance.currentCapacity -= 3;
         StickSpawner.currentSpawned--;
-        GiveOrder();
+
 
         Debug.Log("Stick is detected!");
         cupSprite.sprite = sprites[1];
@@ -52,6 +54,8 @@ public class Cup : MonoBehaviour
     {
       if (other.GetComponent<CustomerTT>() && SpawnDirtyCup.amountInScene < SpawnDirtyCup.maxDirtyCupSpawn)
       {
+        GiveOrder();
+        // ResetCounter();
         gameObject.SetActive(false);
         CupSpawner.currentSpawned--;
       }
@@ -66,6 +70,14 @@ public class Cup : MonoBehaviour
   private void OnDisable()
   {
     foodContents.Clear();
+    //ResetCounter();
+  }
+
+  void ResetCounter()
+  {
+    fishBalls = 0;
+    kwekKwek = 0;
+    squidBalls = 0;
   }
   private void GiveOrder()
   {
