@@ -12,18 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300d5e45baa727a4e8382cfee5673110, type: 3}
   m_Name: Foreigner
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
   possibleOrders:
   - {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747, type: 3}
   - {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
   despawnTime: 3
-  appearsIf: 0
+  appearsIf: 1
   encounter:
   - dialogueDatas:
     - {fileID: 11400000, guid: fe6c26afb347383469d06e7502a09695, type: 2}
-    - {fileID: 11400000, guid: c67ede7b364fcc74ab13c35fd1348671, type: 2}
+    - {fileID: 11400000, guid: 941da8704b65f4046abee9d4ec4aaeb8, type: 2}
   - dialogueDatas:
     - {fileID: 11400000, guid: 317a8c4e676615048b2c8e9ab75895f3, type: 2}
+    - {fileID: 11400000, guid: 31b3c398fe738234c8ab43ee6021fdd8, type: 2}
   - dialogueDatas:
     - {fileID: 11400000, guid: 306a3b701cab6fb409d74f5255183841, type: 2}
+    - {fileID: 11400000, guid: 5141873833b41fa4b8a0c61a4d707ae3, type: 2}
   count: 3

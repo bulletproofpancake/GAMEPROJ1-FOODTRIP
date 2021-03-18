@@ -51,7 +51,7 @@ MonoBehaviour:
     text: I came across him during one of my shifts. I'd tell him off from time to
       time but he'd greet me and all his customers with a smile regardless.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Yeah, sounds like the Enteng I know, alright.
   - order: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
     speakerName: Francisco
     text: I'm guessing every other vendor out there is trying to do the same.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Is that a change of heart I'm hearin?
   - order: {fileID: 0}

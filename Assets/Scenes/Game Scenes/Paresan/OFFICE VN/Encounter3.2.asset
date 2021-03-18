@@ -91,7 +91,7 @@ MonoBehaviour:
     text: "You know, there\u2019s nothing wrong with being a little selfish with
       your time every now and then."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
     text: I know that! but how do I do it??
   - order: {fileID: 0}

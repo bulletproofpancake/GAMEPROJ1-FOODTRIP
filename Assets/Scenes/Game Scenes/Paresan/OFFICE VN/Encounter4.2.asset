@@ -50,7 +50,7 @@ MonoBehaviour:
     speakerName: Clara
     text: "No more Ms. Errand girl for y\u2019all."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
     text: "All that \u201Ccomposing\u201D and stuff really helped out to be honest."
   - order: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
     text: "If you heard him chatter to his customers, you wouldn\u2019t think he\u2019d
       be a day over 30."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
     text: "Huh, you don\u2019t say."
   - order: {fileID: 0}

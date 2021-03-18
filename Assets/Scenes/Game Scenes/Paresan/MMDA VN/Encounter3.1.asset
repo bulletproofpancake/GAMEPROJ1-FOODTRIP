@@ -53,7 +53,7 @@ MonoBehaviour:
     speakerName: 
     text: 'I suppose. He''d always have stories to tell. '
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: Real or fake, it was fun listening to him over a hot bowl of pares.
   - order: {fileID: 0}
