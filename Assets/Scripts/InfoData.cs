@@ -11,4 +11,8 @@ public class InfoData : ScriptableObject
     [TextArea]
     [SerializeField] private string foodDescription;
     [SerializeField] private Sprite foodImage;
+
+    public string FoodName => foodName;
+    public string FoodDescription => foodDescription;
+    public Sprite FoodImage => foodImage;
 }

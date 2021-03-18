@@ -2615,6 +2615,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoBox: {fileID: 3132509504746709340}
   _gameManager: {fileID: 8474473383680894216}
+  foodName: {fileID: 7825375099909870524}
+  foodDescription: {fileID: 7899717857519751505}
+  foodImage: {fileID: 4687108891052151462}
+  pares: {fileID: 11400000, guid: 33be5b9c3f932504299cc30a92111c90, type: 2}
+  fishball: {fileID: 11400000, guid: aa9c07ce8bfc3804ba82b7a213b7dfd3, type: 2}
+  kwekkwek: {fileID: 11400000, guid: fee4bebb1d19fbc4baa592387ea188d5, type: 2}
+  kikiam: {fileID: 11400000, guid: 6c57ebd52a46e4a47a73b5152aafb855, type: 2}
 --- !u!1 &8580389058906722963
 GameObject:
   m_ObjectHideFlags: 0
