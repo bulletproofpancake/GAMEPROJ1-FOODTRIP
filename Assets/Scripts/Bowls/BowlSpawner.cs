@@ -6,13 +6,21 @@ using UnityEngine;
 public class BowlSpawner : Singleton<BowlSpawner>
 {
     private TextMeshProUGUI _btnText;
-    public List<GameObject> _bowls;
+    public List<GameObject> _bowls = new List<GameObject>();
     
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
-        _bowls = new List<GameObject>();
+        //FillBowl();
         _btnText = GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    private void FillBowl()
+    {
+        var bowls = FindObjectsOfType<Bowl>();
+        foreach (var bowl in bowls)
+        {
+            _bowls.Add(bowl.gameObject);
+        }
     }
     
     void Update()
@@ -32,6 +40,6 @@ public class BowlSpawner : Singleton<BowlSpawner>
     
     public void SpawnBowl()
     {
-        SpawnManager.Instance.SpawnBowl(_bowls[_bowls.Count-1]);
+        //SpawnManager.Instance.SpawnBowl(_bowls[_bowls.Count-1]);
     }
 }

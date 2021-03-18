@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
+  m_Name: Encounter4
+  m_EditorClassIdentifier: 
+  info:
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: 'Well, looks like someones lookin'' livelier than usual.
+
+'
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: No thanks to you.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: So, what can I get this fine lady today?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "...\t"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Thanks.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: For what?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: For last time. I tried what you said.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "I can see that. And? How\u2019d it go?"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: 'It worked! '
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: See? What did I tell ya.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Oh, the look on their faces was golden!
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "No more Ms. Errand girl for y\u2019all."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "All that \u201Ccomposing\u201D and stuff really helped out to be honest."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: No more after work blues?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: No more after work blues.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: ...
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: Say, you remind me of this one guy who used to sell here too.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Really? Do tell.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "He\u2019s an old guy but pretty active for someone his age."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "Well there\u2019s something you don\u2019t see everyday."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "If you heard him chatter to his customers, you wouldn\u2019t think he\u2019d
+      be a day over 30."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: "Huh, you don\u2019t say."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: I wonder whatever happened to him?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "Ii don\u2019t know really, it just feels like you have that same air around
+      you."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: What do you mean by that?
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: You know, company you can enjoy some good food over.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "And there\u2019s never been a better pair like food and company"
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: I agree. You, my friend, have earned yourself a regular.
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: Clara
+    text: "Anyways, I\u2019ll be heading home then if you\u2019ll excuse me."
+  - order: {fileID: 0}
+    sprite: {fileID: 0}
+    speakerName: 
+    text: Alright, take care then!
