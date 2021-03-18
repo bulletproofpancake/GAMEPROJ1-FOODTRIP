@@ -106,6 +106,7 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                FindObjectOfType<AudioManager>().Play("OrdersComplete");
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
                 
@@ -173,7 +174,7 @@ public class Customer : MonoBehaviour
     {
         if (readyToCollect == true)
         {
-            FindObjectOfType<AudioManager>().Play("CustomerPay");
+            //FindObjectOfType<AudioManager>().Play("CustomerPay");
             MoneyManager.Instance.Collect(_paymentContainer);
 
             if (GameManager.Instance.isVN)

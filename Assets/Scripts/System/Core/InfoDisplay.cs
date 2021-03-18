@@ -17,7 +17,7 @@ public class InfoDisplay : MonoBehaviour
         if(Pause.isPaused==true)
         {
             FindObjectOfType<AudioManager>().Play("ButtonClick");
-            UnPauseAudio();
+            //UnPauseAudio();
 
             Pause.isPaused = false;
             Time.timeScale = 1f;
@@ -26,7 +26,7 @@ public class InfoDisplay : MonoBehaviour
         else
         {
             FindObjectOfType<AudioManager>().Play("ButtonClick");
-            PauseAudio();
+            //PauseAudio();
 
             Pause.isPaused = true;
             Time.timeScale = 0f;
@@ -34,16 +34,16 @@ public class InfoDisplay : MonoBehaviour
         }
     }
 
-    void PauseAudio()
-    {
-        FindObjectOfType<AudioManager>().Pause("ParesSFX");
-        FindObjectOfType<AudioManager>().Pause("KaninSFX");
-    }
+    //void PauseAudio()
+    //{
+    //    FindObjectOfType<AudioManager>().Pause("ParesSFX");
+    //    FindObjectOfType<AudioManager>().Pause("KaninSFX");
+    //}
 
-    void UnPauseAudio()
-    {
-        FindObjectOfType<AudioManager>().UnPause("ParesSFX");
-        FindObjectOfType<AudioManager>().UnPause("KaninSFX");
-    }
+    //void UnPauseAudio()
+    //{
+    //    FindObjectOfType<AudioManager>().UnPause("ParesSFX");
+    //    FindObjectOfType<AudioManager>().UnPause("KaninSFX");
+    //}
 }
 

@@ -39,21 +39,22 @@ public class CookOrder : MonoBehaviour
     private IEnumerator Cook()
     {
         isCooking = true;
-        switch (orderToCook.Data.Type)
-        {
-            case OrderType.Pares:
-                FindObjectOfType<AudioManager>().Play("ParesSFX");
-                yield return new WaitForSeconds(orderToCook.Data.CookTime);
-                FindObjectOfType<AudioManager>().Stop("ParesSFX");
-                break;
+        //switch (orderToCook.Data.Type)
+        //{
+        //    case OrderType.Pares:
+        //        FindObjectOfType<AudioManager>().Play("ParesSFX");
+        //        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        //        FindObjectOfType<AudioManager>().Stop("ParesSFX");
+        //        break;
 
-            case OrderType.Kanin:
-                FindObjectOfType<AudioManager>().Play("KaninSFX");
-                yield return new WaitForSeconds(orderToCook.Data.CookTime);
-                FindObjectOfType<AudioManager>().Stop("KaninSFX");
-                break;
-        }
+        //    case OrderType.Kanin:
+        //        FindObjectOfType<AudioManager>().Play("KaninSFX");
+        //        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        //        FindObjectOfType<AudioManager>().Stop("KaninSFX");
+        //        break;
+        //}
 
+        yield return new WaitForSeconds(orderToCook.Data.CookTime);
         SpawnManager.Instance.Spawn(orderToCook.Data);
         isCooking = false;
 
