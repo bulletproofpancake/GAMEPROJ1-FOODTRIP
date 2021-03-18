@@ -14,78 +14,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: Hey there kiddo! Fancy seeing you around here again.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: 
     text: Kuya Enteng! I just got back from school, mind if I stay here for a bit?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: Sure! Here, have a bowl. Libre na.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: 
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "What\u2019s wrong?"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: 
     text: I wanna try to prepare one on my own
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: Well, hmm...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: " I don\u2019t see why not!\r\n"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: Here, let me show you the ropes.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "Let\u2019s go through the basics then alright?"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: " Pretend i\u2019m a customer."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "I\u2019ll tell you my order in a small dialogue box. It tells you what
       I wanna have."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "Now, let\u2019s start preparing our orders."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: 'You gotta make sure your order matches mine. '
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "On your left is where we\u2019ll get the food needed for the orders. Just
       click on the Pares or Rice  and you\u2019ll see the food prepared on the table!"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "After preparing my order, all you\u2019ll have to do is drag it onto me
       by holding the left mouse button and you\u2019re good to go!"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "Oh, and make sure you collect the payment. Things can get hectic really
       quickly during actual work hours, so you gotta pay attention or you won\u2019t

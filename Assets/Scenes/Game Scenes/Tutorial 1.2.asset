@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "Great job! Not bad for a youngster, maybe you\u2019ll end up outperforming
       me! HA HA HA"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: " Don\u2019t forget, you can use that money to invest in yourself by upgrading
       a lot of stuff! You\u2019ll see the upgrades button after your post-shift summary!\r\n"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
     text: "Well go on then, enjoy your pares, you\u2019ve earned it. Though make
       one for me too why don't ya HA HA HA"
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: 
     text: Coming right up, Kuya!
