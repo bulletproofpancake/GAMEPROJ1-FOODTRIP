@@ -36,6 +36,11 @@ public class SceneLoader : MonoBehaviour
         SceneSelector.Instance.LoadNextScene("Upgrades");
     }
 
+    public void LoadTutorial()
+    {
+        SceneSelector.Instance.LoadNextScene("Tutorial");
+    }
+
     public virtual void LoadNextScene()
     {
         PlayButtonSFX();

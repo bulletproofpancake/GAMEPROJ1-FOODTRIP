@@ -70,7 +70,12 @@ public class GameManager : Singleton<GameManager>
         {
             //TODO: EARN MONEY AFTER FINISHING VN
             //SpawnManager.Instance.ClearLists();
-            SceneSelector.Instance.LoadNextScene("Summary");
+            if (ShiftManager.Instance.shift != null)
+                SceneSelector.Instance.LoadNextScene("Summary");
+            else
+            {
+                SceneSelector.Instance.LoadNextScene("Main Menu");
+            }
         }
         else
         {
