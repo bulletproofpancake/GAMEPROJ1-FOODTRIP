@@ -176,9 +176,6 @@ public class Customer : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("CustomerPay");
             MoneyManager.Instance.Collect(_paymentContainer);
 
-            StartCoroutine(CustomerLeave());
-            readyToCollect = false;
-
             if (GameManager.Instance.isVN)
             {
                 MoneyManager.Instance.Earn();
@@ -186,15 +183,15 @@ public class Customer : MonoBehaviour
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
             }
-            
-            gameObject.SetActive(false);
+
+            StartCoroutine(CustomerLeave());
         }
     }
 
     private IEnumerator CustomerLeave()
     {
-        LeanTween.moveX(gameObject, endPos.position.x, 2f);
-        yield return new WaitForSeconds(3f + data.DespawnTime);
+        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        yield return new WaitForSeconds(data.DespawnTime);
 
         gameObject.SetActive(false);
     }
