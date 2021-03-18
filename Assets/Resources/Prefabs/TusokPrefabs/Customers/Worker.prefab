@@ -98,10 +98,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 0abf52bb2d6c86543a802489412f82eb, type: 2}
-  dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   orderIcon: {fileID: 5257329337426000543}
   orderText: {fileID: 1677336308125156304}
+  orderBox: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   dialogueBox: {fileID: 5257329337898569564}
+  DialogueBoxNormal: {fileID: 0}
+  dialogueBoxPaid: {fileID: 0}
 --- !u!61 &-7529832867200504693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,12 +167,12 @@ PrefabInstance:
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}

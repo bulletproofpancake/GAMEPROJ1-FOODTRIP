@@ -9,7 +9,7 @@ public class Bowl : MonoBehaviour
     public float currentWashTime;
     public bool isDirty;
     public int SeatTaken { get; set; }
-
+    
     private void OnEnable()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
@@ -29,7 +29,7 @@ public class Bowl : MonoBehaviour
     {
         currentWashTime = baseWashTime - baseWashTime * multiplier;
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<Order>())

@@ -131,9 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 0cc879b1788214c46a190230750cd6ad, type: 2}
-  dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
+  orderBox: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   dialogueBox: {fileID: 2546742412094899566}
   DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
   dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
@@ -333,12 +334,12 @@ PrefabInstance:
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
         type: 3}

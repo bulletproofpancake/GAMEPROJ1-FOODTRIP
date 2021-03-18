@@ -3,19 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeSystem:MonoBehaviour
 {
     [SerializeField] protected UpgradeData upgradeData;
-    [SerializeField] protected TextMeshProUGUI upgradeText, currentText;
-    
-    private void Update()
+    [SerializeField] protected TextMeshProUGUI upgradeCost;
+    [SerializeField] protected Image[] upgradeSlot;
+
+    private void Start()
+    {
+        foreach (var image in upgradeSlot)
+        {
+            image.color = Color.grey;
+        }
+    }
+
+    protected virtual void Update()
     {
         if(upgradeData.Level < upgradeData.Upgrade.Length)
-            upgradeText.text = $"Cost: {upgradeData.Upgrade[upgradeData.Level].cost}";
+            upgradeCost.text = $"{upgradeData.Upgrade[upgradeData.Level].cost}";
         else
-            upgradeText.text = "Upgrade Complete";
-        
-        currentText.text = $"Level: {upgradeData.Level}";
+            upgradeCost.text = "Upgrade Complete";
+        upgradeSlot[upgradeData.Level-1].color = Color.green;
     }
 }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 32
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300d5e45baa727a4e8382cfee5673110, type: 3}
+  m_Name: OFFICE LADY
+  m_EditorClassIdentifier: 
+  sprites: []
+  possibleOrders:
+  - {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
+  - {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747, type: 3}
+  despawnTime: 0
+  appearsIf: 1
+  encounter:
+  - dialogueDatas:
+    - {fileID: 11400000, guid: 747bd2efa1ca1f54a92053c143f435a9, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: a257cc2ebd6d1604badf664ee824ccb5, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: edae6046ad5f45b478d57d305fd0eea1, type: 2}
+  - dialogueDatas:
+    - {fileID: 11400000, guid: aef2d684c7647a6438815d052981ab87, type: 2}
+  count: 0

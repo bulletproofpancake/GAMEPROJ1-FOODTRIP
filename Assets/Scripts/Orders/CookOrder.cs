@@ -19,6 +19,11 @@ public class CookOrder : MonoBehaviour
     private void Update()
     {
         CookingIndicator();
+        if (Pause.isPaused == true)
+            button.interactable = false;
+        else if (Pause.isPaused == false)
+            button.interactable = true;
+        //CookingIndicator();
     }
 
     #region Pares

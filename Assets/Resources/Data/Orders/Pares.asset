@@ -15,5 +15,5 @@ MonoBehaviour:
   orderImage: {fileID: 21300000, guid: 18ff1e4bd2f5e084c986e375dfc924a4, type: 3}
   baseOrderCost: 35
   currentOrderCost: 35
-  baseCookTime: 5
-  currentCookTime: 5
+  baseCookTime: 1
+  currentCookTime: 1

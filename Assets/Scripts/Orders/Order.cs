@@ -32,8 +32,10 @@ public class Order : MonoBehaviour
     {
         smoke.SetActive(false);
         SpawnManager.Instance.foodSeat[SeatTaken].isTaken = false;
-        SpawnManager.Instance.bowlSeat[_bowl.SeatTaken].isTaken = false;
-        _bowl.gameObject.SetActive(false);
+        if(_bowl!=null){
+            SpawnManager.Instance.bowlSeat[_bowl.SeatTaken].isTaken = false;
+            _bowl.gameObject.SetActive(false);
+        }
         _bowl = null;
     }
 
