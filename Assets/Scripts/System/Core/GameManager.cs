@@ -1,27 +1,36 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
+
+    [Header("VN Settings")]
+    [SerializeField] private NPCData[] NpcDatas;
+    
     [Header("Round Settings")]
-    [SerializeField] private bool isVN;
+    public bool isVN;
     [SerializeField] private GameObject arcadeCanvas;
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;
     [SerializeField] private int levelDuration;
-    
+    public List<Customer> customers;
+    public int completedCustomers;
+
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI moneyTextArcade;
+    [SerializeField] private TextMeshProUGUI moneyTextVN;
     [SerializeField] private GameObject background;
+    public bool isPaused;
     
-    private void Awake()
+    protected override void Awake()
     {
-        if(ShiftManager.Instance.Data != null){
+        base.Awake();
+        if(ShiftManager.Instance.shift != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
         }
@@ -29,15 +38,18 @@ public class GameManager : MonoBehaviour
         if (isVN)
         {
             arcadeCanvas.SetActive(false);
-            Instantiate(vnCanvas, transform.position, Quaternion.identity);
+            vnCanvas.SetActive(true);
+            print("VN Start");
         }
         else
         {
             vnCanvas.SetActive(false);
-            Instantiate(arcadeCanvas, transform.position, Quaternion.identity);
+            arcadeCanvas.SetActive(true);
         }
 
-        Instantiate(cartUsed, transform.position, Quaternion.identity);
+        if(cartUsed!=null){
+            Instantiate(cartUsed, transform.position, Quaternion.identity);
+        }
     }
 
     // Start is called before the first frame update
@@ -54,10 +66,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isVN && Input.GetKeyDown(KeyCode.Space))
+        if (isVN && completedCustomers > customers.Count)
         {
-            SceneSelector.Instance.LoadNextScene();
+            //TODO: EARN MONEY AFTER FINISHING VN
+            //SpawnManager.Instance.ClearLists();
+            SceneSelector.Instance.LoadNextScene("Summary");
         }
+        else
+        {
+            if(!isVN)
+                moneyTextArcade.text = $"{MoneyManager.Instance.currentMoney}";
+            else
+                moneyTextVN.text = $"{MoneyManager.Instance.currentMoney}";
+        }
+        
+        
     }
 
     private IEnumerator CountDownLevel()
@@ -68,22 +91,76 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             levelDuration--;
         }
-        SceneSelector.Instance.LoadNextScene();
+        
+        //SpawnManager.Instance.ClearLists();
+        
+        MoneyManager.Instance.Earn();
+        
+
+        if(!IsEncounterComplete())
+        {
+            SceneSelector.Instance.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/VN");
+        }
+        else
+            SceneSelector.Instance.LoadNextScene("Summary");
     }
 
+    public bool IsEncounterComplete()
+    {
+        var isComplete = false;
+        
+        foreach (var data in NpcDatas)
+        {
+            if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+            {
+                if (data.Count >= data.Encounter.Length)
+                {
+                    isComplete= true;
+                }
+                else
+                {
+                    isComplete= false;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("No suitable NPC found");
+            }
+        }
+
+        return isComplete;
+    }
     private void SetBackground()
     {
-        switch (ShiftManager.Instance.Data.Schedule)
+        switch (ShiftManager.Instance.shift.Schedule)
         {
             case ShiftSchedule.Morning:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Morning;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Morning;
                 break;
             case ShiftSchedule.Afternoon:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Afternoon;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Afternoon;
                 break;
             case ShiftSchedule.Night:
-                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.Data.LocSprites.Night;
+                background.GetComponentInChildren<Image>().sprite = ShiftManager.Instance.shift.LocSprites.Night;
                 break;
+        }
+    }
+
+    public void PauseGame(bool paused)
+    {
+        if (!isPaused)
+        {
+            isPaused = paused;
+            Time.timeScale = 0f;
+            print("Paused = " + isPaused);
+            StopAllCoroutines();
+        }
+        else
+        {
+            isPaused = paused;
+            Time.timeScale = 1f;
+            print("Paused = " + isPaused);
+            StartCoroutine(CountDownLevel());
         }
     }
 }

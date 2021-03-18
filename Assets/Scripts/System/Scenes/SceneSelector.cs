@@ -31,11 +31,22 @@ public class SceneSelector : Singleton<SceneSelector>
         StartCoroutine(LoadScene(index));
     }
 
+    public void LoadNextScene(string path)
+    {
+        StartCoroutine(LoadScene(path));
+    }
+    
     private IEnumerator LoadScene(int index)
     {
         transition.Play("Crossfade_Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(index);
     }
-    
+    private IEnumerator LoadScene(string path)
+    {
+        transition.Play("Crossfade_Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(path);
+    }
+
 }

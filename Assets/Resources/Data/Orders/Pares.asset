@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Pares
   m_EditorClassIdentifier: 
   orderImage: {fileID: 21300000, guid: 18ff1e4bd2f5e084c986e375dfc924a4, type: 3}
-  orderCost: 35
-  orderCookTime: 1
+  baseOrderCost: 35
+  currentOrderCost: 35
+  baseCookTime: 1
+  currentCookTime: 1
