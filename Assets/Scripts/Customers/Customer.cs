@@ -20,6 +20,9 @@ public class Customer : MonoBehaviour
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
 
+    [SerializeField] private Transform originalPos;
+    [SerializeField] private Transform endPos;
+
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
@@ -31,6 +34,9 @@ public class Customer : MonoBehaviour
     
     public int SeatTaken { get; set; }
 
+
+    public GameObject particleEffect;
+    
     private void Start()
     {
         if (GameManager.Instance.isVN)
@@ -56,11 +62,14 @@ public class Customer : MonoBehaviour
 
     private void OnDisable()
     {
+        particleEffect.SetActive(false);
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
         _paymentContainer = 0;
         dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;
+
+        gameObject.transform.position = originalPos.position;
     }
     
     public void SetOrder()
@@ -88,6 +97,7 @@ public class Customer : MonoBehaviour
 
         if (_currentOrder.Data == givenOrder.Data)
         {
+            StartCoroutine(ShowParticleEffect());
             _completedOrders++;
 
             _paymentContainer += givenOrder.Data.Cost;
@@ -96,6 +106,7 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                FindObjectOfType<AudioManager>().Play("OrdersComplete");
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
                 
@@ -154,16 +165,17 @@ public class Customer : MonoBehaviour
     private IEnumerator CustomerDespawn()
     {
         yield return new WaitForSeconds(data.DespawnTime);
-
+        LeanTween.moveX(gameObject, endPos.position.x, 2f);
+        yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
     {
-        if(readyToCollect==true)
+        if (readyToCollect == true)
         {
+            //FindObjectOfType<AudioManager>().Play("CustomerPay");
             MoneyManager.Instance.Collect(_paymentContainer);
-            readyToCollect = false;
 
             if (GameManager.Instance.isVN)
             {
@@ -172,8 +184,23 @@ public class Customer : MonoBehaviour
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
             }
-            
-            gameObject.SetActive(false);
+
+            StartCoroutine(CustomerLeave());
         }
+    }
+
+    private IEnumerator CustomerLeave()
+    {
+        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        yield return new WaitForSeconds(data.DespawnTime);
+
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator ShowParticleEffect()
+    {
+        particleEffect.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        particleEffect.SetActive(false);
     }
 }

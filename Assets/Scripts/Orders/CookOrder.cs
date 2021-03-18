@@ -18,6 +18,7 @@ public class CookOrder : MonoBehaviour
 
     private void Update()
     {
+        CookingIndicator();
         if (Pause.isPaused == true)
             button.interactable = false;
         else if (Pause.isPaused == false)
@@ -38,9 +39,26 @@ public class CookOrder : MonoBehaviour
     private IEnumerator Cook()
     {
         isCooking = true;
+        //switch (orderToCook.Data.Type)
+        //{
+        //    case OrderType.Pares:
+        //        FindObjectOfType<AudioManager>().Play("ParesSFX");
+        //        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        //        FindObjectOfType<AudioManager>().Stop("ParesSFX");
+        //        break;
+
+        //    case OrderType.Kanin:
+        //        FindObjectOfType<AudioManager>().Play("KaninSFX");
+        //        yield return new WaitForSeconds(orderToCook.Data.CookTime);
+        //        FindObjectOfType<AudioManager>().Stop("KaninSFX");
+        //        break;
+        //}
+
         yield return new WaitForSeconds(orderToCook.Data.CookTime);
         SpawnManager.Instance.Spawn(orderToCook.Data);
         isCooking = false;
+
+        FindObjectOfType<AudioManager>().Play("OrderReady");
     }
 
     #endregion
@@ -58,18 +76,18 @@ public class CookOrder : MonoBehaviour
 
 
     #endregion
-    // private void CookingIndicator()
-    // {
-    //     if (isCooking == true)
-    //     {
-    //         timer = orderToCook.Data.CookTime;
-    //         fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
-    //     }
-    //     else if (isCooking == false)
-    //     {
-    //         timer = 0;
-    //         fillImage.fillAmount = timer;
-    //     }
-    // }
 
+    private void CookingIndicator()
+    {
+        if (isCooking == true)
+        {
+            timer = orderToCook.Data.CookTime;
+            fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+        }
+        else if (isCooking == false)
+        {
+            timer = 0;
+            fillImage.fillAmount = timer;
+        }
+    }
 }
