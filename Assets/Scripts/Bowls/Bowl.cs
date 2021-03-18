@@ -9,12 +9,7 @@ public class Bowl : MonoBehaviour
     public float currentWashTime;
     public bool isDirty;
     public int SeatTaken { get; set; }
-
-    private void Awake()
-    {
-        BowlSpawner.Instance.AddBowl(gameObject);
-    }
-
+    
     private void OnEnable()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = true;

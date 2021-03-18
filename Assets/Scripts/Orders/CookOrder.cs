@@ -22,7 +22,7 @@ public class CookOrder : MonoBehaviour
             button.interactable = false;
         else if (Pause.isPaused == false)
             button.interactable = true;
-        CookingIndicator();
+        //CookingIndicator();
     }
 
     #region Pares
@@ -58,18 +58,18 @@ public class CookOrder : MonoBehaviour
 
 
     #endregion
-    private void CookingIndicator()
-    {
-        if (isCooking == true)
-        {
-            timer = orderToCook.Data.CookTime;
-            fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
-        }
-        else if (isCooking == false)
-        {
-            timer = 0;
-            fillImage.fillAmount = timer;
-        }
-    }
+    // private void CookingIndicator()
+    // {
+    //     if (isCooking == true)
+    //     {
+    //         timer = orderToCook.Data.CookTime;
+    //         fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+    //     }
+    //     else if (isCooking == false)
+    //     {
+    //         timer = 0;
+    //         fillImage.fillAmount = timer;
+    //     }
+    // }
 
 }
