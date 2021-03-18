@@ -38,6 +38,9 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadTutorial()
     {
+        PlayButtonSFX();
+        Tween();
+
         SceneSelector.Instance.LoadNextScene("Tutorial");
     }
 
