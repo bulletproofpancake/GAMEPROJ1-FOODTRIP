@@ -12,19 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300d5e45baa727a4e8382cfee5673110, type: 3}
   m_Name: OFFICE LADY
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
   possibleOrders:
   - {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
   - {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747, type: 3}
   despawnTime: 0
-  appearsIf: 1
+  appearsIf: 2
   encounter:
   - dialogueDatas:
-    - {fileID: 11400000, guid: 747bd2efa1ca1f54a92053c143f435a9, type: 2}
+    - {fileID: 11400000, guid: eca34c1e8e0b12f46a5f842b04ab60ba, type: 2}
   - dialogueDatas:
-    - {fileID: 11400000, guid: a257cc2ebd6d1604badf664ee824ccb5, type: 2}
+    - {fileID: 11400000, guid: c69f1bbe369aa5e4596ce75dac790818, type: 2}
+    - {fileID: 11400000, guid: 5337d29c67fd50c47a3bc45ff0da8b06, type: 2}
   - dialogueDatas:
-    - {fileID: 11400000, guid: edae6046ad5f45b478d57d305fd0eea1, type: 2}
+    - {fileID: 11400000, guid: d9e7365104424d041b5824bba3e81418, type: 2}
+    - {fileID: 11400000, guid: 288a8c985882e224086de63d2d1138d3, type: 2}
   - dialogueDatas:
-    - {fileID: 11400000, guid: aef2d684c7647a6438815d052981ab87, type: 2}
+    - {fileID: 11400000, guid: 1274b43458fd96d4f8821d63a16925b1, type: 2}
+    - {fileID: 11400000, guid: 6dc55cf146803aa44801b5ab92bf8d8d, type: 2}
   count: 0
