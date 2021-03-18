@@ -101,6 +101,7 @@ public class GameManager : Singleton<GameManager>
         
         MoneyManager.Instance.Earn();
         
+        FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
 
         if(!IsEncounterComplete())
         {

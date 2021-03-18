@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class InfoDisplay : MonoBehaviour
 {
     [SerializeField] private GameObject infoBox;
-    [SerializeField] private GameManager _gameManager;
 
     [SerializeField] private TextMeshProUGUI foodName, foodDescription;
     [SerializeField] private Image foodImage;
@@ -32,19 +31,38 @@ public class InfoDisplay : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+
         if(Pause.isPaused==true)
         {
+            FindObjectOfType<AudioManager>().Play("ButtonClick");
+            //UnPauseAudio();
+
             Pause.isPaused = false;
-            _gameManager.PauseGame(false);
+            Time.timeScale = 1f;
             infoBox.SetActive(false);
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("ButtonClick");
+            //PauseAudio();
+
             Pause.isPaused = true;
-            _gameManager.PauseGame(true);
+            Time.timeScale = 0f;
             infoBox.SetActive(true);
         }
     }
+
+    //void PauseAudio()
+    //{
+    //    FindObjectOfType<AudioManager>().Pause("ParesSFX");
+    //    FindObjectOfType<AudioManager>().Pause("KaninSFX");
+    //}
+
+    //void UnPauseAudio()
+    //{
+    //    FindObjectOfType<AudioManager>().UnPause("ParesSFX");
+    //    FindObjectOfType<AudioManager>().UnPause("KaninSFX");
+    //}
 
     private void ShowParesInfo()
     {
@@ -57,5 +75,5 @@ public class InfoDisplay : MonoBehaviour
     {
         foodName.text = "Tusoktusok";
     }
-    
 }
+

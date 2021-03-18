@@ -11,10 +11,12 @@ public class OrderData : ScriptableObject
     [SerializeField] private float currentOrderCost;
     [SerializeField] private float baseCookTime;
     [SerializeField] private float currentCookTime;
+    [SerializeField] private OrderType type;
 
     public Sprite Image => orderImage;
     public float Cost => currentOrderCost;
     public float CookTime => currentCookTime;
+    public OrderType Type => type;
 
     private void OnEnable()
     {
@@ -31,4 +33,13 @@ public class OrderData : ScriptableObject
     {
         currentOrderCost = baseOrderCost + (baseOrderCost * multiplier);
     }
+}
+
+public enum OrderType
+{
+    Pares,
+    Kanin,
+    Fishball,
+    KwekKwek,
+    Squidball
 }
