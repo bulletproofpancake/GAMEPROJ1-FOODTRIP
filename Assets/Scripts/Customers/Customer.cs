@@ -174,8 +174,8 @@ public class Customer : MonoBehaviour
     {
         if (readyToCollect == true)
         {
-            //FindObjectOfType<AudioManager>().Play("CustomerPay");
             MoneyManager.Instance.Collect(_paymentContainer);
+            _paymentContainer = 0;
 
             if (GameManager.Instance.isVN)
             {

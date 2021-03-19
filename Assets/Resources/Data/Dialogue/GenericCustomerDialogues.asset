@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GenericCustomerDialogues
   m_EditorClassIdentifier: 
   customerDialogue:
-  - dialogue: Solid boss!
+  - dialogue: Solid talaga!
   - dialogue: Salamat  salamat!
-  - dialogue: Bossing bayad
+  - dialogue: Kuya bayad po.
   - dialogue: Bayad po!
-  - dialogue: 'Kabusog talaga! '
+  - dialogue: Next time ulit.
