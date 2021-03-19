@@ -133,11 +133,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8198392540849498376, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: cartUsed
+      value: 
+      objectReference: {fileID: 5462583768610612738, guid: e7886e8aff0951449a30bcd5f142b753,
+        type: 3}
+    - target: {fileID: 8198392540973793290, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 862b8bce6ead9ee499571e93e321576d,
+        type: 3}
+    - target: {fileID: 8198392541350892985, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1260981998}
     - target: {fileID: 8474473383595215882, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 44c8665f696b26a4f959aed498febb28,
+      objectReference: {fileID: 21300000, guid: 862b8bce6ead9ee499571e93e321576d,
         type: 3}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
