@@ -41,5 +41,6 @@ public enum OrderType
     Kanin,
     Fishball,
     KwekKwek,
-    Squidball
+    Squidball,
+    Kikiam
 }
