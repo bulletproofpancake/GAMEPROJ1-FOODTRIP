@@ -56,7 +56,7 @@ public class Customer : MonoBehaviour
         if (!GameManager.Instance.isVN)
         {
             SetOrder();
-            GiveOrder();
+            OrderPares();
         }
     }
 
@@ -88,6 +88,13 @@ public class Customer : MonoBehaviour
     public void GiveOrder(Order order)
     {
         _currentOrder = order;
+        orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;
+        orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
+    }
+
+    public void OrderPares()
+    {
+        _currentOrder = data.PossibleOrders[0];
         orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;
         orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
     }
@@ -131,6 +138,10 @@ public class Customer : MonoBehaviour
                     OrderPrompt();
                     StartCoroutine(CustomerDespawn());
                 }
+            }
+            else
+            {
+                GiveOrder();
             }
         }
         else
@@ -185,6 +196,7 @@ public class Customer : MonoBehaviour
                 GameManager.Instance.completedCustomers++;
             }
 
+            orderBox.SetActive(false);
             StartCoroutine(CustomerLeave());
         }
     }

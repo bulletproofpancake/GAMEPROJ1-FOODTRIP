@@ -103,7 +103,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: cc2b3aed734bd2b4aa7c7ecd886481e5, type: 2}
   orderIcon: {fileID: 5257329337426000543}
   orderText: {fileID: 1677336308125156304}
-  orderBox: {fileID: 0}
+  orderBox: {fileID: 5257329338438103344}
   dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   dialogueBox: {fileID: 5257329337898569564}
   DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
@@ -287,6 +287,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ebd80676746f7a4fa19d23cccdd792b, type: 3}
+--- !u!1 &5257329338438103344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 863244940917849354, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4832104697791253562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5257329338438103347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 863244940917849353, guid: 9ebd80676746f7a4fa19d23cccdd792b,
