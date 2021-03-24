@@ -20,7 +20,6 @@ public class Customer : MonoBehaviour
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
 
-    [SerializeField] private Transform originalPos;
     [SerializeField] private Transform endPos;
 
     private Order _currentOrder;
@@ -52,7 +51,8 @@ public class Customer : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
-        
+        particleEffect.SetActive(false);
+
         if (!GameManager.Instance.isVN)
         {
             SetOrder();
@@ -62,14 +62,11 @@ public class Customer : MonoBehaviour
 
     private void OnDisable()
     {
-        particleEffect.SetActive(false);
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
-        _paymentContainer = 0;
         dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;
-
-        gameObject.transform.position = originalPos.position;
+        orderBox.SetActive(true);
     }
     
     public void SetOrder()
@@ -138,6 +135,8 @@ public class Customer : MonoBehaviour
                     OrderPrompt();
                     StartCoroutine(CustomerDespawn());
                 }
+
+                //StartCoroutine(CustomerDespawn());
             }
             else
             {
@@ -176,8 +175,9 @@ public class Customer : MonoBehaviour
     private IEnumerator CustomerDespawn()
     {
         yield return new WaitForSeconds(data.DespawnTime);
-        LeanTween.moveX(gameObject, endPos.position.x, 2f);
-        yield return new WaitForSeconds(3f);
+        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        orderBox.SetActive(false);
+        yield return new WaitForSeconds(data.DespawnTime);
         gameObject.SetActive(false);
     }
 
@@ -205,7 +205,6 @@ public class Customer : MonoBehaviour
     {
         LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
         yield return new WaitForSeconds(data.DespawnTime);
-
         gameObject.SetActive(false);
     }
 
