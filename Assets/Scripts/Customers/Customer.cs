@@ -31,6 +31,7 @@ public class Customer : MonoBehaviour
     private float _completedOrders;
 
     private float _paymentContainer;
+    private float transitionTime = 4f;
     private bool readyToCollect;
     
     public int SeatTaken { get; set; }
@@ -143,8 +144,6 @@ public class Customer : MonoBehaviour
                     OrderPrompt();
                     StartCoroutine(CustomerDespawn());
                 }
-
-                //StartCoroutine(CustomerDespawn());
             }
             else
             {
@@ -183,7 +182,7 @@ public class Customer : MonoBehaviour
     private IEnumerator CustomerDespawn()
     {
         yield return new WaitForSeconds(data.DespawnTime);
-        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        LeanTween.moveX(gameObject, endPos.position.x, transitionTime);
         orderBox.SetActive(false);
         yield return new WaitForSeconds(data.DespawnTime);
         gameObject.SetActive(false);
@@ -211,7 +210,7 @@ public class Customer : MonoBehaviour
 
     private IEnumerator CustomerLeave()
     {
-        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        LeanTween.moveX(gameObject, endPos.position.x, transitionTime);
         yield return new WaitForSeconds(data.DespawnTime);
         gameObject.SetActive(false);
     }
