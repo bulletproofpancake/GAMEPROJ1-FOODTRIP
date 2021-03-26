@@ -4,6 +4,7 @@ using Customers.Dialogue;
 using Customers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Customer : MonoBehaviour
@@ -19,6 +20,7 @@ public class Customer : MonoBehaviour
     [SerializeField] private SpriteRenderer dialogueBox;
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
+    [SerializeField] private Image fillImage;
 
     [SerializeField] private Transform endPos;
 
@@ -47,11 +49,17 @@ public class Customer : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        CustomerPatienceIndicator();
+    }
+
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
         particleEffect.SetActive(false);
+        fillImage.fillAmount = data.DespawnTime;
 
         if (!GameManager.Instance.isVN)
         {
@@ -213,5 +221,17 @@ public class Customer : MonoBehaviour
         particleEffect.SetActive(true);
         yield return new WaitForSeconds(1f);
         particleEffect.SetActive(false);
+    }
+
+    void CustomerPatienceIndicator()
+    {
+        fillImage.fillAmount -= 1.0f / data.DespawnTime * Time.deltaTime;
+
+        if(fillImage.fillAmount == 0)
+        {
+            orderBox.SetActive(false);
+            //LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+            gameObject.SetActive(false);
+        }
     }
 }
