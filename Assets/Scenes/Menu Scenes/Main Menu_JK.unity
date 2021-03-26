@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 8938037820750157077, guid: dd85a8d57e3ccbc4a92953d2de067942,
         type: 3}
       propertyPath: m_Name
-      value: AudioManager (1)
+      value: AudioManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd85a8d57e3ccbc4a92953d2de067942, type: 3}
@@ -2640,7 +2640,7 @@ GameObject:
   - component: {fileID: 1078422601}
   - component: {fileID: 1078422600}
   m_Layer: 5
-  m_Name: Main Menu Canvas (1)
+  m_Name: Main Menu Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
