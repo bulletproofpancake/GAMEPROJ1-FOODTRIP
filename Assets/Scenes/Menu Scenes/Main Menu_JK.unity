@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 43757459}
   - component: {fileID: 43757458}
   m_Layer: 5
-  m_Name: Shift Select Canvas (1)
+  m_Name: Shift Select Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,7 +1538,7 @@ GameObject:
   - component: {fileID: 541793494}
   - component: {fileID: 541793493}
   m_Layer: 5
-  m_Name: Area Select Canvas (1)
+  m_Name: Area Select Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
