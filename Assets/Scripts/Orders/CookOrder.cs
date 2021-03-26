@@ -58,7 +58,9 @@ public class CookOrder : MonoBehaviour
         SpawnManager.Instance.Spawn(orderToCook.Data);
         isCooking = false;
 
-        FindObjectOfType<AudioManager>().Play("OrderReady");
+        if(FindObjectOfType<AudioManager>()!=null){
+            FindObjectOfType<AudioManager>().Play("OrderReady");
+        }
     }
 
     #endregion

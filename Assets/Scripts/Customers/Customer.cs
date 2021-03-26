@@ -119,7 +119,9 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
-                FindObjectOfType<AudioManager>().Play("OrdersComplete");
+                if(FindObjectOfType<AudioManager>()!=null){
+                    FindObjectOfType<AudioManager>().Play("OrdersComplete");
+                }
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
                 

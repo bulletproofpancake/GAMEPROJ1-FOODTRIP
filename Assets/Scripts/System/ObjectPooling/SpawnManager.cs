@@ -176,7 +176,7 @@ public class SpawnManager : Singleton<SpawnManager>
 
         if (_foodIndex < foodSeat.Length)
         {
-            if(_foodIndex < bowlSeat.Length){
+            //if(_foodIndex < bowlSeat.Length){
                 // if (bowlSeat[_foodIndex].isTaken)
                 // {
                 //     // if (!foodSeat[_foodIndex].isTaken)
@@ -227,11 +227,16 @@ public class SpawnManager : Singleton<SpawnManager>
                     //even if seats are taken
                     Spawn(data);
                 }
-            }
-            else
-            {
-                Debug.LogWarning("No bowls available");
-            }
+            // }
+            // else
+            // {
+            //     Debug.LogWarning("No bowls available");
+            // }
+        }
+        else
+        {
+            Debug.LogWarning("No Seats left");
+            _foodIndex = 0;
         }
 
     }
