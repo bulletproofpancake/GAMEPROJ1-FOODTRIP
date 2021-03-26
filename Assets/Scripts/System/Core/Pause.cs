@@ -52,6 +52,11 @@ public class Pause : MonoBehaviour
         Application.Quit();
     }
 
+    public void MainMenu()
+    {
+
+    }
+
     //void PauseAudio()
     //{
     //    FindObjectOfType<AudioManager>().Pause("ParesSFX");

@@ -2,17 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JK_Main_Menu : MonoBehaviour
+public class JK_Main_Menu : SceneLoader
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private CartData data;
+    [SerializeField] GameObject AreaSelect;
+    [SerializeField] GameObject ShiftSelect;
+    bool isActive;
+
+
+
+    private void update()
     {
-        
+        ShiftManager.Instance.cart = data;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AreaSelectMenu()
     {
-        
+        if (AreaSelect != null)
+        {
+            isActive = AreaSelect.activeSelf;
+            AreaSelect.SetActive(!isActive);
+        }
+    }
+
+    public void ShiftSelectMenu()
+    {
+
+        if (ShiftSelect != null)
+        {
+            ShiftManager.Instance.cart = data;
+            isActive = ShiftSelect.activeSelf;
+            ShiftSelect.SetActive(!isActive);
+        }
     }
 }
