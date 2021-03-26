@@ -9,15 +9,9 @@ public class JK_Main_Menu : SceneLoader
     [SerializeField] GameObject ShiftSelect;
     bool isActive;
 
-
-
-    private void update()
-    {
-        ShiftManager.Instance.cart = data;
-    }
-
     public void AreaSelectMenu()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         if (AreaSelect != null)
         {
             isActive = AreaSelect.activeSelf;
@@ -27,7 +21,7 @@ public class JK_Main_Menu : SceneLoader
 
     public void ShiftSelectMenu()
     {
-
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
         if (ShiftSelect != null)
         {
             ShiftManager.Instance.cart = data;

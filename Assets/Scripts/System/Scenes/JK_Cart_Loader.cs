@@ -13,6 +13,10 @@ public class JK_Cart_Loader:SceneLoader
     private void Start()
     {
         _image = GetComponent<Image>();
+    }
+
+    private void Update()
+    {
         SetBackgroundImage();
     }
 
