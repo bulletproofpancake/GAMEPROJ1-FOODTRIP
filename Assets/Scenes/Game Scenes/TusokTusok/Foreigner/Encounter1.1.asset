@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf5a404df464a6da39c1050827b14ff, type: 3}
+  m_Name: Encounter1.1
+  m_EditorClassIdentifier: 
+  info:
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: ???
+    text: Koya! Puwede pabile?
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: 
+    text: Sure, what can I get you?
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: ???
+    text: Oh, you speak English! And very fluent too, thank goodness!
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: 
+    text: I do, and your Filipino wasn't that bad either.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: ???
+    text: Thank you! So, what are you sellin'?
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: 
+    text: "Well I got kwek kwek, kikiam, and fishball so you're free to choose whatever
+      you want.\t"
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: ???
+    text: I see!
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    speakerName: ???
+    text: Hmm...

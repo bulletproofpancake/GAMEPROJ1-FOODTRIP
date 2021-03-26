@@ -15,6 +15,7 @@ public class SpawnManager : Singleton<SpawnManager>
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
+    public Transform startPos;
     public Seats[] customerSeat;
     private int _customerIndex;
     
@@ -68,20 +69,22 @@ public class SpawnManager : Singleton<SpawnManager>
     private void SpawnVN()
     {
         var npc = ScriptableObject.CreateInstance<NPCData>();
-        
-        foreach (var data in NpcDatas)
+
+
+        if (ShiftManager.Instance.shift != null)
         {
-            if(ShiftManager.Instance.shift != null){
+            foreach (var data in NpcDatas)
+            {
                 if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
                 {
                     npc = data;
                 }
             }
-            else
-            {
-                Debug.LogWarning("Loading default npc");
-                npc = NpcDatas[0];
-            }
+        }
+        else
+        {
+            Debug.LogWarning("Loading default npc");
+            npc = NpcDatas[0];
         }
         
         var customer = ObjectPoolManager.Instance.GetPooledObject(npc.name);
@@ -111,6 +114,8 @@ public class SpawnManager : Singleton<SpawnManager>
     
     private void Spawn(CustomerData data)
     {
+        float seatPos;
+
         var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
         
@@ -118,7 +123,12 @@ public class SpawnManager : Singleton<SpawnManager>
         
         if (!customerSeat[_customerIndex].isTaken)
         {
-            customer.transform.position = customerSeat[_customerIndex].slot.position;
+            customer.transform.position = startPos.position;
+            //customer.transform.position = customerSeat[_customerIndex].slot.position;
+            seatPos = customerSeat[_customerIndex].slot.position.x;
+
+            LeanTween.moveX(customer, seatPos, 2f);
+
             customer.GetComponent<Customer>().SeatTaken = _customerIndex;
             customer.SetActive(true);
             customerSeat[_customerIndex].isTaken = true;

@@ -1,4 +1,6 @@
 ﻿using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Customers.Dialogue
@@ -37,7 +39,9 @@ namespace Customers.Dialogue
             {
                 nameBox.text = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].speakerName;
                 _spriteRenderer.sprite = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].sprite;
-                dialogueBox.text = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].text;
+                //dialogueBox.text = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].text;
+                StopAllCoroutines();
+                StartCoroutine(TypeSentence(_data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].text));
                 _order = _data.Encounter[_data.Count].dialogueDatas[dataIndex].Info[textIndex].order;
                 textIndex++;
             }
@@ -60,6 +64,16 @@ namespace Customers.Dialogue
 
             print(_order);
         }
-    
+
+        IEnumerator TypeSentence(string sentence)
+        {
+            dialogueBox.text = "";
+
+            foreach(char letter in sentence.ToCharArray())
+            {
+                dialogueBox.text += letter;
+                yield return null;
+            }
+        }
     }
 }

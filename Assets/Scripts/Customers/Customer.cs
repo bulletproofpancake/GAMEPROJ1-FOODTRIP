@@ -20,6 +20,8 @@ public class Customer : MonoBehaviour
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
 
+    [SerializeField] private Transform endPos;
+
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
@@ -31,6 +33,9 @@ public class Customer : MonoBehaviour
     
     public int SeatTaken { get; set; }
 
+
+    public GameObject particleEffect;
+    
     private void Start()
     {
         if (GameManager.Instance.isVN)
@@ -46,21 +51,22 @@ public class Customer : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
-        
+        particleEffect.SetActive(false);
+
         if (!GameManager.Instance.isVN)
         {
             SetOrder();
-            GiveOrder();
+            OrderPares();
         }
     }
 
     private void OnDisable()
     {
         SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
-        _paymentContainer = 0;
         dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;
+        orderBox.SetActive(true);
     }
     
     public void SetOrder()
@@ -83,11 +89,19 @@ public class Customer : MonoBehaviour
         orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
     }
 
+    public void OrderPares()
+    {
+        _currentOrder = data.PossibleOrders[0];
+        orderIcon.GetComponent<SpriteRenderer>().sprite = _currentOrder.Data.Image;
+        orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
+    }
+
     private void TakeOrder(Order givenOrder)
     {
 
         if (_currentOrder.Data == givenOrder.Data)
         {
+            StartCoroutine(ShowParticleEffect());
             _completedOrders++;
 
             _paymentContainer += givenOrder.Data.Cost;
@@ -96,6 +110,7 @@ public class Customer : MonoBehaviour
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
+                FindObjectOfType<AudioManager>().Play("OrdersComplete");
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
                 
@@ -120,6 +135,12 @@ public class Customer : MonoBehaviour
                     OrderPrompt();
                     StartCoroutine(CustomerDespawn());
                 }
+
+                //StartCoroutine(CustomerDespawn());
+            }
+            else
+            {
+                GiveOrder();
             }
         }
         else
@@ -154,16 +175,18 @@ public class Customer : MonoBehaviour
     private IEnumerator CustomerDespawn()
     {
         yield return new WaitForSeconds(data.DespawnTime);
-
+        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        orderBox.SetActive(false);
+        yield return new WaitForSeconds(data.DespawnTime);
         gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
     {
-        if(readyToCollect==true)
+        if (readyToCollect == true)
         {
             MoneyManager.Instance.Collect(_paymentContainer);
-            readyToCollect = false;
+            _paymentContainer = 0;
 
             if (GameManager.Instance.isVN)
             {
@@ -172,8 +195,23 @@ public class Customer : MonoBehaviour
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
             }
-            
-            gameObject.SetActive(false);
+
+            orderBox.SetActive(false);
+            StartCoroutine(CustomerLeave());
         }
+    }
+
+    private IEnumerator CustomerLeave()
+    {
+        LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
+        yield return new WaitForSeconds(data.DespawnTime);
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator ShowParticleEffect()
+    {
+        particleEffect.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        particleEffect.SetActive(false);
     }
 }

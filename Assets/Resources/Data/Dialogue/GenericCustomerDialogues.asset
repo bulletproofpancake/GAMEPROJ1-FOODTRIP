@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GenericCustomerDialogues
   m_EditorClassIdentifier: 
   customerDialogue:
-  - dialogue: Ang sarap 1
-  - dialogue: Ang sarap 2
-  - dialogue: Ang sarap 3
-  - dialogue: Ang sarap 4
-  - dialogue: Ang sarap 5
+  - dialogue: Solid talaga!
+  - dialogue: Salamat  salamat!
+  - dialogue: Kuya bayad po.
+  - dialogue: Bayad po!
+  - dialogue: Next time ulit.
