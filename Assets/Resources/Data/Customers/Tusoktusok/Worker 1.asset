@@ -18,4 +18,4 @@ MonoBehaviour:
   possibleOrders:
   - {fileID: 6580914577590136435, guid: b701709b0e152744b932f1b5a76453ba, type: 3}
   - {fileID: 6580914577590136435, guid: 9d8ff4294788ec64e97ca261cca9fc24, type: 3}
-  despawnTime: 2
+  despawnTime: 5
