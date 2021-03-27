@@ -221,6 +221,9 @@ public class SpawnManager : MonoBehaviour
                     //index always starts at zero so that
                     //all slots can be checked
                     _foodIndex = 0;
+                    
+                    if(FindObjectOfType<AudioManager>()!=null)
+                        FindObjectOfType<AudioManager>().Play("OrderReady");
                 }
                 else
                 {
