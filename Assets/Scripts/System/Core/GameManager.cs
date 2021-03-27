@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     
     [Header("Round Settings")]
     public bool isVN;
+    public bool isTutorial;
     [SerializeField] private GameObject arcadeCanvas;
     [SerializeField] private GameObject vnCanvas;
     [SerializeField] private GameObject cartUsed;

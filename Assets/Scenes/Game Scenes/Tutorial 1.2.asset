@@ -28,7 +28,7 @@ MonoBehaviour:
     speakerName: kuya enteng
     text: "Well go on then, enjoy your pares, you\u2019ve earned it. Though make
       one for me too why don't ya HA HA HA"
-  - order: {fileID: 0}
+  - order: {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
     sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: 
     text: Coming right up, Kuya!

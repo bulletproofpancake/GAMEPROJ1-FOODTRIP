@@ -60,7 +60,11 @@ public class Customer : MonoBehaviour
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.sprite = data.ChangeSprite();
+        if(!GameManager.Instance.isVN)
+        {
+            //does not randomly change sprite if character is an NPC
+            _spriteRenderer.sprite = data.ChangeSprite();
+        }
         particleEffect.SetActive(false);
         
         if(fillImage!=null)
@@ -206,7 +210,9 @@ public class Customer : MonoBehaviour
             if (GameManager.Instance.isVN)
             {
                 MoneyManager.Instance.Earn();
-                _npcData.IncrementEncounter();
+                if(!GameManager.Instance.isTutorial){
+                    _npcData.IncrementEncounter();
+                }
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
             }
