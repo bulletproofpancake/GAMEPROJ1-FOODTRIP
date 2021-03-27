@@ -20,4 +20,4 @@ MonoBehaviour:
   encounter:
   - dialogueDatas:
     - {fileID: 11400000, guid: 3249924f85a24244eb1413923c2eb43d, type: 2}
-  count: 1
+  count: 0

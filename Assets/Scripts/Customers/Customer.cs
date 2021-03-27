@@ -52,15 +52,25 @@ public class Customer : MonoBehaviour
 
     private void Update()
     {
-        CustomerPatienceIndicator();
+        if(fillImage != null){
+            CustomerPatienceIndicator();
+        }
     }
 
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.sprite = data.ChangeSprite();
+        if(!GameManager.Instance.isVN)
+        {
+            //does not randomly change sprite if character is an NPC
+            _spriteRenderer.sprite = data.ChangeSprite();
+        }
         particleEffect.SetActive(false);
-        fillImage.fillAmount = data.DespawnTime;
+        
+        if(fillImage!=null)
+        {
+            fillImage.fillAmount = data.DespawnTime;
+        }
 
         if (!GameManager.Instance.isVN)
         {
@@ -71,7 +81,7 @@ public class Customer : MonoBehaviour
 
     private void OnDisable()
     {
-        SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+        SpawnManager.spawner.customerSeat[SeatTaken].isTaken = false;
         dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;
@@ -200,7 +210,9 @@ public class Customer : MonoBehaviour
             if (GameManager.Instance.isVN)
             {
                 MoneyManager.Instance.Earn();
-                _npcData.IncrementEncounter();
+                if(!GameManager.Instance.isTutorial){
+                    _npcData.IncrementEncounter();
+                }
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
             }

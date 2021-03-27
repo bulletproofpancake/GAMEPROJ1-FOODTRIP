@@ -175,6 +175,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474473383680894216, guid: c8e26806f4c618e43a208f6992e17b81,
+        type: 3}
       propertyPath: NpcDatas.Array.size
       value: 0
       objectReference: {fileID: 0}
