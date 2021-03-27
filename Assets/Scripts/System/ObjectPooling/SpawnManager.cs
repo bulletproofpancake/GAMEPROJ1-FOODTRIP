@@ -17,16 +17,16 @@ public class SpawnManager : Singleton<SpawnManager>
     public CustomerData[] customers;
     public Transform startPos;
     public Seats[] customerSeat;
-    private int _customerIndex;
+    [SerializeField]private int _customerIndex;
     
     [Header("Food Spawn")]
     public Seats[] foodSeat;
-    private int _foodIndex;
+    [SerializeField]private int _foodIndex;
 
     [Header("Bowl Spawn")]
     public GameObject bowl;
     public Seats[] bowlSeat;
-    private int _bowlIndex;
+    [SerializeField]private int _bowlIndex;
 
     
     public List<Seat> seats;

@@ -52,7 +52,9 @@ public class Customer : MonoBehaviour
 
     private void Update()
     {
-        CustomerPatienceIndicator();
+        if(fillImage != null){
+            CustomerPatienceIndicator();
+        }
     }
 
     private void OnEnable()
@@ -60,7 +62,11 @@ public class Customer : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = data.ChangeSprite();
         particleEffect.SetActive(false);
-        fillImage.fillAmount = data.DespawnTime;
+        
+        if(fillImage!=null)
+        {
+            fillImage.fillAmount = data.DespawnTime;
+        }
 
         if (!GameManager.Instance.isVN)
         {

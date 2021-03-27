@@ -1595,7 +1595,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[2].amountToPool
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -1606,7 +1606,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].amountToPool
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
