@@ -30,9 +30,9 @@ public class Order : MonoBehaviour
     private void OnDisable()
     {
         smoke.SetActive(false);
-        SpawnManager.Instance.foodSeat[SeatTaken].isTaken = false;
+        SpawnManager.spawner.foodSeat[SeatTaken].isTaken = false;
         if(_bowl!=null){
-            SpawnManager.Instance.bowlSeat[_bowl.SeatTaken].isTaken = false;
+            SpawnManager.spawner.bowlSeat[_bowl.SeatTaken].isTaken = false;
             _bowl.gameObject.SetActive(false);
         }
         _bowl = null;

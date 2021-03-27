@@ -55,7 +55,7 @@ public class CookOrder : MonoBehaviour
         //}
 
         yield return new WaitForSeconds(orderToCook.Data.CookTime);
-        SpawnManager.Instance.Spawn(orderToCook.Data);
+        SpawnManager.spawner.Spawn(orderToCook.Data);
         isCooking = false;
 
         if(FindObjectOfType<AudioManager>()!=null){

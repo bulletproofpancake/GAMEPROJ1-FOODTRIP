@@ -77,7 +77,7 @@ public class Customer : MonoBehaviour
 
     private void OnDisable()
     {
-        SpawnManager.Instance.customerSeat[SeatTaken].isTaken = false;
+        SpawnManager.spawner.customerSeat[SeatTaken].isTaken = false;
         dialogueBox.sprite = DialogueBoxNormal;
         orderIcon.GetComponent<SpriteRenderer>().enabled = true;
         readyToCollect = false;

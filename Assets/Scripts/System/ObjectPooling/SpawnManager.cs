@@ -7,8 +7,11 @@ using Random = UnityEngine.Random;
 /// <summary>
 /// Spawn manager for Pares only
 /// </summary>
-public class SpawnManager : Singleton<SpawnManager>
+public class SpawnManager : MonoBehaviour
 {
+
+    public static SpawnManager spawner;
+    
     [Header("NPC Spawn")]
     public NPCData[] NpcDatas;
 
@@ -31,8 +34,9 @@ public class SpawnManager : Singleton<SpawnManager>
     
     public List<Seat> seats;
     
-    protected override void Awake()
+    private void Awake()
     {
+        spawner = GetComponent<SpawnManager>();
         _customerIndex = 0;
         _foodIndex = 0;
         // seats = new List<Seat>(FindObjectsOfType<Seat>());
