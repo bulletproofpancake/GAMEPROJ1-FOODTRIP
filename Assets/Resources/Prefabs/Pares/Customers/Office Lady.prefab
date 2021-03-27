@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 4e92c32b44ea937498946f56dfeb8782, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 2546742412094899566}
   DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
   dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
-  originalPos: {fileID: 0}
+  fillImage: {fileID: 0}
   endPos: {fileID: 0}
   particleEffect: {fileID: 0}
 --- !u!61 &-2928564202525044758
@@ -121,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.22498071, y: 3.674944}
+  m_Offset: {x: 0.010415316, y: 2.2312336}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0.22133331, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.036}
-    oldSize: {x: 3.235293, y: 6.04}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.50465226, y: 0.05319704}
+    oldSize: {x: 3.5172207, y: 6.2419996}
     newSize: {x: 2.992138, y: 5.242}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0625288, y: 3.0000782}
+  m_Size: {x: 2.8594856, y: 1.5280781}
   m_EdgeRadius: 0
 --- !u!50 &5359904429127108726
 Rigidbody2D:
