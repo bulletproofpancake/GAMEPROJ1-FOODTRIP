@@ -116,8 +116,6 @@ public class SpawnManager : MonoBehaviour
     
     private void Spawn(CustomerData data)
     {
-        float seatPos;
-
         var customer = ObjectPoolManager.pool.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
         

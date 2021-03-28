@@ -28,7 +28,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private TextMeshProUGUI moneyTextVN;
     [SerializeField] private GameObject background;
     public bool isPaused;
-    
+
+    public bool npcAvailable, encounterComplete;
+
     protected override void Awake()
     {
         base.Awake();
@@ -55,9 +57,11 @@ public class GameManager : Singleton<GameManager>
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         SceneSelector.Instance.transition.Play("Crossfade_End");
+        npcAvailable = IsNpcAvailable();
+        encounterComplete = IsEncounterComplete();
         if (!isVN)
         {
             StartCoroutine(CountDownLevel());
@@ -66,7 +70,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isVN && completedCustomers > customers.Count)
         {
@@ -104,9 +108,10 @@ public class GameManager : Singleton<GameManager>
         MoneyManager.Instance.Earn();
         
         FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
-        
-        //if(isNpcAvailable()){
-            if (!IsEncounterComplete())
+
+        if (npcAvailable)
+        {
+            if (!encounterComplete)
             {
                 SceneSelector.Instance.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/VN");
             }
@@ -114,14 +119,28 @@ public class GameManager : Singleton<GameManager>
             {
                 SceneSelector.Instance.LoadNextScene("Summary");
             }
-        //}
-        //else
-        //{
-        //    SceneSelector.Instance.LoadNextScene("Summary");
-        //}
+        }
+        else
+        {
+            SceneSelector.Instance.LoadNextScene("Summary");
+        }
+
+    }
+    
+    private bool IsNpcAvailable()
+    {
+        foreach (var data in NpcDatas)
+        {
+            if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    public bool IsEncounterComplete()
+    private bool IsEncounterComplete()
     {
         var isComplete = false;
         
@@ -147,23 +166,6 @@ public class GameManager : Singleton<GameManager>
         return isComplete;
     }
 
-    private bool isNpcAvailable()
-    {
-        var isAvailable = true;
-        foreach (var data in NpcDatas)
-        {
-            if (data.AppearsIf != ShiftManager.Instance.shift.Schedule)
-            {
-                isAvailable = false;
-            }
-            else
-            {
-                isAvailable = true;
-            }
-        }
-        return isAvailable;
-    }
-    
     private void SetBackground()
     {
         switch (ShiftManager.Instance.shift.Schedule)
