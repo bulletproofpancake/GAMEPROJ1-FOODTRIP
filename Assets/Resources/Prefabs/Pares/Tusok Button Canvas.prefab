@@ -897,7 +897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18ff1e4bd2f5e084c986e375dfc924a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f17d26ee60bd9894297e34bf33f2975f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 5462583767195865345}
   - component: {fileID: 7894817722279433763}
   m_Layer: 5
-  m_Name: Rice
+  m_Name: Kwekkwek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderToCook: {fileID: 6580914577590136435, guid: 575b60d948d08ae459ffb48bc45d5747,
+  orderToCook: {fileID: 6580914577590136435, guid: 9d8ff4294788ec64e97ca261cca9fc24,
     type: 3}
   fillImage: {fileID: 8268625655960156322}
 --- !u!1 &5462583767371125532
@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 5462583767371125522}
   - component: {fileID: 8750463417327467230}
   m_Layer: 5
-  m_Name: Pares
+  m_Name: Kikiam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba12d960a4c23384b9327e8e976015a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderToCook: {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d,
+  orderToCook: {fileID: 6580914577590136435, guid: b701709b0e152744b932f1b5a76453ba,
     type: 3}
   fillImage: {fileID: 4666185588706728922}
 --- !u!1 &5462583768455702629
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f45c612093bc4be4ebddfae2fcb6cfdf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05976cb691424d34f9240616d2e8ce28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1288,7 +1288,7 @@ GameObject:
   - component: {fileID: 5462583768610612736}
   - component: {fileID: 5462583768610612737}
   m_Layer: 5
-  m_Name: Pares Button Canvas
+  m_Name: Tusok Button Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

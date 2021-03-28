@@ -75,7 +75,18 @@ public class Customer : MonoBehaviour
         if (!GameManager.Instance.isVN)
         {
             SetOrder();
-            OrderPares();
+            //Dictates the first order depending on the cart
+            switch (ShiftManager.Instance.cart.Type)
+            {
+                case CartType.Paresan:
+                    OrderPares();
+                    break;
+                case CartType.Tusoktusok:
+                    GiveOrder();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 

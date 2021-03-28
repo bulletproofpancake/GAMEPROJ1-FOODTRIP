@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
@@ -103,13 +104,21 @@ public class GameManager : Singleton<GameManager>
         MoneyManager.Instance.Earn();
         
         FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
-
-        if(!IsEncounterComplete())
-        {
-            SceneSelector.Instance.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/VN");
+        
+        if(isNpcAvailable()){
+            if (!IsEncounterComplete())
+            {
+                SceneSelector.Instance.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/VN");
+            }
+            else
+            {
+                SceneSelector.Instance.LoadNextScene("Summary");
+            }
         }
         else
+        {
             SceneSelector.Instance.LoadNextScene("Summary");
+        }
     }
 
     public bool IsEncounterComplete()
@@ -137,6 +146,24 @@ public class GameManager : Singleton<GameManager>
 
         return isComplete;
     }
+
+    private bool isNpcAvailable()
+    {
+        var isAvailable = true;
+        foreach (var data in NpcDatas)
+        {
+            if (data.AppearsIf != ShiftManager.Instance.shift.Schedule)
+            {
+                isAvailable = false;
+            }
+            else
+            {
+                isAvailable = true;
+            }
+        }
+        return isAvailable;
+    }
+    
     private void SetBackground()
     {
         switch (ShiftManager.Instance.shift.Schedule)
