@@ -244,6 +244,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 160586297}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &160586304 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6589351652661809027, guid: aae6923240baa7d408d9c884e1248b73,
+    type: 3}
+  m_PrefabInstance: {fileID: 160586297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &320634322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1484,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.size
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -1493,17 +1499,17 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[2].id
-      value: Student
+      value: Bowl
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].id
-      value: Worker
+      value: MMDA
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[4].id
-      value: Kikiam
+      value: clara
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -1539,7 +1545,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[2].parent
       value: 
-      objectReference: {fileID: 160586302}
+      objectReference: {fileID: 160586304}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].parent
@@ -1549,7 +1555,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[4].parent
       value: 
-      objectReference: {fileID: 160586301}
+      objectReference: {fileID: 160586302}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[5].parent
@@ -1595,35 +1601,35 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[2].amountToPool
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[2].objectToPool
       value: 
-      objectReference: {fileID: 6077367765372447431, guid: 3ca788167ccfa3546945574a1af5614a,
+      objectReference: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].amountToPool
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[3].objectToPool
       value: 
-      objectReference: {fileID: 537334110035868631, guid: 53656ec6bf562d349a0b3be9fdbf351b,
+      objectReference: {fileID: 6077367765372447431, guid: 5442012e18c4ad841a28574f7c488d07,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[4].amountToPool
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[4].objectToPool
       value: 
-      objectReference: {fileID: 5476258529874628051, guid: b701709b0e152744b932f1b5a76453ba,
+      objectReference: {fileID: 6077367765372447431, guid: b23a8d88145079d43a07ac0086f988ba,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
