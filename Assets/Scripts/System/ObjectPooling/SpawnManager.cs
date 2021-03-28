@@ -74,7 +74,6 @@ public class SpawnManager : MonoBehaviour
     {
         var npc = ScriptableObject.CreateInstance<NPCData>();
 
-
         if (ShiftManager.Instance.shift != null)
         {
             foreach (var data in NpcDatas)
@@ -180,65 +179,74 @@ public class SpawnManager : MonoBehaviour
 
         if (_foodIndex < foodSeat.Length)
         {
-            //if(_foodIndex < bowlSeat.Length){
-                // if (bowlSeat[_foodIndex].isTaken)
-                // {
-                //     // if (!foodSeat[_foodIndex].isTaken)
-                //     // {
-                //     //     food.transform.position = foodSeat[_foodIndex].slot.position;
-                //     //     food.GetComponent<Order>().SeatTaken = _foodIndex;
-                //     //     food.SetActive(true);
-                //     //     foodSeat[_foodIndex].isTaken = true;
-                //     //     //index always starts at zero so that
-                //     //     //all slots can be checked
-                //     //     _foodIndex = 0;
-                //     // }
-                //     // else
-                //     // {
-                //     //     Debug.LogWarning("Seat taken, looking for another");
-                //     //     _foodIndex++;
-                //     //     //recursion is done so that
-                //     //     //it will continue to spawn
-                //     //     //even if seats are taken
-                //     //     Spawn(data);
-                //     // }
-                // }
-                // else
-                // {
-                //     Debug.LogWarning("bowl seat taken, looking for another");
-                //     _foodIndex++;
-                //     //recursion is done so that
-                //     //it will continue to spawn
-                //     //even if seats are taken
-                //     Spawn(data);
-                // }
-                if (!foodSeat[_foodIndex].isTaken)
+            #region foodSpawnBowl
+
+            if(_foodIndex < bowlSeat.Length){
+                if (bowlSeat[_foodIndex].isTaken)
                 {
-                    food.transform.position = foodSeat[_foodIndex].slot.position;
-                    food.GetComponent<Order>().SeatTaken = _foodIndex;
-                    food.SetActive(true);
-                    foodSeat[_foodIndex].isTaken = true;
-                    //index always starts at zero so that
-                    //all slots can be checked
-                    _foodIndex = 0;
-                    
-                    if(FindObjectOfType<AudioManager>()!=null)
-                        FindObjectOfType<AudioManager>().Play("OrderReady");
+                    if (!foodSeat[_foodIndex].isTaken)
+                    {
+                        food.transform.position = foodSeat[_foodIndex].slot.position;
+                        food.GetComponent<Order>().SeatTaken = _foodIndex;
+                        food.SetActive(true);
+                        foodSeat[_foodIndex].isTaken = true;
+                        //index always starts at zero so that
+                        //all slots can be checked
+                        _foodIndex = 0;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Seat taken, looking for another");
+                        _foodIndex++;
+                        //recursion is done so that
+                        //it will continue to spawn
+                        //even if seats are taken
+                        Spawn(data);
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning("Seat taken, looking for another");
+                    Debug.LogWarning("bowl seat taken, looking for another");
                     _foodIndex++;
                     //recursion is done so that
                     //it will continue to spawn
                     //even if seats are taken
                     Spawn(data);
                 }
+            }
+            else
+            {
+                Debug.LogWarning("No bowls available");
+            }
+
+            #endregion
+            
+            #region foodSpawnNoBowl
+
+            // if (!foodSeat[_foodIndex].isTaken)
+            // {
+            //     food.transform.position = foodSeat[_foodIndex].slot.position;
+            //     food.GetComponent<Order>().SeatTaken = _foodIndex;
+            //     food.SetActive(true);
+            //     foodSeat[_foodIndex].isTaken = true;
+            //     //index always starts at zero so that
+            //     //all slots can be checked
+            //     _foodIndex = 0;
+            //     
+            //     if(FindObjectOfType<AudioManager>()!=null)
+            //         FindObjectOfType<AudioManager>().Play("OrderReady");
             // }
             // else
             // {
-            //     Debug.LogWarning("No bowls available");
+            //     Debug.LogWarning("Seat taken, looking for another");
+            //     _foodIndex++;
+            //     //recursion is done so that
+            //     //it will continue to spawn
+            //     //even if seats are taken
+            //     Spawn(data);
             // }
+
+            #endregion
         }
         else
         {

@@ -105,7 +105,7 @@ public class GameManager : Singleton<GameManager>
         
         FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
         
-        if(isNpcAvailable()){
+        //if(isNpcAvailable()){
             if (!IsEncounterComplete())
             {
                 SceneSelector.Instance.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/VN");
@@ -114,11 +114,11 @@ public class GameManager : Singleton<GameManager>
             {
                 SceneSelector.Instance.LoadNextScene("Summary");
             }
-        }
-        else
-        {
-            SceneSelector.Instance.LoadNextScene("Summary");
-        }
+        //}
+        //else
+        //{
+        //    SceneSelector.Instance.LoadNextScene("Summary");
+        //}
     }
 
     public bool IsEncounterComplete()
