@@ -22,8 +22,6 @@ public class Customer : MonoBehaviour
     [SerializeField] private Sprite dialogueBoxPaid;
     [SerializeField] private Image fillImage;
 
-    [SerializeField] private Transform endPos;
-
     private Order _currentOrder;
     private SpriteRenderer _spriteRenderer;
 
@@ -31,11 +29,9 @@ public class Customer : MonoBehaviour
     private float _completedOrders;
 
     private float _paymentContainer;
-    private float transitionTime = 4f;
     private bool readyToCollect;
     
     public int SeatTaken { get; set; }
-
 
     public GameObject particleEffect;
     
@@ -71,6 +67,7 @@ public class Customer : MonoBehaviour
         {
             fillImage.fillAmount = data.DespawnTime;
         }
+        StartCoroutine(FadeIn());
 
         if (!GameManager.Instance.isVN)
         {
@@ -165,7 +162,6 @@ public class Customer : MonoBehaviour
                 else
                 {
                     OrderPrompt();
-                    StartCoroutine(CustomerDespawn());
                 }
             }
             else
@@ -202,15 +198,6 @@ public class Customer : MonoBehaviour
         orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
-    private IEnumerator CustomerDespawn()
-    {
-        yield return new WaitForSeconds(data.DespawnTime);
-        LeanTween.moveX(gameObject, endPos.position.x, transitionTime);
-        orderBox.SetActive(false);
-        yield return new WaitForSeconds(data.DespawnTime);
-        gameObject.SetActive(false);
-    }
-
     private void OnMouseDown()
     {
         if (readyToCollect == true)
@@ -235,9 +222,28 @@ public class Customer : MonoBehaviour
 
     private IEnumerator CustomerLeave()
     {
-        LeanTween.moveX(gameObject, endPos.position.x, transitionTime);
-        yield return new WaitForSeconds(data.DespawnTime);
+        // Fade Out
+        for (float f = 1f; f >= -0.05f; f -= 0.05f)
+        {
+            Color c = _spriteRenderer.material.color;
+            c.a = f;
+            _spriteRenderer.material.color = c;
+
+            yield return new WaitForSeconds(0.05f);
+        }
         gameObject.SetActive(false);
+    }
+
+    private IEnumerator FadeIn()
+    {
+        for (float f = 0.05f; f <= 1; f += 0.05f)
+        {
+            Color c = _spriteRenderer.material.color;
+            c.a = f;
+            _spriteRenderer.material.color = c;
+
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
     private IEnumerator ShowParticleEffect()
@@ -253,9 +259,15 @@ public class Customer : MonoBehaviour
 
         if(fillImage.fillAmount == 0)
         {
-            orderBox.SetActive(false);
-            //LeanTween.moveX(gameObject, endPos.position.x, data.DespawnTime);
-            gameObject.SetActive(false);
+            Color c = _spriteRenderer.material.color;
+            c.a -= 1.0f * Time.deltaTime;
+            _spriteRenderer.material.color = c;
+            Invoke("DisableObject", 1.0f);
         }
+    }
+
+    void DisableObject()
+    {
+        gameObject.SetActive(false);
     }
 }
