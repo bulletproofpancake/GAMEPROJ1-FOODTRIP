@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPoolManager : Singleton<ObjectPoolManager>
+public class ObjectPoolManager : MonoBehaviour
 {
+    public static ObjectPoolManager pool;
     public List<ObjectPoolItems> itemsToPool;
     private List<GameObject> pooledObjects;
 
-    protected override void Awake()
+    private void Awake()
+    {
+        pool = GetComponent<ObjectPoolManager>();
+    }
+
+    private void Start()
     {
         InstantiateObjects();
     }

@@ -13,16 +13,16 @@ public class Bowl : MonoBehaviour
     private void OnEnable()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        BowlSpawner.Instance.RemoveBowl(gameObject);
+        BowlSpawner.spawner.RemoveBowl(gameObject);
     }
 
     private void OnDisable()
     {
-        SpawnManager.spawner.bowlSeat[SeatTaken].isTaken = false;
         if(isDirty)
-            Sink.Instance.AddBowl(gameObject);
+            Sink.sink.AddBowl(gameObject);
         else
-            BowlSpawner.Instance.AddBowl(gameObject); 
+            BowlSpawner.spawner.AddBowl(gameObject); 
+        SpawnManager.spawner.bowlSeat[SeatTaken].isTaken = false;
     }
 
     public void ReduceWashTime(float multiplier)

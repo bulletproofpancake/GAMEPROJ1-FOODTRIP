@@ -91,7 +91,7 @@ public class SpawnManager : MonoBehaviour
             npc = NpcDatas[0];
         }
         
-        var customer = ObjectPoolManager.Instance.GetPooledObject(npc.name);
+        var customer = ObjectPoolManager.pool.GetPooledObject(npc.name);
 
         if (customer == null)
         {
@@ -120,7 +120,7 @@ public class SpawnManager : MonoBehaviour
     {
         float seatPos;
 
-        var customer = ObjectPoolManager.Instance.GetPooledObject(data.name);
+        var customer = ObjectPoolManager.pool.GetPooledObject(data.name);
         _customerIndex = Random.Range(0, customerSeat.Length);
         
         if (isFull()) return;
@@ -139,7 +139,7 @@ public class SpawnManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Seat taken, looking for another");
+            //Debug.LogWarning("Seat taken, looking for another");
         }
     }
 
@@ -176,7 +176,7 @@ public class SpawnManager : MonoBehaviour
 
     public void Spawn(OrderData data)
     {
-        var food = ObjectPoolManager.Instance.GetPooledObject(data.name);
+        var food = ObjectPoolManager.pool.GetPooledObject(data.name);
 
         if (_foodIndex < foodSeat.Length)
         {
@@ -252,7 +252,6 @@ public class SpawnManager : MonoBehaviour
     
     public void SpawnBowl(GameObject bowl)
     {
-
         var newBowl = bowl;
         
         if ( _bowlIndex < bowlSeat.Length)

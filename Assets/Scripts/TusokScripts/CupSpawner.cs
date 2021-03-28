@@ -40,7 +40,7 @@ public class CupSpawner : MonoBehaviour
     }
     else
     {
-      var cup = ObjectPoolManager.Instance.GetPooledObject("Cup");
+      var cup = ObjectPoolManager.pool.GetPooledObject("Cup");
 
       cup.transform.position = spawnPoint.position;
       cup.SetActive(true);

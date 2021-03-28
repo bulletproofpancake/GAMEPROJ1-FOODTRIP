@@ -40,7 +40,7 @@ public class StickSpawner : MonoBehaviour
     }
     else
     {
-      var cup = ObjectPoolManager.Instance.GetPooledObject("Stick");
+      var cup = ObjectPoolManager.pool.GetPooledObject("Stick");
 
       cup.transform.position = spawnPoint.position;
       cup.SetActive(true);
