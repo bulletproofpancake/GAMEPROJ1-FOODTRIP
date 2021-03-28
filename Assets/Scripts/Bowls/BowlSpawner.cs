@@ -1,28 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BowlSpawner : Singleton<BowlSpawner>
+public class BowlSpawner : MonoBehaviour
 {
+    public static BowlSpawner spawner;
     private TextMeshProUGUI _btnText;
-    public List<GameObject> _bowls = new List<GameObject>();
+    public List<GameObject> _bowls;
     
-    private void Start()
+    private void Awake()
     {
-        //FillBowl();
+        spawner = GetComponent<BowlSpawner>();
         _btnText = GetComponentInChildren<TextMeshProUGUI>();
+        _bowls = new List<GameObject>();
     }
 
-    private void FillBowl()
-    {
-        var bowls = FindObjectsOfType<Bowl>();
-        foreach (var bowl in bowls)
-        {
-            _bowls.Add(bowl.gameObject);
-        }
-    }
-    
     void Update()
     {
         _btnText.text = $"{name}: {_bowls.Count}";
@@ -40,6 +34,6 @@ public class BowlSpawner : Singleton<BowlSpawner>
     
     public void SpawnBowl()
     {
-        //SpawnManager.Instance.SpawnBowl(_bowls[_bowls.Count-1]);
+        SpawnManager.spawner.SpawnBowl(_bowls[_bowls.Count-1]);
     }
 }

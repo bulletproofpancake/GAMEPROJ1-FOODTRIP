@@ -28,7 +28,7 @@ public class TusokTusokFoodSpawner : Singleton<TusokTusokFoodSpawner>
             return;
         } else { 
             currentCapacity++;
-            var food = ObjectPoolManager.Instance.GetPooledObject(data.name);
+            var food = ObjectPoolManager.pool.GetPooledObject(data.name);
             food.transform.position = new Vector2(Random.Range(-SpawnRange, SpawnRange), this.gameObject.transform.position.y);
             food.SetActive(true);
         } 

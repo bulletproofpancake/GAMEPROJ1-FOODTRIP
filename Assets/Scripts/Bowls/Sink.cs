@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Sink : Singleton<Sink>
+public class Sink : MonoBehaviour
 {
+    public static Sink sink;
     private TextMeshProUGUI _btnText;
     private List<GameObject> _bowls;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
+        sink = GetComponent<Sink>();
         _bowls = new List<GameObject>();
         _btnText = GetComponentInChildren<TextMeshProUGUI>();
     }
@@ -34,7 +35,7 @@ public class Sink : Singleton<Sink>
         bowl.GetComponent<Bowl>().isDirty = false;
         _bowls.Remove(bowl);
         yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);       
-        BowlSpawner.Instance.AddBowl(bowl);
+        BowlSpawner.spawner.AddBowl(bowl);
     }
     
     public void AddBowl(GameObject bowl)
