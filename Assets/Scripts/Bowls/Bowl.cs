@@ -13,6 +13,7 @@ public class Bowl : MonoBehaviour
     private void OnEnable()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
         BowlSpawner.spawner.RemoveBowl(gameObject);
     }
 

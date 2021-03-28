@@ -50,6 +50,7 @@ public class Order : MonoBehaviour
     {
         _bowl = bowl;
         _bowl.GetComponent<SpriteRenderer>().enabled = false;
+        _bowl.GetComponent<BoxCollider2D>().enabled = false;
     }
     
 }
