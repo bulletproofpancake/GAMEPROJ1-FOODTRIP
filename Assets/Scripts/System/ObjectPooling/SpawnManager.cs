@@ -18,7 +18,6 @@ public class SpawnManager : MonoBehaviour
     [Header("Customer Spawn")]
     public int spawnInterval;
     public CustomerData[] customers;
-    public Transform startPos;
     public Seats[] customerSeat;
     [SerializeField]private int _customerIndex;
     
@@ -126,11 +125,7 @@ public class SpawnManager : MonoBehaviour
         
         if (!customerSeat[_customerIndex].isTaken)
         {
-            customer.transform.position = startPos.position;
-            //customer.transform.position = customerSeat[_customerIndex].slot.position;
-            seatPos = customerSeat[_customerIndex].slot.position.x;
-
-            LeanTween.moveX(customer, seatPos, 2f);
+            customer.transform.position = customerSeat[_customerIndex].slot.position;
 
             customer.GetComponent<Customer>().SeatTaken = _customerIndex;
             customer.SetActive(true);
