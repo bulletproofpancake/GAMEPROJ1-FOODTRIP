@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9c8e9409e89fd43a5d04d551b72ef7, type: 3}
   m_Name: PISHBOL
   m_EditorClassIdentifier: 
-  foodName: PARES
-  foodDescription: "PISHBOL\r\nA cultural delicacy in the philippines, fishballs
-    are made using cuttlefish or pollock and often deep fried and served with sweet
-    or spicy sauce. \r\n\r\nFIshball fun fact:\r\n\r\nFishballs used to be whiter
-    and rounder. But producers made cheaper yellow fish balls which are the ones
-    we love dearly today.\r\n\r\nPISHBOL nalang di nagmamahal\r"
-  foodImage: {fileID: 0}
+  foodName: Fishball
+  foodDescription: "A cultural delicacy in the philippines, fishballs are made using
+    cuttlefish or pollock and often deep fried and served with sweet or spicy sauce.
+    \r\n\r\nFIshball fun fact:\r\r\nFishballs used to be whiter and rounder. But
+    producers made cheaper yellow fish balls which are the ones we love dearly today.\r"
+  foodImage: {fileID: 21300000, guid: 50f815dd2dfb2824493ccf3d9422e6eb, type: 3}

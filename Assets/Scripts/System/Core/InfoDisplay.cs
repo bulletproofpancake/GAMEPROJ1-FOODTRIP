@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class InfoDisplay : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class InfoDisplay : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI foodName, foodDescription;
     [SerializeField] private Image foodImage;
-    [SerializeField] private InfoData pares, fishball, kwekkwek, kikiam;
+    [SerializeField] private InfoData pares;
+    [SerializeField] private InfoData[] tusoktusokInfo;
+
+    [SerializeField] private int index = 0;
 
     void Start()
     {
@@ -52,6 +56,20 @@ public class InfoDisplay : MonoBehaviour
         }
     }
 
+    public void IncrementIndex()
+    {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        index++;
+        ShowTusokTusokInfo();
+    }
+
+    public void DecrementIndex()
+    {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        index--;
+        ShowTusokTusokInfo();
+    }
+
     //void PauseAudio()
     //{
     //    FindObjectOfType<AudioManager>().Pause("ParesSFX");
@@ -73,7 +91,16 @@ public class InfoDisplay : MonoBehaviour
 
     private void ShowTusokTusokInfo()
     {
-        foodName.text = "Tusoktusok";
+        if (index >= tusoktusokInfo.Length)
+            index = 0;
+        else if (index < 0)
+        {
+            index = tusoktusokInfo.Length-1;
+        }
+
+        foodName.text = tusoktusokInfo[index].FoodName;
+        foodDescription.text = tusoktusokInfo[index].FoodDescription;
+        foodImage.sprite = tusoktusokInfo[index].FoodImage;
     }
 }
 

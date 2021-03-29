@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9c8e9409e89fd43a5d04d551b72ef7, type: 3}
   m_Name: KWEKWEK 2
   m_EditorClassIdentifier: 
-  foodName: PARES
+  foodName: KwekKwek
   foodDescription: "A legend explains that kwek kwek was an accidental invention.
-    \r\n\r\nThe story is that of a balut vendor from cubao who dropped her merchandise,
+    \r\r\n\nThe story is that of a balut vendor from cubao who dropped her merchandise,
     and not wanting to waste the balut, she peeled off the shells, coated the eggs
-    in flour and fried them.\r\n\r\nKwek Kwek is a hard boiled quail egg covered
-    in a batter mixture of flour, water, and annatto powder.\r\nThe large duck egg
-    equivalent is called tokneneng.\r\n"
-  foodImage: {fileID: 21300000, guid: 18ff1e4bd2f5e084c986e375dfc924a4, type: 3}
+    in flour and fried them.\r\n\nKwek Kwek is a hard boiled quail egg covered in
+    a batter mixture of flour, water, and annatto powder.\r\n\nThe large duck egg
+    equivalent is called tokneneng.\r"
+  foodImage: {fileID: 21300000, guid: 05976cb691424d34f9240616d2e8ce28, type: 3}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9c8e9409e89fd43a5d04d551b72ef7, type: 3}
   m_Name: KIKIAM
   m_EditorClassIdentifier: 
-  foodName: KIKIAM
+  foodName: Kikiam
   foodDescription: "KIKIAM was originally introduced by Hokkien migrants in the Philippines\r\n\r\nThe
     kikiam sold on the streets are actually elongated fishballs made out of pork
     instead of fish.\r"
-  foodImage: {fileID: 21300000, guid: 18ff1e4bd2f5e084c986e375dfc924a4, type: 3}
+  foodImage: {fileID: 21300000, guid: f17d26ee60bd9894297e34bf33f2975f, type: 3}
