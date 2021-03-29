@@ -32,7 +32,7 @@ public class CookTimeUpgrade : UpgradeSystem
 
     private void OnMouseEnter()
     {
-        Tooltip.ShowTooltip_Static("Cook Time");
+        Tooltip.ShowTooltip_Static("Makes cooking time faster!");
     }
 
     private void OnMouseExit()

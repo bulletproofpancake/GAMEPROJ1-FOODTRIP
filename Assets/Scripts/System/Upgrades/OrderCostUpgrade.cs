@@ -32,7 +32,7 @@ public class OrderCostUpgrade : UpgradeSystem
     }
     private void OnMouseEnter()
     {
-        Tooltip.ShowTooltip_Static("Order Cost Upgrade");
+        Tooltip.ShowTooltip_Static("Orders now generate more money!");
     }
 
     private void OnMouseExit()

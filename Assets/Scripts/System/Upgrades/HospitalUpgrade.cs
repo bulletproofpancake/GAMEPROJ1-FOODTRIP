@@ -31,7 +31,7 @@ public class HospitalUpgrade : UpgradeSystem
     }
     private void OnMouseEnter()
     {
-        Tooltip.ShowTooltip_Static("Hospital");
+        Tooltip.ShowTooltip_Static("Hospital bills to be paid for Manong Enteng");
     }
 
     private void OnMouseExit()

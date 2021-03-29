@@ -36,7 +36,7 @@ public class WashTimeUpgrade : UpgradeSystem
     }
     private void OnMouseEnter()
     {
-        Tooltip.ShowTooltip_Static("Wash Time Upgrade");
+        Tooltip.ShowTooltip_Static("Cleaning bowls is now faster than ever!");
     }
 
     private void OnMouseExit()
