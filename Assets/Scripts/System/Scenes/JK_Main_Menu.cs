@@ -10,11 +10,11 @@ public class JK_Main_Menu : SceneLoader
     bool isActive;
 
     //Hard set to avoid game opening conflict bugs
-    private void Awake()
-    {
-        AreaSelect.SetActive(false);
-        ShiftSelect.SetActive(false);
-    }
+    //private void Start()
+    //{
+    //    AreaSelect.SetActive(false);
+    //    ShiftSelect.SetActive(false);
+    //}
 
     //Simplest way of opening and closing a canvas
     public void AreaSelectMenu()

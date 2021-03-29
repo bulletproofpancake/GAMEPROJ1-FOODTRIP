@@ -54,7 +54,8 @@ public class Pause : MonoBehaviour
 
     public void MainMenu()
     {
-
+        SceneSelector.Instance.LoadNextScene("Main Menu_JK");
+        ResumeTheGame();
     }
 
     //void PauseAudio()
