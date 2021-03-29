@@ -20,6 +20,7 @@ public class Customer : MonoBehaviour
     [SerializeField] private SpriteRenderer dialogueBox;
     [SerializeField] private Sprite DialogueBoxNormal;
     [SerializeField] private Sprite dialogueBoxPaid;
+    [SerializeField] private Image fillBackground;
     [SerializeField] private Image fillImage;
 
     private Order _currentOrder;
@@ -30,7 +31,9 @@ public class Customer : MonoBehaviour
 
     private float _paymentContainer;
     private bool readyToCollect;
-    
+    private bool correctOrder;
+    private bool wrongOrder;
+
     public int SeatTaken { get; set; }
 
     public GameObject particleEffect;
@@ -63,8 +66,14 @@ public class Customer : MonoBehaviour
         }
         particleEffect.SetActive(false);
         
+        if(fillBackground!=null)
+        {
+            fillBackground.enabled = true;
+        }
+
         if(fillImage!=null)
         {
+            fillImage.enabled = true;
             fillImage.fillAmount = data.DespawnTime;
         }
         StartCoroutine(FadeIn());
@@ -130,10 +139,9 @@ public class Customer : MonoBehaviour
         {
             StartCoroutine(ShowParticleEffect());
             _completedOrders++;
-
             _paymentContainer += givenOrder.Data.Cost;
-
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
+            correctOrder = true;
 
             if (_completedOrders >= _numberOfOrders + 1)
             {
@@ -142,7 +150,8 @@ public class Customer : MonoBehaviour
                 }
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
-                
+                fillImage.fillAmount = data.DespawnTime;
+
                 if (GameManager.Instance.isVN)
                 {
                     _npcData = (NPCData) data;
@@ -171,6 +180,7 @@ public class Customer : MonoBehaviour
         }
         else
         {
+            wrongOrder = true;
             StartCoroutine(WrongOrder());
         }
     }
@@ -213,6 +223,16 @@ public class Customer : MonoBehaviour
                 }
                 GameManager.Instance.customers.Remove(this);
                 GameManager.Instance.completedCustomers++;
+            }
+
+            if (fillBackground != null)
+            {
+                fillBackground.enabled = false;
+            }
+
+            if (fillImage != null)
+            {
+                fillImage.enabled = false;
             }
 
             orderBox.SetActive(false);
@@ -263,6 +283,20 @@ public class Customer : MonoBehaviour
             c.a -= 1.0f * Time.deltaTime;
             _spriteRenderer.material.color = c;
             Invoke("DisableObject", 1.0f);
+        }
+
+        //Add time
+        if (correctOrder == true)
+        {
+            fillImage.fillAmount += data.DespawnTime * .025f;
+            correctOrder = false;
+        }
+
+        //Reduce time
+        if(wrongOrder ==true)
+        {
+            fillImage.fillAmount -= data.DespawnTime * .025f;
+            wrongOrder = false;
         }
     }
 

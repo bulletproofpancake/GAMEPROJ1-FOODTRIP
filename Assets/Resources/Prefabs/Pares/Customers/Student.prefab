@@ -213,8 +213,8 @@ MonoBehaviour:
   dialogueBox: {fileID: 2546742412094899566}
   DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
   dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
+  fillBackground: {fileID: 1276302754990802333}
   fillImage: {fileID: 4539775007350599259}
-  endPos: {fileID: 4692096930004309372}
   particleEffect: {fileID: 5546710609686158893}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
