@@ -34,4 +34,13 @@ public class WashTimeUpgrade : UpgradeSystem
             Debug.LogWarning("No upgrades left");
         }
     }
+    private void OnMouseEnter()
+    {
+        Tooltip.ShowTooltip_Static("Wash Time Upgrade");
+    }
+
+    private void OnMouseExit()
+    {
+        Tooltip.HideTooltip_Static();
+    }
 }

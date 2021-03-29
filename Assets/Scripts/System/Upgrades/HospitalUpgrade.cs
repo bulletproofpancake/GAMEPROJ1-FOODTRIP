@@ -29,4 +29,13 @@ public class HospitalUpgrade : UpgradeSystem
             }
         }
     }
+    private void OnMouseEnter()
+    {
+        Tooltip.ShowTooltip_Static("Hospital");
+    }
+
+    private void OnMouseExit()
+    {
+        Tooltip.HideTooltip_Static();
+    }
 }
