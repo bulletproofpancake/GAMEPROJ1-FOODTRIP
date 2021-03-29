@@ -30,4 +30,13 @@ public class OrderCostUpgrade : UpgradeSystem
             Debug.LogWarning("No upgrades left");
         }
     }
+    private void OnMouseEnter()
+    {
+        Tooltip.ShowTooltip_Static("Order Cost Upgrade");
+    }
+
+    private void OnMouseExit()
+    {
+        Tooltip.HideTooltip_Static();
+    }
 }

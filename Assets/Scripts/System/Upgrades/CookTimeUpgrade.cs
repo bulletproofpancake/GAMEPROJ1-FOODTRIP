@@ -29,4 +29,14 @@ public class CookTimeUpgrade : UpgradeSystem
             Debug.LogWarning("No upgrades left");
         }
     }
+
+    private void OnMouseEnter()
+    {
+        Tooltip.ShowTooltip_Static("Cook Time");
+    }
+
+    private void OnMouseExit()
+    {
+        Tooltip.HideTooltip_Static();
+    }
 }
