@@ -3047,6 +3047,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c57ebd52a46e4a47a73b5152aafb855, type: 2}
   - {fileID: 11400000, guid: aa9c07ce8bfc3804ba82b7a213b7dfd3, type: 2}
   index: 0
+  navButtons:
+  - {fileID: 7719422339139039460}
+  - {fileID: 576975653182410950}
 --- !u!1 &8580389058906722963
 GameObject:
   m_ObjectHideFlags: 0

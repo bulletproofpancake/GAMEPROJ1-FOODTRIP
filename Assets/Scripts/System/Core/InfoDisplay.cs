@@ -16,6 +16,7 @@ public class InfoDisplay : MonoBehaviour
     [SerializeField] private InfoData[] tusoktusokInfo;
 
     [SerializeField] private int index = 0;
+    [SerializeField] private GameObject[] navButtons;
 
     void Start()
     {
@@ -27,9 +28,17 @@ public class InfoDisplay : MonoBehaviour
         switch (ShiftManager.Instance.cart.Type)
         {
             case CartType.Paresan:
+                foreach (var button in navButtons)
+                {
+                    button.SetActive(false);
+                }
                 ShowParesInfo();
                 break;
             case CartType.Tusoktusok:
+                foreach (var button in navButtons)
+                {
+                    button.SetActive(true);
+                }
                 ShowTusokTusokInfo();
                 break;
             default:
