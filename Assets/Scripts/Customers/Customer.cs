@@ -150,7 +150,9 @@ public class Customer : MonoBehaviour
                 }
                 dialogueBox.sprite = dialogueBoxPaid;
                 readyToCollect = true;
-                fillImage.fillAmount = data.DespawnTime;
+                if(fillImage != null){
+                    fillImage.fillAmount = data.DespawnTime;
+                }
 
                 if (GameManager.Instance.isVN)
                 {
@@ -158,6 +160,7 @@ public class Customer : MonoBehaviour
                     if (_npcData.Encounter[_npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
                     {
                         orderBox.SetActive(false);
+                        dialogueBox.sprite = DialogueBoxNormal;
                         SetOrder();
                         GiveOrder();
                         DialogueManager.Instance.Advance();
