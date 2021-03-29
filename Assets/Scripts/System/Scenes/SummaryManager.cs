@@ -8,9 +8,8 @@ using UnityEngine.UI;
 public class SummaryManager : MonoBehaviour
 {
     [SerializeField] private Image image;
-    [SerializeField] private TextMeshProUGUI customersServed;
-    [SerializeField] private TextMeshProUGUI expectedProfit;
-    [SerializeField] private TextMeshProUGUI actualProfit;
+    [SerializeField] private TextMeshProUGUI previousProfit;
+    [SerializeField] private TextMeshProUGUI currentProfit;
     [SerializeField] private TextMeshProUGUI totalMoney;
 
     private void Awake()
@@ -25,8 +24,14 @@ public class SummaryManager : MonoBehaviour
     {
         if(ShiftManager.Instance.shift != null)
             SetBackgroundImage();
+
+        if (MoneyManager.Instance.previousMoney > MoneyManager.Instance.currentMoney)
+            currentProfit.color = Color.red;
+        else
+            currentProfit.color = Color.green;
         
-        actualProfit.text = $"Actual Profit: {MoneyManager.Instance.roundMoney}";
+        previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney}";
+        currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney}";
         totalMoney.text = $"Total Money: {MoneyManager.Instance.totalMoney}";
     }
 

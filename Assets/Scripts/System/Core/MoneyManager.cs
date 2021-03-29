@@ -8,6 +8,7 @@ public class MoneyManager : Singleton<MoneyManager>
     public float totalMoney;
     public float roundMoney;
     public float currentMoney;
+    public float previousMoney;
 
     public void Collect(float payment)
     {
@@ -22,6 +23,7 @@ public class MoneyManager : Singleton<MoneyManager>
 
     public void EndRound()
     {
+        previousMoney = roundMoney;
         currentMoney = 0;
         roundMoney = 0;
     }
