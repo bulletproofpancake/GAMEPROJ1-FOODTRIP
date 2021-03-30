@@ -208,13 +208,14 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 85f9b6e88b59ad442ba69d2fa391535f, type: 2}
   orderIcon: {fileID: 2546742412701446317}
   orderText: {fileID: 8999610333636315618}
+  promptBox: {fileID: 1223403727131935469}
   orderBox: {fileID: 2546742413702871810}
   dialogueData: {fileID: 11400000, guid: 434b5c20ffb8f4749b15d5c32e0de2a1, type: 2}
   dialogueBox: {fileID: 2546742412094899566}
   DialogueBoxNormal: {fileID: 21300000, guid: b110e9eb3f4150d4c893de400dc32fd6, type: 3}
   dialogueBoxPaid: {fileID: 21300000, guid: 932d4b71aca38ef49828a0b19ff23904, type: 3}
+  fillBackground: {fileID: 0}
   fillImage: {fileID: 4539775007350599259}
-  endPos: {fileID: 4692096930004309372}
   particleEffect: {fileID: 5546710609686158893}
 --- !u!61 &-2928564202525044758
 BoxCollider2D:
@@ -633,6 +634,18 @@ GameObject:
 --- !u!114 &8999610333636315618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6073119365110321130, guid: 9ebd80676746f7a4fa19d23cccdd792b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2931003366481954312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1223403727131935469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4059822704389719269, guid: 9ebd80676746f7a4fa19d23cccdd792b,
     type: 3}
   m_PrefabInstance: {fileID: 2931003366481954312}
   m_PrefabAsset: {fileID: 0}

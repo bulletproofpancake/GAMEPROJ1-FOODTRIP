@@ -14,6 +14,7 @@ public class Customer : MonoBehaviour
     public CustomerData Data => data;
     [SerializeField] private GameObject orderIcon;
     [SerializeField] private TextMeshPro orderText;
+    [SerializeField] private TextMeshPro promptBox;
     public GameObject orderBox;
     
     [SerializeField] private Customers.DialogueData dialogueData;
@@ -59,6 +60,7 @@ public class Customer : MonoBehaviour
     private void OnEnable()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        promptBox.text = string.Empty;
         if(!GameManager.Instance.isVN)
         {
             //does not randomly change sprite if character is an NPC
@@ -191,9 +193,9 @@ public class Customer : MonoBehaviour
     private void OrderPrompt()
     {
         int _index = Random.Range(0, dialogueData.customerDialogue.Length);
-
+        promptBox.text = dialogueData.customerDialogue[_index].Dialogue;
         orderIcon.GetComponent<SpriteRenderer>().enabled = false;
-        orderText.text = dialogueData.customerDialogue[_index].Dialogue;
+        orderText.text = $"Php. {_paymentContainer}";
     }
 
     private void OnTriggerEnter2D(Collider2D other)
