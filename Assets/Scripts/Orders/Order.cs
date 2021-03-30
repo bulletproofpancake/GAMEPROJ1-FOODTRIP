@@ -27,6 +27,11 @@ public class Order : MonoBehaviour
         smoke.SetActive(true);
     }
 
+    private void Update()
+    {
+        gameObject.GetComponent<DragAndDrop>().enabled = !GameManager.Instance.isPaused;
+    }
+
     private void OnDisable()
     {
         smoke.SetActive(false);
