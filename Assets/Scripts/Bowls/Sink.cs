@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Sink : MonoBehaviour
@@ -8,6 +9,10 @@ public class Sink : MonoBehaviour
     public static Sink sink;
     private TextMeshProUGUI _btnText;
     private List<GameObject> _bowls;
+
+    [SerializeField] private Image fillImage;
+    private bool isWashing;
+    private float timer;
 
     private void Awake()
     {
@@ -19,6 +24,7 @@ public class Sink : MonoBehaviour
     private void Update()
     {
         _btnText.text = $"{name}: {_bowls.Count}";
+        WashingIndicator();
     }
 
     public void WashBowl()
@@ -32,14 +38,33 @@ public class Sink : MonoBehaviour
     
     private IEnumerator Wash(GameObject bowl)
     {
+        isWashing = true;
         bowl.GetComponent<Bowl>().isDirty = false;
         _bowls.Remove(bowl);
         yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);       
         BowlSpawner.spawner.AddBowl(bowl);
+        isWashing = false;
     }
     
     public void AddBowl(GameObject bowl)
     {
         _bowls.Add(bowl);
+    }
+
+    private void WashingIndicator()
+    {
+        if(_bowls.Count > 0)
+        {
+            if (isWashing == true)
+            {
+                timer = _bowls[_bowls.Count - 1].GetComponent<Bowl>().currentWashTime;
+                fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+            }
+            else if (isWashing == false)
+            {
+                timer = 0;
+                fillImage.fillAmount = timer;
+            }
+        }
     }
 }

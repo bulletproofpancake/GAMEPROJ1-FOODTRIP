@@ -358,14 +358,14 @@ public class Customer : MonoBehaviour
           //Add time
           if (correctOrder == true)
           {
-               fillImage.fillAmount += data.DespawnTime * .025f;
+               fillImage.fillAmount += data.DespawnTime * .07f;
                correctOrder = false;
           }
 
           //Reduce time
           if (wrongOrder == true)
           {
-               fillImage.fillAmount -= data.DespawnTime * .025f;
+               fillImage.fillAmount -= data.DespawnTime * .07f;
                wrongOrder = false;
           }
      }
