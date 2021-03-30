@@ -131,9 +131,11 @@ public class GameManager : Singleton<GameManager>
     {
         foreach (var data in NpcDatas)
         {
-            if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
-            {
-                return true;
+            if(ShiftManager.Instance != null){
+                if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+                {
+                    return true;
+                }
             }
         }
 
