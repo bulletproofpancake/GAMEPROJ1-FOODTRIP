@@ -246,9 +246,13 @@ public class Customer : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D other)
      {
+          StickBehaviors stick = other.GetComponent<StickBehaviors>();
+
           if (other.GetComponent<Order>())
           {
+               stick.RemoveFood();
                TakeOrder(other.GetComponent<Order>());
+
           }
      }
 

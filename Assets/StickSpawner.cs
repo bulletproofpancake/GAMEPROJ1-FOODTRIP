@@ -26,7 +26,7 @@ public class StickSpawner : MonoBehaviour
      private void Start()
      {
           currentSpawned = 0;
-          spawnPoint.position = Vector3.zero;
+          spawnPoint = GameObject.Find("StickSpawner").transform;
      }
      public void SpawnStick()
      {
