@@ -246,14 +246,28 @@ public class Customer : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D other)
      {
-          StickBehaviors stick = other.GetComponent<StickBehaviors>();
 
-          if (other.GetComponent<Order>())
-          {
-               stick.RemoveFood();
-               TakeOrder(other.GetComponent<Order>());
-
+          if(ShiftManager.Instance.cart != null){
+               switch (ShiftManager.Instance.cart.Type)
+               {
+                    case CartType.Paresan:
+                         if (other.GetComponent<Order>())
+                              TakeOrder(other.GetComponent<Order>());
+                         break;
+                    case CartType.Tusoktusok:
+                         StickBehaviors stick = other.GetComponent<StickBehaviors>();
+                         if (other.GetComponent<Order>())
+                         {
+                              stick.RemoveFood();
+                              TakeOrder(other.GetComponent<Order>());
+                         }
+                         break;
+                    default:
+                         throw new ArgumentOutOfRangeException();
+               }
           }
+          else if (other.GetComponent<Order>())
+               TakeOrder(other.GetComponent<Order>());
      }
 
      private IEnumerator WrongOrder()
