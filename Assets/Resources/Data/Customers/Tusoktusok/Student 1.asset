@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 6580914577590136435, guid: b701709b0e152744b932f1b5a76453ba, type: 3}
   - {fileID: 8758606404657732872, guid: 3c3a24bd77da06a4abe6ffb56605c325, type: 3}
   despawnTime: 8
+  type: 1

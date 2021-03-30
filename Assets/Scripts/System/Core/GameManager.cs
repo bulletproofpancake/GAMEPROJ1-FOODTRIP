@@ -80,7 +80,7 @@ public class GameManager : Singleton<GameManager>
                 SceneSelector.Instance.LoadNextScene("Summary");
             else
             {
-                SceneSelector.Instance.LoadNextScene("Main Menu");
+                SceneSelector.Instance.LoadNextScene(0);
             }
         }
         else
@@ -131,9 +131,11 @@ public class GameManager : Singleton<GameManager>
     {
         foreach (var data in NpcDatas)
         {
-            if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
-            {
-                return true;
+            if(ShiftManager.Instance != null){
+                if (data.AppearsIf == ShiftManager.Instance.shift.Schedule)
+                {
+                    return true;
+                }
             }
         }
 

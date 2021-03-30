@@ -8,6 +8,9 @@ public class CustomerData : ScriptableObject
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private Order[] possibleOrders;
     [SerializeField] private int despawnTime;
+    
+    [SerializeField] private CustomerType type;
+    public CustomerType Type => type;
 
     public Order[] PossibleOrders => possibleOrders;
 
@@ -22,4 +25,10 @@ public class CustomerData : ScriptableObject
     }
 
     public int DespawnTime => despawnTime;
+}
+
+public enum CustomerType
+{
+    None,
+    Student
 }
