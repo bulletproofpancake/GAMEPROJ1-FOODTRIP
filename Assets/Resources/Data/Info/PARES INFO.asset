@@ -25,4 +25,4 @@ MonoBehaviour:
     Pares
     can also be paired with other food such as mami and sinangag or garlic fried
     rice.'
-  foodImage: {fileID: 21300000, guid: 18ff1e4bd2f5e084c986e375dfc924a4, type: 3}
+  foodImage: {fileID: 21300000, guid: e9c008d329baa56489a2b12195c3fcc6, type: 3}
