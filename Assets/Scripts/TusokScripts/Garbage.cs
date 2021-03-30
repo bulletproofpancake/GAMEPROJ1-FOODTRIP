@@ -53,7 +53,7 @@ public class Garbage : MonoBehaviour
           {
                collision.gameObject.SetActive(false);
                CapacityChecker(1f);
-               //SpawnDirtyCup.amountInScene -= 1;
+               DirtyCupsScript.Instance.currentDirtyCupsInScene -= 1;
                return; //in case we have to detect other gameobjects going in the garbage, we have to return so that it won't have to check other tags once this was 
 
 
