@@ -8,6 +8,12 @@ public class Sink : MonoBehaviour
     public static Sink sink;
     private TextMeshProUGUI _btnText;
     private List<GameObject> _bowls;
+    private bool _isBtnTextNotNull;
+
+    private void Start()
+    {
+        _isBtnTextNotNull = _btnText!=null;
+    }
 
     private void Awake()
     {
@@ -18,7 +24,8 @@ public class Sink : MonoBehaviour
     
     private void Update()
     {
-        _btnText.text = $"{name}: {_bowls.Count}";
+        if(_isBtnTextNotNull)
+            _btnText.text = $"{name}: {_bowls.Count}";
     }
 
     public void WashBowl()
