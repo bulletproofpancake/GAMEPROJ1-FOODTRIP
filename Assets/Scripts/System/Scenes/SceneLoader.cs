@@ -40,7 +40,7 @@ public class SceneLoader : MonoBehaviour
     {
         PlayButtonSFX();
         Tween();
-
+        Destroy(ShiftManager.Instance);
         SceneSelector.Instance.LoadNextScene("Tutorial");
     }
 
