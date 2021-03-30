@@ -25,6 +25,9 @@ public class UpgradeSystem:MonoBehaviour
             upgradeCost.text = $"{upgradeData.Upgrade[upgradeData.Level].cost}";
         else
             upgradeCost.text = "Upgrade Complete";
-        upgradeSlot[upgradeData.Level-1].color = Color.green;
+        for (int i = 0; i < upgradeData.Level; i++)
+        {
+            upgradeSlot[i].color = Color.green;
+        }
     }
 }

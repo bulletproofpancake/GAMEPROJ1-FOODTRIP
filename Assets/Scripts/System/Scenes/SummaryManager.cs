@@ -11,6 +11,7 @@ public class SummaryManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI previousProfit;
     [SerializeField] private TextMeshProUGUI currentProfit;
     [SerializeField] private TextMeshProUGUI totalMoney;
+    private Color baseColor;
 
     private void Awake()
     {
@@ -25,8 +26,12 @@ public class SummaryManager : MonoBehaviour
         if(ShiftManager.Instance.shift != null)
             SetBackgroundImage();
 
+        baseColor = currentProfit.color;
+        
         if (MoneyManager.Instance.previousMoney > MoneyManager.Instance.currentMoney)
             currentProfit.color = Color.red;
+        else if (MoneyManager.Instance.previousMoney == MoneyManager.Instance.currentMoney)
+            currentProfit.color = baseColor;
         else
             currentProfit.color = Color.green;
         
