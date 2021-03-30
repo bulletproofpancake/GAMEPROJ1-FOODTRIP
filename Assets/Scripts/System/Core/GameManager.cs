@@ -80,7 +80,7 @@ public class GameManager : Singleton<GameManager>
                 SceneSelector.Instance.LoadNextScene("Summary");
             else
             {
-                SceneSelector.Instance.LoadNextScene("Main Menu");
+                SceneSelector.Instance.LoadNextScene(0);
             }
         }
         else
