@@ -138,7 +138,10 @@ public class Customer : MonoBehaviour
 
      private void TakeOrder(Order givenOrder)
      {
-
+          if (!readyToCollect)
+               givenOrder.gameObject.SetActive(false);
+          else return;
+          
           if (_currentOrder.Data == givenOrder.Data)
           {
                StartCoroutine(ShowParticleEffect());

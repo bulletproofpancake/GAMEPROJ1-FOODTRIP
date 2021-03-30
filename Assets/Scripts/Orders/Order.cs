@@ -43,14 +43,6 @@ public class Order : MonoBehaviour
         _bowl = null;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponent<Customer>())
-        {
-            gameObject.SetActive(false);
-        }
-    }
-
     public void GetBowl(Bowl bowl)
     {
         _bowl = bowl;
