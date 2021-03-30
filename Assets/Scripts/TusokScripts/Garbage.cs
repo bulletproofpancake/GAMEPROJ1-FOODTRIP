@@ -105,8 +105,6 @@ public class Garbage : MonoBehaviour
      //make a function that would do the procress of changing trash
      private IEnumerator ChangeGarbageProcess()
      {
-
-
           yield return new WaitForSeconds(timeForChange);
           ResetStats();
      }
