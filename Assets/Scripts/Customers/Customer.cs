@@ -141,7 +141,24 @@ public class Customer : MonoBehaviour
         {
             StartCoroutine(ShowParticleEffect());
             _completedOrders++;
-            _paymentContainer += givenOrder.Data.Cost;
+
+            switch (data.Type)
+            {
+                case CustomerType.None:
+                    _paymentContainer += givenOrder.Data.Cost;
+                    break;
+                case CustomerType.Student:
+                    var incompletePayChance = Random.Range(1, 100);
+                    //20% chance of customer not paying full
+                    if (incompletePayChance <= 20)
+                        _paymentContainer += ReducedPayment(givenOrder);
+                    else
+                        _paymentContainer += givenOrder.Data.Cost;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            
             orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
             correctOrder = true;
 
@@ -190,6 +207,20 @@ public class Customer : MonoBehaviour
         }
     }
 
+    private float ReducedPayment(Order givenOrder)
+    {
+        //amount customer will not pay is up to 20%
+        var rate = Random.Range(1, 20);
+        
+        var percent = rate/100f;
+
+        var reduction = givenOrder.Data.Cost * percent;
+
+        var payment = givenOrder.Data.Cost - reduction;
+
+        return payment;
+
+    }
     private void OrderPrompt()
     {
         int _index = Random.Range(0, dialogueData.customerDialogue.Length);
