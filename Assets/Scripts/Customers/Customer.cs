@@ -165,18 +165,18 @@ public class Customer : MonoBehaviour
 
                if (_completedOrders >= _numberOfOrders + 1)
                {
-                    if(ShiftManager.Instance.cart != null){
-                         if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
-                             DirtyCupsScript.Instance.currentDirtyCupsInScene <
-                             DirtyCupsScript.Instance.maxAmountInScene)
-                         {
-                              //*insertdirty cup spawn here.
-                              DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
-                              Debug.Log("amount of DirtyCups in scene is " +
-                                        DirtyCupsScript.Instance.currentDirtyCupsInScene);
-                              DirtyCupsScript.Instance.SpawnHere();
-                         }
-                    }
+                    // if(ShiftManager.Instance.cart != null){
+                    //      if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                    //          DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                    //          DirtyCupsScript.Instance.maxAmountInScene)
+                    //      {
+                    //           //*insertdirty cup spawn here.
+                    //           DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
+                    //           Debug.Log("amount of DirtyCups in scene is " +
+                    //                     DirtyCupsScript.Instance.currentDirtyCupsInScene);
+                    //           DirtyCupsScript.Instance.SpawnHere();
+                    //      }
+                    // }
                     if (FindObjectOfType<AudioManager>() != null)
                     {
                          FindObjectOfType<AudioManager>().Play("OrdersComplete");
@@ -255,10 +255,10 @@ public class Customer : MonoBehaviour
                               TakeOrder(other.GetComponent<Order>());
                          break;
                     case CartType.Tusoktusok:
-                         StickBehaviors stick = other.GetComponent<StickBehaviors>();
+                         //StickBehaviors stick = other.GetComponent<StickBehaviors>();
                          if (other.GetComponent<Order>())
                          {
-                              stick.RemoveFood();
+                              //stick.RemoveFood();
                               TakeOrder(other.GetComponent<Order>());
                          }
                          break;
