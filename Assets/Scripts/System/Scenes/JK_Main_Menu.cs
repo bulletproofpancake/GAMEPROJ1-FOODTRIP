@@ -7,7 +7,7 @@ public class JK_Main_Menu : SceneLoader
     [SerializeField] private CartData data;
     [SerializeField] GameObject AreaSelect;
     [SerializeField] GameObject ShiftSelect;
-    bool isActive;
+    //bool isActive;
 
     //Hard set to avoid game opening conflict bugs
     //private void Start()
@@ -23,8 +23,10 @@ public class JK_Main_Menu : SceneLoader
         Tween();
         if (AreaSelect != null)
         {
-            isActive = AreaSelect.activeSelf;
-            AreaSelect.SetActive(!isActive);
+            //isActive = AreaSelect.activeSelf;
+            //AreaSelect.SetActive(!isActive);
+            AreaSelect.SetActive(true);
+            LeanTween.moveX(AreaSelect, 0, 1f);
         }
     }
 
@@ -35,9 +37,41 @@ public class JK_Main_Menu : SceneLoader
         if (ShiftSelect != null)
         {
             ShiftManager.Instance.cart = data;
-            isActive = ShiftSelect.activeSelf;
-            ShiftSelect.SetActive(!isActive);
+            //isActive = ShiftSelect.activeSelf;
+            //ShiftSelect.SetActive(!isActive);
+            ShiftSelect.SetActive(true);
+            LeanTween.moveX(ShiftSelect, 0, 1f);
         }
+    }
+
+    public void CloseAreaSelect()
+    {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        Tween();
+        if (AreaSelect != null)
+        {
+            LeanTween.moveX(AreaSelect, 18, 1f);
+            Invoke("AreaSelectDisable", 1f);
+        }
+    }
+
+    public void CloseShiftSelect()
+    {
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        Tween();
+        if (ShiftSelect != null)
+        {
+            LeanTween.moveX(ShiftSelect, 18, 1f);
+            Invoke("ShiftSelectDisable", 1f);
+        }
+    }
+
+    void AreaSelectDisable() {
+        AreaSelect.SetActive(false);
+    }
+
+    void ShiftSelectDisable() {
+        ShiftSelect.SetActive(false);
     }
 
     void Tween()
@@ -47,6 +81,5 @@ public class JK_Main_Menu : SceneLoader
 
     void Slide()
     {
-
     }
 }
