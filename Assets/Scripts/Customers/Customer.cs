@@ -186,7 +186,6 @@ public class Customer : MonoBehaviour
                          FindObjectOfType<AudioManager>().Play("OrdersComplete");
                     }
                     dialogueBox.sprite = dialogueBoxPaid;
-                    readyToCollect = true;
                     if (fillImage != null)
                     {
                          fillImage.fillAmount = data.DespawnTime;
@@ -205,12 +204,14 @@ public class Customer : MonoBehaviour
                          }
                          else
                          {
+                              readyToCollect = true;
                               OrderPrompt();
                          }
 
                     }
                     else
                     {
+                         readyToCollect = true;
                          OrderPrompt();
                     }
                }
