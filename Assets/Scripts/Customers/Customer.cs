@@ -62,6 +62,7 @@ public class Customer : MonoBehaviour
      {
           _spriteRenderer = GetComponent<SpriteRenderer>();
           promptBox.text = string.Empty;
+          orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
           if (!GameManager.Instance.isVN)
           {
                //does not randomly change sprite if character is an NPC
