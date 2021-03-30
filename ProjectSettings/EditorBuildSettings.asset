@@ -5,15 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu Scenes/Area Select.unity
     guid: 26231f6aa10835f479dbcc945eb81e00
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu Scenes/Shift Select.unity
     guid: 57d502e292c84ca4fbc0ca67601984b4
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Main Menu_JK.unity
+    guid: 57ab67c7a971d314e85f71daa4b7f4d7
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Tutorial.unity
+    guid: ef6a9ad830e126645b6a1025f7d39f1c
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Paresan/Arcade.unity
     guid: 9e5a98d14ba6a9a4ab59c036fb882654
@@ -35,10 +41,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Ending.unity
     guid: 7b426651a44be8f4785b8ba4b5b413f5
-  - enabled: 1
-    path: Assets/Scenes/Game Scenes/Tutorial.unity
-    guid: ef6a9ad830e126645b6a1025f7d39f1c
-  - enabled: 1
-    path: Assets/Scenes/Menu Scenes/Main Menu_JK.unity
-    guid: 57ab67c7a971d314e85f71daa4b7f4d7
   m_configObjects: {}
