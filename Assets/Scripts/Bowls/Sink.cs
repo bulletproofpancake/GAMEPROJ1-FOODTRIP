@@ -40,10 +40,10 @@ public class Sink : MonoBehaviour
     {
         isWashing = true;
         bowl.GetComponent<Bowl>().isDirty = false;
+        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);
         _bowls.Remove(bowl);
-        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);       
-        BowlSpawner.spawner.AddBowl(bowl);
         isWashing = false;
+        BowlSpawner.spawner.AddBowl(bowl);
     }
     
     public void AddBowl(GameObject bowl)
@@ -53,7 +53,7 @@ public class Sink : MonoBehaviour
 
     private void WashingIndicator()
     {
-        if(_bowls.Count > 0)
+        if (_bowls.Count > 0)
         {
             if (isWashing == true)
             {
@@ -66,5 +66,7 @@ public class Sink : MonoBehaviour
                 fillImage.fillAmount = timer;
             }
         }
+        else
+            fillImage.fillAmount = 0;
     }
 }
