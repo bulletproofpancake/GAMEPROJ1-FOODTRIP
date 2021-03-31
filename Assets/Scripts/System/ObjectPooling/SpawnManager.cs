@@ -57,19 +57,8 @@ public class SpawnManager : MonoBehaviour
         // }
     }
 
-    private void Start()
-    {
-        if(!GameManager.Instance.isVN){
-            StartCoroutine(SpawnCustomers());
-        }
-        else
-        {
-            SpawnVN();
-        }
-    }
-
     #region CustomerSpawning
-    private void SpawnVN()
+    public void SpawnVN()
     {
         var npc = ScriptableObject.CreateInstance<NPCData>();
 
@@ -153,7 +142,7 @@ public class SpawnManager : MonoBehaviour
             return false;
     }
 
-    private IEnumerator SpawnCustomers()
+    public IEnumerator SpawnCustomers()
     {
         while(true)
         {

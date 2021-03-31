@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI moneyTextArcade;
     [SerializeField] private TextMeshProUGUI moneyTextVN;
+    [SerializeField] private TextMeshProUGUI overlay;
     [SerializeField] private GameObject background;
     public bool isPaused;
 
@@ -64,11 +65,31 @@ public class GameManager : Singleton<GameManager>
         encounterComplete = IsEncounterComplete();
         if (!isVN)
         {
-            StartCoroutine(CountDownLevel());
+            StartCoroutine(CountDownStart());
+        }
+        else
+        {
+            SpawnManager.spawner.SpawnVN();
         }
         
     }
 
+    IEnumerator CountDownStart()
+    {
+        timerText.text = levelDuration.ToString();
+        int i = 3;
+        //PauseGame(true);
+        while (i > 0)
+        {
+            overlay.text = i.ToString();
+            yield return new WaitForSeconds(1f);
+            i--;
+        }
+        //PauseGame(false);
+        StartCoroutine(SpawnManager.spawner.SpawnCustomers());
+        StartCoroutine(CountDownLevel());
+        overlay.text = string.Empty;
+    }
     // Update is called once per frame
     private void Update()
     {
