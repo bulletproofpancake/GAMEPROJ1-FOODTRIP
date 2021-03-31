@@ -26,6 +26,7 @@ public class Customer : MonoBehaviour
 
      private Order _currentOrder;
      private SpriteRenderer _spriteRenderer;
+     private BoxCollider2D _boxCollider;
 
      private float _numberOfOrders;
      private float _completedOrders;
@@ -63,6 +64,8 @@ public class Customer : MonoBehaviour
           _spriteRenderer = GetComponent<SpriteRenderer>();
           promptBox.text = string.Empty;
           orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
+          _boxCollider = GetComponent<BoxCollider2D>();
+          _boxCollider.enabled = true;
           if (!GameManager.Instance.isVN)
           {
                //does not randomly change sprite if character is an NPC
@@ -317,6 +320,7 @@ public class Customer : MonoBehaviour
 
      private IEnumerator CustomerLeave()
      {
+          _boxCollider.enabled = false;
           // Fade Out
           for (float f = 1f; f >= -0.05f; f -= 0.05f)
           {
@@ -354,6 +358,8 @@ public class Customer : MonoBehaviour
 
           if (fillImage.fillAmount == 0)
           {
+               orderBox.SetActive(false);
+               _boxCollider.enabled = false;
                Color c = _spriteRenderer.material.color;
                c.a -= 1.0f * Time.deltaTime;
                _spriteRenderer.material.color = c;
