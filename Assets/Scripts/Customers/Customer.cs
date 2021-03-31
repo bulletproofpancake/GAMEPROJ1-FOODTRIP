@@ -159,13 +159,13 @@ public class Customer : MonoBehaviour
                     case CustomerType.Student:
                          var incompletePayChance = Random.Range(1, 100);
                          //20% chance of customer not paying full
-                         // if (incompletePayChance <= 20)
-                         // {
-                         //      print($"{incompletePayChance}");
+                         if (incompletePayChance <= 20)
+                         {
+                               print($"{incompletePayChance}");
                               _paymentContainer += ReducedPayment(givenOrder);
-                         //}
-                         //else
-                         //     _paymentContainer += givenOrder.Data.Cost;
+                         }
+                         else
+                              _paymentContainer += givenOrder.Data.Cost;
                          break;
                     default:
                          throw new ArgumentOutOfRangeException();
