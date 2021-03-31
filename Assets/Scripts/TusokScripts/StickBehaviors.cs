@@ -49,6 +49,9 @@ public class StickBehaviors : MonoBehaviour
 
      private GameObject referencePoolObject;
 
+     [SerializeField]
+     private string pooledObjectName;
+
      [HideInInspector]
      public int counter;
 
@@ -64,7 +67,7 @@ public class StickBehaviors : MonoBehaviour
      }
      private void OnEnable()
      {
-          //pooledObjectReference = GameObject.Find("Pooled Objects");
+          pooledObjectReference = GameObject.Find(pooledObjectName);
      }
      private void Update()
      {

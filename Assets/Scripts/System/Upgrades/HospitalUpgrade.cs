@@ -1,9 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HospitalUpgrade : UpgradeSystem
 {
+    private void Awake()
+    {
+        if (upgradeData.Level == upgradeData.Upgrade.Length)
+        {
+            gameObject.SetActive(false);
+        }
+
+    }
+
     protected override void Update()
     {
         base.Update();

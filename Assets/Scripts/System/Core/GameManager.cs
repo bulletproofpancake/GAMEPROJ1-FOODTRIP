@@ -86,9 +86,9 @@ public class GameManager : Singleton<GameManager>
         else
         {
             if(!isVN)
-                moneyTextArcade.text = $"{MoneyManager.Instance.currentMoney}";
+                moneyTextArcade.text = $"{MoneyManager.Instance.currentMoney:F}";
             else
-                moneyTextVN.text = $"{MoneyManager.Instance.currentMoney}";
+                moneyTextVN.text = $"{MoneyManager.Instance.currentMoney:F}";
         }
         
         
