@@ -52,6 +52,9 @@ public class Pause : MonoBehaviour
         Application.Quit();
     }
 
+    //Known bug: On 1 or 0 second of the core game loop,
+    //this will not work because of how the end of summary will
+    //take over this part immediately after being called.
     public void MainMenu()
     {
         SceneSelector.Instance.LoadNextScene("Main Menu_JK");
