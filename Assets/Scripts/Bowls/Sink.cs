@@ -40,8 +40,8 @@ public class Sink : MonoBehaviour
     {
         isWashing = true;
         bowl.GetComponent<Bowl>().isDirty = false;
-        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);
         _bowls.Remove(bowl);
+        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);
         isWashing = false;
         BowlSpawner.spawner.AddBowl(bowl);
     }
