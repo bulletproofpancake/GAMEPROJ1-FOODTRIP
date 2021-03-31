@@ -66,6 +66,7 @@ public class Customer : MonoBehaviour
           orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
           _boxCollider = GetComponent<BoxCollider2D>();
           _boxCollider.enabled = true;
+          _paymentContainer = 0;
           if (!GameManager.Instance.isVN)
           {
                //does not randomly change sprite if character is an NPC
