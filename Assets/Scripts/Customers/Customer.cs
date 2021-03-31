@@ -369,6 +369,7 @@ public class Customer : MonoBehaviour
 
      void CustomerPatienceIndicator()
      {
+          float rate = data.DespawnTime * .07f;
           fillImage.fillAmount -= 1.0f / data.DespawnTime * Time.deltaTime;
 
           if (fillImage.fillAmount == 0)
@@ -384,14 +385,14 @@ public class Customer : MonoBehaviour
           //Add time
           if (correctOrder == true)
           {
-               fillImage.fillAmount += data.DespawnTime * .07f;
+               fillImage.fillAmount += rate;
                correctOrder = false;
           }
 
           //Reduce time
           if (wrongOrder == true)
           {
-               fillImage.fillAmount -= data.DespawnTime * .07f;
+               fillImage.fillAmount -= rate;
                wrongOrder = false;
           }
      }
