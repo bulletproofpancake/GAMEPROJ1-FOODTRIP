@@ -37,7 +37,11 @@ public class SummaryManager : MonoBehaviour
         
         previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney}";
         currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney}";
-        totalMoney.text = $"Total Money: {MoneyManager.Instance.totalMoney}";
+    }
+
+    private void Update()
+    {
+        totalMoney.text = $"{MoneyManager.Instance.totalMoney}";
     }
 
     private void SetBackgroundImage()
