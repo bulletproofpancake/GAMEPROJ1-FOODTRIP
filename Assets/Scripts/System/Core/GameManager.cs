@@ -63,6 +63,7 @@ public class GameManager : Singleton<GameManager>
         SceneSelector.Instance.transition.Play("Crossfade_End");
         npcAvailable = IsNpcAvailable();
         encounterComplete = IsEncounterComplete();
+        overlay.text = string.Empty;
         if (!isVN)
         {
             StartCoroutine(CountDownStart());
@@ -74,7 +75,7 @@ public class GameManager : Singleton<GameManager>
         
     }
 
-    IEnumerator CountDownStart()
+    private IEnumerator CountDownStart()
     {
         timerText.text = levelDuration.ToString();
         int i = 3;
@@ -130,6 +131,12 @@ public class GameManager : Singleton<GameManager>
         
         FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
 
+        StartCoroutine(GameOver());
+
+    }
+
+    private void LoadNextLevel()
+    {
         if (npcAvailable)
         {
             if (!encounterComplete)
@@ -145,7 +152,17 @@ public class GameManager : Singleton<GameManager>
         {
             SceneSelector.Instance.LoadNextScene("Summary");
         }
+    }
 
+    private IEnumerator GameOver()
+    {
+        Time.timeScale = 0f;
+        overlay.text = "Game Over";
+        print("game");
+        yield return new WaitForSecondsRealtime(3f);
+        Time.timeScale = 1f;
+        print("over");
+        LoadNextLevel();
     }
     
     private bool IsNpcAvailable()
