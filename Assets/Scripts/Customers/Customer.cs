@@ -161,7 +161,7 @@ public class Customer : MonoBehaviour
                          //20% chance of customer not paying full
                          if (incompletePayChance <= 20)
                          {
-                               print($"{incompletePayChance}");
+                              print($"{incompletePayChance}");
                               _paymentContainer += ReducedPayment(givenOrder);
                          }
                          else
@@ -253,7 +253,7 @@ public class Customer : MonoBehaviour
           var percent = rate / 100;
           var reduction = givenOrder.Data.Cost * percent;
           var payment = givenOrder.Data.Cost - reduction;
-          
+
           print($"{rate},{reduction},{payment}");
           return payment;
 
