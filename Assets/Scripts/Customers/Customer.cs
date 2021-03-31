@@ -262,7 +262,7 @@ public class Customer : MonoBehaviour
           int _index = Random.Range(0, dialogueData.customerDialogue.Length);
           promptBox.text = dialogueData.customerDialogue[_index].Dialogue;
           orderIcon.GetComponent<SpriteRenderer>().enabled = false;
-          orderText.text = $"Php. {_paymentContainer}";
+          orderText.text = $"Php. {_paymentContainer:F}";
      }
 
      private void OnTriggerEnter2D(Collider2D other)

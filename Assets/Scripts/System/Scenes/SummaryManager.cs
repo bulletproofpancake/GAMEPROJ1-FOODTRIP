@@ -35,13 +35,13 @@ public class SummaryManager : MonoBehaviour
         else
             currentProfit.color = Color.green;
         
-        previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney}";
-        currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney}";
+        previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney:F}";
+        currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney:F}";
     }
 
     private void Update()
     {
-        totalMoney.text = $"{MoneyManager.Instance.totalMoney}";
+        totalMoney.text = $"{MoneyManager.Instance.totalMoney:F}";
     }
 
     private void SetBackgroundImage()
