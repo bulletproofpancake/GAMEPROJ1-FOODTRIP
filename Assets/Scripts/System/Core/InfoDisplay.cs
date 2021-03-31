@@ -25,24 +25,36 @@ public class InfoDisplay : MonoBehaviour
 
     public void ShowInfo()
     {
-        switch (ShiftManager.Instance.cart.Type)
-        {
-            case CartType.Paresan:
-                foreach (var button in navButtons)
-                {
-                    button.SetActive(false);
-                }
-                ShowParesInfo();
-                break;
-            case CartType.Tusoktusok:
-                foreach (var button in navButtons)
-                {
-                    button.SetActive(true);
-                }
-                ShowTusokTusokInfo();
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
+        if(ShiftManager.Instance.cart != null){
+            switch (ShiftManager.Instance.cart.Type)
+            {
+                case CartType.Paresan:
+                    foreach (var button in navButtons)
+                    {
+                        button.SetActive(false);
+                    }
+
+                    ShowParesInfo();
+                    break;
+                case CartType.Tusoktusok:
+                    foreach (var button in navButtons)
+                    {
+                        button.SetActive(true);
+                    }
+
+                    ShowTusokTusokInfo();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+        else
+        { 
+            foreach (var button in navButtons)
+            {
+                button.SetActive(false);
+            }
+            ShowParesInfo();
         }
 
         if(Pause.isPaused==true)
