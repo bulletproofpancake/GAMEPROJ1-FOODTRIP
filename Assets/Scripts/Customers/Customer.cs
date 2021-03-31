@@ -182,9 +182,10 @@ public class Customer : MonoBehaviour
                              DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene)
                          {
                               //*insertdirty cup spawn here.
+
                               DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
-                              Debug.Log("amount of DirtyCups in scene is " + DirtyCupsScript.Instance.currentDirtyCupsInScene);
                               DirtyCupsScript.Instance.SpawnHere();
+                              Debug.Log("amount of DirtyCups in scene is " + DirtyCupsScript.Instance.currentDirtyCupsInScene);
                          }
                     }
                     if (FindObjectOfType<AudioManager>() != null)
@@ -281,6 +282,7 @@ public class Customer : MonoBehaviour
                          StickBehaviors stick = other.GetComponent<StickBehaviors>();
                          if (other.GetComponent<Order>())
                          {
+                              Debug.Log("did detect(TUSOKTUSOK FOOD)");
                               stick.RemoveFood();
                               TakeOrder(other.GetComponent<Order>());
                          }
@@ -291,6 +293,20 @@ public class Customer : MonoBehaviour
           }
           else if (other.GetComponent<Order>())
                TakeOrder(other.GetComponent<Order>());
+     }
+
+     private void OnTriggerStay2D(Collider2D other)
+     {
+          if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
+          {
+               if (other.GetComponent<StickBehaviors>())
+               {
+                    StickBehaviors stick = other.GetComponent<StickBehaviors>();
+                    stick.RemoveFood();
+               }
+
+
+          }
      }
 
      private IEnumerator WrongOrder()
