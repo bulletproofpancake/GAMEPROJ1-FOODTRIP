@@ -308,10 +308,10 @@ public class Customer : MonoBehaviour
 
                if (GameManager.Instance.isVN)
                {
-                    MoneyManager.Instance.Earn();
                     if (!GameManager.Instance.isTutorial)
                     {
                          _npcData.IncrementEncounter();
+                         MoneyManager.Instance.Earn();
                     }
                     GameManager.Instance.customers.Remove(this);
                     GameManager.Instance.completedCustomers++;
