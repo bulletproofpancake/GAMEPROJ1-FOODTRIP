@@ -810,11 +810,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoneyVNText
       objectReference: {fileID: 0}
-    - target: {fileID: 5278853496944832247, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -38
-      objectReference: {fileID: 0}
     - target: {fileID: 6784055797222874848, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -984,21 +979,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8474473383680894218, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8474473385314228665, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1260981998}
-    - target: {fileID: 8580389058324194302, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13
-      objectReference: {fileID: 0}
     - target: {fileID: 8580389058405040582, guid: c8e26806f4c618e43a208f6992e17b81,
         type: 3}
       propertyPath: m_Name
@@ -1008,11 +993,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TimerArcadeText
-      objectReference: {fileID: 0}
-    - target: {fileID: 8580389058981039371, guid: c8e26806f4c618e43a208f6992e17b81,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e26806f4c618e43a208f6992e17b81, type: 3}
