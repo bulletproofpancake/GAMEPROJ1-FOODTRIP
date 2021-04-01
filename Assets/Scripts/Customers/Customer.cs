@@ -91,14 +91,15 @@ public class Customer : MonoBehaviour
 
           if (!GameManager.Instance.isVN)
           {
-               SetOrder();
                //Dictates the first order depending on the cart
                switch (ShiftManager.Instance.cart.Type)
                {
                     case CartType.Paresan:
+                         SetOrder();
                          OrderPares();
                          break;
                     case CartType.Tusoktusok:
+                         SetOrder(2);
                          GiveOrder();
                          break;
                     default:
@@ -119,6 +120,12 @@ public class Customer : MonoBehaviour
      {
           _completedOrders = 0;
           _numberOfOrders = Random.Range(0, data.PossibleOrders.Length);
+     }
+     
+     public void SetOrder(int maxOrder)
+     {
+          _completedOrders = 0;
+          _numberOfOrders = maxOrder;
      }
 
      public void GiveOrder()
