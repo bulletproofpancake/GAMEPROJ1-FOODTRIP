@@ -105,7 +105,9 @@ public class Customer : MonoBehaviour
           dialogueBox.sprite = DialogueBoxNormal;
           orderIcon.GetComponent<SpriteRenderer>().enabled = true;
 
-        DirtyCupsScript.Instance.SpawnHere();
+          if(DirtyCupsScript.Instance!=null){
+               DirtyCupsScript.Instance.SpawnHere();
+          }
           readyToCollect = false;
           fadeInDone = false;
      }
@@ -150,11 +152,11 @@ public class Customer : MonoBehaviour
           //return;
           
           if (!readyToCollect)
-        {
+          {
             
-            givenOrder.gameObject.SetActive(false);
+               givenOrder.gameObject.SetActive(false);
             
-        }
+          }
                
           else return;
 

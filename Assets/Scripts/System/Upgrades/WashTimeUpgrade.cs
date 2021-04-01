@@ -6,10 +6,13 @@ using UnityEngine;
 public class WashTimeUpgrade : UpgradeSystem
 {
     [SerializeField] private GameObject bowlObject;
+    [SerializeField] private GameObject cupObject;
     private Bowl bowl;
+    private Bowl cup;
     private void Awake()
     {
         bowl = bowlObject.GetComponent<Bowl>();
+        cup = cupObject.GetComponent<Bowl>();
     }
 
     public void UpgradeBowlWashTime()
@@ -20,7 +23,7 @@ public class WashTimeUpgrade : UpgradeSystem
                 MoneyManager.Instance.totalMoney -= upgradeData.Upgrade[upgradeData.Level].cost;
 
                 bowl.ReduceWashTime(upgradeData.Upgrade[upgradeData.Level].Multiplier);
-                
+                cup.ReduceWashTime(upgradeData.Upgrade[upgradeData.Level].Multiplier);
                 if (upgradeData.Level < upgradeData.Upgrade.Length)
                     upgradeData.Level++;
             }

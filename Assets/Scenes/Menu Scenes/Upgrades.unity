@@ -972,6 +972,8 @@ MonoBehaviour:
   - {fileID: 369573070}
   bowlObject: {fileID: 5406834193081483271, guid: 39f32ec2c89358145817c28b22dfed5c,
     type: 3}
+  cupObject: {fileID: 5406834193081483271, guid: 8b25ebfb8db846846844674f6bcc701e,
+    type: 3}
 --- !u!114 &311582019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,6 +1563,9 @@ MonoBehaviour:
   orderData:
   - {fileID: 11400000, guid: ab6e8d767f2ed1443af8539004885b75, type: 2}
   - {fileID: 11400000, guid: 3df010f36eae0ee44bb2587023deb518, type: 2}
+  - {fileID: 11400000, guid: d8f20d6e7a3e26f4b991e6de1e370a68, type: 2}
+  - {fileID: 11400000, guid: d5122c0577fa62548a47cb4da1b08c28, type: 2}
+  - {fileID: 11400000, guid: ac91610ab54ec93469c2d82eb62b95e9, type: 2}
 --- !u!61 &375657750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3369,6 +3374,9 @@ MonoBehaviour:
   orderData:
   - {fileID: 11400000, guid: ab6e8d767f2ed1443af8539004885b75, type: 2}
   - {fileID: 11400000, guid: 3df010f36eae0ee44bb2587023deb518, type: 2}
+  - {fileID: 11400000, guid: d8f20d6e7a3e26f4b991e6de1e370a68, type: 2}
+  - {fileID: 11400000, guid: d5122c0577fa62548a47cb4da1b08c28, type: 2}
+  - {fileID: 11400000, guid: ac91610ab54ec93469c2d82eb62b95e9, type: 2}
 --- !u!114 &1969342709
 MonoBehaviour:
   m_ObjectHideFlags: 0
