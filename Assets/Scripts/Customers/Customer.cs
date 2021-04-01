@@ -145,6 +145,10 @@ public class Customer : MonoBehaviour
 
      private void TakeOrder(Order givenOrder)
      {
+          //garbage bool garbage.isFull == true
+          //Debug.Log (Garbage is full)
+          //return;
+          
           if (!readyToCollect)
         {
             

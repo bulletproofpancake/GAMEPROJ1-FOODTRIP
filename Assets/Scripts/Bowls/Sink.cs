@@ -76,4 +76,18 @@ public class Sink : MonoBehaviour
         else
             fillImage.fillAmount = 0;
     }
+
+    void GarbageChecker()
+    {
+        //maximum capacity = 10
+        //bowls.Length == 10
+        //public boolean Customer, full na ang garbage.
+        //Di na pwedeng tumanggap
+        //CleanGarbage(_bowls);
+        
+        // foreach (var bowl in _bowls)
+        // {
+        //     Wash(bowl);
+        // }
+    }
 }
