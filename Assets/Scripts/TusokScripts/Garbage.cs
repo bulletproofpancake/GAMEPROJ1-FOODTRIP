@@ -20,7 +20,7 @@ public class Garbage : MonoBehaviour
 
      [Tooltip("Put all the sprites needed for the garbage states")]
      [SerializeField]
-     private Image[] GarbageStates;
+     private Sprite[] GarbageStates;
 
      private int indexState;
 
@@ -28,12 +28,12 @@ public class Garbage : MonoBehaviour
 
      private SpriteRenderer _sprite;
 
-    private Image img;
+    private Button btn;
 
      private void Awake()
      {
           _sprite = this.gameObject.GetComponent<SpriteRenderer>();
-        img = this.gameObject.GetComponent<Image>();
+        btn = this.gameObject.GetComponent<Button>();
      }
 
      private void OnEnable()
@@ -45,7 +45,7 @@ public class Garbage : MonoBehaviour
      {
 
           currentCapacity = 0;
-          img = GarbageStates[0];
+          btn.image.sprite = GarbageStates[0];
 
           indexState = -1;
           isFull = false;
@@ -77,13 +77,14 @@ public class Garbage : MonoBehaviour
                indexState++;
           }
           Debug.Log("value of indexState is " + indexState);
-          img = GarbageStates[indexState];
+        btn.image.sprite = GarbageStates[indexState];
 
      }
 
 
      public void ChangeGarbage()
      {
+        Debug.Log("You press the change the garbge");
           StartCoroutine(ChangeGarbageProcess());
      }
 
@@ -91,6 +92,7 @@ public class Garbage : MonoBehaviour
      private IEnumerator ChangeGarbageProcess()
      {
           yield return new WaitForSeconds(timeForChange);
+          DirtyCupsScript.Instance.currentDirtyCupsInScene = 0;
           ResetStats();
      }
 

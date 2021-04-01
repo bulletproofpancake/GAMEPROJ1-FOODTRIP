@@ -200,7 +200,7 @@ public class Customer : MonoBehaviour
                 //      }
                 // }
                 //Spawns dirty cups as soon as the customer turns off  
-                if (DirtyCupsScript.Instance.currentDirtyCupsInScene <=
+                if (DirtyCupsScript.Instance.currentDirtyCupsInScene <
                   DirtyCupsScript.Instance.maxAmountInScene)
                 {
                     DirtyCupsScript.Instance.SpawnHere();
@@ -297,7 +297,9 @@ public class Customer : MonoBehaviour
                          break;
                     case CartType.Tusoktusok:
                          //StickBehaviors stick = other.GetComponent<StickBehaviors>();
-                         if (other.GetComponent<Order>() && !Garbage.isFull)
+                         if (other.GetComponent<Order>() && 
+                        DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                        DirtyCupsScript.Instance.maxAmountInScene)
                          {
                               //stick.RemoveFood();
                               TakeOrder(other.GetComponent<Order>());
