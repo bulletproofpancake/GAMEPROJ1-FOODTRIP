@@ -7,6 +7,6 @@ public class UpgradeUI : MonoBehaviour
 
     private void Update()
     {
-        moneyText.text = $"{MoneyManager.Instance.totalMoney}" ;
+        moneyText.text = $"{MoneyManager.Instance.totalMoney:F}";
     }
 }

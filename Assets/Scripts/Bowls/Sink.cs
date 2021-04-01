@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Sink : MonoBehaviour
@@ -15,6 +16,10 @@ public class Sink : MonoBehaviour
         _isBtnTextNotNull = _btnText!=null;
     }
 
+    [SerializeField] private Image fillImage;
+    private bool isWashing;
+    private float timer;
+
     private void Awake()
     {
         sink = GetComponent<Sink>();
@@ -26,6 +31,7 @@ public class Sink : MonoBehaviour
     {
         if(_isBtnTextNotNull)
             _btnText.text = $"{name}: {_bowls.Count}";
+        WashingIndicator();
     }
 
     public void WashBowl()
@@ -39,14 +45,35 @@ public class Sink : MonoBehaviour
     
     private IEnumerator Wash(GameObject bowl)
     {
+        isWashing = true;
         bowl.GetComponent<Bowl>().isDirty = false;
         _bowls.Remove(bowl);
-        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);       
+        yield return new WaitForSeconds(bowl.GetComponent<Bowl>().currentWashTime);
+        isWashing = false;
         BowlSpawner.spawner.AddBowl(bowl);
     }
     
     public void AddBowl(GameObject bowl)
     {
         _bowls.Add(bowl);
+    }
+
+    private void WashingIndicator()
+    {
+        if (_bowls.Count > 0)
+        {
+            if (isWashing == true)
+            {
+                timer = _bowls[_bowls.Count - 1].GetComponent<Bowl>().currentWashTime;
+                fillImage.fillAmount += 1.0f / timer * Time.deltaTime;
+            }
+            else if (isWashing == false)
+            {
+                timer = 0;
+                fillImage.fillAmount = timer;
+            }
+        }
+        else
+            fillImage.fillAmount = 0;
     }
 }

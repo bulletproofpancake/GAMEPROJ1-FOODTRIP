@@ -27,6 +27,11 @@ public class Order : MonoBehaviour
         smoke.SetActive(true);
     }
 
+    private void Update()
+    {
+        gameObject.GetComponent<DragAndDrop>().enabled = !GameManager.Instance.isPaused;
+    }
+
     private void OnDisable()
     {
         smoke.SetActive(false);
@@ -36,14 +41,6 @@ public class Order : MonoBehaviour
             _bowl.gameObject.SetActive(false);
         }
         _bowl = null;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponent<Customer>())
-        {
-            gameObject.SetActive(false);
-        }
     }
 
     public void GetBowl(Bowl bowl)

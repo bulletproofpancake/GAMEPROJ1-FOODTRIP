@@ -26,6 +26,7 @@ public class Customer : MonoBehaviour
 
      private Order _currentOrder;
      private SpriteRenderer _spriteRenderer;
+     private BoxCollider2D _boxCollider;
 
      private float _numberOfOrders;
      private float _completedOrders;
@@ -62,6 +63,10 @@ public class Customer : MonoBehaviour
      {
           _spriteRenderer = GetComponent<SpriteRenderer>();
           promptBox.text = string.Empty;
+          orderIcon.GetComponent<SpriteRenderer>().color = Color.white;
+          _boxCollider = GetComponent<BoxCollider2D>();
+          _boxCollider.enabled = true;
+          _paymentContainer = 0;
           if (!GameManager.Instance.isVN)
           {
                //does not randomly change sprite if character is an NPC
@@ -137,6 +142,9 @@ public class Customer : MonoBehaviour
 
      private void TakeOrder(Order givenOrder)
      {
+          if (!readyToCollect)
+               givenOrder.gameObject.SetActive(false);
+          else return;
 
           if (_currentOrder.Data == givenOrder.Data)
           {
@@ -152,7 +160,10 @@ public class Customer : MonoBehaviour
                          var incompletePayChance = Random.Range(1, 100);
                          //20% chance of customer not paying full
                          if (incompletePayChance <= 20)
+                         {
+                              print($"{incompletePayChance}");
                               _paymentContainer += ReducedPayment(givenOrder);
+                         }
                          else
                               _paymentContainer += givenOrder.Data.Cost;
                          break;
@@ -182,7 +193,6 @@ public class Customer : MonoBehaviour
                          FindObjectOfType<AudioManager>().Play("OrdersComplete");
                     }
                     dialogueBox.sprite = dialogueBoxPaid;
-                    readyToCollect = true;
                     if (fillImage != null)
                     {
                          fillImage.fillAmount = data.DespawnTime;
@@ -201,12 +211,14 @@ public class Customer : MonoBehaviour
                          }
                          else
                          {
+                              readyToCollect = true;
                               OrderPrompt();
                          }
 
                     }
                     else
                     {
+                         readyToCollect = true;
                          OrderPrompt();
                     }
                }
@@ -225,15 +237,26 @@ public class Customer : MonoBehaviour
      private float ReducedPayment(Order givenOrder)
      {
           //amount customer will not pay is up to 20%
-          var rate = Random.Range(1, 20);
+          // var rate = Random.Range(0, 20);
+          //
+          // var percent = rate / 100;
+          //
+          // var reduction = givenOrder.Data.Cost * percent;
+          //
+          // var payment = givenOrder.Data.Cost - reduction;
+          //
+          // print($"{rate},{reduction},{payment}");
+          //
+          // return payment;
 
-          var percent = rate / 100f;
-
+          float rate = Random.Range(0, 20);
+          var percent = rate / 100;
           var reduction = givenOrder.Data.Cost * percent;
-
           var payment = givenOrder.Data.Cost - reduction;
 
+          print($"{rate},{reduction},{payment}");
           return payment;
+
 
      }
      private void OrderPrompt()
@@ -241,13 +264,14 @@ public class Customer : MonoBehaviour
           int _index = Random.Range(0, dialogueData.customerDialogue.Length);
           promptBox.text = dialogueData.customerDialogue[_index].Dialogue;
           orderIcon.GetComponent<SpriteRenderer>().enabled = false;
-          orderText.text = $"Php. {_paymentContainer}";
+          orderText.text = $"Php. {_paymentContainer:F}";
      }
 
      private void OnTriggerEnter2D(Collider2D other)
      {
 
-          if(ShiftManager.Instance.cart != null){
+          if (ShiftManager.Instance.cart != null)
+          {
                switch (ShiftManager.Instance.cart.Type)
                {
                     case CartType.Paresan:
@@ -270,6 +294,20 @@ public class Customer : MonoBehaviour
                TakeOrder(other.GetComponent<Order>());
      }
 
+     private void OnTriggerStay2D(Collider2D other)
+     {
+          if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
+          {
+               if (other.GetComponent<StickBehaviors>())
+               {
+                    StickBehaviors stick = other.GetComponent<StickBehaviors>();
+                    stick.RemoveFood();
+               }
+
+
+          }
+     }
+
      private IEnumerator WrongOrder()
      {
           orderIcon.GetComponent<SpriteRenderer>().color = Color.red;
@@ -286,10 +324,10 @@ public class Customer : MonoBehaviour
 
                if (GameManager.Instance.isVN)
                {
-                    MoneyManager.Instance.Earn();
                     if (!GameManager.Instance.isTutorial)
                     {
                          _npcData.IncrementEncounter();
+                         MoneyManager.Instance.Earn();
                     }
                     GameManager.Instance.customers.Remove(this);
                     GameManager.Instance.completedCustomers++;
@@ -312,6 +350,7 @@ public class Customer : MonoBehaviour
 
      private IEnumerator CustomerLeave()
      {
+          _boxCollider.enabled = false;
           // Fade Out
           for (float f = 1f; f >= -0.05f; f -= 0.05f)
           {
@@ -345,10 +384,13 @@ public class Customer : MonoBehaviour
 
      void CustomerPatienceIndicator()
      {
+          float rate = data.DespawnTime * .07f;
           fillImage.fillAmount -= 1.0f / data.DespawnTime * Time.deltaTime;
 
           if (fillImage.fillAmount == 0)
           {
+               orderBox.SetActive(false);
+               _boxCollider.enabled = false;
                Color c = _spriteRenderer.material.color;
                c.a -= 1.0f * Time.deltaTime;
                _spriteRenderer.material.color = c;
@@ -358,14 +400,14 @@ public class Customer : MonoBehaviour
           //Add time
           if (correctOrder == true)
           {
-               fillImage.fillAmount += data.DespawnTime * .025f;
+               fillImage.fillAmount += rate;
                correctOrder = false;
           }
 
           //Reduce time
           if (wrongOrder == true)
           {
-               fillImage.fillAmount -= data.DespawnTime * .025f;
+               fillImage.fillAmount -= rate;
                wrongOrder = false;
           }
      }

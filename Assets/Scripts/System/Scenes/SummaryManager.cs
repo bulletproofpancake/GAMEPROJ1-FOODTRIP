@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class SummaryManager : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private Image newBest;
     [SerializeField] private TextMeshProUGUI previousProfit;
     [SerializeField] private TextMeshProUGUI currentProfit;
     [SerializeField] private TextMeshProUGUI totalMoney;
@@ -27,17 +28,19 @@ public class SummaryManager : MonoBehaviour
             SetBackgroundImage();
 
         baseColor = currentProfit.color;
-        
-        if (MoneyManager.Instance.previousMoney > MoneyManager.Instance.currentMoney)
-            currentProfit.color = Color.red;
-        else if (MoneyManager.Instance.previousMoney == MoneyManager.Instance.currentMoney)
-            currentProfit.color = baseColor;
+
+        if (MoneyManager.Instance.previousMoney >= MoneyManager.Instance.currentMoney)
+            newBest.gameObject.SetActive(false);
         else
-            currentProfit.color = Color.green;
+            newBest.gameObject.SetActive(true);
         
-        previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney}";
-        currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney}";
-        totalMoney.text = $"Total Money: {MoneyManager.Instance.totalMoney}";
+        previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney:F}";
+        currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney:F}";
+    }
+
+    private void Update()
+    {
+        totalMoney.text = $"{MoneyManager.Instance.totalMoney:F}";
     }
 
     private void SetBackgroundImage()
