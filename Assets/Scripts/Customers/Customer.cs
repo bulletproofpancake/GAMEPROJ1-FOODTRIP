@@ -104,9 +104,7 @@ public class Customer : MonoBehaviour
           dialogueBox.sprite = DialogueBoxNormal;
           orderIcon.GetComponent<SpriteRenderer>().enabled = true;
 
-          if(DirtyCupsScript.Instance!=null){
-               DirtyCupsScript.Instance.SpawnHere();
-          }
+
           readyToCollect = false;
           fadeInDone = false;
      }
@@ -189,19 +187,25 @@ public class Customer : MonoBehaviour
 
                if (_completedOrders >= _numberOfOrders + 1)
                {
-                    // if(ShiftManager.Instance.cart != null){
-                    //      if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
-                    //          DirtyCupsScript.Instance.currentDirtyCupsInScene <
-                    //          DirtyCupsScript.Instance.maxAmountInScene)
-                    //      {
-                    //           //*insertdirty cup spawn here.
-                    //           DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
-                    //           Debug.Log("amount of DirtyCups in scene is " +
-                    //                     DirtyCupsScript.Instance.currentDirtyCupsInScene);
-                    //           DirtyCupsScript.Instance.SpawnHere();
-                    //      }
-                    // }
-                    if (FindObjectOfType<AudioManager>() != null)
+                // if(ShiftManager.Instance.cart != null){
+                //      if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                //          DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                //          DirtyCupsScript.Instance.maxAmountInScene)
+                //      {
+                //           //*insertdirty cup spawn here.
+                //           DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
+                //           Debug.Log("amount of DirtyCups in scene is " +
+                //                     DirtyCupsScript.Instance.currentDirtyCupsInScene);
+                //           DirtyCupsScript.Instance.SpawnHere();
+                //      }
+                // }
+                //Spawns dirty cups as soon as the customer turns off  
+                if (DirtyCupsScript.Instance.currentDirtyCupsInScene <=
+                  DirtyCupsScript.Instance.maxAmountInScene)
+                {
+                    DirtyCupsScript.Instance.SpawnHere();
+                }
+                if (FindObjectOfType<AudioManager>() != null)
                     {
                          FindObjectOfType<AudioManager>().Play("OrdersComplete");
                     }

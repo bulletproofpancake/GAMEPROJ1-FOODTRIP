@@ -9,6 +9,8 @@ public class DirtyCupsScript : MonoBehaviour
      public int maxAmountInScene = 3;
      public int currentDirtyCupsInScene = 0;
 
+    public List<GameObject> dirtyCups;
+
      int index = 0;
 
 
@@ -37,10 +39,21 @@ public class DirtyCupsScript : MonoBehaviour
           var dirtycup = ObjectPoolManager.pool.GetPooledObject("DirtyCup");
           dirtycup.transform.position = dirtyCupSpawnPos[index].position;
           dirtycup.SetActive(true);
+          AddDirtyCups(dirtycup);
           index++;
           if (index >= 3)
           {
                index = 0;
           }
      }
+
+    public void AddDirtyCups(GameObject obj)
+    {
+        dirtyCups.Add(obj);
+    }
+
+    public void RemoveDirtyCups(GameObject obj)
+    {
+        dirtyCups.Remove(obj);
+    }
 }

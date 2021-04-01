@@ -342,8 +342,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: WashBowl
+      - m_Target: {fileID: 4387963467531795222}
+        m_MethodName: ChangeGarbage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
