@@ -44,7 +44,7 @@ public class Customer : MonoBehaviour
      {
           if (GameManager.Instance.isVN)
           {
-               orderBox.SetActive(false);
+               //orderBox.SetActive(false);
                GameManager.Instance.customers.Add(this);
                DialogueManager.Instance.GetCustomerObject(gameObject);
                DialogueManager.Instance.Advance();
@@ -67,6 +67,8 @@ public class Customer : MonoBehaviour
           _boxCollider = GetComponent<BoxCollider2D>();
           _boxCollider.enabled = true;
           _paymentContainer = 0;
+          orderBox.SetActive(false);
+          
           if (!GameManager.Instance.isVN)
           {
                //does not randomly change sprite if character is an NPC
@@ -110,7 +112,6 @@ public class Customer : MonoBehaviour
           dialogueBox.sprite = DialogueBoxNormal;
           orderIcon.GetComponent<SpriteRenderer>().enabled = true;
           readyToCollect = false;
-          orderBox.SetActive(true);
      }
 
      public void SetOrder()
@@ -374,7 +375,12 @@ public class Customer : MonoBehaviour
 
                yield return new WaitForSeconds(0.05f);
           }
-     }
+
+          if(!GameManager.Instance.isVN)
+          {
+              orderBox.SetActive(true);
+          }
+    }
 
      private IEnumerator ShowParticleEffect()
      {
@@ -392,9 +398,12 @@ public class Customer : MonoBehaviour
           {
                orderBox.SetActive(false);
                _boxCollider.enabled = false;
+
+               //Customer Sprite Fade Out
                Color c = _spriteRenderer.material.color;
                c.a -= 1.0f * Time.deltaTime;
                _spriteRenderer.material.color = c;
+
                Invoke("DisableObject", 1.0f);
           }
 
