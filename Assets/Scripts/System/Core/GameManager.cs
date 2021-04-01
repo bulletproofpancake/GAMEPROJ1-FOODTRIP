@@ -30,7 +30,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject background;
     public bool isPaused;
 
-    public bool npcAvailable, encounterComplete;
+    public bool npcAvailable, encounterComplete, countdownFinished;
 
     protected override void Awake()
     {
@@ -78,6 +78,7 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator CountDownStart()
     {
         timerText.text = levelDuration.ToString();
+        countdownFinished = false;
         int i = 3;
         //PauseGame(true);
         while (i > 0)
@@ -86,6 +87,7 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(1f);
             i--;
         }
+        countdownFinished = true;
         //PauseGame(false);
         StartCoroutine(SpawnManager.spawner.SpawnCustomers());
         StartCoroutine(CountDownLevel());
@@ -236,7 +238,13 @@ public class GameManager : Singleton<GameManager>
             isPaused = paused;
             Time.timeScale = 1f;
             print("Paused = " + isPaused);
-            StartCoroutine(CountDownLevel());
+            if(countdownFinished){
+                StartCoroutine(CountDownLevel());
+            }
+            else
+            {
+                StartCoroutine(CountDownStart());
+            }
         }
     }
 }
