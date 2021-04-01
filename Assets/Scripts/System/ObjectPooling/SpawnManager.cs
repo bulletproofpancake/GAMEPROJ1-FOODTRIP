@@ -172,6 +172,7 @@ public class SpawnManager : MonoBehaviour
                         food.GetComponent<Order>().SeatTaken = _foodIndex;
                         food.SetActive(true);
                         foodSeat[_foodIndex].isTaken = true;
+                        FindObjectOfType<AudioManager>().Play("OrderReady");
                         //index always starts at zero so that
                         //all slots can be checked
                         _foodIndex = 0;
