@@ -14,7 +14,7 @@ public class Garbage : MonoBehaviour
      public float timeForChange;
 
      private float currentCapacity;
-     private bool isFull;
+     public static bool isFull;
 
 
      [Tooltip("Put all the sprites needed for the garbage states")]
@@ -102,6 +102,7 @@ public class Garbage : MonoBehaviour
      {
           StartCoroutine(ChangeGarbageProcess());
      }
+
      //make a function that would do the procress of changing trash
      private IEnumerator ChangeGarbageProcess()
      {

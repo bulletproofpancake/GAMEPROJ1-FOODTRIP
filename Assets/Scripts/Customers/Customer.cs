@@ -27,7 +27,6 @@ public class Customer : MonoBehaviour
      private Order _currentOrder;
      private SpriteRenderer _spriteRenderer;
      private BoxCollider2D _boxCollider;
-     private StickBehaviors stick;
 
      private float _numberOfOrders;
      private float _completedOrders;
@@ -294,10 +293,14 @@ public class Customer : MonoBehaviour
                          break;
                     case CartType.Tusoktusok:
                          //StickBehaviors stick = other.GetComponent<StickBehaviors>();
-                         if (other.GetComponent<Order>())
+                         if (other.GetComponent<Order>() && !Garbage.isFull)
                          {
                               //stick.RemoveFood();
                               TakeOrder(other.GetComponent<Order>());
+                         }
+                         else if (Garbage.isFull)
+                         {
+                        Debug.Log("garbage is full");
                          }
                          break;
                     default:
@@ -308,24 +311,7 @@ public class Customer : MonoBehaviour
                TakeOrder(other.GetComponent<Order>());
      }
 
-     private void OnTriggerStay2D(Collider2D other)
-     {
-          if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
-          {
-               if (other.GetComponent<StickBehaviors>())
-               {
-                    stick = other.GetComponent<StickBehaviors>();
-                    
-               }
 
-
-          }
-     }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        
-    }
 
     private IEnumerator WrongOrder()
      {

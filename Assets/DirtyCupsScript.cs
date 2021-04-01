@@ -20,6 +20,7 @@ public class DirtyCupsScript : MonoBehaviour
         Instance = this;
     }
 
+
     private void Start()
      {
           for (int i = 0; i < dirtyCupSpawnPos.Length; i++)
@@ -37,7 +38,7 @@ public class DirtyCupsScript : MonoBehaviour
           dirtycup.transform.position = dirtyCupSpawnPos[index].position;
           dirtycup.SetActive(true);
           index++;
-          if (index >= maxAmountInScene)
+          if (index >= 3)
           {
                index = 0;
           }
