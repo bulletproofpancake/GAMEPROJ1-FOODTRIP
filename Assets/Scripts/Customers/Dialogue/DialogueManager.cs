@@ -50,18 +50,26 @@ namespace Customers.Dialogue
             {
                 if(_order!=null)
                 {
-                    switch (ShiftManager.Instance.cart.Type)
+                    if (ShiftManager.Instance.cart != null)
                     {
-                        case CartType.Paresan:
-                            _customer.SetOrder();
-                            _customer.GiveOrder(_order);
-                            break;
-                        case CartType.Tusoktusok:
-                            _customer.SetOrder(2);
-                            _customer.GiveOrder(_order);
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
+                        switch (ShiftManager.Instance.cart.Type)
+                        {
+                            case CartType.Paresan:
+                                _customer.SetOrder();
+                                _customer.GiveOrder(_order);
+                                break;
+                            case CartType.Tusoktusok:
+                                _customer.SetOrder(2);
+                                _customer.GiveOrder(_order);
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
+                    }
+                    else
+                    {
+                        _customer.SetOrder();
+                        _customer.GiveOrder(_order);
                     }
                 }
                 else
@@ -71,7 +79,7 @@ namespace Customers.Dialogue
                         {
                             case CartType.Paresan:
                                 _customer.SetOrder();
-                                _customer.GiveOrder();
+                                _customer.OrderPares();
                                 break;
                             case CartType.Tusoktusok:
                                 _customer.SetOrder(2);
@@ -80,6 +88,11 @@ namespace Customers.Dialogue
                             default:
                                 throw new ArgumentOutOfRangeException();
                         }
+                    }
+                    else
+                    {
+                        _customer.SetOrder();
+                        _customer.GiveOrder();
                     }
                 }
                 gameObject.SetActive(false);
