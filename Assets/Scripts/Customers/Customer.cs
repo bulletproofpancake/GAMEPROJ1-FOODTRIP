@@ -27,6 +27,7 @@ public class Customer : MonoBehaviour
      private Order _currentOrder;
      private SpriteRenderer _spriteRenderer;
      private BoxCollider2D _boxCollider;
+     private StickBehaviors stick;
 
      private float _numberOfOrders;
      private float _completedOrders;
@@ -144,7 +145,16 @@ public class Customer : MonoBehaviour
      private void TakeOrder(Order givenOrder)
      {
           if (!readyToCollect)
-               givenOrder.gameObject.SetActive(false);
+        {
+            
+            givenOrder.gameObject.SetActive(false);
+            if (stick != null)
+            {
+                stick.RemoveFood();
+            }
+            
+        }
+               
           else return;
 
           if (_currentOrder.Data == givenOrder.Data)
@@ -179,7 +189,12 @@ public class Customer : MonoBehaviour
                {
                     if (ShiftManager.Instance.cart != null)
                     {
-                         if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                    //if (stick != null)
+                    //{
+                    //    stick.RemoveFood();
+                    //}
+
+                    if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
                              DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene)
                          {
                               //*insertdirty cup spawn here.
@@ -280,12 +295,12 @@ public class Customer : MonoBehaviour
                               TakeOrder(other.GetComponent<Order>());
                          break;
                     case CartType.Tusoktusok:
-                         StickBehaviors stick = other.GetComponent<StickBehaviors>();
                          if (other.GetComponent<Order>())
                          {
                               Debug.Log("did detect(TUSOKTUSOK FOOD)");
-                              stick.RemoveFood();
-                              TakeOrder(other.GetComponent<Order>());
+                        TakeOrder(other.GetComponent<Order>());
+                       stick.RemoveFood();
+                              
                          }
                          break;
                     default:
@@ -302,15 +317,20 @@ public class Customer : MonoBehaviour
           {
                if (other.GetComponent<StickBehaviors>())
                {
-                    StickBehaviors stick = other.GetComponent<StickBehaviors>();
-                    stick.RemoveFood();
+                    stick = other.GetComponent<StickBehaviors>();
+                    
                }
 
 
           }
      }
 
-     private IEnumerator WrongOrder()
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        
+    }
+
+    private IEnumerator WrongOrder()
      {
           orderIcon.GetComponent<SpriteRenderer>().color = Color.red;
           yield return new WaitForSeconds(1f);
