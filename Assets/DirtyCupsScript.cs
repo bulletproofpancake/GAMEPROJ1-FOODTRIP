@@ -15,11 +15,16 @@ public class DirtyCupsScript : MonoBehaviour
      [SerializeField]
      private Transform[] dirtyCupSpawnPos = new Transform[3];
 
-     private void Start()
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void Start()
      {
           for (int i = 0; i < dirtyCupSpawnPos.Length; i++)
           {
-            dirtyCupSpawnPos[i] = GetComponent<Transform>();
+            dirtyCupSpawnPos[i] = gameObject.GetComponent<Transform>();
             dirtyCupSpawnPos[i] = transform.GetChild(i);
           }
      }

@@ -104,6 +104,8 @@ public class Customer : MonoBehaviour
           SpawnManager.spawner.customerSeat[SeatTaken].isTaken = false;
           dialogueBox.sprite = DialogueBoxNormal;
           orderIcon.GetComponent<SpriteRenderer>().enabled = true;
+
+        DirtyCupsScript.Instance.SpawnHere();
           readyToCollect = false;
           fadeInDone = false;
      }
@@ -147,10 +149,6 @@ public class Customer : MonoBehaviour
         {
             
             givenOrder.gameObject.SetActive(false);
-            if (stick != null)
-            {
-                stick.RemoveFood();
-            }
             
         }
                
