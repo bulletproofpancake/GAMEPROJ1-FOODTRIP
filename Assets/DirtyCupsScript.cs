@@ -19,7 +19,8 @@ public class DirtyCupsScript : MonoBehaviour
      {
           for (int i = 0; i < dirtyCupSpawnPos.Length; i++)
           {
-               dirtyCupSpawnPos[i] = transform.GetChild(i);
+            dirtyCupSpawnPos[i] = GetComponent<Transform>();
+            dirtyCupSpawnPos[i] = transform.GetChild(i);
           }
      }
 

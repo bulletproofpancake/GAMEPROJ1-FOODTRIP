@@ -48,7 +48,7 @@ public class Garbage : MonoBehaviour
      //Dito na lang gagamitin magdadagdag ng collider detection.
      private void OnTriggerEnter2D(Collider2D collision)
      {
-          Debug.Log("test");
+          Debug.Log("Garbage script detected a collision");
           if (collision.CompareTag("DirtyCup") && !isFull)
           {
                collision.gameObject.SetActive(false);
