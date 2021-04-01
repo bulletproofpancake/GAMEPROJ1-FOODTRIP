@@ -34,6 +34,7 @@ public class Customer : MonoBehaviour
 
      private float _paymentContainer;
      private bool readyToCollect;
+     private bool fadeInDone;
      private bool correctOrder;
      private bool wrongOrder;
 
@@ -77,16 +78,6 @@ public class Customer : MonoBehaviour
           }
           particleEffect.SetActive(false);
 
-          if (fillBackground != null)
-          {
-               fillBackground.enabled = true;
-          }
-
-          if (fillImage != null)
-          {
-               fillImage.enabled = true;
-               fillImage.fillAmount = data.DespawnTime;
-          }
           StartCoroutine(FadeIn());
 
           if (!GameManager.Instance.isVN)
@@ -114,6 +105,7 @@ public class Customer : MonoBehaviour
           dialogueBox.sprite = DialogueBoxNormal;
           orderIcon.GetComponent<SpriteRenderer>().enabled = true;
           readyToCollect = false;
+          fadeInDone = false;
      }
 
      public void SetOrder()
@@ -388,6 +380,16 @@ public class Customer : MonoBehaviour
 
      private IEnumerator FadeIn()
      {
+          if (fillBackground != null)
+          {
+              fillBackground.enabled = true;
+          }
+          if (fillImage != null)
+          {
+               fillImage.enabled = true;
+               fillImage.fillAmount = data.DespawnTime;
+          }
+
           for (float f = 0.05f; f <= 1; f += 0.05f)
           {
                Color c = _spriteRenderer.material.color;
@@ -396,8 +398,9 @@ public class Customer : MonoBehaviour
 
                yield return new WaitForSeconds(0.05f);
           }
+          fadeInDone=true;
 
-          if(!GameManager.Instance.isVN)
+          if (!GameManager.Instance.isVN)
           {
               orderBox.SetActive(true);
           }
@@ -413,33 +416,36 @@ public class Customer : MonoBehaviour
      void CustomerPatienceIndicator()
      {
           float rate = data.DespawnTime * .07f;
-          fillImage.fillAmount -= 1.0f / data.DespawnTime * Time.deltaTime;
-
-          if (fillImage.fillAmount == 0)
+          if(fadeInDone == true)
           {
-               orderBox.SetActive(false);
-               _boxCollider.enabled = false;
+               fillImage.fillAmount -= 1.0f / data.DespawnTime * Time.deltaTime;
 
-               //Customer Sprite Fade Out
-               Color c = _spriteRenderer.material.color;
-               c.a -= 1.0f * Time.deltaTime;
-               _spriteRenderer.material.color = c;
+               if (fillImage.fillAmount == 0)
+               {
+                    orderBox.SetActive(false);
+                    _boxCollider.enabled = false;
 
-               Invoke("DisableObject", 1.0f);
-          }
+                    //Customer Sprite Fade Out
+                    Color c = _spriteRenderer.material.color;
+                    c.a -= 1.0f * Time.deltaTime;
+                    _spriteRenderer.material.color = c;
 
-          //Add time
-          if (correctOrder == true)
-          {
-               fillImage.fillAmount += rate;
-               correctOrder = false;
-          }
+                    Invoke("DisableObject", 1.0f);
+               }
 
-          //Reduce time
-          if (wrongOrder == true)
-          {
-               fillImage.fillAmount -= rate;
-               wrongOrder = false;
+               //Add time
+               if (correctOrder == true)
+               {
+                    fillImage.fillAmount += rate;
+                    correctOrder = false;
+               }
+
+               //Reduce time
+               if (wrongOrder == true)
+               {
+                   fillImage.fillAmount -= rate;
+                   wrongOrder = false;
+               }
           }
      }
 
