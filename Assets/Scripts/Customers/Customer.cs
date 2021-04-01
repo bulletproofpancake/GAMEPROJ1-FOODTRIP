@@ -91,14 +91,15 @@ public class Customer : MonoBehaviour
 
           if (!GameManager.Instance.isVN)
           {
-               SetOrder();
                //Dictates the first order depending on the cart
                switch (ShiftManager.Instance.cart.Type)
                {
                     case CartType.Paresan:
+                         SetOrder();
                          OrderPares();
                          break;
                     case CartType.Tusoktusok:
+                         SetOrder(2);
                          GiveOrder();
                          break;
                     default:
@@ -119,6 +120,12 @@ public class Customer : MonoBehaviour
      {
           _completedOrders = 0;
           _numberOfOrders = Random.Range(0, data.PossibleOrders.Length);
+     }
+     
+     public void SetOrder(int maxOrder)
+     {
+          _completedOrders = 0;
+          _numberOfOrders = maxOrder;
      }
 
      public void GiveOrder()
@@ -187,23 +194,18 @@ public class Customer : MonoBehaviour
 
                if (_completedOrders >= _numberOfOrders + 1)
                {
-                    if (ShiftManager.Instance.cart != null)
-                    {
-                    //if (stick != null)
-                    //{
-                    //    stick.RemoveFood();
-                    //}
-
-                    if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
-                             DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene)
-                         {
-                              //*insertdirty cup spawn here.
-
-                              DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
-                              DirtyCupsScript.Instance.SpawnHere();
-                              Debug.Log("amount of DirtyCups in scene is " + DirtyCupsScript.Instance.currentDirtyCupsInScene);
-                         }
-                    }
+                    // if(ShiftManager.Instance.cart != null){
+                    //      if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                    //          DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                    //          DirtyCupsScript.Instance.maxAmountInScene)
+                    //      {
+                    //           //*insertdirty cup spawn here.
+                    //           DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
+                    //           Debug.Log("amount of DirtyCups in scene is " +
+                    //                     DirtyCupsScript.Instance.currentDirtyCupsInScene);
+                    //           DirtyCupsScript.Instance.SpawnHere();
+                    //      }
+                    // }
                     if (FindObjectOfType<AudioManager>() != null)
                     {
                          FindObjectOfType<AudioManager>().Play("OrdersComplete");
@@ -295,12 +297,11 @@ public class Customer : MonoBehaviour
                               TakeOrder(other.GetComponent<Order>());
                          break;
                     case CartType.Tusoktusok:
+                         //StickBehaviors stick = other.GetComponent<StickBehaviors>();
                          if (other.GetComponent<Order>())
                          {
-                              Debug.Log("did detect(TUSOKTUSOK FOOD)");
-                        TakeOrder(other.GetComponent<Order>());
-                       stick.RemoveFood();
-                              
+                              //stick.RemoveFood();
+                              TakeOrder(other.GetComponent<Order>());
                          }
                          break;
                     default:

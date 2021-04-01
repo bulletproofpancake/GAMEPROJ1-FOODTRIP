@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: a4c880735abb57a45b19a63c5d180a50
   - enabled: 1
     path: Assets/Scenes/Game Scenes/TusokTusok/Arcade.unity
-    guid: 18d50b745a1fa304abee1cf1eb055d62
+    guid: e63be7d958c41d5419ed1fab80104570
   - enabled: 1
     path: Assets/Scenes/Game Scenes/TusokTusok/VN.unity
     guid: 15f157836804ce342a2761023525e26f

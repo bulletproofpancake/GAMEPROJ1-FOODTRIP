@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,13 +50,37 @@ namespace Customers.Dialogue
             {
                 if(_order!=null)
                 {
-                    _customer.SetOrder();
-                    _customer.GiveOrder(_order);
+                    switch (ShiftManager.Instance.cart.Type)
+                    {
+                        case CartType.Paresan:
+                            _customer.SetOrder();
+                            _customer.GiveOrder(_order);
+                            break;
+                        case CartType.Tusoktusok:
+                            _customer.SetOrder(2);
+                            _customer.GiveOrder(_order);
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
                 }
                 else
                 {
-                    _customer.SetOrder();
-                    _customer.OrderPares();
+                    if(ShiftManager.Instance.cart != null){
+                        switch (ShiftManager.Instance.cart.Type)
+                        {
+                            case CartType.Paresan:
+                                _customer.SetOrder();
+                                _customer.GiveOrder();
+                                break;
+                            case CartType.Tusoktusok:
+                                _customer.SetOrder(2);
+                                _customer.GiveOrder();
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
+                    }
                 }
                 gameObject.SetActive(false);
                 _spriteRenderer.sprite = _base;

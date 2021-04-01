@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8025813b5c7c94e4f97450b92e0ffc00, type: 3}
   m_Name: Fishball
   m_EditorClassIdentifier: 
-  orderImage: {fileID: 21300000, guid: 50f815dd2dfb2824493ccf3d9422e6eb, type: 3}
+  orderImage: {fileID: 21300000, guid: 68b8d6526bc41c640990fc352c3ccf07, type: 3}
   baseOrderCost: 20
   currentOrderCost: 20
   baseCookTime: 1

@@ -9,7 +9,13 @@ public class BowlSpawner : MonoBehaviour
     public static BowlSpawner spawner;
     private TextMeshProUGUI _btnText;
     public List<GameObject> _bowls;
-    
+    private bool _isBtnTextNotNull;
+
+    private void Start()
+    {
+        _isBtnTextNotNull = _btnText!=null;
+    }
+
     private void Awake()
     {
         spawner = GetComponent<BowlSpawner>();
@@ -17,9 +23,10 @@ public class BowlSpawner : MonoBehaviour
         _bowls = new List<GameObject>();
     }
 
-    void Update()
+    private void Update()
     {
-        _btnText.text = $"{name}: {_bowls.Count}";
+        if(_isBtnTextNotNull)
+            _btnText.text = $"{name}: {_bowls.Count}";
     }
 
     public void AddBowl(GameObject bowl)

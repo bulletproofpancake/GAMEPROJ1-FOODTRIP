@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 5462517579788063155}
   - component: {fileID: 6580914577590136435}
   - component: {fileID: -1782324680628162728}
-  - component: {fileID: 8794361254002897843}
-  - component: {fileID: 8553797438760926626}
+  - component: {fileID: -4697205614557236097}
   m_Layer: 0
   m_Name: Fishball
   m_TagString: Untagged
@@ -113,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c618f25adb8374c8db127e06d0ffbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &8794361254002897843
-PolygonCollider2D:
+--- !u!61 &-4697205614557236097
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,42 +135,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.105, y: 0.19999999}
-      - {x: -0.024999999, y: 0.19999999}
-      - {x: -0.225, y: 0.17}
-      - {x: -0.295, y: 0.14}
-      - {x: -0.45499998, y: 0.02}
-      - {x: -0.45499998, y: -0.04}
-      - {x: -0.355, y: -0.14}
-      - {x: -0.13499999, y: -0.24}
-      - {x: -0.074999996, y: -0.25}
-      - {x: 0.265, y: -0.25}
-      - {x: 0.435, y: -0.14999999}
-      - {x: 0.435, y: -0.01}
-      - {x: 0.36499998, y: 0.089999996}
---- !u!50 &8553797438760926626
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5476258529874628051}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 35b4c4c95ac165c438ac3ca9a5b52b75, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  serializedVersion: 2
+  m_Size: {x: 1.41, y: 1.04}
+  m_EdgeRadius: 0
 --- !u!1001 &8912217636127699329
 PrefabInstance:
   m_ObjectHideFlags: 0
