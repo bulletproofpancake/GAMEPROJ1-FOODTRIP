@@ -161,7 +161,7 @@ public class Customer : MonoBehaviour
                          //20% chance of customer not paying full
                          if (incompletePayChance <= 20)
                          {
-                               print($"{incompletePayChance}");
+                              print($"{incompletePayChance}");
                               _paymentContainer += ReducedPayment(givenOrder);
                          }
                          else
@@ -182,9 +182,10 @@ public class Customer : MonoBehaviour
                              DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene)
                          {
                               //*insertdirty cup spawn here.
+
                               DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
-                              Debug.Log("amount of DirtyCups in scene is " + DirtyCupsScript.Instance.currentDirtyCupsInScene);
                               DirtyCupsScript.Instance.SpawnHere();
+                              Debug.Log("amount of DirtyCups in scene is " + DirtyCupsScript.Instance.currentDirtyCupsInScene);
                          }
                     }
                     if (FindObjectOfType<AudioManager>() != null)
@@ -252,7 +253,7 @@ public class Customer : MonoBehaviour
           var percent = rate / 100;
           var reduction = givenOrder.Data.Cost * percent;
           var payment = givenOrder.Data.Cost - reduction;
-          
+
           print($"{rate},{reduction},{payment}");
           return payment;
 
@@ -281,6 +282,7 @@ public class Customer : MonoBehaviour
                          StickBehaviors stick = other.GetComponent<StickBehaviors>();
                          if (other.GetComponent<Order>())
                          {
+                              Debug.Log("did detect(TUSOKTUSOK FOOD)");
                               stick.RemoveFood();
                               TakeOrder(other.GetComponent<Order>());
                          }
@@ -291,6 +293,20 @@ public class Customer : MonoBehaviour
           }
           else if (other.GetComponent<Order>())
                TakeOrder(other.GetComponent<Order>());
+     }
+
+     private void OnTriggerStay2D(Collider2D other)
+     {
+          if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
+          {
+               if (other.GetComponent<StickBehaviors>())
+               {
+                    StickBehaviors stick = other.GetComponent<StickBehaviors>();
+                    stick.RemoveFood();
+               }
+
+
+          }
      }
 
      private IEnumerator WrongOrder()
@@ -369,6 +385,7 @@ public class Customer : MonoBehaviour
 
      void CustomerPatienceIndicator()
      {
+          float rate = data.DespawnTime * .07f;
           fillImage.fillAmount -= 1.0f / data.DespawnTime * Time.deltaTime;
 
           if (fillImage.fillAmount == 0)
@@ -384,14 +401,14 @@ public class Customer : MonoBehaviour
           //Add time
           if (correctOrder == true)
           {
-               fillImage.fillAmount += data.DespawnTime * .07f;
+               fillImage.fillAmount += rate;
                correctOrder = false;
           }
 
           //Reduce time
           if (wrongOrder == true)
           {
-               fillImage.fillAmount -= data.DespawnTime * .07f;
+               fillImage.fillAmount -= rate;
                wrongOrder = false;
           }
      }
