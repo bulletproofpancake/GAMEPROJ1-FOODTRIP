@@ -41,7 +41,12 @@ public class Garbage : MonoBehaviour
           ResetStats();
      }
 
-     private void ResetStats()
+    private void Update()
+    {
+        CapacityChecker();
+    }
+
+    private void ResetStats()
      {
 
           currentCapacity = 0;
@@ -93,6 +98,7 @@ public class Garbage : MonoBehaviour
      {
           yield return new WaitForSeconds(timeForChange);
           DirtyCupsScript.Instance.currentDirtyCupsInScene = 0;
+          DirtyCupsScript.Instance.RemoveDirtyCups();
           ResetStats();
      }
 

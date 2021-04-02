@@ -40,7 +40,7 @@ public class DirtyCupsScript : MonoBehaviour
           dirtycup.transform.position = dirtyCupSpawnPos[index].position;
          currentDirtyCupsInScene++;
           dirtycup.SetActive(true);
-         // AddDirtyCups(dirtycup);
+         AddDirtyCups(dirtycup);
           index++;
           if (index >= 3)
           {
@@ -53,8 +53,11 @@ public class DirtyCupsScript : MonoBehaviour
         dirtyCups.Add(obj);
     }
 
-    public void RemoveDirtyCups(GameObject obj)
+    public void RemoveDirtyCups()
     {
-        dirtyCups.Remove(obj);
+        foreach(GameObject dc in dirtyCups)
+        {
+            dc.SetActive(false);
+        }
     }
 }
