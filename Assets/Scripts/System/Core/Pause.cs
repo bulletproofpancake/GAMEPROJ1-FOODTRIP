@@ -28,7 +28,7 @@ public class Pause : MonoBehaviour
 
     public void ResumeTheGame()
     {
-        //UnPauseAudio();
+        UnPauseAudio();
         pauseMenuPanel.SetActive(false);
         isPaused = false;
         _gameManager.PauseGame(isPaused);
@@ -36,16 +36,11 @@ public class Pause : MonoBehaviour
 
     public void PauseTheGame()
     {
-        //PauseAudio();
+        PauseAudio();
         pauseMenuPanel.SetActive(true);
         isPaused = true;
         _gameManager.PauseGame(isPaused);
     }
-
-    /*public void Options()
-    {
-
-    }*/
 
     public void Quit()
     {
@@ -57,19 +52,34 @@ public class Pause : MonoBehaviour
     //take over this part immediately after being called.
     public void MainMenu()
     {
+        StopAudio();
         SceneSelector.Instance.LoadNextScene("Main Menu_JK");
         ResumeTheGame();
     }
 
-    //void PauseAudio()
-    //{
-    //    FindObjectOfType<AudioManager>().Pause("ParesSFX");
-    //    FindObjectOfType<AudioManager>().Pause("KaninSFX");
-    //}
+    void StopAudio()
+    {
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
+            FindObjectOfType<AudioManager>().Stop("VisualNovelBGM");
+            FindObjectOfType<AudioManager>().Stop("OrderReady");
+        }
+    }
 
-    //void UnPauseAudio()
-    //{
-    //    FindObjectOfType<AudioManager>().UnPause("ParesSFX");
-    //    FindObjectOfType<AudioManager>().UnPause("KaninSFX");
-    //}
+    void PauseAudio()
+    {
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Pause("OrderReady");
+        }
+    }
+
+    void UnPauseAudio()
+    {
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().UnPause("OrderReady");
+        }
+    }
 }
