@@ -200,8 +200,9 @@ public class Customer : MonoBehaviour
                 //      }
                 // }
                 //Spawns dirty cups as soon as the customer turns off  
-                if (DirtyCupsScript.Instance.currentDirtyCupsInScene <
-                  DirtyCupsScript.Instance.maxAmountInScene)
+                if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                    DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                    DirtyCupsScript.Instance.maxAmountInScene)
                 {
                     DirtyCupsScript.Instance.SpawnHere();
                 }
