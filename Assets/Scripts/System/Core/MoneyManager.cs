@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MoneyManager : Singleton<MoneyManager>
 {
+    public float expectedMoney;
     public float totalMoney;
     public float roundMoney;
     public float currentMoney;
@@ -26,6 +27,7 @@ public class MoneyManager : Singleton<MoneyManager>
         previousMoney = roundMoney;
         currentMoney = 0;
         roundMoney = 0;
+        expectedMoney = 0;
     }
 
     public void Spend(float cost)

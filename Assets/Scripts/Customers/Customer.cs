@@ -32,6 +32,7 @@ public class Customer : MonoBehaviour
      private float _completedOrders;
 
      private float _paymentContainer;
+     private float expectedPayment;
      private bool readyToCollect;
      private bool fadeInDone;
      private bool correctOrder;
@@ -182,6 +183,8 @@ public class Customer : MonoBehaviour
                          throw new ArgumentOutOfRangeException();
                }
 
+               expectedPayment += givenOrder.Data.Cost;
+
                orderText.text = $"{_completedOrders}/{_numberOfOrders + 1}";
                correctOrder = true;
 
@@ -320,7 +323,7 @@ public class Customer : MonoBehaviour
                          }
                          else if (Garbage.isFull)
                          {
-                        Debug.Log("garbage is full");
+                              Debug.Log("garbage is full");
                          }
                          break;
                     default:
@@ -344,7 +347,9 @@ public class Customer : MonoBehaviour
      {
           if (readyToCollect == true)
           {
+               MoneyManager.Instance.expectedMoney += expectedPayment;
                MoneyManager.Instance.Collect(_paymentContainer);
+               expectedPayment = 0;
                _paymentContainer = 0;
 
                if (GameManager.Instance.isVN)

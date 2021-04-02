@@ -10,6 +10,7 @@ public class SummaryManager : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private Image newBest;
     [SerializeField] private TextMeshProUGUI previousProfit;
+    [SerializeField] private TextMeshProUGUI expectedProfit;
     [SerializeField] private TextMeshProUGUI currentProfit;
     [SerializeField] private TextMeshProUGUI totalMoney;
     private Color baseColor;
@@ -35,6 +36,7 @@ public class SummaryManager : MonoBehaviour
             newBest.gameObject.SetActive(true);
         
         previousProfit.text = $"Previous Profit: {MoneyManager.Instance.previousMoney:F}";
+        expectedProfit.text = $"Expected Profit: {MoneyManager.Instance.expectedMoney:F}";
         currentProfit.text = $"Current Profit: {MoneyManager.Instance.roundMoney:F}";
     }
 
