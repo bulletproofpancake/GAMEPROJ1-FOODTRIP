@@ -187,58 +187,71 @@ public class Customer : MonoBehaviour
 
                if (_completedOrders >= _numberOfOrders + 1)
                {
-                // if(ShiftManager.Instance.cart != null){
-                //      if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
-                //          DirtyCupsScript.Instance.currentDirtyCupsInScene <
-                //          DirtyCupsScript.Instance.maxAmountInScene)
-                //      {
-                //           //*insertdirty cup spawn here.
-                //           DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
-                //           Debug.Log("amount of DirtyCups in scene is " +
-                //                     DirtyCupsScript.Instance.currentDirtyCupsInScene);
-                //           DirtyCupsScript.Instance.SpawnHere();
-                //      }
-                // }
-                //Spawns dirty cups as soon as the customer turns off  
-                if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
-                    DirtyCupsScript.Instance.currentDirtyCupsInScene <
-                    DirtyCupsScript.Instance.maxAmountInScene)
-                {
-                    DirtyCupsScript.Instance.SpawnHere();
-                }
-                if (FindObjectOfType<AudioManager>() != null)
-                    {
-                         FindObjectOfType<AudioManager>().Play("OrdersComplete");
-                    }
-                    dialogueBox.sprite = dialogueBoxPaid;
-                    if (fillImage != null)
-                    {
-                         fillImage.fillAmount = data.DespawnTime;
-                    }
+                     // if(ShiftManager.Instance.cart != null){
+                     //      if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                     //          DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                     //          DirtyCupsScript.Instance.maxAmountInScene)
+                     //      {
+                     //           //*insertdirty cup spawn here.
+                     //           DirtyCupsScript.Instance.currentDirtyCupsInScene += 1;
+                     //           Debug.Log("amount of DirtyCups in scene is " +
+                     //                     DirtyCupsScript.Instance.currentDirtyCupsInScene);
+                     //           DirtyCupsScript.Instance.SpawnHere();
+                     //      }
+                     // }
+                     //Spawns dirty cups as soon as the customer turns off  
+                     if(ShiftManager.Instance.cart != null){
+                          // if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                          //     DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                          //     DirtyCupsScript.Instance.maxAmountInScene)
+                          // {
+                          //      DirtyCupsScript.Instance.SpawnHere();
+                          // }
+                          switch (ShiftManager.Instance.cart.Type)
+                          {
+                               case CartType.Paresan:
+                                    break;
+                               case CartType.Tusoktusok:
+                                    if(DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene)
+                                         DirtyCupsScript.Instance.SpawnHere();
+                                    break;
+                               default:
+                                    break;
+                          }
+                     }
+                     if (FindObjectOfType<AudioManager>() != null)
+                     {
+                          FindObjectOfType<AudioManager>().Play("OrdersComplete");
+                     }
+                     dialogueBox.sprite = dialogueBoxPaid;
+                     if (fillImage != null)
+                     {
+                          fillImage.fillAmount = data.DespawnTime;
+                     }
 
-                    if (GameManager.Instance.isVN)
-                    {
-                         _npcData = (NPCData)data;
-                         if (_npcData.Encounter[_npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
-                         {
-                              orderBox.SetActive(false);
-                              dialogueBox.sprite = DialogueBoxNormal;
-                              SetOrder();
-                              GiveOrder();
-                              DialogueManager.Instance.Advance();
-                         }
-                         else
-                         {
-                              readyToCollect = true;
-                              OrderPrompt();
-                         }
+                     if (GameManager.Instance.isVN)
+                     {
+                          _npcData = (NPCData)data;
+                          if (_npcData.Encounter[_npcData.Count].DialogueCount > DialogueManager.Instance.dataIndex)
+                          {
+                               orderBox.SetActive(false);
+                               dialogueBox.sprite = DialogueBoxNormal;
+                               SetOrder();
+                               GiveOrder();
+                               DialogueManager.Instance.Advance();
+                          }
+                          else
+                          {
+                               readyToCollect = true;
+                               OrderPrompt();
+                          }
 
-                    }
-                    else
-                    {
-                         readyToCollect = true;
-                         OrderPrompt();
-                    }
+                     }
+                     else
+                     {
+                          readyToCollect = true;
+                          OrderPrompt();
+                     }
                }
                else
                {
