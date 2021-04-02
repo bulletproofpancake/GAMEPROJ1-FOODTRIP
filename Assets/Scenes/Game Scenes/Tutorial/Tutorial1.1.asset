@@ -60,7 +60,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
-    text: " Pretend i\u2019m a customer."
+    text: " Pretend I\u2019m a customer."
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
@@ -77,16 +77,45 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
-    text: "On your left is where we\u2019ll get the food needed for the orders. Just
-      click on the Pares or Rice  and you\u2019ll see the food prepared on the table!"
+    text: "On your left is where we\u2019ll get the food needed for the orders. "
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
-    text: "After preparing my order, all you\u2019ll have to do is drag it onto me
-      by holding the left mouse button and you\u2019re good to go!"
+    text: On your right is where you'll be placing said food.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
     speakerName: kuya enteng
-    text: "Oh, and make sure you collect the payment. Things can get hectic really
-      quickly during actual work hours, so you gotta pay attention or you won\u2019t
-      get paid! \r\n"
+    text: Always make sure to have a bowl ready before clicking on the food button.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: "Just click on the Pares or Rice and you\u2019ll see the food prepared
+      on the table!"
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: "After preparing my order, drag it onto me by holding the left mouse button
+      and you\u2019re good to go!"
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: Make sure to be quick about it, customers can get really impatient when
+      they're hungry,
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: Oh, and make sure to collect the payment by clicking on the order box.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: 'Things can get hectic really quick during actual work hours!
+
+'
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: So pay close attention or you won't get paid!
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    speakerName: kuya enteng
+    text: Now, let's give it a shot!
