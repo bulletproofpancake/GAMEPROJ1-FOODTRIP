@@ -14,59 +14,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: Morning.
+    text: Greetings, officer.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
-    text: Well now, a new rat!
+    text: Well, well, a new guy huh?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: 'Hey, I''m not here to cause any trouble. '
+    text: I'm not here to cause any trouble sir, I assure you.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: Just doin' business.
+    text: I'm only here to sell food.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
-    text: Uh huh, and are you not aware of the litter and obstruction your little
-      "BUSINESS" is causing?
+    text: Uh huh... Well, I'm here to inform you of a surprise inspection.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Look, I clean it up as much as I can during AND after shifts.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Besides, I'm right next to the station. There is no "obstruction" going
-      on.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
-    text: You expect me to believe that??
+    text: Do you have any authorization to set up a business here? Any of the necessary
+      papers? Licenses?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: Well, yes, obviously. As you can see, I keep my equipment and area VERY
-      well maintained.
+    text: "Yes, sir, I-\t"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
-    text: HMPH! You street food vendors, always doing whatever you want, wherever
-      you want.
+    text: What about the litter? Road obstruction? Despite the papers, do you expect
+      me to just let all of that slide?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: "We're just trying to make a living, no need to get hostile now.\t\t\t"
+    text: Sir, I keep my station clean as much as I can.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: ???
+    text: That doesn't change the fact that you're an eyesore. You and all the other
+      vendors around.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: ???
+    text: 'Even after that kerosene plan, you just keep coming back, huh. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: 
+    text: "We're just trying to make a living sir. No need for hostilities.\t\t\t"
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
-    text: Tell you what, I'll toss you a bone. If you can impress me with your food,
-      I'll leave you alone.
+    text: 'Tell you what, all you have to do is pay some "rent". '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: ???
+    text: Do that, and I'll leave you alone.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: 
+    text: 'I can report this to city hall, sir. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: 
+    text: I don't think city officials will keep quiet about this.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: ???
+    text: HAH! I like your style. Fine. Forget about the rent. Just fix me up with
+      a bowl and I'll leave you alone.

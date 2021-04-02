@@ -16,26 +16,12 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
-    text: "Are you satisfied yet?\t"
+    text: 'Huh. That''s actually not half bad. '
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
-    text: Oh very!
+    text: Hit me up with another bowl and I'll forgive your arrogance, for now.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: ???
-    text: You know what, I was about to charge you for the public disturbance, but
-      I'm feeling veeeery generous today!
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: ???
-    text: 'I''ll take your food as payment instead. '
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: ???
-    text: Plus, I'll have another order to go. Looked like you needed the extra funds
-      and my kind ol' heart can't help but feel sorry for ya. HA HA HA!
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: ...
+    text: HA HA HA
