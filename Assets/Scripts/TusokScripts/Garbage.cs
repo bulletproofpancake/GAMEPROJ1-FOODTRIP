@@ -62,15 +62,8 @@ public class Garbage : MonoBehaviour
      //Added parameters incase we would dispose food or sticks here and have diff value
      public void CapacityChecker()
      {
-        // Use the capacity as from the dirtycup spawned in max scene
         float capPerc = DirtyCupsScript.Instance.currentDirtyCupsInScene / DirtyCupsScript.Instance.maxAmountInScene 
             * 100.0f;
-
-        //float intervals = (1 / DirtyCupsScript.Instance.maxAmountInScene) * 100.0f;
-        //Mathf.Round(intervals);
-
-        Debug.Log("(Garbage.cs)capPerc value: " + capPerc );
-
         GarbageSpriteChange(capPerc);
      }
 
@@ -107,27 +100,3 @@ public class Garbage : MonoBehaviour
 
 }
 
-
-
-// don't mind these
-
-//float capacityPercentage;
-
-////check if trash is full
-//if (currentCapacity >= trashCapacity)
-//{
-//     Debug.LogWarning("trash is full");
-//     return;
-//}
-
-//currentCapacity += numCap;
-//capacityPercentage = (currentCapacity / trashCapacity) * 100;
-//percentageInc = 100f / trashCapacity;
-
-//Debug.Log(capacityPercentage + "%");
-
-//if (capacityPercentage >= 100)
-//     isFull = true;
-
-//indexState = -1;
-//GarbageSpriteChange(capacityPercentage);
