@@ -66,23 +66,24 @@ public class Garbage : MonoBehaviour
         float capPerc = DirtyCupsScript.Instance.currentDirtyCupsInScene / DirtyCupsScript.Instance.maxAmountInScene 
             * 100.0f;
 
-        float intervals = DirtyCupsScript.Instance.maxAmountInScene / DirtyCupsScript.Instance.currentDirtyCupsInScene;
+        //float intervals = (1 / DirtyCupsScript.Instance.maxAmountInScene) * 100.0f;
+        //Mathf.Round(intervals);
 
-        Debug.Log("(Garbage.cs)capPerc value: " + capPerc + " (Garbage cs.) intervals value: " + intervals);
+        Debug.Log("(Garbage.cs)capPerc value: " + capPerc );
 
-        GarbageSpriteChange(capPerc , intervals);
+        GarbageSpriteChange(capPerc);
      }
 
      //make a function that would do the process of changing trash sprites
-     private void GarbageSpriteChange(float percentage, float interval)
+     private void GarbageSpriteChange(float percentage)
      {
 
-          for (int i = 0; i <= percentage; i += (int)interval)
+          for (int i = 0; i <= percentage; i += 25)
           {
                indexState++;
           }
           Debug.Log("value of indexState is " + indexState);
-        btn.image.sprite = GarbageStates[indexState];
+          btn.image.sprite = GarbageStates[indexState];
 
      }
 
