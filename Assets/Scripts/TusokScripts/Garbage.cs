@@ -24,15 +24,17 @@ public class Garbage : MonoBehaviour
 
      private int indexState;
 
-    private float percentageInc;
-
-     private SpriteRenderer _sprite;
 
     private Button btn;
 
+    [SerializeField]
+    private Image fllimg;
+
+    private bool isRefill;
+
      private void Awake()
      {
-          _sprite = this.gameObject.GetComponent<SpriteRenderer>();
+        isRefill = false;
         btn = this.gameObject.GetComponent<Button>();
      }
 
@@ -57,7 +59,20 @@ public class Garbage : MonoBehaviour
 
      }
 
-    
+    private void SpriteFilling()
+    {
+        float timer;
+        if (isRefill)
+        {
+            timer = timeForChange;
+            fllimg.fillAmount += 1.0f / timer * Time.deltaTime;
+        }
+        else
+        {
+            timer = 0;
+            fllimg.fillAmount = timer;
+        }
+    }
 
      //Added parameters incase we would dispose food or sticks here and have diff value
      public void CapacityChecker()
@@ -90,10 +105,12 @@ public class Garbage : MonoBehaviour
      //make a function that would do the procress of changing trash
      private IEnumerator ChangeGarbageProcess()
      {
+         isRefill = true;
           yield return new WaitForSeconds(timeForChange);
           DirtyCupsScript.Instance.currentDirtyCupsInScene = 0;
           DirtyCupsScript.Instance.RemoveDirtyCups();
           ResetStats();
+
      }
 
 

@@ -344,7 +344,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -500,6 +500,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3e561a22b349770409e2efbffbe53673, type: 3}
   - {fileID: 21300000, guid: 1d59f5953a3fb064997d8b6eda8beb05, type: 3}
   - {fileID: 21300000, guid: daec5dbb4dd563749879dcca7b0db9cc, type: 3}
+  fllimg: {fileID: 792537412795402481}
 --- !u!1 &2652070930764877662
 GameObject:
   m_ObjectHideFlags: 0
