@@ -238,7 +238,7 @@ public class GameManager : Singleton<GameManager>
             isPaused = paused;
             Time.timeScale = 1f;
             print("Paused = " + isPaused);
-            if(ShiftManager.Instance!=null){
+            if(ShiftManager.Instance.shift !=null){
                 if (countdownFinished)
                 {
                     StartCoroutine(CountDownLevel());
