@@ -91,7 +91,7 @@ public class GameManager : Singleton<GameManager>
         //PauseGame(false);
         if (FindObjectOfType<AudioManager>() != null)
         {
-            FindObjectOfType<AudioManager>().Play("OrdersComplete");
+            FindObjectOfType<AudioManager>().Play("Bell");
         }
         StartCoroutine(SpawnManager.spawner.SpawnCustomers());
         StartCoroutine(CountDownLevel());
@@ -167,7 +167,7 @@ public class GameManager : Singleton<GameManager>
         print("game");
         if (FindObjectOfType<AudioManager>() != null)
         {
-            FindObjectOfType<AudioManager>().Play("OrdersComplete");
+            FindObjectOfType<AudioManager>().Play("Bell");
         }
         yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1f;
