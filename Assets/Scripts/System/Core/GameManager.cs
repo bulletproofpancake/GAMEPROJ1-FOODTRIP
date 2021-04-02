@@ -89,6 +89,10 @@ public class GameManager : Singleton<GameManager>
         }
         countdownFinished = true;
         //PauseGame(false);
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Play("OrdersComplete");
+        }
         StartCoroutine(SpawnManager.spawner.SpawnCustomers());
         StartCoroutine(CountDownLevel());
         overlay.text = string.Empty;
@@ -161,6 +165,10 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 0f;
         overlay.text = "Game Over";
         print("game");
+        if (FindObjectOfType<AudioManager>() != null)
+        {
+            FindObjectOfType<AudioManager>().Play("OrdersComplete");
+        }
         yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1f;
         print("over");
