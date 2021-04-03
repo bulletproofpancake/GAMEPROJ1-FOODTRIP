@@ -14,35 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
     speakerName: ???
     text: Koya! Puwede pabile?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
     speakerName: 
     text: Sure, what can I get you?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: ???
     text: Oh, you speak English! And very fluent too, thank goodness!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: 
     text: I do, and your Filipino wasn't that bad either.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: ???
     text: Thank you! So, what are you sellin'?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: 
     text: "Well I got kwek kwek, kikiam, and fishball so you're free to choose whatever
       you want.\t"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
     speakerName: ???
     text: I see!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
     speakerName: ???
     text: Hmm...
