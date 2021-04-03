@@ -16,12 +16,12 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
     speakerName: kuya enteng
-    text: "Great job! Not bad for a youngster, maybe you\u2019ll end up outperforming
-      me! HA HA HA"
+    text: Great job! If you want more information about the food, click on the info
+      button on the upper left corner.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: kuya enteng
-    text: Make sure to keep your cart and equipment clean!
+    text: Always make sure to keep your cart and equipment clean!
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
     speakerName: kuya enteng

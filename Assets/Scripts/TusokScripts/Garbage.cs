@@ -45,6 +45,11 @@ public class Garbage : MonoBehaviour
 
     private void Update()
     {
+        if (Pause.isPaused == true)
+            btn.interactable = false;
+        else if (Pause.isPaused == false)
+            btn.interactable = true;
+
         CapacityChecker();
     }
 
