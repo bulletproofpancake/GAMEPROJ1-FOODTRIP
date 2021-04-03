@@ -10,10 +10,12 @@ public class Sink : MonoBehaviour
     private TextMeshProUGUI _btnText;
     private List<GameObject> _bowls;
     private bool _isBtnTextNotNull;
+    private Button button;
 
     private void Start()
     {
         _isBtnTextNotNull = _btnText!=null;
+        button = GetComponent<Button>();
     }
 
     [SerializeField] private Image fillImage;
@@ -32,6 +34,11 @@ public class Sink : MonoBehaviour
         if(_isBtnTextNotNull)
             _btnText.text = $"{name}: {_bowls.Count}";
         WashingIndicator();
+
+        if (Pause.isPaused == true)
+            button.interactable = false;
+        else if (Pause.isPaused == false)
+            button.interactable = true;
     }
 
     public void WashBowl()
