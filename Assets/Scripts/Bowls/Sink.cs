@@ -8,14 +8,18 @@ public class Sink : MonoBehaviour
 {
     public static Sink sink;
     private TextMeshProUGUI _btnText;
-    private List<GameObject> _bowls;
+    [SerializeField] private List<GameObject> _bowls;
     private bool _isBtnTextNotNull;
     private Button button;
-
+    private Image image;
+    [SerializeField] private Sprite empty,half,full;
+    [SerializeField] private int maxCapacity;
+    
     private void Start()
     {
         _isBtnTextNotNull = _btnText!=null;
         button = GetComponent<Button>();
+        image = GetComponent<Image>();
     }
 
     [SerializeField] private Image fillImage;
@@ -39,6 +43,9 @@ public class Sink : MonoBehaviour
             button.interactable = false;
         else if (Pause.isPaused == false)
             button.interactable = true;
+        
+        if(ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
+            GarbageChecker();
     }
 
     public void WashBowl()
@@ -84,17 +91,41 @@ public class Sink : MonoBehaviour
             fillImage.fillAmount = 0;
     }
 
-    void GarbageChecker()
+    private void GarbageChecker()
     {
-        //maximum capacity = 10
-        //bowls.Length == 10
-        //public boolean Customer, full na ang garbage.
-        //Di na pwedeng tumanggap
-        //CleanGarbage(_bowls);
-        
-        // foreach (var bowl in _bowls)
-        // {
-        //     Wash(bowl);
-        // }
+        if (_bowls.Count < maxCapacity / 2)
+        {
+            image.sprite = empty;
+        }
+        else if (_bowls.Count >= maxCapacity / 2 && _bowls.Count < maxCapacity)
+        {
+            image.sprite = half;
+        }
+        else
+        {
+            image.sprite = full;
+            GameManager.Instance.garbageFull = true;
+        }
     }
+
+    public void CleanGarbage()
+    {
+        foreach (var bowl in _bowls)
+        {
+            bowl.GetComponent<Bowl>().isDirty = false;
+            BowlSpawner.spawner.AddBowl(bowl);
+        }
+        StartCoroutine(GarbageIndicator());
+        print(_bowls.Count);
+    }
+
+    IEnumerator GarbageIndicator()
+    {
+        isWashing = true;
+        yield return new WaitForSeconds(1f);
+        isWashing = false;
+        _bowls.Clear();
+        GameManager.Instance.garbageFull = false;
+    }
+    
 }

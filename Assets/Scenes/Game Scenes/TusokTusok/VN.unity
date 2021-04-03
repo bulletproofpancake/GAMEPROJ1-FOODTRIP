@@ -1498,7 +1498,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -1528,7 +1528,7 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[5].id
-      value: Kwekkwek
+      value: DirtyCup
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
@@ -1574,7 +1574,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsToPool.Array.data[5].parent
       value: 
-      objectReference: {fileID: 160586301}
+      objectReference: {fileID: 160586304}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[6].parent
@@ -1653,13 +1653,13 @@ PrefabInstance:
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[5].amountToPool
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
       propertyPath: itemsToPool.Array.data[5].objectToPool
       value: 
-      objectReference: {fileID: 5476258529874628051, guid: 9d8ff4294788ec64e97ca261cca9fc24,
+      objectReference: {fileID: 4024988518476713767, guid: 1ade1e3e451bd634baddc9356020eafc,
         type: 3}
     - target: {fileID: 6746603514144867601, guid: 60364eb1227a15745a706e26f84d8847,
         type: 3}
