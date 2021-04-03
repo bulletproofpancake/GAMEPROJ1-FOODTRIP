@@ -32,6 +32,8 @@ public class GameManager : Singleton<GameManager>
 
     public bool npcAvailable, encounterComplete, countdownFinished;
 
+    public bool garbageFull;
+
     protected override void Awake()
     {
         base.Awake();
