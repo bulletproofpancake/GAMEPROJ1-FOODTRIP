@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BowlSpawner : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class BowlSpawner : MonoBehaviour
     private TextMeshProUGUI _btnText;
     public List<GameObject> _bowls;
     private bool _isBtnTextNotNull;
+    private Button button;
 
     private void Start()
     {
         _isBtnTextNotNull = _btnText!=null;
+        button = GetComponent<Button>();
     }
 
     private void Awake()
@@ -27,6 +30,11 @@ public class BowlSpawner : MonoBehaviour
     {
         if(_isBtnTextNotNull)
             _btnText.text = $"{name}: {_bowls.Count}";
+
+        if (Pause.isPaused == true)
+            button.interactable = false;
+        else if (Pause.isPaused == false)
+            button.interactable = true;
     }
 
     public void AddBowl(GameObject bowl)
