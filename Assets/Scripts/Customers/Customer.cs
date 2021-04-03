@@ -214,7 +214,7 @@ public class Customer : MonoBehaviour
                                case CartType.Paresan:
                                     break;
                                case CartType.Tusoktusok:
-                                    if(DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene)
+                                    if(DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene && !GameManager.Instance.isVN)
                                          DirtyCupsScript.Instance.SpawnHere();
                                     break;
                                default:
