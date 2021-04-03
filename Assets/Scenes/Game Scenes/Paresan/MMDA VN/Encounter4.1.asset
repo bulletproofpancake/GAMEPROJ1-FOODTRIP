@@ -14,106 +14,97 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
     text: Morning, officer.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: Francisco
-    text: Morning, kid.
+    text: Morning.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: Francisco
     text: You know, you remind me of the old man in a lot of ways.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: What made you say that?
+    text: How so?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
     speakerName: Francisco
-    text: Well, you're talkative. I'll give you that.
+    text: You aren't shy of strangers, I'll give you that.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: Francisco
-    text: Plus you make good company.
+    text: Plus you have that same spunk in your eyes as he does.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
+    speakerName: Francisco
+    text: HA! I remember my first time working in the city.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: Francisco
+    text: My senior would take me here to set an example of Enteng, show these vendors
+      to uphold the law.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
+    speakerName: Francisco
+    text: He didn't back down, not one bit. Kinda embarrasing for my senior to be
+      honest.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
+    speakerName: Francisco
+    text: 'I took what he said in mind, still. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 833d761ada40fb242bf48bf7ef81e343, type: 3}
+    speakerName: Francisco
+    text: The city would be so much clearer without you lot.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
+    speakerName: Francisco
+    text: Funny enough, even after threatening him multiple times, the old man won't
+      budge.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: Francisco
+    text: He'd always greet us with a smile on his face and start rambling about
+      whatever he thought of.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
+    speakerName: Francisco
+    text: 'I ended up taking a liking to him. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
+    speakerName: Francisco
+    text: Other vendors would fight back harshly, use force even just to keep their
+      spot.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
     speakerName: 
-    text: Speaking of the old man, how'd you guys meet anyways?
+    text: He wouldn't. Hell, he'd serve anybody no matter how badly they saw him.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
     speakerName: Francisco
-    text: Enteng was here even before I started workin' shifts this side of the city.
+    text: It's laughable how similar you two are.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: Francisco
-    text: I came across him during one of my shifts. I'd tell him off from time to
-      time but he'd greet me and all his customers with a smile regardless.
+    text: I threatened you with bribery and yet you still continue to serve a customer
+      like me.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: Yeah, sounds like the Enteng I know, alright.
+    text: 'As much as I hated that, you''re still a paying customer. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
     speakerName: Francisco
-    text: To be honest, I've never liked you vendors.
+    text: HA! You're right about that.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
     speakerName: Francisco
-    text: No matter how many times we sweep you off the streets, there'll always
-      be someone new.
+    text: 'You''re not bad, kid. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: ef04a76d78f920b4c94dc6d1332c6dc8, type: 3}
     speakerName: Francisco
-    text: Always someone out there to replace the other. Taking up space and blocking
-      up roads, always causing all sorts of trouble for us.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: Enteng though? He ain't like that at all. He stayed away from roads, and
-      always eager to see a new face and know more about them.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: I could tell you have that very same energy, though a bit more subtle compared
-      to his that's for sure.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Say, isn't it a bit harsh to be hating on us this much when we're just
-      trying to get by?
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: I suppose you're right. After all, you haven't bbeen much trouble yourself
-      either, just here to make ends meet.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: I'm guessing every other vendor out there is trying to do the same.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Is that a change of heart I'm hearin?
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: Shut it, before I change my mind and go back to calling you rats.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Alright, alright.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: So, how about an order of pares?
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Sure, something to commemorate this change of heart of yours.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: "Ha! Nothing goes well with food better than good company, and you\u2019re
-      good company, kid."
+    text: I won't bother you anymore, so how about serving me up some food before
+      I go.

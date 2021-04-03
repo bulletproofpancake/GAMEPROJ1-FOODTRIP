@@ -14,66 +14,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
     speakerName: kuya enteng
     text: "Great job! Not bad for a youngster, maybe you\u2019ll end up outperforming
       me! HA HA HA"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: kuya enteng
     text: Make sure to keep your cart and equipment clean!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
     speakerName: kuya enteng
     text: In our case, just make sure the bowls are washed everytime you use them
       by clicking on the sink.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: 
     text: 'Other carts require you to keep an empty trash bag like the classic TUSOK-TUSOK. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
     speakerName: 
     text: Having a dirty cart kinda ruins the appetite so make sure to replace the
       trash bag every now and then!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
     speakerName: 
     text: Or else customers won't accept your food no matter how tempting it is!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: 
     text: " Don\u2019t forget, you can use that money to invest in equipment by upgrading
       a lot of stuff! "
   - order: {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
     speakerName: 
     text: "You\u2019ll see the upgrades button after your post-shift summary!\r"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: a27320446f5dd7644887ee01fe959bef, type: 3}
     speakerName: 
     text: Oh, and watch out for some of the customers okay?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
     speakerName: 
     text: Workers are honest so they'll pay you in full.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: a27320446f5dd7644887ee01fe959bef, type: 3}
     speakerName: 
     text: Some of the youngsters nowadays, however, are really mischievous.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
     speakerName: 
     text: So expect some, er, inconsistencies with your profit when serving them.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
     speakerName: 
     text: "Well go on then, enjoy your pares, you\u2019ve earned it. "
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: 
     text: Though make one for me too why don't ya HA HA HA
   - order: {fileID: 6580914577590136435, guid: bc43124a97d488f489846143cb2a5d0d, type: 3}
-    sprite: {fileID: 21300000, guid: e2f17ea161b12674dad097c68af71c84, type: 3}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: 
     text: Coming right up, Kuya!

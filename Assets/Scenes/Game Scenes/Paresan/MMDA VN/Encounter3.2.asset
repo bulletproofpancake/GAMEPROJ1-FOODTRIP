@@ -14,20 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
+    speakerName: ???
+    text: Yep, right down to the broth.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
     text: Next time you visit Enteng, tell him Francisco sends his regards, yeah?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: "I've known that guy for a while and I tell ya, not even a broken bone
-      would shut him up!\t"
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: 
-    text: 'I''ll be sure to relay the message. '
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: Francisco
-    text: Oh, by the way, my friends love your food, how about preparin' some for
-      them and I'll bring them over next time we get off shift.
+    text: 'I''ll be sure to relay the message. sir. '

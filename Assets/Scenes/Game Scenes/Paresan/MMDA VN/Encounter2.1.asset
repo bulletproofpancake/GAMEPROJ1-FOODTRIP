@@ -14,106 +14,121 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 4056c09ff769e604a911b12b4d2aecfd, type: 3}
     speakerName: ???
     text: Huh, you again today?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 4056c09ff769e604a911b12b4d2aecfd, type: 3}
     speakerName: 
-    text: I was here the last time we spoke, how is now any different?
+    text: I'm just here to make a living sir.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 4056c09ff769e604a911b12b4d2aecfd, type: 3}
+    speakerName: 
+    text: I can move to another spot if you're just here to make a mockery of me
+      again.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 833d761ada40fb242bf48bf7ef81e343, type: 3}
     speakerName: ???
     text: No, no, it's just that...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: ???
     text: 'Someone else used to run this cart. Man named Enteng. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: b5efa6a4a8efdbf4b902d57fdcaf0de9, type: 3}
     speakerName: ???
     text: Fun guy, he is. One of the only vendors I tolerate.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: Huh, weird how we have something we can agree on.
+    sprite: {fileID: 21300000, guid: 833d761ada40fb242bf48bf7ef81e343, type: 3}
+    speakerName: ???
+    text: His cart looks almost like yours, in fact...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 833d761ada40fb242bf48bf7ef81e343, type: 3}
     speakerName: ???
     text: Hmmm...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 586cffef7e2fbc249b28239465014e20, type: 3}
     speakerName: ???
     text: Hmm...!!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 586cffef7e2fbc249b28239465014e20, type: 3}
     speakerName: 
     text: Hmm?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 69b2d34bc9261784cb6201348bb774c6, type: 3}
     speakerName: ???
-    text: Wait a damn minute, I bet you stole his cart huh?!
+    text: I'm gonna have to ask you to come with me to the station for questioning.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 69b2d34bc9261784cb6201348bb774c6, type: 3}
     speakerName: 
-    text: No-what?? No, of course not.
+    text: Excuse me?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: He just ain't here right now. I'm just here to keep the business alive.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 586cffef7e2fbc249b28239465014e20, type: 3}
     speakerName: ???
-    text: Then tell me, why are you running this thing instead of him???
+    text: That's Enteng's cart, isn't it? I'm beginning to suspect some foul play.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
+    speakerName: 
+    text: I believe it's all a huge misunderstanding.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
+    speakerName: 
+    text: I know Kuya Enteng, and yes it is his cart.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
+    speakerName: 
+    text: But I can explain.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 833d761ada40fb242bf48bf7ef81e343, type: 3}
+    speakerName: ???
+    text: Speak before I lose my patience.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
     speakerName: 
     text: He's well...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: 
     text: He's in the hospital right now.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 69b2d34bc9261784cb6201348bb774c6, type: 3}
     speakerName: ???
-    text: What?! What did you do?!
+    text: So I was right! You're coming with me.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: 
-    text: It wasn't me, it was a bunch of rowdy kids.
+    text: It wasn't me, sir. I found him on my way home battered and bruised.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: 
-    text: Took him by surprise on his way home. I was lucky to find him barely breathing
-      at all.
+    text: Sounds like a bunch of rowdy kids saw him as an easy target.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 69b2d34bc9261784cb6201348bb774c6, type: 3}
     speakerName: ???
-    text: Why should I believe you? Give me one good reason why I shouldn't turn
-      you in right now.
+    text: Why should I believe you? For all I know, you could be lying to cover your
+      ass right now.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: 
-    text: '''Cause I''m working to pay his medical bills. That, and I''ve known him
-      my whole life. I would never hurt him.'
+    text: 'Because I''m working to pay off his bills, sir. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
+    speakerName: 
+    text: He was like a father to me, and I just want to repay the kindness he showed
+      me.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 833d761ada40fb242bf48bf7ef81e343, type: 3}
     speakerName: ???
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: ???
-    text: Fine, you have a point. I may not like your lot, but even I have limitations.
+    text: 'Fine. You don''t look like the type to lie to get out of trouble, anyways. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: ???
-    text: Beating an old man in the middle of the night just for the hell of it?
-      That's an all new level of low.
+    text: 'I''ll let it slide. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
-    speakerName: 
-    text: You can say that again.
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 39048ec421e352749980c33c4ede3ece, type: 3}
+    sprite: {fileID: 21300000, guid: 7cc373cfd4393ac4196d3bc5844239cb, type: 3}
     speakerName: ???
-    text: All this talk is makin' me hungry. How 'bout an order of pares?
+    text: I'll just order and be on my way.
