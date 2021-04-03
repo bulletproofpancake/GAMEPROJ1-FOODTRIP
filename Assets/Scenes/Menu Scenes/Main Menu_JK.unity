@@ -1437,6 +1437,7 @@ GameObject:
   - component: {fileID: 541793495}
   - component: {fileID: 541793494}
   - component: {fileID: 541793493}
+  - component: {fileID: 541793497}
   m_Layer: 5
   m_Name: Area Select Canvas
   m_TagString: Untagged
@@ -1524,6 +1525,21 @@ RectTransform:
   m_AnchoredPosition: {x: 18, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &541793497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541793492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ab21e7eac6525478cd7d29d491a411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paresButton: {fileID: 73591476}
+  tusokButton: {fileID: 488117235}
+  chance: 60
 --- !u!1 &609520139
 GameObject:
   m_ObjectHideFlags: 0
