@@ -14,86 +14,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: 
-    text: Okay ka lang po ba miss?
+    text: You okay miss?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: Clara
     text: I suppose, why do you ask?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: 
     text: In all honesty, you look horrible. I'm guessing today was way worse than
       last time.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: Clara
     text: Is it really that obvious?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: 
     text: Very.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: Clara
     text: Ugh, maybe I should touch up first before leaving next time.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: Clara
     text: "Say, you look like someone who can keep a secret. You don\u2019t mind
       if I rant for a bit? "
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: 
     text: Be my guest.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: "Ugh, everyone at the office thinks it\u2019s fine to push work onto me."
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: "Just cause I\u2019m little old Clara who\u2019s too shy to say no."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: "Sometimes I feel like they know what they\u2019re doing and it pisses
       me off."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: "It\u2019s really frustrating how much I want to decline but can\u2019t."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: 
     text: "It must be rough.\t"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: 
     text: It's obvious how much it's affecting you too.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: "I know! If this keeps up, I\u2019d be dead before I know it."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: 
     text: "I wouldn\u2019t say that."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: Clara
     text: Probably.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: 
     text: Maybe.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: Ugh.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: Clara
     text: God, I could use another bowl.
   - order: {fileID: 0}
@@ -102,46 +102,46 @@ MonoBehaviour:
     text: "There\u2019s nothing wrong with being a little selfish with your time
       every now and then."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: Clara
     text: I know that!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: 'I just don''t know how to do it. The guilt of declining is overwhelming. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: 
     text: 'Just breathe deep, look at them in the eye, and give a solid no.
 
 '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: Clara
     text: You think I haven't tried that before?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
     speakerName: 
     text: From the way I see it, I'd say no.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
     speakerName: Clara
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: Clara
     text: I'll give it a shot, and sorry you have to listen to a stranger rant about
       work.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: 
     text: "I believe we\u2019re already acquainted so you\u2019re no stranger to
       me, Clara.\r\n"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: af4efbb293379574bb50500c2f84df68, type: 3}
     speakerName: Clara
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: af4efbb293379574bb50500c2f84df68, type: 3}
     speakerName: Clara
     text: Thanks for that. I'll take another order, to go this time.

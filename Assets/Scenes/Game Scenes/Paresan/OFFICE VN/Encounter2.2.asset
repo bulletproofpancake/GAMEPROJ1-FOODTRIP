@@ -14,71 +14,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 390625d5c80384545a840de7e35c3b55, type: 3}
     speakerName: 
     text: You don't have to pay for that anymore.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: ???
     text: What?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: 
     text: The food's free now, miss uh...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: ???
     text: Clara, and why?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: 
     text: Well, Clara, it looked like you needed a pat on the back and this is the
       best way I could do it.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: 
     text: You look kind of depressing in all honesty.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: 
     text: "Think of it as an act of kindness.\n\t"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 390625d5c80384545a840de7e35c3b55, type: 3}
     speakerName: Clara
     text: I...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ef20218aebe4aba4baba24dce66902a6, type: 3}
     speakerName: Clara
     text: Alright. Thank you.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ef20218aebe4aba4baba24dce66902a6, type: 3}
     speakerName: 
     text: No problem!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ef20218aebe4aba4baba24dce66902a6, type: 3}
     speakerName: 
     text: So... Rough day at work I'm guessin'?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: Clara
     text: Excuse me?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: a1b6710bc483e1745b93f64f959ed9b1, type: 3}
     speakerName: 
     text: Er, just small talk. I'm guessing today really isn't your day.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ef20218aebe4aba4baba24dce66902a6, type: 3}
     speakerName: Clara
     text: Heh, you could say that.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ef20218aebe4aba4baba24dce66902a6, type: 3}
     speakerName: 
     text: I could prepare another one for you if you want.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: b3b744eb07b984543a7ff33d9b95f8f2, type: 3}
     speakerName: Clara
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: ef20218aebe4aba4baba24dce66902a6, type: 3}
     speakerName: Clara
     text: Actually, I'll take you up on that, but I'll pay this time.

@@ -14,117 +14,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 84889cb92da81b24f8a940d68d52c39a, type: 3}
     speakerName: Clara
     text: "...\t"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: Clara
     text: Thanks.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: 
     text: For what?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5b46bef0107c4cf4bb4f5314037eba15, type: 3}
     speakerName: Clara
     text: For last time. I tried what you said.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5b46bef0107c4cf4bb4f5314037eba15, type: 3}
     speakerName: 
     text: "And? How\u2019d it go?"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: Clara
     text: 'It worked! '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: 
     text: Huh. I didn't think it'd actually work.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 4817195e8402f7e4a8d45b939ca3f66f, type: 3}
     speakerName: Clara
     text: Oh, the look on their faces was golden!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: Clara
     text: No more Ms. Errand girl for them! HA!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: Clara
     text: "All that \u201Ccomposing\u201D and stuff really helped out to be honest."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: 
     text: I'm hoping things'll go smoother then?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: Clara
     text: I'm pretty sure it will.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5b46bef0107c4cf4bb4f5314037eba15, type: 3}
     speakerName: Clara
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: Clara
     text: Say, you remind me of this one guy who used to sell here too.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: 
     text: Really? How so?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 84889cb92da81b24f8a940d68d52c39a, type: 3}
     speakerName: Clara
     text: "He\u2019s an old guy but pretty active for someone his age."
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: Clara
     text: I used to come here often after work.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 84889cb92da81b24f8a940d68d52c39a, type: 3}
     speakerName: Clara
     text: I was honestly surprised you were the one selling instead of him.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 679543bfac9971940a2b2a54d698cf12, type: 3}
     speakerName: 
     text: 'I''m just filling in for him. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 679543bfac9971940a2b2a54d698cf12, type: 3}
     speakerName: Clara
     text: Huh. Well, I hope he's doing fine these days.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: Clara
     text: It's funny how similar you two are.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 4817195e8402f7e4a8d45b939ca3f66f, type: 3}
     speakerName: Clara
     text: 'Always willing to talk to complete strangers with a smile. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 4817195e8402f7e4a8d45b939ca3f66f, type: 3}
     speakerName: 
     text: I figured if this is all I'll be doing in the meantime, might as well make
       the most out of it.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: Clara
     text: 'I remember him saying that too! '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 9f1770df060bf1b41858147687d47f99, type: 3}
     speakerName: Clara
     text: 'Things were much livelier while he was around. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: Clara
     text: Although, I wouldn't be surprised if you'd end up the talk of the town
       either.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 5fa38c6bdc3145d4a99ec09a8fea5baf, type: 3}
     speakerName: 
     text: You flatter me too much, miss.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 4817195e8402f7e4a8d45b939ca3f66f, type: 3}
     speakerName: Clara
     text: HA! Well, I should be going now. It's getting pretty late. I'll order one
       more pares to go.

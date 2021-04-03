@@ -14,30 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 0ba839f5bbac9aa4588925eca1c2cb23, type: 3}
     speakerName: ???
     text: Kuya pabili po.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 0ba839f5bbac9aa4588925eca1c2cb23, type: 3}
     speakerName: 
     text: Ano sayo miss?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 390625d5c80384545a840de7e35c3b55, type: 3}
     speakerName: ???
     text: Pares lang po.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 390625d5c80384545a840de7e35c3b55, type: 3}
     speakerName: 
     text: Sige, okay ka lang po ba? Parang wala ka yatang malay miss.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: b3b744eb07b984543a7ff33d9b95f8f2, type: 3}
     speakerName: ???
     text: ...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 390625d5c80384545a840de7e35c3b55, type: 3}
     speakerName: ???
     text: Pabalot nalang po pala kuya.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 390625d5c80384545a840de7e35c3b55, type: 3}
     speakerName: 
     text: Ah sige sige.
