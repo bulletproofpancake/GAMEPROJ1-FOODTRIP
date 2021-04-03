@@ -52,6 +52,7 @@ public class Pause : MonoBehaviour
     //take over this part immediately after being called.
     public void MainMenu()
     {
+        MoneyManager.Instance.currentMoney = 0;
         StopAudio();
         SceneSelector.Instance.LoadNextScene("Main Menu_JK");
         ResumeTheGame();
