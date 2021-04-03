@@ -110,7 +110,6 @@ public class Sink : MonoBehaviour
 
     public void CleanGarbage()
     {
-        GameManager.Instance.garbageFull = false;
         foreach (var bowl in _bowls)
         {
             bowl.GetComponent<Bowl>().isDirty = false;
@@ -123,9 +122,10 @@ public class Sink : MonoBehaviour
     IEnumerator GarbageIndicator()
     {
         isWashing = true;
-        yield return new WaitForSeconds(_bowls[0].GetComponent<Bowl>().currentWashTime);
+        yield return new WaitForSeconds(1f);
         isWashing = false;
         _bowls.Clear();
+        GameManager.Instance.garbageFull = false;
     }
     
 }

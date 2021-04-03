@@ -202,25 +202,25 @@ public class Customer : MonoBehaviour
                      //      }
                      // }
                      //Spawns dirty cups as soon as the customer turns off  
-                     if(ShiftManager.Instance.cart != null){
-                          // if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
-                          //     DirtyCupsScript.Instance.currentDirtyCupsInScene <
-                          //     DirtyCupsScript.Instance.maxAmountInScene)
-                          // {
-                          //      DirtyCupsScript.Instance.SpawnHere();
-                          // }
-                          switch (ShiftManager.Instance.cart.Type)
-                          {
-                               case CartType.Paresan:
-                                    break;
-                               case CartType.Tusoktusok:
-                                    if(DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene && !GameManager.Instance.isVN)
-                                         DirtyCupsScript.Instance.SpawnHere();
-                                    break;
-                               default:
-                                    break;
-                          }
-                     }
+                     // if(ShiftManager.Instance.cart != null){
+                     //      // if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok &&
+                     //      //     DirtyCupsScript.Instance.currentDirtyCupsInScene <
+                     //      //     DirtyCupsScript.Instance.maxAmountInScene)
+                     //      // {
+                     //      //      DirtyCupsScript.Instance.SpawnHere();
+                     //      // }
+                     //      switch (ShiftManager.Instance.cart.Type)
+                     //      {
+                     //           case CartType.Paresan:
+                     //                break;
+                     //           case CartType.Tusoktusok:
+                     //                if(DirtyCupsScript.Instance.currentDirtyCupsInScene < DirtyCupsScript.Instance.maxAmountInScene && !GameManager.Instance.isVN)
+                     //                     DirtyCupsScript.Instance.SpawnHere();
+                     //                break;
+                     //           default:
+                     //                break;
+                     //      }
+                     // }
                      if (FindObjectOfType<AudioManager>() != null)
                      {
                           FindObjectOfType<AudioManager>().Play("OrdersComplete");
