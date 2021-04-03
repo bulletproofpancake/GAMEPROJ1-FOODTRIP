@@ -149,13 +149,12 @@ public class Customer : MonoBehaviour
           //Debug.Log (Garbage is full)
           //return;
           
+          if (GameManager.Instance.garbageFull)
+               return;
+          
           if (!readyToCollect)
-          {
-            
                givenOrder.gameObject.SetActive(false);
-            
-          }
-               
+
           else return;
 
           if (_currentOrder.Data == givenOrder.Data)
