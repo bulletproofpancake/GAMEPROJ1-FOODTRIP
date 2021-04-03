@@ -32,7 +32,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: "I can see that. And? How\u2019d it go?"
+    text: "And? How\u2019d it go?"
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
@@ -40,7 +40,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: See? What did I tell ya.
+    text: Huh. I didn't think it'd actually work.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
@@ -48,7 +48,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: "No more Ms. Errand girl for y\u2019all."
+    text: No more Ms. Errand girl for them! HA!
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
@@ -56,11 +56,11 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: No more after work blues?
+    text: I'm hoping things'll go smoother then?
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: No more after work blues.
+    text: I'm pretty sure it will.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
@@ -72,51 +72,59 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Really? Do tell.
+    text: Really? How so?
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
     text: "He\u2019s an old guy but pretty active for someone his age."
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
-    speakerName: 
-    text: "Well there\u2019s something you don\u2019t see everyday."
+    speakerName: Clara
+    text: I used to come here often after work.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: "If you heard him chatter to his customers, you wouldn\u2019t think he\u2019d
-      be a day over 30."
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
-    speakerName: 
-    text: "Huh, you don\u2019t say."
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
-    speakerName: Clara
-    text: I wonder whatever happened to him?
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
-    speakerName: Clara
-    text: "I don\u2019t know really, it just feels like you have that same air around
-      you."
+    text: I was honestly surprised you were the one selling instead of him.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: What do you mean by that?
+    text: 'I''m just filling in for him. '
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: You know, company you can enjoy some good food over.
+    text: Huh. Well, I hope he's doing fine these days.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    speakerName: Clara
+    text: It's funny how similar you two are.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    speakerName: Clara
+    text: 'Always willing to talk to complete strangers with a smile. '
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: "And there\u2019s never been a better pair like food and company"
+    text: I figured if this is all I'll be doing in the meantime, might as well make
+      the most out of it.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: I agree. You, my friend, have earned yourself a regular.
+    text: 'I remember him saying that too! '
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: Plus, your sevings taste so similar to his. Maybe it's just a coincidence
-      but i'll have another order to go just to be sure!
+    text: 'Things were much livelier while he was around. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    speakerName: Clara
+    text: Although, I wouldn't be surprised if you'd end up the talk of the town
+      either.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    speakerName: 
+    text: You flatter me too much, miss.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    speakerName: Clara
+    text: HA! Well, I should be going now. It's getting pretty late. I'll order one
+      more pares to go.

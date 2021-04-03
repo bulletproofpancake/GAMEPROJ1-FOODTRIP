@@ -20,8 +20,8 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Woah, you don't look too good.
+    text: You don't look too good.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
-    text: "I\u2019ll just order real quick and I\u2019ll be on my way."
+    text: I'll be quick.

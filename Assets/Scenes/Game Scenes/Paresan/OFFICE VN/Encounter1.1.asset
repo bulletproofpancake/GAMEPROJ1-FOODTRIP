@@ -24,11 +24,11 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: ???
-    text: ...
+    text: Pares lang po.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: 
+    text: Sige, okay ka lang po ba? Parang wala ka yatang malay miss.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: ???
@@ -36,8 +36,8 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: ???
-    text: Pabalot nalang po kuya.
+    text: Pabalot nalang po pala kuya.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Oh sure, of course.
+    text: Ah sige sige.

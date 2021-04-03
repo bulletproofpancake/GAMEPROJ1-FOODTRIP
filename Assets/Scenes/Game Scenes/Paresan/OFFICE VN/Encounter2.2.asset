@@ -16,7 +16,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: It's on the house.
+    text: You don't have to pay for that anymore.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: ???
@@ -24,7 +24,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Food's free, lady uh...
+    text: The food's free now, miss uh...
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: ???
@@ -32,12 +32,12 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Well, Clara, from the looks of it, you mght as well need that extra energy
-      before headin' home.
+    text: Well, Clara, it looked like you needed a pat on the back and this is the
+      best way I could do it.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Cause you seem to be a bit out of it to be honest.
+    text: You look kind of depressing in all honesty.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
@@ -53,11 +53,11 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: No worries.
+    text: No problem!
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: So... rough day at work I'm guessin'?
+    text: So... Rough day at work I'm guessin'?
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
@@ -65,8 +65,7 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: I could've sworn the dead was walkin' over when I saw you shuffling all
-      the way over here.
+    text: Er, just small talk. I'm guessing today really isn't your day.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
@@ -74,7 +73,11 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: 
-    text: Well I could prepare another one for you if you want.
+    text: I could prepare another one for you if you want.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    speakerName: Clara
+    text: ...
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
     speakerName: Clara
