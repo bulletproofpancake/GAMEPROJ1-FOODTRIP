@@ -24,7 +24,9 @@ public class JK_Cart_Loader:SceneLoader
     {
         SetShift();
         base.LoadNextScene($"Scenes/Game Scenes/{ShiftManager.Instance.cart.Type}/Arcade");
-
+        GameObject mainmenuaudio = GameObject.Find("MainMenuAudio");
+        mainmenuaudio.GetComponent<AudioSource>().Stop();
+        
         FindObjectOfType<AudioManager>().Play("ArcadeBGM");
         LeanTween.scale(gameObject, new Vector3(.7f, .7f, .7f), 1f).setEase(LeanTweenType.punch);
     }

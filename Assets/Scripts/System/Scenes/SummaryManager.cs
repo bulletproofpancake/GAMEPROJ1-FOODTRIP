@@ -22,9 +22,7 @@ public class SummaryManager : MonoBehaviour
         {
             Destroy(GameManager.Instance.gameObject);
         }
-       
-       
-        AudioManager.instance.Play("Main Menu");
+      
     }
 
     private void Start()

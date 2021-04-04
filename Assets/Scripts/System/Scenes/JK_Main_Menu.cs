@@ -20,12 +20,17 @@ public class JK_Main_Menu : SceneLoader
 
     private void Awake()
     {
-        AudioManager.instance.Play("Main Menu");
+        
+    }
+
+    private void Start()
+    {
+       // AudioManager.instance.Play("Main Menu");
     }
 
     public void AreaSelectMenu()
     {
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        AudioManager.instance.Play("ButtonClick");
         Tween();
         if (AreaSelect != null)
         {
@@ -38,7 +43,7 @@ public class JK_Main_Menu : SceneLoader
 
     public void ShiftSelectMenu()
     {
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        AudioManager.instance.Play("ButtonClick");
         Tween();
         if (ShiftSelect != null)
         {
@@ -52,7 +57,7 @@ public class JK_Main_Menu : SceneLoader
 
     public void CloseAreaSelect()
     {
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        AudioManager.instance.Play("ButtonClick");
         Tween();
         if (AreaSelect != null)
         {
@@ -63,7 +68,7 @@ public class JK_Main_Menu : SceneLoader
 
     public void CloseShiftSelect()
     {
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        AudioManager.instance.Play("ButtonClick");
         Tween();
         if (ShiftSelect != null)
         {

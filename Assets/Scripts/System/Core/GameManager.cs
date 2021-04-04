@@ -37,6 +37,7 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
+        AudioManager.instance.Stop("Main Menu");
         if(ShiftManager.Instance.shift != null){
             background.GetComponent<Canvas>().worldCamera = Camera.main;
             SetBackground();
@@ -134,11 +135,24 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(1f);
             levelDuration--;
         }
-        
+
         //SpawnManager.Instance.ClearLists();
-        
-        MoneyManager.Instance.Earn();
-        
+        if (encounterComplete)
+        {
+            if (npcAvailable)
+            {
+                MoneyManager.Instance.Earn();
+            }
+        }
+        else
+        {
+            if (!npcAvailable)
+            {
+                MoneyManager.Instance.Earn();
+            }
+        }
+
+
         FindObjectOfType<AudioManager>().Stop("ArcadeBGM");
 
         StartCoroutine(GameOver());
@@ -250,20 +264,23 @@ public class GameManager : Singleton<GameManager>
             isPaused = paused;
             Time.timeScale = 1f;
             print("Paused = " + isPaused);
-            if(ShiftManager.Instance.shift !=null){
-                if (countdownFinished)
-                {
-                    StartCoroutine(CountDownLevel());
-                }
-                else
-                {
-                    StartCoroutine(CountDownStart());
+            if (!isVN) {
+                if (ShiftManager.Instance.shift != null) {
+                    if (countdownFinished)
+                    {
+                        StartCoroutine(CountDownLevel());
+                    }
+                    else
+                    {
+                        StartCoroutine(CountDownStart());
+                    }
                 }
             }
             else
             {
                 StartCoroutine(CountDownLevel());
             }
+
         }
     }
 }
