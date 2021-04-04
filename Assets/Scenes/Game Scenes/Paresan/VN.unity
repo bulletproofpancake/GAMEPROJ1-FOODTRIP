@@ -238,12 +238,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 160586297}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &160586303 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8619928536124083218, guid: aae6923240baa7d408d9c884e1248b73,
-    type: 3}
-  m_PrefabInstance: {fileID: 160586297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &160586304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6589351652661809027, guid: aae6923240baa7d408d9c884e1248b73,
@@ -1261,7 +1255,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startPos
       value: 
-      objectReference: {fileID: 160586303}
+      objectReference: {fileID: 0}
     - target: {fileID: 5095226403237566819, guid: d0e56c35171e3fd4ca7e7b15911a783c,
         type: 3}
       propertyPath: spawnInterval
