@@ -17,6 +17,12 @@ public class JK_Main_Menu : SceneLoader
     //}
 
     //Simplest way of opening and closing a canvas
+
+    private void Awake()
+    {
+        AudioManager.instance.Play("Main Menu");
+    }
+
     public void AreaSelectMenu()
     {
         FindObjectOfType<AudioManager>().Play("ButtonClick");

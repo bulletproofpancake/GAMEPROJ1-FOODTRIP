@@ -17,10 +17,14 @@ public class SummaryManager : MonoBehaviour
 
     private void Awake()
     {
+
         if(GameManager.Instance != null)
         {
             Destroy(GameManager.Instance.gameObject);
         }
+       
+       
+        AudioManager.instance.Play("Main Menu");
     }
 
     private void Start()

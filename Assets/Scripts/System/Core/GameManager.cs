@@ -44,6 +44,7 @@ public class GameManager : Singleton<GameManager>
         
         if (isVN)
         {
+            AudioManager.instance.Play("VisualNovelBGM");
             arcadeCanvas.SetActive(false);
             vnCanvas.SetActive(true);
             print("VN Start");
@@ -106,6 +107,7 @@ public class GameManager : Singleton<GameManager>
         {
             //TODO: EARN MONEY AFTER FINISHING VN
             //SpawnManager.Instance.ClearLists();
+            AudioManager.instance.Stop("VisualNovelBGM");
             if (ShiftManager.Instance.shift != null)
                 SceneSelector.Instance.LoadNextScene("Summary");
             else
