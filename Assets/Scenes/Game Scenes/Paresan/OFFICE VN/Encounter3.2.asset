@@ -82,7 +82,7 @@ MonoBehaviour:
     text: "I wouldn\u2019t say that."
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: dcca44f6b4b85c84ebae55179861c6f4, type: 3}
-    speakerName: Clara
+    speakerName: 
     text: Probably.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: ddf97414747b18a4ca051033fcd2a3c0, type: 3}
@@ -97,7 +97,7 @@ MonoBehaviour:
     speakerName: Clara
     text: God, I could use another bowl.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 45c02dbeac9ee7a41842c9e353ea17ea, type: 3}
+    sprite: {fileID: 21300000, guid: 91261c0766b546544a5cfca9ea5d1eba, type: 3}
     speakerName: 
     text: "There\u2019s nothing wrong with being a little selfish with your time
       every now and then."

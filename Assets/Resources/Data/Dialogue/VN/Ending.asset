@@ -14,10 +14,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: Ka Enteng
-    text: Yo
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
+    speakerName: Kuya Enteng
+    text: I must say, it's good to be back on the field.
   - order: {fileID: 0}
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
+    speakerName: Kuya Enteng
+    text: I can't thank you enough for what you did for me.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
     speakerName: 
-    text: Yo
+    text: Don't worry about it, kuya. It's the least I could do.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
+    speakerName: Kuya Enteng
+    text: You didn't get into any trouble did you? Did some cops try to rough you
+      up?
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
+    speakerName: Kuya Enteng
+    text: Just a bit, but I assure you, everything is fine.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
+    speakerName: Kuya Enteng
+    text: Heh. Reminds me of that one time some fella came over and tried to get
+      rid of me.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
+    speakerName: Kuya Enteng
+    text: No sir, I ain't leaving this spot when I could be serving the hungry people
+      of the city as much as I can.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
+    speakerName: Kuya Enteng
+    text: Huh. You seem a bit happier than last I saw you.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: df2c404bffdce8d4fa889adc036905a7, type: 3}
+    speakerName: Kuya Enteng
+    text: Did you meet any new people lately? Got yourself a girl?
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
+    speakerName: Kuya Enteng
+    text: HA HA HA
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
+    speakerName: 
+    text: 'You could say that I''ve met some new faces. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
+    speakerName: Kuya Enteng
+    text: 'It''s nice to see you managing on your own. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: a27320446f5dd7644887ee01fe959bef, type: 3}
+    speakerName: Kuya Enteng
+    text: People these days don't take too kindly with us.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
+    speakerName: Kuya Enteng
+    text: 'But, it''s those people who do take the time to listen that makes this
+      job fulfilling. '
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
+    speakerName: Kuya Enteng
+    text: Now, show me what you got before I escort you home.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f15a938cc92e26d4588e3f31bc8fc6ca, type: 3}
+    speakerName: Kuya Enteng
+    text: Your mom must've been worried sick. HA HA HA
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e4d93c5e399581a4993bea83cddf2efb, type: 3}
+    speakerName: 
+    text: Coming right up, Kuya!

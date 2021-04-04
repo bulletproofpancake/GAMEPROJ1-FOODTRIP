@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Foreigner
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+  - {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
   possibleOrders:
   - {fileID: 6580914577590136435, guid: b701709b0e152744b932f1b5a76453ba, type: 3}
   - {fileID: 6580914577590136435, guid: 4d12bd62da0b25448adcb3fc70bc302d, type: 3}

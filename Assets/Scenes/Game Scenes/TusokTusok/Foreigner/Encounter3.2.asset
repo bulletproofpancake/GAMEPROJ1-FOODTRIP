@@ -24,18 +24,18 @@ MonoBehaviour:
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: Hugo
-    text: The contrast between the mega city of Buendia and the smaller areas of
-      Chino Roces was it? It's like night and day!
+    text: The contrast between the mega city and the smaller areas? It's like night
+      and day!
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: Hugo
-    text: There's so much to explore that It feels like i haven't seen everything
+    text: There's so much to explore that It feels like I haven't seen everything
       yet!
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: 
-    text: I agree. There's this one place I know of in Taft that's full of street
-      carts like mine.
+    text: I agree. There's this one place I know of that's full of street carts like
+      mine.
   - order: {fileID: 0}
     sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
     speakerName: Hugo
@@ -51,7 +51,7 @@ MonoBehaviour:
     text: Yes, I've been called in for a meeting next week, and I have to be back
       before then.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: e3eedf996462913439b4bcfeb693772a, type: 3}
     speakerName: 
     text: I see. Take care on your way back then!
   - order: {fileID: 0}
