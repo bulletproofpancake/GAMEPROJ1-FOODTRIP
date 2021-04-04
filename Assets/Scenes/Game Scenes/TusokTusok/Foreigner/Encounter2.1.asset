@@ -14,28 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: ???
-    text: 'My good friend!
+    text: 'Hello!
 
 '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: 
-    text: Hey! It's er.. you! From yesterday.
+    text: Hey! It's er.. you!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: ???
-    text: HA HA HA Forgive my rudeness, I forgot to introduce myself yesterday.
+    text: HA HA HA Forgive my rudeness, I forgot to introduce myself.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: ???
     text: You can call me Hugo!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: 
     text: Well, Hugo, it's a pleasure to meet you.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: 
     text: So, what can I get you?

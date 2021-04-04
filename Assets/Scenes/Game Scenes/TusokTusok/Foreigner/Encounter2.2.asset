@@ -14,105 +14,100 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info:
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: ???
-    text: AHHHH this is truly bliss~
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
+    speakerName: Hugo
+    text: This is truly bliss!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
+    speakerName: Hugo
+    text: Nothing beats cheap food!
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: 
-    text: No fancy restaurant can ever compare to this.
+    text: You aren't from around here, aren't you?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: ???
-    text: Say Hugo, you aren't from around here, aren't you?
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: ???
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
+    speakerName: Hugo
     text: My, how did you know?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: ab9178e1576d1dc409dc129c3f59a4f5, type: 3}
     speakerName: 
     text: Just think of it as a hunch.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: ab9178e1576d1dc409dc129c3f59a4f5, type: 3}
     speakerName: 
     text: So, where are you from? And what are you doing here, spending time at a
       lowly street cart like mine?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: Hugo
-    text: I'm glad you asked friend!
+    text: I'm glad you asked friend! I come all the way from Sweden!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: Hugo
     text: You see, I'm in search of this place called Entoy's Bakasihan!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: 
-    text: 'My friends back in Sweden told me all about it! Especially how it''s also
-      a well known aphrodisiac. '
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: Hugo
-    text: It could help me boost my game, if you know what I mean. HA HA HA
+    text: 'My friends back home told me all about it! '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 544d3535927624140a29ba840dc9e10e, type: 3}
+    speakerName: Hugo
+    text: Especially how it's also a well known aphrodisiac. HA HA HA
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 544d3535927624140a29ba840dc9e10e, type: 3}
     speakerName: 
     text: But Hugo...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: 
+    sprite: {fileID: 21300000, guid: ab9178e1576d1dc409dc129c3f59a4f5, type: 3}
+    speakerName: Hugo
     text: Hm? What's wrong my friend?
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: Hugo
-    text: That diner you're looking for, well...
+    sprite: {fileID: 21300000, guid: ab9178e1576d1dc409dc129c3f59a4f5, type: 3}
+    speakerName: 
+    text: That diner you're looking for...
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: Hugo
+    sprite: {fileID: 21300000, guid: ab9178e1576d1dc409dc129c3f59a4f5, type: 3}
+    speakerName: 
     text: It's in Cebu. We're in Makati right now, and Cebu is at the other side
       of the country.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: e3eedf996462913439b4bcfeb693772a, type: 3}
     speakerName: Hugo
     text: Ah..
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: e3eedf996462913439b4bcfeb693772a, type: 3}
     speakerName: Hugo
     text: Haaaa... And I was completely looking forward to it too.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: 
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
+    speakerName: Hugo
     text: "Ah well, no use worrying about it now. Ingen ko p\xE5 isen HA HA HA"
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: Hugo
+    sprite: {fileID: 21300000, guid: 1e6922fbef86e2f48b126a13cc9058b5, type: 3}
+    speakerName: 
     text: What does that mean exactly?
   - order: {fileID: 0}
-    sprite: {fileID: 0}
-    speakerName: 
-    text: "No cow on the ice! \t"
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: 
-    text: "...\t"
-  - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
     speakerName: Hugo
     text: Er, well, it just really means no worries.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: Hugo
+    sprite: {fileID: 21300000, guid: 544d3535927624140a29ba840dc9e10e, type: 3}
+    speakerName: 
     text: I see, I'll keep that in mind then.
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: Hugo
-    text: 'Alas, I must depart for I have more sights to see. '
+    text: 'I think it is time for me to take my leave. '
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
-    speakerName: 
+    sprite: {fileID: 21300000, guid: d2264f3a0080d634e833cc016a267a31, type: 3}
+    speakerName: Hugo
+    text: I might as well make the most out of my time here and explore.
+  - order: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 544d3535927624140a29ba840dc9e10e, type: 3}
+    speakerName: Hugo
     text: BUT!
   - order: {fileID: 0}
-    sprite: {fileID: 21300000, guid: 7050a3edeb653994087e451af440a830, type: 3}
+    sprite: {fileID: 21300000, guid: 60a6cfb987818a94f92f7305b1370056, type: 3}
     speakerName: Hugo
-    text: Not before having a snack on the go!
+    text: Not before having a snack before I go.
