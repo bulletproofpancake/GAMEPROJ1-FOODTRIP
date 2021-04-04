@@ -43,6 +43,14 @@ public class SceneLoader : MonoBehaviour
         Destroy(ShiftManager.Instance);
         SceneSelector.Instance.LoadNextScene("Tutorial");
     }
+    
+    public void LoadEnding()
+    {
+        PlayButtonSFX();
+        Tween();
+        Destroy(ShiftManager.Instance);
+        SceneSelector.Instance.LoadNextScene("Ending");
+    }
 
     public virtual void LoadNextScene()
     {

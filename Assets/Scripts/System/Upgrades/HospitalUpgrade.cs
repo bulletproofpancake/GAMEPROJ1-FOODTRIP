@@ -19,6 +19,7 @@ public class HospitalUpgrade : UpgradeSystem
         base.Update();
         if (upgradeData.Level == upgradeData.Upgrade.Length)
         {
+            Destroy(ShiftManager.Instance);
             SceneSelector.Instance.LoadNextScene("Ending");
         }
     }

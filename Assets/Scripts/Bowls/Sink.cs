@@ -44,8 +44,10 @@ public class Sink : MonoBehaviour
         else if (Pause.isPaused == false)
             button.interactable = true;
         
-        if(ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
-            GarbageChecker();
+        if(ShiftManager.Instance.cart != null){
+            if (ShiftManager.Instance.cart.Type == CartType.Tusoktusok)
+                GarbageChecker();
+        }
     }
 
     public void WashBowl()

@@ -972,6 +972,7 @@ GameObject:
   - component: {fileID: 547150060}
   - component: {fileID: 547150059}
   - component: {fileID: 547150057}
+  - component: {fileID: 547150058}
   m_Layer: 5
   m_Name: Hospital
   m_TagString: Untagged
@@ -1022,6 +1023,19 @@ MonoBehaviour:
   - {fileID: 2078747226}
   - {fileID: 216232641}
   - {fileID: 327988}
+  sceneLoader: {fileID: 547150058}
+--- !u!114 &547150058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547150055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40cc045ed8864a645844c0863de2a5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &547150059
 MonoBehaviour:
   m_ObjectHideFlags: 0

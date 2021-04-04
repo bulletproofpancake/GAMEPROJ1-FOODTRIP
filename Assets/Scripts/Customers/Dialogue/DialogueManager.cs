@@ -92,7 +92,7 @@ namespace Customers.Dialogue
                     else
                     {
                         _customer.SetOrder();
-                        _customer.GiveOrder();
+                        _customer.OrderPares();
                     }
                 }
                 gameObject.SetActive(false);
